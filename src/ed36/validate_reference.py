@@ -16,7 +16,7 @@ EXE = HERE / "ed_sym"
 
 
 def lanczos_E0(spec, r, vec=True):
-    cmd = [str(EXE), str(spec), "--r", repr(r), "--tol", "1e-12", "--maxit", "500"] + ([] if vec else ["--novec"])
+    cmd = [str(EXE), str(spec), "--r", repr(r), "--tol", "1e-9", "--maxit", "500"] + ([] if vec else ["--novec"])
     out = subprocess.run(cmd, capture_output=True, text=True, check=True).stdout
     d = {}
     for l in out.splitlines():
