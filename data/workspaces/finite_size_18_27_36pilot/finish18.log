@@ -1,0 +1,9 @@
+{'number_of_index6_sublattices': 12, 'valid_K_compatible_shapes': 3, 'all_K_compatible_shapes_pointgroup_equivalent': True, 'control_T': [[1, 2], [0, 6]], 'geometry_metric': 'Cell vectors (1,1),(2,-1) in primitive triangular coordinates; 60-degree metric multiplied by 3.', 'caution': 'K-compatible here means weak-coupling CELL k=(1/3,2/3); physical triangular K folds to cell Gamma and is allowed on every ABC-cell torus.'}
+{"shape": "K18", "r": 0.3646865486, "E": -7.193694908907828, "S": 2, "q": [0.0, 0.0], "pH": 0.9612376979882098, "wall_seconds": 4.198199275000661}
+{"shape": "K18", "r": 0.501706589, "E": -7.523368452956724, "S": 2, "q": [0.0, 0.0], "pH": 0.9403766960439041, "wall_seconds": 5.240178157000628}
+{"shape": "K18", "r": 1.0, "E": -10.459935635774283, "S": 0, "q": [0.0, 0.0], "pH": 0.7112177161643203, "wall_seconds": 4.493026425996504}
+{"shape": "C18", "r": 0.3346873744, "E": -7.101957147023565, "S": 2, "q": [0.0, 0.0], "pH": 0.9721401363954603, "wall_seconds": 3.8616300799985765}
+{"shape": "C18", "r": 0.5042126561, "E": -7.513215938866886, "S": 2, "q": [0.0, 0.0], "pH": 0.9487319269869249, "wall_seconds": 4.228693135999492}
+{"shape": "C18", "r": 0.6619467984, "E": -8.249687192353582, "S": 1, "q": [0.0, 0.0], "pH": 0.806272316001412, "wall_seconds": 4.571706938004354}
+{"shape": "C18", "r": 1.0, "E": -10.594618331987615, "S": 0, "q": [0.0, 0.0], "pH": 0.5859845150624994, "wall_seconds": 4.355918618006399}
+PASS 18-spin endpoints/intersections, full-space controls, checkpoint reconstruction and r=0/r=1 sanity checks.

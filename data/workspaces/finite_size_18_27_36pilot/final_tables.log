@@ -1,0 +1,7 @@
+{'number_of_index6_sublattices': 12, 'valid_K_compatible_shapes': 3, 'all_K_compatible_shapes_pointgroup_equivalent': True, 'control_T': [[1, 2], [0, 6]], 'geometry_metric': 'Cell vectors (1,1),(2,-1) in primitive triangular coordinates; 60-degree metric multiplied by 3.', 'caution': 'K-compatible here means weak-coupling CELL k=(1/3,2/3); physical triangular K folds to cell Gamma and is allowed on every ABC-cell torus.'}
+PASS cached verified 27-spin sources, energy and spin-sum checks.
+{'status': 'PASS', 'number_of_18spin_couplings_and_shapes': 122, 'number_of_18spin_momentum_minima': 732, 'number_of_18spin_returned_eigenpairs': 3660, 'max_ground_H_residual': 4.691651745880047e-14, 'max_all_eigenpair_H_residual': 2.2006568501437907e-12, 'max_ground_S2_residual': 4.907653602423959e-10, 'max_all_eigenpair_S2_residual': 1.1321672950292963e-09, 'max_18spin_total_spin_sum_rule_error': 1.857541898075965e-14, 'max_27spin_total_spin_sum_rule_error': 5.320854867818525e-12, 'max_18spin_energy_from_G_error': 1.4210854715202004e-14, 'note': 'Global ground-state coverage is at all sampled points. Numerical scans cannot rule out arbitrarily narrow re-entrant plateaus between unchanged endpoints.'}
+PASS 122 fresh checkpoint checks and sector completeness.
+PNG/SVG/PDF figures written.
+Physics report written.
+PASS reproducible outputs and fresh checkpoint verification.

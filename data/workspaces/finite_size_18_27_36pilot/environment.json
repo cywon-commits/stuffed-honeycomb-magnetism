@@ -1,0 +1,9 @@
+{
+  "CPU_model": "INTEL(R) XEON(R) PLATINUM 8573C",
+  "CPU_quota": "200000 100000",
+  "RAM_limit_bytes": 8589934592,
+  "Python": "3.12.14",
+  "NumPy": "2.3.5",
+  "OpenMP_threads": 2,
+  "BLAS_threads": 1
+}
