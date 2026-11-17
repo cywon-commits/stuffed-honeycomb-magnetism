@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "complex_physical_deflation_tests": [
+    {
+      "root": 0,
+      "energy_error": 2.6645352591003757e-15,
+      "residual": 3.5151724914329562e-15,
+      "orthogonality": 0.0
+    },
+    {
+      "root": 1,
+      "energy_error": 7.105427357601002e-15,
+      "residual": 1.9723950108206292e-13,
+      "orthogonality": 1.1295700899707568e-16
+    },
+    {
+      "root": 2,
+      "energy_error": 3.552713678800501e-15,
+      "residual": 4.35667519382533e-15,
+      "orthogonality": 1.0007415106216802e-16
+    }
+  ],
+  "quadratic_tail_majorant_on_bounded_spectrum": true
+}

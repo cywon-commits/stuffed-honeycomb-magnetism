@@ -1,0 +1,15 @@
+{
+  "discarded_searches": [
+    {
+      "kind": "cold random full-sector search",
+      "last_recorded_H_calls": 50,
+      "last_recorded_solve_seconds": 135.0622724160021
+    },
+    {
+      "kind": "probe-started low-root search",
+      "last_recorded_H_calls": 150,
+      "last_recorded_solve_seconds": 467.6187898390017
+    }
+  ],
+  "reason": "Reuse saved, independently verified symmetry-character minima via exact point-group transfer, avoiding duplicate eigenvalue work. No unconverged Ritz values from either discarded search are exported. Additional partial work after the last sampled H-call count is excluded from measured completed-solve sums."
+}

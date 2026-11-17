@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "fresh_archive_extraction": true,
+  "byte_identical_scientific_outputs": [
+    "crossing_poles.csv",
+    "weak_verified_poles.csv",
+    "weak_complex_residues.csv",
+    "weak_exact_moments.csv",
+    "moment_reference_comparison.csv",
+    "final_validation.json"
+  ]
+}

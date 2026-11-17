@@ -1,0 +1,14 @@
+{
+  "independent_longitudinal_seed_errors": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "complete_spectral_moment_errors_M0_M1_M2": [
+    1.7931318741032613e-15,
+    4.601354501214038e-15,
+    1.0706655622233671e-14
+  ],
+  "status": "PASS",
+  "cluster": "12 spins, L=2, Nup=6; full target-block spectral decomposition; independent bit-diagonal Fourier seeds"
+}

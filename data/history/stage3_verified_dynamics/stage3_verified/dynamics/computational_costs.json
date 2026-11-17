@@ -1,0 +1,16 @@
+{
+  "crossing_transition_wall_seconds": [
+    59.687817949998134,
+    82.54492760200083
+  ],
+  "weak_seed_moment_seconds_before_checkpoint_IO": 55.38501724400339,
+  "symmetry_map_and_recheck_seconds": 80.02523350100091,
+  "quadrature_seconds": 191.54848454700186,
+  "quadrature_H_calls": 72,
+  "max_completed_process_RSS_MiB": 3297.5234375,
+  "CPU_quota": 2,
+  "RAM_cap_GiB": 8,
+  "BLAS_threads": 1,
+  "OpenMP_threads": 2,
+  "scope": "Measured per-operation walls with contention; overlapping operations must not be interpreted as elapsed total. Original eigenvalue solves are reused, not newly timed. Discarded searches recorded separately in solver_restart_note.json."
+}

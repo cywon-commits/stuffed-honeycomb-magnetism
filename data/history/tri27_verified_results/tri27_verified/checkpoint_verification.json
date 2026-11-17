@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Gamma_primitive",
+    "energy": -14.529841875985394,
+    "residual": 8.047228489381294e-10,
+    "status": "VERIFIED FROM SAVED VECTOR"
+  },
+  {
+    "name": "K_primitive",
+    "energy": -15.125973385092479,
+    "residual": 8.295612194315798e-09,
+    "status": "VERIFIED FROM SAVED VECTOR"
+  },
+  {
+    "name": "cell11_fold1",
+    "energy": -14.44264752813215,
+    "residual": 6.931510108956548e-09,
+    "status": "VERIFIED FROM SAVED VECTOR"
+  },
+  {
+    "name": "cell11_fold2",
+    "energy": -14.611700724315783,
+    "residual": 2.597650175311234e-09,
+    "status": "VERIFIED FROM SAVED VECTOR"
+  },
+  {
+    "name": "cell11_fold3",
+    "energy": -14.177170425055476,
+    "residual": 6.64324358412609e-09,
+    "status": "VERIFIED FROM SAVED VECTOR"
+  },
+  {
+    "name": "other",
+    "energy": -14.266683821871894,
+    "residual": 5.08815567960369e-10,
+    "status": "VERIFIED FROM SAVED VECTOR"
+  }
+]

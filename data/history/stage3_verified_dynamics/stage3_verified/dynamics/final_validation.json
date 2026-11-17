@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "verified_crossing_poles": 2,
+  "verified_weak_poles": 2,
+  "reference_moment_max_error": 6.193490165173898e-12,
+  "quadrature_M0_M1_M2_matrix_norm_errors": [
+    2.8445917799073156e-15,
+    7.716229546889964e-15,
+    2.444529058792141e-14
+  ],
+  "positive_partial_moment_remainder_minimum_eigenvalues_M0_M1_M2": [
+    0.1689930202601375,
+    0.009944468971956655,
+    0.010790894720351352
+  ],
+  "interpretation": "Quadrature nodes remain approximate, irrespective of moment closure. No unconverged Ritz value is promoted to a physical pole."
+}

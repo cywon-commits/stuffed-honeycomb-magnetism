@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "blocks": [
+    {
+      "cell_n": [
+        1,
+        2
+      ],
+      "conjugate_cell_n": [
+        2,
+        1
+      ],
+      "reflection_character": 0,
+      "phase_conjugation_error": 2.494915946531976e-15,
+      "H_conjugation_error": 1.6309373165682106e-15
+    },
+    {
+      "cell_n": [
+        1,
+        0
+      ],
+      "conjugate_cell_n": [
+        2,
+        0
+      ],
+      "reflection_character": 0,
+      "phase_conjugation_error": 1.4475537224895361e-15,
+      "H_conjugation_error": 1.0632123814990469e-15
+    },
+    {
+      "cell_n": [
+        1,
+        0
+      ],
+      "conjugate_cell_n": [
+        2,
+        0
+      ],
+      "reflection_character": 1,
+      "phase_conjugation_error": 2.437438961788735e-15,
+      "H_conjugation_error": 1.6069390830615682e-15
+    }
+  ],
+  "operator_conjugation_error": 0.0,
+  "identity": "The conjugate source at -k0 probed at -k has target -(k0+k) and moment/residue matrices conjugate to the original forward matrices. This is distinct from reversing only the probe around the original k0 source. Real bond couplings make the identity valid at both couplings."
+}

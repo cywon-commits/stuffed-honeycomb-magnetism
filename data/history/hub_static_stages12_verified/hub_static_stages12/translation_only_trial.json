@@ -1,0 +1,10 @@
+{
+  "status": "STOPPED_TO_USE_VALIDATED_ADDITIONAL_SYMMETRY",
+  "converged": false,
+  "last_progress_record": {
+    "matvec_calls": 250,
+    "elapsed_seconds": 524.4067413949997,
+    "peak_rss_MiB": 1558.9921875
+  },
+  "note": "No Ritz value is available or treated as an eigenvalue. This trial is superseded by complete cyclic little-group coverage."
+}

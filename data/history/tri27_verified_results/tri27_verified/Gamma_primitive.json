@@ -1,0 +1,88 @@
+{
+  "energy": -14.529841875985394,
+  "residual": 8.047228489381294e-10,
+  "converged": true,
+  "iterations": 100,
+  "matvec_calls": 101,
+  "matvec_seconds": 53.744274302999656,
+  "solve_seconds": 80.06673777900005,
+  "peak_rss_MiB": 1423.3203125,
+  "history": [
+    {
+      "iteration": 10,
+      "ritz": -12.650859003068062,
+      "recurrence_residual": 1.8048185304829654,
+      "elapsed_seconds": 7.3463451480000685
+    },
+    {
+      "iteration": 20,
+      "ritz": -14.482199034941686,
+      "recurrence_residual": 0.38254900164790345,
+      "elapsed_seconds": 14.72020275500006
+    },
+    {
+      "iteration": 30,
+      "ritz": -14.519056222704807,
+      "recurrence_residual": 0.042522310173992495,
+      "elapsed_seconds": 22.851903816000004
+    },
+    {
+      "iteration": 40,
+      "ritz": -14.525378119749398,
+      "recurrence_residual": 0.11038435884649257,
+      "elapsed_seconds": 28.59877676300016
+    },
+    {
+      "iteration": 50,
+      "ritz": -14.529822368914445,
+      "recurrence_residual": 0.009403963752680112,
+      "elapsed_seconds": 34.642639501000076
+    },
+    {
+      "iteration": 60,
+      "ritz": -14.529841792436997,
+      "recurrence_residual": 0.0006326478836375407,
+      "elapsed_seconds": 41.28098745600005
+    },
+    {
+      "iteration": 70,
+      "ritz": -14.529841875880983,
+      "recurrence_residual": 2.2331975192953005e-05,
+      "elapsed_seconds": 48.82444238400012
+    },
+    {
+      "iteration": 80,
+      "ritz": -14.529841875985248,
+      "recurrence_residual": 8.074847453835117e-07,
+      "elapsed_seconds": 60.49996516800002
+    },
+    {
+      "iteration": 90,
+      "ritz": -14.52984187598539,
+      "recurrence_residual": 2.7917981053668153e-08,
+      "elapsed_seconds": 69.50879010200015
+    },
+    {
+      "iteration": 100,
+      "ritz": -14.52984187598539,
+      "recurrence_residual": 8.04722847620952e-10,
+      "elapsed_seconds": 78.53156563300013,
+      "energy": -14.529841875985394,
+      "residual": 8.047228489381294e-10
+    }
+  ],
+  "maxiter": 180,
+  "tolerance": 1e-08,
+  "seed": 2026,
+  "threads": 2,
+  "copy_reorth": false,
+  "q": [
+    0.0,
+    0.0
+  ],
+  "full_dim": 20058300,
+  "sector_dim": 742900,
+  "setup_seconds": 2.0121424820000584,
+  "benchmark_matvec_seconds": 0.6192112969999926,
+  "hermiticity_absolute": 8.688952061272272e-17
+}

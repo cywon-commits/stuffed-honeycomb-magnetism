@@ -1,0 +1,30 @@
+[
+  {
+    "name": "p0.387500000_n00_r0_e0",
+    "C6_character": 0,
+    "reflection_parity": 1,
+    "rotation_eigen_residual": 7.934802744766764e-17,
+    "reflection_eigen_residual": 3.4540516671974134e-11
+  },
+  {
+    "name": "p0.387500000_n00_r3_e0",
+    "C6_character": 3,
+    "reflection_parity": -1,
+    "rotation_eigen_residual": 1.4092849202171844e-16,
+    "reflection_eigen_residual": 3.129038315771006e-12
+  },
+  {
+    "name": "p0.392187500_n00_r0_e0",
+    "C6_character": 0,
+    "reflection_parity": 1,
+    "rotation_eigen_residual": 7.31754838849909e-17,
+    "reflection_eigen_residual": 3.7508350560387735e-11
+  },
+  {
+    "name": "p0.392187500_n00_r3_e0",
+    "C6_character": 3,
+    "reflection_parity": -1,
+    "rotation_eigen_residual": 1.42262349739174e-16,
+    "reflection_eigen_residual": 9.962096016801943e-12
+  }
+]

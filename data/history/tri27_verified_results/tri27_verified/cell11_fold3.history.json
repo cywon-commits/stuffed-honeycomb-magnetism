@@ -1,0 +1,82 @@
+[
+  {
+    "iteration": 10,
+    "ritz": -12.68357693185044,
+    "recurrence_residual": 1.5293619095620063,
+    "elapsed_seconds": 3.5892933940000376
+  },
+  {
+    "iteration": 20,
+    "ritz": -13.9750889899683,
+    "recurrence_residual": 0.4397027124890044,
+    "elapsed_seconds": 9.200676596999983
+  },
+  {
+    "iteration": 30,
+    "ritz": -14.123134420253821,
+    "recurrence_residual": 0.2865817578191677,
+    "elapsed_seconds": 13.812044452999999
+  },
+  {
+    "iteration": 40,
+    "ritz": -14.16469372357362,
+    "recurrence_residual": 0.09172715795866541,
+    "elapsed_seconds": 19.35059853100006
+  },
+  {
+    "iteration": 50,
+    "ritz": -14.174279446906699,
+    "recurrence_residual": 0.06830049435667543,
+    "elapsed_seconds": 25.402010474000008
+  },
+  {
+    "iteration": 60,
+    "ritz": -14.176949703305333,
+    "recurrence_residual": 0.024733775749170635,
+    "elapsed_seconds": 31.944282821
+  },
+  {
+    "iteration": 70,
+    "ritz": -14.177165216986808,
+    "recurrence_residual": 0.0036466978988937797,
+    "elapsed_seconds": 38.992015219999985
+  },
+  {
+    "iteration": 80,
+    "ritz": -14.177170340274722,
+    "recurrence_residual": 0.0005130534828947411,
+    "elapsed_seconds": 46.58350456300002
+  },
+  {
+    "iteration": 90,
+    "ritz": -14.17717042406764,
+    "recurrence_residual": 5.9839943400229065e-05,
+    "elapsed_seconds": 55.050906854999994
+  },
+  {
+    "iteration": 100,
+    "ritz": -14.177170425044425,
+    "recurrence_residual": 5.02880843841949e-06,
+    "elapsed_seconds": 64.69648078900002
+  },
+  {
+    "iteration": 110,
+    "ritz": -14.17717042505509,
+    "recurrence_residual": 1.125171259534705e-06,
+    "elapsed_seconds": 74.06346478300009
+  },
+  {
+    "iteration": 120,
+    "ritz": -14.177170425055484,
+    "recurrence_residual": 1.1134971740255846e-07,
+    "elapsed_seconds": 84.28187973900003
+  },
+  {
+    "iteration": 130,
+    "ritz": -14.177170425055486,
+    "recurrence_residual": 6.6432435755028445e-09,
+    "elapsed_seconds": 95.22414225700004,
+    "energy": -14.177170425055476,
+    "residual": 6.64324358412609e-09
+  }
+]

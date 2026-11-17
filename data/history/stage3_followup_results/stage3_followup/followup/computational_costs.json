@@ -1,0 +1,11 @@
+{
+  "new_verified_eigenpairs": 9,
+  "iterative_H_calls": 1916,
+  "sum_completed_solve_wall_seconds": 5671.65855452,
+  "maximum_process_peak_RSS_MiB": 1588.8046875,
+  "CPU_quota": 2,
+  "RAM_cap_GiB": 8,
+  "OpenMP_threads_per_model": 2,
+  "BLAS_threads": 1,
+  "scope": "Completed solve walls include spin checks/checkpoint I/O and overlap in real time. H calls count iterative Hamiltonian applications, excluding seed Casimir projections and post-validation. Source preparation, matched baseline moment computation, and final validation are separately scoped. Duplicate-worker partial cost is disclosed separately and excluded from these accepted-solve sums."
+}

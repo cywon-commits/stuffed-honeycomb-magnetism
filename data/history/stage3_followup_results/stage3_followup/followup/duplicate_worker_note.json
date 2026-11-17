@@ -1,0 +1,5 @@
+{
+  "incident": "A second controller started a duplicate j=0.2 even-reflection solve. It was terminated before exporting any eigenpair.",
+  "discarded_worker_observed_elapsed_seconds_approximately": 179,
+  "final_records": "Only the surviving worker writes the accepted root JSON/checkpoint. The early r0 comparison progress log may contain interleaved attempts and null padding; do not sum it as one convergence trajectory. Completed-root JSON gives the measured accepted-run H calls and wall time."
+}

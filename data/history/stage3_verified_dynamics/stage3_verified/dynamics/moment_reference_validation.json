@@ -1,0 +1,6 @@
+{
+  "maximum_error": 6.193490165173898e-12,
+  "entries": 30,
+  "second_moment_reference": "Not supplied; M2 is newly evaluated as (D B)^dagger(D B), validated by small-cluster complete spectral sums.",
+  "forward_reverse_M1_matrix_difference": 1.9766116491188786e-14
+}

@@ -1,0 +1,3 @@
+physical_sector,n1,n2,"primitive_k=(n1/3,n2/3)",code_cell_k,dimension,energy_J,residual_J,iterations,solve_seconds,peak_rss_MiB,CPU_quota,OpenMP_threads,RAM_cap_GiB,status
+Gamma_primitive,0,0,"(0/3,0/3)","(0,0)",742900,-14.529841875985394,8.047228489381294e-10,100,80.06673777900005,1423.3203125,2,2,8,CONVERGED
+K_primitive,1,2,"(1/3,2/3)","(0,0)",742900,-15.125973385092479,8.295612194315798e-09,70,39.71806542100012,1085.87890625,2,2,8,CONVERGED

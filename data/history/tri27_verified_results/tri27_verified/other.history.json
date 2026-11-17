@@ -1,0 +1,76 @@
+[
+  {
+    "iteration": 10,
+    "ritz": -12.619935826418976,
+    "recurrence_residual": 1.6381248798592145,
+    "elapsed_seconds": 5.593618272999947
+  },
+  {
+    "iteration": 20,
+    "ritz": -14.152180440020812,
+    "recurrence_residual": 0.5767124858905713,
+    "elapsed_seconds": 10.212912673000005
+  },
+  {
+    "iteration": 30,
+    "ritz": -14.25758736264787,
+    "recurrence_residual": 0.057838339199889746,
+    "elapsed_seconds": 15.248996527000031
+  },
+  {
+    "iteration": 40,
+    "ritz": -14.259613062956873,
+    "recurrence_residual": 0.04777656725849492,
+    "elapsed_seconds": 20.789515824999967
+  },
+  {
+    "iteration": 50,
+    "ritz": -14.265476334757757,
+    "recurrence_residual": 0.0608016658793786,
+    "elapsed_seconds": 26.71347365500003
+  },
+  {
+    "iteration": 60,
+    "ritz": -14.266672775655675,
+    "recurrence_residual": 0.006630696347824538,
+    "elapsed_seconds": 37.046803602999944
+  },
+  {
+    "iteration": 70,
+    "ritz": -14.266683756115434,
+    "recurrence_residual": 0.0005003795458062876,
+    "elapsed_seconds": 46.598517690999984
+  },
+  {
+    "iteration": 80,
+    "ritz": -14.266683821494343,
+    "recurrence_residual": 3.913716463203657e-05,
+    "elapsed_seconds": 55.29463104700005
+  },
+  {
+    "iteration": 90,
+    "ritz": -14.266683821870563,
+    "recurrence_residual": 2.3017794319723944e-06,
+    "elapsed_seconds": 64.61758719
+  },
+  {
+    "iteration": 100,
+    "ritz": -14.266683821871919,
+    "recurrence_residual": 1.4151231448782618e-07,
+    "elapsed_seconds": 73.34437686000001
+  },
+  {
+    "iteration": 110,
+    "ritz": -14.26668382187192,
+    "recurrence_residual": 1.0950742900581259e-08,
+    "elapsed_seconds": 88.57305549
+  },
+  {
+    "iteration": 120,
+    "ritz": -14.266683821871922,
+    "recurrence_residual": 5.088155908930533e-10,
+    "elapsed_seconds": 101.89027351000004,
+    "energy": -14.266683821871894,
+    "residual": 5.08815567960369e-10
+  }
+]

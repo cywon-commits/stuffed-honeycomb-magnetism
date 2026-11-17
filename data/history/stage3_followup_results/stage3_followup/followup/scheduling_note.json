@@ -1,0 +1,4 @@
+{
+  "paused_j02_comparison_seconds": 136.021422455,
+  "reason": "Prioritize remaining 0.2375 solves and reduce OpenMP oversubscription under two-CPU quota. Comparison timer includes this pause."
+}

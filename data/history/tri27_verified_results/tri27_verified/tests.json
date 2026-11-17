@@ -1,0 +1,201 @@
+[
+  {
+    "uploaded_geometry_exact_match": true
+  },
+  {
+    "three_site_analytic_spectrum_error": 0.0
+  },
+  {
+    "27_site_fully_polarized_energy": 20.25
+  },
+  {
+    "geometry_L": 2,
+    "sites": 12,
+    "bonds": 36,
+    "degree": 6,
+    "independent_geometry_match": true
+  },
+  {
+    "geometry_L": 3,
+    "sites": 27,
+    "bonds": 81,
+    "degree": 6,
+    "independent_geometry_match": true
+  },
+  {
+    "primitive": true,
+    "Jp": 1.0,
+    "q": [
+      0.0,
+      0.0
+    ],
+    "dimension": 84,
+    "projection_error_frobenius": 5.627199105561947e-15
+  },
+  {
+    "primitive": true,
+    "Jp": 1.0,
+    "q": [
+      0.0,
+      0.5
+    ],
+    "dimension": 76,
+    "projection_error_frobenius": 5.256387047530108e-15
+  },
+  {
+    "primitive": true,
+    "Jp": 1.0,
+    "q": [
+      0.16666666666666666,
+      0.3333333333333333
+    ],
+    "dimension": 75,
+    "projection_error_frobenius": 8.659209900853044e-15
+  },
+  {
+    "primitive": true,
+    "Jp": 1.0,
+    "q": [
+      0.16666666666666666,
+      0.8333333333333334
+    ],
+    "dimension": 75,
+    "projection_error_frobenius": 8.210817677711246e-15
+  },
+  {
+    "primitive": true,
+    "Jp": 1.0,
+    "q": [
+      0.3333333333333333,
+      0.16666666666666666
+    ],
+    "dimension": 75,
+    "projection_error_frobenius": 1.2002960943584601e-14
+  },
+  {
+    "primitive": true,
+    "Jp": 1.0,
+    "q": [
+      0.3333333333333333,
+      0.6666666666666666
+    ],
+    "dimension": 81,
+    "projection_error_frobenius": 1.4698860815860004e-14
+  },
+  {
+    "primitive": true,
+    "Jp": 1.0,
+    "q": [
+      0.5,
+      0.0
+    ],
+    "dimension": 76,
+    "projection_error_frobenius": 6.239605264677776e-15
+  },
+  {
+    "primitive": true,
+    "Jp": 1.0,
+    "q": [
+      0.5,
+      0.5
+    ],
+    "dimension": 76,
+    "projection_error_frobenius": 6.741963939671717e-15
+  },
+  {
+    "primitive": true,
+    "Jp": 1.0,
+    "q": [
+      0.6666666666666666,
+      0.3333333333333333
+    ],
+    "dimension": 81,
+    "projection_error_frobenius": 2.1683120466075215e-14
+  },
+  {
+    "primitive": true,
+    "Jp": 1.0,
+    "q": [
+      0.6666666666666666,
+      0.8333333333333334
+    ],
+    "dimension": 75,
+    "projection_error_frobenius": 2.090460147395721e-14
+  },
+  {
+    "primitive": true,
+    "Jp": 1.0,
+    "q": [
+      0.8333333333333334,
+      0.16666666666666666
+    ],
+    "dimension": 75,
+    "projection_error_frobenius": 1.100044463494383e-14
+  },
+  {
+    "primitive": true,
+    "Jp": 1.0,
+    "q": [
+      0.8333333333333334,
+      0.6666666666666666
+    ],
+    "dimension": 75,
+    "projection_error_frobenius": 1.424807322933478e-14
+  },
+  {
+    "primitive": true,
+    "complete_spectrum_error": 3.375077994860476e-14
+  },
+  {
+    "primitive": false,
+    "Jp": 0.73,
+    "q": [
+      0.0,
+      0.0
+    ],
+    "dimension": 246,
+    "projection_error_frobenius": 3.975931712634214e-15
+  },
+  {
+    "primitive": false,
+    "Jp": 0.73,
+    "q": [
+      0.0,
+      0.5
+    ],
+    "dimension": 226,
+    "projection_error_frobenius": 3.3278995468105427e-15
+  },
+  {
+    "primitive": false,
+    "Jp": 0.73,
+    "q": [
+      0.16666666666666666,
+      0.3333333333333333
+    ],
+    "dimension": 226,
+    "projection_error_frobenius": 3.214966240957448e-15
+  },
+  {
+    "primitive": false,
+    "Jp": 0.73,
+    "q": [
+      0.16666666666666666,
+      0.8333333333333334
+    ],
+    "dimension": 226,
+    "projection_error_frobenius": 4.21129987167097e-15
+  },
+  {
+    "primitive": false,
+    "complete_spectrum_error": 4.884981308350689e-14
+  },
+  {
+    "lanczos_small_energy": -7.323961625254615,
+    "residual": 6.834193513537044e-14
+  },
+  {
+    "nonconvergence_label_test": true,
+    "incompatible_momentum_rejected": true
+  }
+]

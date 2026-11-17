@@ -1,0 +1,10 @@
+{
+  "norm_error": 0.0,
+  "H_residual": 3.085234874124005e-14,
+  "spin": {
+    "S2": 0.7499999999999982,
+    "spin": 0.4999999999999991,
+    "nearest_half_integer_spin": 0.5,
+    "S2_eigen_residual": 9.91589613125975e-13
+  }
+}

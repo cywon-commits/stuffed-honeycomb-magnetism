@@ -1,0 +1,24 @@
+[
+  {
+    "shape": "K18",
+    "r_lo": 0.3640625,
+    "r_hi": 0.365625,
+    "width": 0.0015624999999999667,
+    "S_lo": 0,
+    "S_hi": 2,
+    "k_lo": "[[0, 0.0, 0.5]]",
+    "k_hi": "[[2, 0.0, 0.0]]",
+    "status": "VERIFIED_GROUND_ENDPOINTS; numerical energy-intersection refinement follows"
+  },
+  {
+    "shape": "K18",
+    "r_lo": 0.5015625,
+    "r_hi": 0.503125,
+    "width": 0.0015625000000000222,
+    "S_lo": 2,
+    "S_hi": 1,
+    "k_lo": "[[2, 0.0, 0.0]]",
+    "k_hi": "[[1, 0.0, 0.0]]",
+    "status": "VERIFIED_GROUND_ENDPOINTS; numerical energy-intersection refinement follows"
+  }
+]

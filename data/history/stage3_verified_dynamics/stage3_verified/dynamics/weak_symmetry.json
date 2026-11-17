@@ -1,0 +1,24 @@
+[
+  {
+    "file": "weak_pole_0.npz",
+    "reflection_index_in_pg6": 1,
+    "reflection_parity": 1,
+    "reflection_eigen_residual": 8.748000600770032e-16,
+    "energy": -10.224686239870218,
+    "cell_n": [
+      1,
+      0
+    ]
+  },
+  {
+    "file": "weak_pole_1.npz",
+    "reflection_index_in_pg6": 1,
+    "reflection_parity": -1,
+    "reflection_eigen_residual": 1.1801766459270332e-15,
+    "energy": -10.22465538205773,
+    "cell_n": [
+      1,
+      0
+    ]
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "fresh_compact_archive_cached_reproduction": true,
+  "byte_identical_scientific_files": [
+    "verified_poles.csv",
+    "complex_residues.csv",
+    "cumulative_weight_bounds.csv",
+    "spectral_remainders.json",
+    "four_channel_exact_moments.json",
+    "verified_poles.json"
+  ],
+  "overlap_cache_note": "The compact archive reuses independently verified vector-overlap evidence. Fresh vector validation requires the full checkpoint archive."
+}

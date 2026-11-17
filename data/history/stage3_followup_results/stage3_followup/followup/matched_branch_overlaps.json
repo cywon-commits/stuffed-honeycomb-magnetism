@@ -1,0 +1,50 @@
+[
+  {
+    "reflection_character": 0,
+    "spin": 0.5,
+    "abs_overlap": 0.9986897148946744,
+    "matching": "Same reflection/S labels and direct common-basis cyclic-sector eigenvector overlap; not sorted-index-only matching."
+  },
+  {
+    "reflection_character": 1,
+    "spin": 0.5,
+    "abs_overlap": 0.9987247216791866,
+    "matching": "Same reflection/S labels and direct common-basis cyclic-sector eigenvector overlap; not sorted-index-only matching."
+  },
+  {
+    "source": "j0.2_r0_root2",
+    "target": "j0.2375_r0_root2",
+    "reflection_character": 0,
+    "spin": 0.5,
+    "abs_overlap": 0.9988653381743388,
+    "status": "MATCHED",
+    "matching": "Maximum-total-overlap one-to-one assignment within equal spin and reflection; not sorted-index matching."
+  },
+  {
+    "source": "j0.2_r0_root1",
+    "target": "j0.2375_r0_root1",
+    "reflection_character": 0,
+    "spin": 1.5,
+    "abs_overlap": 0.9987551742993139,
+    "status": "MATCHED",
+    "matching": "Maximum-total-overlap one-to-one assignment within equal spin and reflection; not sorted-index matching."
+  },
+  {
+    "source": "j0.2_r0_root3",
+    "target": "j0.2375_r0_root3",
+    "reflection_character": 0,
+    "spin": 1.5,
+    "abs_overlap": 0.9988913598802909,
+    "status": "MATCHED",
+    "matching": "Maximum-total-overlap one-to-one assignment within equal spin and reflection; not sorted-index matching."
+  },
+  {
+    "source": "j0.2_r1_root1",
+    "target": "j0.2375_r1_root1",
+    "reflection_character": 1,
+    "spin": 1.5,
+    "abs_overlap": 0.9989400776331083,
+    "status": "MATCHED",
+    "matching": "Maximum-total-overlap one-to-one assignment within equal spin and reflection; not sorted-index matching."
+  }
+]
