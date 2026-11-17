@@ -44,7 +44,8 @@ Usage:
 See `results/validation_N12.json` and `results/validation_reference_18_27.json`.
 
 - **N = 12, r = 0.3 / 0.77 / 1.0:** the union of the 36 sector spectra equals the full 924-state Sz = 0 spectrum, max |ΔE| = 3e-14; Hermiticity error ≤ 3e-15; every sector dimension equals its Burnside count.
-- **N = 18 / 27:** see the reference-validation results file (per-momentum lowest energies vs. the archived NEW_18_SPIN_ED data; global 27-spin ground state vs. the verified checkpoint).
+- **N = 18 (K18, C18), r = 0.1 / 0.3 / 0.5 / 1.0:** lowest energy in every one of the 6 momenta agrees with the archived NEW_18_SPIN_ED data to ≤ 1.8e-14; global ground energies agree to ≤ 1.1e-14; eigenvector residuals ‖Hψ − Eψ‖ < 1e-9.
+- **N = 27 (Sz = 1/2, no spin flip), r = 0.2 / 0.2375:** global ground energies −10.185949128477 and −10.224890752095 agree with the verified 27-spin checkpoints to 1.4e-14 and 5e-15; the ground-state momentum is the reference K point (found at −k, i.e. the opposite Fourier sign convention).
 
 ## Measured N = 36 benchmark (this environment)
 
