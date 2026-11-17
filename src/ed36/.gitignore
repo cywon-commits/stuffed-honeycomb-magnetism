@@ -1,0 +1,7 @@
+# build products and regenerable sector specs
+ed_sym
+ed_sym_new
+specs/
+specs_*.txt
+*.lz
+*.vec
