@@ -210,7 +210,7 @@ struct Basis {
     hubidx.assign(H, -1); int nb = 0;
     for (u64 h : hubs) hubidx[h] = nb++;
     double per = (double)tot / std::max(1, nb);
-    rb = 0; while (rb < S.NR && (double)(1ULL << rb) * 64 < per) rb++;
+    rb = 0; while (rb < S.NR && (double)(1ULL << rb) * 2 < per) rb++;
     size_t nbk = (size_t)nb << rb;
     off.assign(nbk + 1, 0);
     for (u64 s : reps) off[key(s) + 1]++;
