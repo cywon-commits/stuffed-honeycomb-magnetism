@@ -1,0 +1,242 @@
+[
+  {
+    "a": 0.2,
+    "b": 0.21875,
+    "excluded_other_families": false,
+    "unresolved_families": [
+      [
+        [
+          0,
+          1
+        ],
+        0
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        1
+      ]
+    ],
+    "family_margins": [
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 0,
+        "minimum_margin": 0.0008877635215913671
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 1,
+        "minimum_margin": 0.014430715268565208
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 2,
+        "minimum_margin": 0.01576885871188871
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 3,
+        "minimum_margin": 0.0006327670327994639
+      },
+      {
+        "cell_n": [
+          0,
+          1
+        ],
+        "character": 0,
+        "minimum_margin": -0.00036354552502082527
+      },
+      {
+        "cell_n": [
+          0,
+          1
+        ],
+        "character": 1,
+        "minimum_margin": -0.00034941304773106197
+      },
+      {
+        "cell_n": [
+          1,
+          2
+        ],
+        "character": 1,
+        "minimum_margin": 0.014443826595289977
+      }
+    ],
+    "sampling_points_for_piecewise_linear_bounds": 38
+  },
+  {
+    "a": 0.21875,
+    "b": 0.2375,
+    "excluded_other_families": false,
+    "unresolved_families": [
+      [
+        [
+          0,
+          1
+        ],
+        0
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        1
+      ]
+    ],
+    "family_margins": [
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 0,
+        "minimum_margin": 0.0013070966950863294
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 1,
+        "minimum_margin": 0.015137367650236655
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 2,
+        "minimum_margin": 0.016716601124565855
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 3,
+        "minimum_margin": 0.0009376205606024257
+      },
+      {
+        "cell_n": [
+          0,
+          1
+        ],
+        "character": 0,
+        "minimum_margin": -0.0003259417527701203
+      },
+      {
+        "cell_n": [
+          0,
+          1
+        ],
+        "character": 1,
+        "minimum_margin": -0.00030153384129860683
+      },
+      {
+        "cell_n": [
+          1,
+          2
+        ],
+        "character": 1,
+        "minimum_margin": 0.015154771855430127
+      }
+    ],
+    "sampling_points_for_piecewise_linear_bounds": 83
+  },
+  {
+    "a": 0.2375,
+    "b": 0.25625,
+    "excluded_other_families": false,
+    "unresolved_families": [
+      [
+        [
+          0,
+          1
+        ],
+        0
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        1
+      ]
+    ],
+    "family_margins": [
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 0,
+        "minimum_margin": 0.0013004965112202171
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 1,
+        "minimum_margin": 0.01755362859688603
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 2,
+        "minimum_margin": 0.01961756709006046
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 3,
+        "minimum_margin": 0.0012973560498661385
+      },
+      {
+        "cell_n": [
+          0,
+          1
+        ],
+        "character": 0,
+        "minimum_margin": -0.00027409521516652546
+      },
+      {
+        "cell_n": [
+          0,
+          1
+        ],
+        "character": 1,
+        "minimum_margin": -0.00023204481966487833
+      },
+      {
+        "cell_n": [
+          1,
+          2
+        ],
+        "character": 1,
+        "minimum_margin": 0.017579663518700883
+      }
+    ],
+    "sampling_points_for_piecewise_linear_bounds": 185
+  }
+]

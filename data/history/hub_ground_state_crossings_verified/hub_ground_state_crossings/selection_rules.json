@@ -1,0 +1,34 @@
+[
+  {
+    "crossing": 1,
+    "bracket": [
+      0.25625,
+      0.2609375
+    ],
+    "delta_S": 3.0,
+    "single_spin_rank_one_allowed": false,
+    "required_transfer_cell_n": [
+      2,
+      1
+    ],
+    "n_Gamma_symmetry_allowed": false,
+    "m_h_Gamma_symmetry_allowed": false,
+    "scope": "Analytic selection rules only; transition matrix elements and spectral weights have NOT been calculated."
+  },
+  {
+    "crossing": 2,
+    "bracket": [
+      0.3875,
+      0.3921875
+    ],
+    "delta_S": 1.0,
+    "single_spin_rank_one_allowed": true,
+    "required_transfer_cell_n": [
+      0,
+      0
+    ],
+    "n_Gamma_symmetry_allowed": true,
+    "m_h_Gamma_symmetry_allowed": false,
+    "scope": "Analytic selection rules only; transition matrix elements and spectral weights have NOT been calculated."
+  }
+]

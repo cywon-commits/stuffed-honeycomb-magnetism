@@ -1,0 +1,478 @@
+{
+  "Jp": 0.2,
+  "global_ground_identified": true,
+  "winner": {
+    "name": "endpoint_j0.2_n12_r0",
+    "Jp": 0.2,
+    "cell_n": [
+      1,
+      2
+    ],
+    "character": 0,
+    "physical_root_index": 0,
+    "energy": -10.1859491284774,
+    "residual": 2.8171892745612456e-14,
+    "spin": 0.5,
+    "spin_check": {
+      "Jp": 0.2,
+      "cell_n": [
+        1,
+        2
+      ],
+      "character": 0,
+      "energy": -10.1859491284774,
+      "S2": 0.7499999999999984,
+      "spin": 0.4999999999999992,
+      "nearest_half_integer_spin": 0.5,
+      "S2_eigen_residual": 5.799277077539944e-13
+    },
+    "verified": true,
+    "dimension": 742900,
+    "reference_endpoint": true,
+    "reflection_parity": 1,
+    "reflection_eigen_residual": 8.421049736047732e-11
+  },
+  "label": [
+    [
+      1,
+      2
+    ],
+    0,
+    0.5,
+    1
+  ],
+  "sector_minima": {
+    "(0, 0)": {
+      "cell_n": [
+        0,
+        0
+      ],
+      "lowest_measured": {
+        "name": "endpoint_j0.2_n00_r3",
+        "Jp": 0.2,
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 3,
+        "physical_root_index": 0,
+        "energy": -10.184979067204068,
+        "residual": 7.140706764981639e-12,
+        "spin": 1.5,
+        "spin_check": {
+          "Jp": 0.2,
+          "cell_n": [
+            0,
+            0
+          ],
+          "character": 3,
+          "energy": -10.184979067204068,
+          "S2": 3.7500000000000075,
+          "spin": 1.5000000000000018,
+          "nearest_half_integer_spin": 1.5,
+          "S2_eigen_residual": 2.3785622297279114e-11
+        },
+        "verified": true,
+        "dimension": 371232,
+        "reference_endpoint": true
+      },
+      "energy_lower_bound": -10.184979068204068,
+      "minimum_identified": true
+    },
+    "(0, 1)": {
+      "cell_n": [
+        0,
+        1
+      ],
+      "lowest_measured": {
+        "name": "endpoint_j0.2_n01_r0",
+        "Jp": 0.2,
+        "cell_n": [
+          0,
+          1
+        ],
+        "character": 0,
+        "physical_root_index": 0,
+        "energy": -10.185850940996136,
+        "residual": 3.278153959648013e-11,
+        "spin": 0.5,
+        "spin_check": {
+          "Jp": 0.2,
+          "cell_n": [
+            0,
+            1
+          ],
+          "character": 0,
+          "energy": -10.185850940996136,
+          "S2": 0.7500000000000011,
+          "spin": 0.5000000000000004,
+          "nearest_half_integer_spin": 0.5,
+          "S2_eigen_residual": 3.0218046821293223e-10
+        },
+        "verified": true,
+        "dimension": 1119396,
+        "reference_endpoint": true
+      },
+      "energy_lower_bound": -10.185850941996136,
+      "minimum_identified": true
+    },
+    "(1, 2)": {
+      "cell_n": [
+        1,
+        2
+      ],
+      "lowest_measured": {
+        "name": "endpoint_j0.2_n12_r0",
+        "Jp": 0.2,
+        "cell_n": [
+          1,
+          2
+        ],
+        "character": 0,
+        "physical_root_index": 0,
+        "energy": -10.1859491284774,
+        "residual": 2.8171892745612456e-14,
+        "spin": 0.5,
+        "spin_check": {
+          "Jp": 0.2,
+          "cell_n": [
+            1,
+            2
+          ],
+          "character": 0,
+          "energy": -10.1859491284774,
+          "S2": 0.7499999999999984,
+          "spin": 0.4999999999999992,
+          "nearest_half_integer_spin": 0.5,
+          "S2_eigen_residual": 5.799277077539944e-13
+        },
+        "verified": true,
+        "dimension": 742900,
+        "reference_endpoint": true,
+        "reflection_parity": 1,
+        "reflection_eigen_residual": 8.421049736047732e-11
+      },
+      "energy_lower_bound": -10.1859491294774,
+      "minimum_identified": true
+    }
+  },
+  "family_evidence": [
+    {
+      "family": [
+        [
+          0,
+          0
+        ],
+        0
+      ],
+      "kind": "MEASURED_EIGENPAIR",
+      "record": {
+        "name": "endpoint_j0.2_n00_r0",
+        "Jp": 0.2,
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 0,
+        "physical_root_index": 0,
+        "energy": -10.184773199593877,
+        "residual": 3.231571357378324e-11,
+        "spin": 1.5,
+        "spin_check": {
+          "Jp": 0.2,
+          "cell_n": [
+            0,
+            0
+          ],
+          "character": 0,
+          "energy": -10.184773199593877,
+          "S2": 3.7500000000000058,
+          "spin": 1.5000000000000013,
+          "nearest_half_integer_spin": 1.5,
+          "S2_eigen_residual": 1.2685377361973546e-10
+        },
+        "verified": true,
+        "dimension": 371808,
+        "reference_endpoint": true
+      }
+    },
+    {
+      "family": [
+        [
+          0,
+          0
+        ],
+        1
+      ],
+      "kind": "MEASURED_EIGENPAIR",
+      "record": {
+        "name": "endpoint_j0.2_n00_r1",
+        "Jp": 0.2,
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 1,
+        "physical_root_index": 0,
+        "energy": -10.171257705444294,
+        "residual": 3.2275431167316636e-13,
+        "spin": 0.5,
+        "spin_check": {
+          "Jp": 0.2,
+          "cell_n": [
+            0,
+            0
+          ],
+          "character": 1,
+          "energy": -10.171257705444294,
+          "S2": 0.7499999999999993,
+          "spin": 0.49999999999999967,
+          "nearest_half_integer_spin": 0.5,
+          "S2_eigen_residual": 1.7649342307101397e-11
+        },
+        "verified": true,
+        "dimension": 371130,
+        "reference_endpoint": true
+      }
+    },
+    {
+      "family": [
+        [
+          0,
+          0
+        ],
+        2
+      ],
+      "kind": "MEASURED_EIGENPAIR",
+      "record": {
+        "name": "endpoint_j0.2_n00_r2",
+        "Jp": 0.2,
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 2,
+        "physical_root_index": 0,
+        "energy": -10.170163176988808,
+        "residual": 8.192387353614035e-14,
+        "spin": 1.5,
+        "spin_check": {
+          "Jp": 0.2,
+          "cell_n": [
+            0,
+            0
+          ],
+          "character": 2,
+          "energy": -10.170163176988808,
+          "S2": 3.749999999999999,
+          "spin": 1.4999999999999998,
+          "nearest_half_integer_spin": 1.5,
+          "S2_eigen_residual": 2.1878691846135139e-13
+        },
+        "verified": true,
+        "dimension": 371700,
+        "reference_endpoint": true
+      }
+    },
+    {
+      "family": [
+        [
+          0,
+          0
+        ],
+        3
+      ],
+      "kind": "MEASURED_EIGENPAIR",
+      "record": {
+        "name": "endpoint_j0.2_n00_r3",
+        "Jp": 0.2,
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 3,
+        "physical_root_index": 0,
+        "energy": -10.184979067204068,
+        "residual": 7.140706764981639e-12,
+        "spin": 1.5,
+        "spin_check": {
+          "Jp": 0.2,
+          "cell_n": [
+            0,
+            0
+          ],
+          "character": 3,
+          "energy": -10.184979067204068,
+          "S2": 3.7500000000000075,
+          "spin": 1.5000000000000018,
+          "nearest_half_integer_spin": 1.5,
+          "S2_eigen_residual": 2.3785622297279114e-11
+        },
+        "verified": true,
+        "dimension": 371232,
+        "reference_endpoint": true
+      }
+    },
+    {
+      "family": [
+        [
+          0,
+          1
+        ],
+        0
+      ],
+      "kind": "MEASURED_EIGENPAIR",
+      "record": {
+        "name": "endpoint_j0.2_n01_r0",
+        "Jp": 0.2,
+        "cell_n": [
+          0,
+          1
+        ],
+        "character": 0,
+        "physical_root_index": 0,
+        "energy": -10.185850940996136,
+        "residual": 3.278153959648013e-11,
+        "spin": 0.5,
+        "spin_check": {
+          "Jp": 0.2,
+          "cell_n": [
+            0,
+            1
+          ],
+          "character": 0,
+          "energy": -10.185850940996136,
+          "S2": 0.7500000000000011,
+          "spin": 0.5000000000000004,
+          "nearest_half_integer_spin": 0.5,
+          "S2_eigen_residual": 3.0218046821293223e-10
+        },
+        "verified": true,
+        "dimension": 1119396,
+        "reference_endpoint": true
+      }
+    },
+    {
+      "family": [
+        [
+          0,
+          1
+        ],
+        1
+      ],
+      "kind": "MEASURED_EIGENPAIR",
+      "record": {
+        "name": "endpoint_j0.2_n01_r1",
+        "Jp": 0.2,
+        "cell_n": [
+          0,
+          1
+        ],
+        "character": 1,
+        "physical_root_index": 0,
+        "energy": -10.185840604003182,
+        "residual": 3.7569859348182016e-11,
+        "spin": 0.5,
+        "spin_check": {
+          "Jp": 0.2,
+          "cell_n": [
+            0,
+            1
+          ],
+          "character": 1,
+          "energy": -10.185840604003182,
+          "S2": 0.7499999999999973,
+          "spin": 0.49999999999999867,
+          "nearest_half_integer_spin": 0.5,
+          "S2_eigen_residual": 1.4762278395849338e-10
+        },
+        "verified": true,
+        "dimension": 1109304,
+        "reference_endpoint": true
+      }
+    },
+    {
+      "family": [
+        [
+          1,
+          2
+        ],
+        0
+      ],
+      "kind": "MEASURED_EIGENPAIR",
+      "record": {
+        "name": "endpoint_j0.2_n12_r0",
+        "Jp": 0.2,
+        "cell_n": [
+          1,
+          2
+        ],
+        "character": 0,
+        "physical_root_index": 0,
+        "energy": -10.1859491284774,
+        "residual": 2.8171892745612456e-14,
+        "spin": 0.5,
+        "spin_check": {
+          "Jp": 0.2,
+          "cell_n": [
+            1,
+            2
+          ],
+          "character": 0,
+          "energy": -10.1859491284774,
+          "S2": 0.7499999999999984,
+          "spin": 0.4999999999999992,
+          "nearest_half_integer_spin": 0.5,
+          "S2_eigen_residual": 5.799277077539944e-13
+        },
+        "verified": true,
+        "dimension": 742900,
+        "reference_endpoint": true,
+        "reflection_parity": 1,
+        "reflection_eigen_residual": 8.421049736047732e-11
+      }
+    },
+    {
+      "family": [
+        [
+          1,
+          2
+        ],
+        1
+      ],
+      "kind": "MEASURED_EIGENPAIR",
+      "record": {
+        "name": "endpoint_j0.2_n12_r1",
+        "Jp": 0.2,
+        "cell_n": [
+          1,
+          2
+        ],
+        "character": 1,
+        "physical_root_index": 0,
+        "energy": -10.171248931955724,
+        "residual": 3.433970633751545e-14,
+        "spin": 0.5,
+        "spin_check": {
+          "Jp": 0.2,
+          "cell_n": [
+            1,
+            2
+          ],
+          "character": 1,
+          "energy": -10.171248931955724,
+          "S2": 0.7500000000000006,
+          "spin": 0.5000000000000002,
+          "nearest_half_integer_spin": 0.5,
+          "S2_eigen_residual": 4.78640614568947e-11
+        },
+        "verified": true,
+        "dimension": 742900,
+        "reference_endpoint": true
+      }
+    }
+  ],
+  "unresolved_families": [],
+  "all_sector_minima_identified": true,
+  "bound_scope": "Conditional numerical exclusions: lowest-root identification at measured endpoints is supported by independent cold starts, direct residuals and validated ED, not an interval-arithmetic proof."
+}

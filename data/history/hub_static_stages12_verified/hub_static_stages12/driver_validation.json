@@ -1,0 +1,6 @@
+{
+  "physical_K_rejects_nonzero_cell_momentum": true,
+  "physical_Kprime_rejects_nonzero_cell_momentum": true,
+  "incomplete_sector_coverage_rejected": true,
+  "non_ground_checkpoint_rejected": true
+}

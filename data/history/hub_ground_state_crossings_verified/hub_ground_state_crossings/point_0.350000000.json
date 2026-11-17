@@ -1,0 +1,735 @@
+{
+  "Jp": 0.35,
+  "global_ground_identified": true,
+  "winner": {
+    "name": "p0.350000000_n00_r0_e0",
+    "Jp": 0.35,
+    "cell_n": [
+      0,
+      0
+    ],
+    "cell_k": [
+      0.0,
+      0.0
+    ],
+    "character": 0,
+    "cyclic_order": 6,
+    "physical_root_index": 0,
+    "dimension": 371808,
+    "ncv": 64,
+    "seed": 2026,
+    "start_type": "independent_random",
+    "model_cache_hit": true,
+    "setup_seconds": 0.005998599999657017,
+    "arpack_tol": 1e-11,
+    "verified": true,
+    "deflation_shift": 0,
+    "history": [
+      {
+        "name": "p0.350000000_n00_r0_e0",
+        "H_calls": 50,
+        "elapsed_seconds": 13.319020216998979
+      },
+      {
+        "name": "p0.350000000_n00_r0_e0",
+        "H_calls": 100,
+        "elapsed_seconds": 28.864109177999126
+      }
+    ],
+    "energy": -10.472017603235424,
+    "residual": 5.0007232543251477e-11,
+    "orthogonality_to_lower_roots": 0.0,
+    "spin_check": {
+      "S2": 15.75,
+      "spin": 3.5,
+      "nearest_half_integer_spin": 3.5,
+      "S2_eigen_residual": 2.582016572957432e-10
+    },
+    "spin": 3.5,
+    "slope_dE_dJp": -2.476100313954883,
+    "verification_seconds": 1.2925590760005434,
+    "status": "VERIFIED",
+    "H_calls": 129,
+    "H_kernel_seconds": 30.209158936988388,
+    "wall_seconds": 38.341833233000216,
+    "peak_rss_MiB": 2154.13671875,
+    "reflection_parity": 1,
+    "reflection_eigen_residual": 2.4514808408762552e-11
+  },
+  "label": [
+    [
+      0,
+      0
+    ],
+    0,
+    3.5,
+    1
+  ],
+  "sector_minima": {
+    "(0, 0)": {
+      "cell_n": [
+        0,
+        0
+      ],
+      "lowest_measured": {
+        "name": "p0.350000000_n00_r0_e0",
+        "Jp": 0.35,
+        "cell_n": [
+          0,
+          0
+        ],
+        "cell_k": [
+          0.0,
+          0.0
+        ],
+        "character": 0,
+        "cyclic_order": 6,
+        "physical_root_index": 0,
+        "dimension": 371808,
+        "ncv": 64,
+        "seed": 2026,
+        "start_type": "independent_random",
+        "model_cache_hit": true,
+        "setup_seconds": 0.005998599999657017,
+        "arpack_tol": 1e-11,
+        "verified": true,
+        "deflation_shift": 0,
+        "history": [
+          {
+            "name": "p0.350000000_n00_r0_e0",
+            "H_calls": 50,
+            "elapsed_seconds": 13.319020216998979
+          },
+          {
+            "name": "p0.350000000_n00_r0_e0",
+            "H_calls": 100,
+            "elapsed_seconds": 28.864109177999126
+          }
+        ],
+        "energy": -10.472017603235424,
+        "residual": 5.0007232543251477e-11,
+        "orthogonality_to_lower_roots": 0.0,
+        "spin_check": {
+          "S2": 15.75,
+          "spin": 3.5,
+          "nearest_half_integer_spin": 3.5,
+          "S2_eigen_residual": 2.582016572957432e-10
+        },
+        "spin": 3.5,
+        "slope_dE_dJp": -2.476100313954883,
+        "verification_seconds": 1.2925590760005434,
+        "status": "VERIFIED",
+        "H_calls": 129,
+        "H_kernel_seconds": 30.209158936988388,
+        "wall_seconds": 38.341833233000216,
+        "peak_rss_MiB": 2154.13671875,
+        "reflection_parity": 1,
+        "reflection_eigen_residual": 2.4514808408762552e-11
+      },
+      "energy_lower_bound": -10.472017604235424,
+      "minimum_identified": true
+    },
+    "(0, 1)": {
+      "cell_n": [
+        0,
+        1
+      ],
+      "lowest_measured": {
+        "name": "p0.350000000_n01_r0_e0",
+        "Jp": 0.35,
+        "cell_n": [
+          0,
+          1
+        ],
+        "cell_k": [
+          0.0,
+          0.3333333333333333
+        ],
+        "character": 0,
+        "cyclic_order": 2,
+        "physical_root_index": 0,
+        "dimension": 1119396,
+        "ncv": 64,
+        "seed": 2026,
+        "start_type": "independent_random",
+        "model_cache_hit": true,
+        "setup_seconds": 0.028915790000610286,
+        "arpack_tol": 1e-11,
+        "verified": true,
+        "deflation_shift": 0,
+        "history": [
+          {
+            "name": "p0.350000000_n01_r0_e0",
+            "H_calls": 50,
+            "elapsed_seconds": 37.57950391200029
+          },
+          {
+            "name": "p0.350000000_n01_r0_e0",
+            "H_calls": 100,
+            "elapsed_seconds": 89.39138453499982
+          },
+          {
+            "name": "p0.350000000_n01_r0_e0",
+            "H_calls": 150,
+            "elapsed_seconds": 148.7401203540012
+          },
+          {
+            "name": "p0.350000000_n01_r0_e0",
+            "H_calls": 200,
+            "elapsed_seconds": 229.18843745600134
+          },
+          {
+            "name": "p0.350000000_n01_r0_e0",
+            "H_calls": 250,
+            "elapsed_seconds": 361.54193481400034
+          }
+        ],
+        "energy": -10.420149856826626,
+        "residual": 5.119812771446591e-12,
+        "orthogonality_to_lower_roots": 0.0,
+        "spin_check": {
+          "S2": 8.749999999999973,
+          "spin": 2.4999999999999956,
+          "nearest_half_integer_spin": 2.5,
+          "S2_eigen_residual": 8.382593345170907e-11
+        },
+        "spin": 2.5,
+        "slope_dE_dJp": -2.5840300283941855,
+        "verification_seconds": 4.940919083999688,
+        "status": "VERIFIED",
+        "H_calls": 257,
+        "H_kernel_seconds": 232.65553825800453,
+        "wall_seconds": 378.60048890000144,
+        "peak_rss_MiB": 2302.78125
+      },
+      "energy_lower_bound": -10.420149857826626,
+      "minimum_identified": true
+    },
+    "(1, 2)": {
+      "cell_n": [
+        1,
+        2
+      ],
+      "lowest_measured": {
+        "name": "p0.350000000_n12_r0_e0",
+        "Jp": 0.35,
+        "cell_n": [
+          1,
+          2
+        ],
+        "cell_k": [
+          0.3333333333333333,
+          0.6666666666666666
+        ],
+        "character": 0,
+        "cyclic_order": 3,
+        "physical_root_index": 0,
+        "dimension": 742900,
+        "ncv": 64,
+        "seed": 2026,
+        "start_type": "independent_random",
+        "model_cache_hit": true,
+        "setup_seconds": 0.008432922999418224,
+        "arpack_tol": 1e-11,
+        "verified": true,
+        "deflation_shift": 0,
+        "history": [
+          {
+            "name": "p0.350000000_n12_r0_e0",
+            "H_calls": 50,
+            "elapsed_seconds": 33.26179722100096
+          },
+          {
+            "name": "p0.350000000_n12_r0_e0",
+            "H_calls": 100,
+            "elapsed_seconds": 70.14915121100057
+          },
+          {
+            "name": "p0.350000000_n12_r0_e0",
+            "H_calls": 150,
+            "elapsed_seconds": 103.80086100500012
+          },
+          {
+            "name": "p0.350000000_n12_r0_e0",
+            "H_calls": 200,
+            "elapsed_seconds": 138.27861155200117
+          }
+        ],
+        "energy": -10.392949925560032,
+        "residual": 4.212154930274472e-14,
+        "orthogonality_to_lower_roots": 0.0,
+        "spin_check": {
+          "S2": 0.7499999999999989,
+          "spin": 0.49999999999999944,
+          "nearest_half_integer_spin": 0.5,
+          "S2_eigen_residual": 2.82799019880412e-12
+        },
+        "spin": 0.5,
+        "slope_dE_dJp": -1.8699836286951315,
+        "verification_seconds": 2.61242141799994,
+        "status": "VERIFIED",
+        "H_calls": 225,
+        "H_kernel_seconds": 82.88632848100497,
+        "wall_seconds": 157.49982017900038,
+        "peak_rss_MiB": 2154.13671875
+      },
+      "energy_lower_bound": -10.392949926560032,
+      "minimum_identified": true
+    }
+  },
+  "family_evidence": [
+    {
+      "family": [
+        [
+          0,
+          0
+        ],
+        0
+      ],
+      "kind": "MEASURED_EIGENPAIR",
+      "record": {
+        "name": "p0.350000000_n00_r0_e0",
+        "Jp": 0.35,
+        "cell_n": [
+          0,
+          0
+        ],
+        "cell_k": [
+          0.0,
+          0.0
+        ],
+        "character": 0,
+        "cyclic_order": 6,
+        "physical_root_index": 0,
+        "dimension": 371808,
+        "ncv": 64,
+        "seed": 2026,
+        "start_type": "independent_random",
+        "model_cache_hit": true,
+        "setup_seconds": 0.005998599999657017,
+        "arpack_tol": 1e-11,
+        "verified": true,
+        "deflation_shift": 0,
+        "history": [
+          {
+            "name": "p0.350000000_n00_r0_e0",
+            "H_calls": 50,
+            "elapsed_seconds": 13.319020216998979
+          },
+          {
+            "name": "p0.350000000_n00_r0_e0",
+            "H_calls": 100,
+            "elapsed_seconds": 28.864109177999126
+          }
+        ],
+        "energy": -10.472017603235424,
+        "residual": 5.0007232543251477e-11,
+        "orthogonality_to_lower_roots": 0.0,
+        "spin_check": {
+          "S2": 15.75,
+          "spin": 3.5,
+          "nearest_half_integer_spin": 3.5,
+          "S2_eigen_residual": 2.582016572957432e-10
+        },
+        "spin": 3.5,
+        "slope_dE_dJp": -2.476100313954883,
+        "verification_seconds": 1.2925590760005434,
+        "status": "VERIFIED",
+        "H_calls": 129,
+        "H_kernel_seconds": 30.209158936988388,
+        "wall_seconds": 38.341833233000216,
+        "peak_rss_MiB": 2154.13671875,
+        "reflection_parity": 1,
+        "reflection_eigen_residual": 2.4514808408762552e-11
+      }
+    },
+    {
+      "family": [
+        [
+          0,
+          0
+        ],
+        1
+      ],
+      "kind": "CONCAVITY_LOWER_BOUND",
+      "energy_lower_bound": -10.408980227719606,
+      "bounds_endpoint_couplings": [
+        0.275,
+        0.5
+      ]
+    },
+    {
+      "family": [
+        [
+          0,
+          0
+        ],
+        2
+      ],
+      "kind": "CONCAVITY_LOWER_BOUND",
+      "energy_lower_bound": -10.439162939397683,
+      "bounds_endpoint_couplings": [
+        0.275,
+        0.5
+      ]
+    },
+    {
+      "family": [
+        [
+          0,
+          0
+        ],
+        3
+      ],
+      "kind": "MEASURED_EIGENPAIR",
+      "record": {
+        "name": "p0.350000000_n00_r3_e0",
+        "Jp": 0.35,
+        "cell_n": [
+          0,
+          0
+        ],
+        "cell_k": [
+          0.0,
+          0.0
+        ],
+        "character": 3,
+        "cyclic_order": 6,
+        "physical_root_index": 0,
+        "dimension": 371232,
+        "ncv": 64,
+        "seed": 2026,
+        "start_type": "independent_random",
+        "model_cache_hit": true,
+        "setup_seconds": 0.001327664000200457,
+        "arpack_tol": 1e-11,
+        "verified": true,
+        "deflation_shift": 0,
+        "history": [
+          {
+            "name": "p0.350000000_n00_r3_e0",
+            "H_calls": 50,
+            "elapsed_seconds": 17.321889023998665
+          },
+          {
+            "name": "p0.350000000_n00_r3_e0",
+            "H_calls": 100,
+            "elapsed_seconds": 38.2917668049995
+          },
+          {
+            "name": "p0.350000000_n00_r3_e0",
+            "H_calls": 150,
+            "elapsed_seconds": 55.29763670799912
+          }
+        ],
+        "energy": -10.391276783838112,
+        "residual": 1.7038196472809098e-12,
+        "orthogonality_to_lower_roots": 0.0,
+        "spin_check": {
+          "S2": 8.750000000000004,
+          "spin": 2.5000000000000004,
+          "nearest_half_integer_spin": 2.5,
+          "S2_eigen_residual": 6.9791326791944785e-12
+        },
+        "spin": 2.5,
+        "slope_dE_dJp": -4.40196014916635,
+        "verification_seconds": 1.3919011759990099,
+        "status": "VERIFIED",
+        "H_calls": 161,
+        "H_kernel_seconds": 50.53576335100479,
+        "wall_seconds": 61.85573422699963,
+        "peak_rss_MiB": 2154.13671875
+      }
+    },
+    {
+      "family": [
+        [
+          0,
+          1
+        ],
+        0
+      ],
+      "kind": "MEASURED_EIGENPAIR",
+      "record": {
+        "name": "p0.350000000_n01_r0_e0",
+        "Jp": 0.35,
+        "cell_n": [
+          0,
+          1
+        ],
+        "cell_k": [
+          0.0,
+          0.3333333333333333
+        ],
+        "character": 0,
+        "cyclic_order": 2,
+        "physical_root_index": 0,
+        "dimension": 1119396,
+        "ncv": 64,
+        "seed": 2026,
+        "start_type": "independent_random",
+        "model_cache_hit": true,
+        "setup_seconds": 0.028915790000610286,
+        "arpack_tol": 1e-11,
+        "verified": true,
+        "deflation_shift": 0,
+        "history": [
+          {
+            "name": "p0.350000000_n01_r0_e0",
+            "H_calls": 50,
+            "elapsed_seconds": 37.57950391200029
+          },
+          {
+            "name": "p0.350000000_n01_r0_e0",
+            "H_calls": 100,
+            "elapsed_seconds": 89.39138453499982
+          },
+          {
+            "name": "p0.350000000_n01_r0_e0",
+            "H_calls": 150,
+            "elapsed_seconds": 148.7401203540012
+          },
+          {
+            "name": "p0.350000000_n01_r0_e0",
+            "H_calls": 200,
+            "elapsed_seconds": 229.18843745600134
+          },
+          {
+            "name": "p0.350000000_n01_r0_e0",
+            "H_calls": 250,
+            "elapsed_seconds": 361.54193481400034
+          }
+        ],
+        "energy": -10.420149856826626,
+        "residual": 5.119812771446591e-12,
+        "orthogonality_to_lower_roots": 0.0,
+        "spin_check": {
+          "S2": 8.749999999999973,
+          "spin": 2.4999999999999956,
+          "nearest_half_integer_spin": 2.5,
+          "S2_eigen_residual": 8.382593345170907e-11
+        },
+        "spin": 2.5,
+        "slope_dE_dJp": -2.5840300283941855,
+        "verification_seconds": 4.940919083999688,
+        "status": "VERIFIED",
+        "H_calls": 257,
+        "H_kernel_seconds": 232.65553825800453,
+        "wall_seconds": 378.60048890000144,
+        "peak_rss_MiB": 2302.78125
+      }
+    },
+    {
+      "family": [
+        [
+          0,
+          1
+        ],
+        1
+      ],
+      "kind": "MEASURED_EIGENPAIR",
+      "record": {
+        "name": "p0.350000000_n01_r1_e0",
+        "Jp": 0.35,
+        "cell_n": [
+          0,
+          1
+        ],
+        "cell_k": [
+          0.0,
+          0.3333333333333333
+        ],
+        "character": 1,
+        "cyclic_order": 2,
+        "physical_root_index": 0,
+        "dimension": 1109304,
+        "ncv": 64,
+        "seed": 2026,
+        "start_type": "independent_random",
+        "model_cache_hit": true,
+        "setup_seconds": 0.021848045000297134,
+        "arpack_tol": 1e-11,
+        "verified": true,
+        "deflation_shift": 0,
+        "history": [
+          {
+            "name": "p0.350000000_n01_r1_e0",
+            "H_calls": 50,
+            "elapsed_seconds": 58.77376553200156
+          },
+          {
+            "name": "p0.350000000_n01_r1_e0",
+            "H_calls": 100,
+            "elapsed_seconds": 134.83260704500026
+          },
+          {
+            "name": "p0.350000000_n01_r1_e0",
+            "H_calls": 150,
+            "elapsed_seconds": 209.4119661550012
+          }
+        ],
+        "energy": -10.391433424227628,
+        "residual": 5.269802832617134e-13,
+        "orthogonality_to_lower_roots": 0.0,
+        "spin_check": {
+          "S2": 0.7499999999999998,
+          "spin": 0.4999999999999999,
+          "nearest_half_integer_spin": 0.5,
+          "S2_eigen_residual": 2.5826523069961165e-12
+        },
+        "spin": 0.5,
+        "slope_dE_dJp": -1.8477750420768069,
+        "verification_seconds": 4.03839587100083,
+        "status": "VERIFIED",
+        "H_calls": 193,
+        "H_kernel_seconds": 153.54377327300972,
+        "wall_seconds": 275.2552335700002,
+        "peak_rss_MiB": 2302.78125
+      }
+    },
+    {
+      "family": [
+        [
+          1,
+          2
+        ],
+        0
+      ],
+      "kind": "MEASURED_EIGENPAIR",
+      "record": {
+        "name": "p0.350000000_n12_r0_e0",
+        "Jp": 0.35,
+        "cell_n": [
+          1,
+          2
+        ],
+        "cell_k": [
+          0.3333333333333333,
+          0.6666666666666666
+        ],
+        "character": 0,
+        "cyclic_order": 3,
+        "physical_root_index": 0,
+        "dimension": 742900,
+        "ncv": 64,
+        "seed": 2026,
+        "start_type": "independent_random",
+        "model_cache_hit": true,
+        "setup_seconds": 0.008432922999418224,
+        "arpack_tol": 1e-11,
+        "verified": true,
+        "deflation_shift": 0,
+        "history": [
+          {
+            "name": "p0.350000000_n12_r0_e0",
+            "H_calls": 50,
+            "elapsed_seconds": 33.26179722100096
+          },
+          {
+            "name": "p0.350000000_n12_r0_e0",
+            "H_calls": 100,
+            "elapsed_seconds": 70.14915121100057
+          },
+          {
+            "name": "p0.350000000_n12_r0_e0",
+            "H_calls": 150,
+            "elapsed_seconds": 103.80086100500012
+          },
+          {
+            "name": "p0.350000000_n12_r0_e0",
+            "H_calls": 200,
+            "elapsed_seconds": 138.27861155200117
+          }
+        ],
+        "energy": -10.392949925560032,
+        "residual": 4.212154930274472e-14,
+        "orthogonality_to_lower_roots": 0.0,
+        "spin_check": {
+          "S2": 0.7499999999999989,
+          "spin": 0.49999999999999944,
+          "nearest_half_integer_spin": 0.5,
+          "S2_eigen_residual": 2.82799019880412e-12
+        },
+        "spin": 0.5,
+        "slope_dE_dJp": -1.8699836286951315,
+        "verification_seconds": 2.61242141799994,
+        "status": "VERIFIED",
+        "H_calls": 225,
+        "H_kernel_seconds": 82.88632848100497,
+        "wall_seconds": 157.49982017900038,
+        "peak_rss_MiB": 2154.13671875
+      }
+    },
+    {
+      "family": [
+        [
+          1,
+          2
+        ],
+        1
+      ],
+      "kind": "MEASURED_EIGENPAIR",
+      "record": {
+        "name": "p0.350000000_n12_r1_e0",
+        "Jp": 0.35,
+        "cell_n": [
+          1,
+          2
+        ],
+        "cell_k": [
+          0.3333333333333333,
+          0.6666666666666666
+        ],
+        "character": 1,
+        "cyclic_order": 3,
+        "physical_root_index": 0,
+        "dimension": 742900,
+        "ncv": 64,
+        "seed": 2026,
+        "start_type": "independent_random",
+        "model_cache_hit": true,
+        "setup_seconds": 0.007161875000747386,
+        "arpack_tol": 1e-11,
+        "verified": true,
+        "deflation_shift": 0,
+        "history": [
+          {
+            "name": "p0.350000000_n12_r1_e0",
+            "H_calls": 50,
+            "elapsed_seconds": 39.97435117799978
+          },
+          {
+            "name": "p0.350000000_n12_r1_e0",
+            "H_calls": 100,
+            "elapsed_seconds": 78.04039034400012
+          },
+          {
+            "name": "p0.350000000_n12_r1_e0",
+            "H_calls": 150,
+            "elapsed_seconds": 120.8106513090006
+          }
+        ],
+        "energy": -10.36845465647996,
+        "residual": 2.6090429569527635e-13,
+        "orthogonality_to_lower_roots": 0.0,
+        "spin_check": {
+          "S2": 3.750000000000001,
+          "spin": 1.5,
+          "nearest_half_integer_spin": 1.5,
+          "S2_eigen_residual": 9.22814826732915e-13
+        },
+        "spin": 1.5,
+        "slope_dE_dJp": -2.609709475308381,
+        "verification_seconds": 5.259081184000024,
+        "status": "VERIFIED",
+        "H_calls": 193,
+        "H_kernel_seconds": 116.42773824301185,
+        "wall_seconds": 177.92963293100001,
+        "peak_rss_MiB": 2302.78125
+      }
+    }
+  ],
+  "unresolved_families": [],
+  "all_sector_minima_identified": true,
+  "bound_scope": "Conditional numerical exclusions: lowest-root identification at measured endpoints is supported by independent cold starts, direct residuals and validated ED, not an interval-arithmetic proof."
+}

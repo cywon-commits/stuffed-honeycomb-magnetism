@@ -1,0 +1,4 @@
+Jp_over_J,spin,source_cell_n,source_name,channels,reason,status
+0.2375,0.5,"[1, 2]",p0.237500000_n12_r0_e0,"hub at transfer (0,1/3), with Gamma n,m,h controls","Weak, finite-momentum hub correlations; below the first observed crossing.",RECOMMENDATION ONLY; STAGE 3 NOT STARTED
+0.35,3.5,"[0, 0]",p0.350000000_n00_r0_e0,"Gamma n, and separate m/h channels","Interior S=7/2 state, below the higher-coupling crossing.",RECOMMENDATION ONLY; STAGE 3 NOT STARTED
+0.425,2.5,"[0, 0]",p0.425000000_n00_r3_e0,"Gamma n, and separate m/h channels","Interior S=5/2 state, above the higher-coupling crossing.",RECOMMENDATION ONLY; STAGE 3 NOT STARTED

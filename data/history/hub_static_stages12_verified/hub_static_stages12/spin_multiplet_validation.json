@@ -1,0 +1,39 @@
+{
+  "Jp": 0.5,
+  "spin_verified": 2.5,
+  "checks": [
+    {
+      "source_up": 14,
+      "target_up": 15,
+      "target_M": 1.5,
+      "target_cell_dimension": 1931652,
+      "raising_norm_squared": 7.999999999999996,
+      "expected_norm_squared_for_S_5_over_2": 8.0,
+      "energy": -11.083587020439131,
+      "energy_relative_to_original": -3.907985046680551e-14,
+      "eigen_residual_at_original_energy": 3.13595348017595e-14
+    },
+    {
+      "source_up": 15,
+      "target_up": 16,
+      "target_M": 2.5,
+      "target_cell_dimension": 1448655,
+      "raising_norm_squared": 5.000000000000012,
+      "expected_norm_squared_for_S_5_over_2": 5.0,
+      "energy": -11.083587020439033,
+      "energy_relative_to_original": 5.861977570020827e-14,
+      "eigen_residual_at_original_energy": 1.0117195914678786e-13
+    },
+    {
+      "source_up": 16,
+      "target_up": 17,
+      "target_M": 3.5,
+      "target_cell_dimension": 937365,
+      "raising_norm_squared": 2.1939335537946652e-26,
+      "expected_norm_squared_for_S_5_over_2": 0.0
+    }
+  ],
+  "analysis_seconds": 7.994778766998934,
+  "peak_rss_MiB": 480.24609375,
+  "scope": "Static total-spin ladder identities and equal-energy multiplet check only; no spectrum or frequency-dependent calculation."
+}

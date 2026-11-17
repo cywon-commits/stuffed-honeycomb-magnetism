@@ -1,0 +1,16 @@
+{
+  "Jp": 0.425,
+  "cell_n": [
+    0,
+    1
+  ],
+  "character": 1,
+  "kind": "EXCLUDED_BY_SECTOR_CONCAVITY_BOUND",
+  "energy_lower_bound": -10.580629397365296,
+  "endpoint_couplings": [
+    0.35,
+    0.5
+  ],
+  "computed_sector_upper_bound": -10.62350497211563,
+  "note": "No eigenvalue or spin is assigned to this uncomputed character."
+}

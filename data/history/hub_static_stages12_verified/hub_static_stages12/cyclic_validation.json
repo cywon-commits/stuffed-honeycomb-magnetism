@@ -1,0 +1,71 @@
+[
+  {
+    "L": 2,
+    "up": 6,
+    "cell_n": [
+      0,
+      0
+    ],
+    "cyclic_order": 6,
+    "dimensions": [
+      48,
+      36,
+      44,
+      38,
+      44,
+      36
+    ],
+    "spectrum_error": 1.7763568394002505e-14,
+    "projection_error": 7.059101288464225e-15
+  },
+  {
+    "L": 3,
+    "up": 1,
+    "cell_n": [
+      0,
+      0
+    ],
+    "cyclic_order": 6,
+    "dimensions": [
+      2,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "spectrum_error": 1.7763568394002505e-15,
+    "projection_error": 7.32936414382614e-15
+  },
+  {
+    "L": 3,
+    "up": 1,
+    "cell_n": [
+      0,
+      1
+    ],
+    "cyclic_order": 2,
+    "dimensions": [
+      3,
+      0
+    ],
+    "spectrum_error": 0.0,
+    "projection_error": 6.180587746238556e-15
+  },
+  {
+    "L": 3,
+    "up": 1,
+    "cell_n": [
+      1,
+      2
+    ],
+    "cyclic_order": 3,
+    "dimensions": [
+      1,
+      1,
+      1
+    ],
+    "spectrum_error": 1.7763568394002505e-15,
+    "projection_error": 0.0
+  }
+]

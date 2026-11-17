@@ -1,0 +1,49 @@
+[
+  {
+    "cyclic": false,
+    "cell_n": [
+      0,
+      0
+    ],
+    "angular": 0,
+    "energy_error": 1.3322676295501878e-14,
+    "residual": 3.6264978832351868e-12,
+    "real_solver": true
+  },
+  {
+    "cyclic": false,
+    "cell_n": [
+      1,
+      0
+    ],
+    "angular": 0,
+    "energy_error": 1.0658141036401503e-14,
+    "residual": 1.4417034318102742e-13,
+    "real_solver": false
+  },
+  {
+    "cyclic": true,
+    "cell_n": [
+      0,
+      0
+    ],
+    "angular": 0,
+    "energy_error": 3.552713678800501e-15,
+    "residual": 1.1683317152079618e-12,
+    "real_solver": true
+  },
+  {
+    "cyclic": true,
+    "cell_n": [
+      0,
+      0
+    ],
+    "angular": 3,
+    "energy_error": 2.6645352591003757e-15,
+    "residual": 1.6860735804298576e-15,
+    "real_solver": true
+  },
+  {
+    "time_limit_never_labeled_converged": true
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "L": 2,
+    "up": 6,
+    "source_cell_k": [
+      0,
+      0
+    ],
+    "pair_matrix_error": 5.828199748583073e-16,
+    "spin_seed_max_error": 1.8549336978001195e-16,
+    "H_seed_max_error": 6.788347965667964e-16,
+    "full_C_max_error": 3.561932682576234e-16
+  },
+  {
+    "L": 2,
+    "up": 5,
+    "source_cell_k": [
+      0.5,
+      0
+    ],
+    "pair_matrix_error": 6.850820874488029e-16,
+    "spin_seed_max_error": 2.0627110060908645e-16,
+    "H_seed_max_error": 6.80786182264764e-16,
+    "full_C_max_error": 5.8723088094142e-16
+  },
+  {
+    "L": 3,
+    "up": 1,
+    "source_cell_k": [
+      0.3333333333333333,
+      0
+    ],
+    "pair_matrix_error": 3.792522908391293e-15,
+    "spin_seed_max_error": 1.5819553434298968e-15,
+    "H_seed_max_error": 2.7724846192898424e-14,
+    "full_C_max_error": 3.567800959325002e-15
+  },
+  {
+    "primitive_to_cell_error": 1.1384492053392381e-15,
+    "physical_K_weights_verified": true,
+    "staggered_centered_form_factor_linear_term_zero": true,
+    "leading_generic_odd_term_cubic": true
+  }
+]

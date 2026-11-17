@@ -1,0 +1,15 @@
+{
+  "requested_crossing_brackets_already_resolved": [
+    [
+      0.25625,
+      0.2609375
+    ],
+    [
+      0.3875,
+      0.3921875
+    ]
+  ],
+  "weak_side_audit_completed": 0.21875,
+  "scope": "Targeted crossing bisection plus stable-region midpoint audits; continuous spatial exclusions are retained as passive diagnostics. Exhaustive parameter-space certification is not claimed.",
+  "reason": "Requested bracket widths are achieved. Near-parallel weak momentum branches make exhaustive concavity exclusions costly without establishing absence of every same-family spin island."
+}

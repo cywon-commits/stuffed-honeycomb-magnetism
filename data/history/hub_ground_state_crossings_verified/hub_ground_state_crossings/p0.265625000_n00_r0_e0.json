@@ -1,0 +1,60 @@
+{
+  "name": "p0.265625000_n00_r0_e0",
+  "Jp": 0.265625,
+  "cell_n": [
+    0,
+    0
+  ],
+  "cell_k": [
+    0.0,
+    0.0
+  ],
+  "L": 3,
+  "up": 14,
+  "character": 0,
+  "cyclic_order": 6,
+  "physical_root_index": 0,
+  "dimension": 371808,
+  "ncv": 64,
+  "seed": 2026,
+  "start_type": "independent_random",
+  "model_cache_hit": true,
+  "setup_seconds": 0.00285096799780149,
+  "arpack_tol": 1e-11,
+  "verified": true,
+  "deflation_shift": 0,
+  "history": [
+    {
+      "name": "p0.265625000_n00_r0_e0",
+      "H_calls": 50,
+      "elapsed_seconds": 13.51865798700237
+    },
+    {
+      "name": "p0.265625000_n00_r0_e0",
+      "H_calls": 100,
+      "elapsed_seconds": 27.072416152001097
+    },
+    {
+      "name": "p0.265625000_n00_r0_e0",
+      "H_calls": 150,
+      "elapsed_seconds": 40.28789555100229
+    }
+  ],
+  "energy": -10.267856033026344,
+  "residual": 2.7573297114730765e-14,
+  "orthogonality_to_lower_roots": 0.0,
+  "spin_check": {
+    "S2": 15.750000000000032,
+    "spin": 3.5000000000000036,
+    "nearest_half_integer_spin": 3.5,
+    "S2_eigen_residual": 3.437301746466917e-12
+  },
+  "spin": 3.5,
+  "slope_dE_dJp": -2.3607129600611594,
+  "verification_seconds": 1.3313597249980376,
+  "status": "VERIFIED",
+  "H_calls": 161,
+  "H_kernel_seconds": 34.02567916301268,
+  "wall_seconds": 44.96050361900052,
+  "peak_rss_MiB": 1938.3671875
+}

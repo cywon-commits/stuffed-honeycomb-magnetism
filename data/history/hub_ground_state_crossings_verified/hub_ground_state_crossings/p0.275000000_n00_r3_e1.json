@@ -1,0 +1,88 @@
+{
+  "name": "p0.275000000_n00_r3_e1",
+  "Jp": 0.275,
+  "cell_n": [
+    0,
+    0
+  ],
+  "cell_k": [
+    0.0,
+    0.0
+  ],
+  "character": 3,
+  "cyclic_order": 6,
+  "physical_root_index": 1,
+  "dimension": 371232,
+  "ncv": 64,
+  "seed": 2026,
+  "start_type": "independent_random",
+  "model_cache_hit": true,
+  "setup_seconds": 0.003874765001455671,
+  "arpack_tol": 1e-11,
+  "verified": true,
+  "deflation_shift": 42.85,
+  "history": [
+    {
+      "name": "p0.275000000_n00_r3_e1",
+      "H_calls": 50,
+      "elapsed_seconds": 10.897131429999718
+    },
+    {
+      "name": "p0.275000000_n00_r3_e1",
+      "H_calls": 100,
+      "elapsed_seconds": 22.92070651499853
+    },
+    {
+      "name": "p0.275000000_n00_r3_e1",
+      "H_calls": 150,
+      "elapsed_seconds": 34.425215917999594
+    },
+    {
+      "name": "p0.275000000_n00_r3_e1",
+      "H_calls": 200,
+      "elapsed_seconds": 45.28996741299852
+    },
+    {
+      "name": "p0.275000000_n00_r3_e1",
+      "H_calls": 250,
+      "elapsed_seconds": 56.92578138099998
+    },
+    {
+      "name": "p0.275000000_n00_r3_e1",
+      "H_calls": 300,
+      "elapsed_seconds": 68.4090174590001
+    },
+    {
+      "name": "p0.275000000_n00_r3_e1",
+      "H_calls": 350,
+      "elapsed_seconds": 81.38830744400002
+    },
+    {
+      "name": "p0.275000000_n00_r3_e1",
+      "H_calls": 400,
+      "elapsed_seconds": 94.35097413099902
+    },
+    {
+      "name": "p0.275000000_n00_r3_e1",
+      "H_calls": 450,
+      "elapsed_seconds": 111.60321064199888
+    }
+  ],
+  "energy": -10.184838142624528,
+  "residual": 5.599147868786647e-12,
+  "orthogonality_to_lower_roots": 3.452099717193846e-16,
+  "spin_check": {
+    "S2": 3.7499999999999987,
+    "spin": 1.4999999999999996,
+    "nearest_half_integer_spin": 1.5,
+    "S2_eigen_residual": 3.4844316724503045e-09
+  },
+  "spin": 1.5,
+  "slope_dE_dJp": -0.7123562878832621,
+  "verification_seconds": 2.0398414390001562,
+  "status": "VERIFIED",
+  "H_calls": 469,
+  "H_kernel_seconds": 101.3361426219708,
+  "wall_seconds": 121.6189987609996,
+  "peak_rss_MiB": 2154.13671875
+}

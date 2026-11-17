@@ -1,0 +1,70 @@
+{
+  "energy": -15.125973385092479,
+  "residual": 8.295612194315798e-09,
+  "converged": true,
+  "iterations": 70,
+  "matvec_calls": 71,
+  "matvec_seconds": 23.403723423000883,
+  "solve_seconds": 39.71806542100012,
+  "peak_rss_MiB": 1085.87890625,
+  "history": [
+    {
+      "iteration": 10,
+      "ritz": -12.658028475282373,
+      "recurrence_residual": 1.629804448005495,
+      "elapsed_seconds": 3.7901943320000555
+    },
+    {
+      "iteration": 20,
+      "ritz": -15.024262503065978,
+      "recurrence_residual": 0.5567406595347603,
+      "elapsed_seconds": 8.148506894000093
+    },
+    {
+      "iteration": 30,
+      "ritz": -15.125387211729821,
+      "recurrence_residual": 0.05614484228874659,
+      "elapsed_seconds": 13.069149827000047
+    },
+    {
+      "iteration": 40,
+      "ritz": -15.125972905882412,
+      "recurrence_residual": 0.0016738811858450049,
+      "elapsed_seconds": 18.621861062000107
+    },
+    {
+      "iteration": 50,
+      "ritz": -15.125973384913875,
+      "recurrence_residual": 3.31669639212371e-05,
+      "elapsed_seconds": 24.73676049300002
+    },
+    {
+      "iteration": 60,
+      "ritz": -15.125973385092438,
+      "recurrence_residual": 4.822607374659961e-07,
+      "elapsed_seconds": 31.371817169999986
+    },
+    {
+      "iteration": 70,
+      "ritz": -15.125973385092474,
+      "recurrence_residual": 8.295612214700651e-09,
+      "elapsed_seconds": 38.641429489000075,
+      "energy": -15.125973385092479,
+      "residual": 8.295612194315798e-09
+    }
+  ],
+  "maxiter": 180,
+  "tolerance": 1e-08,
+  "seed": 2026,
+  "threads": 2,
+  "copy_reorth": false,
+  "q": [
+    0.3333333333333333,
+    0.6666666666666666
+  ],
+  "full_dim": 20058300,
+  "sector_dim": 742900,
+  "setup_seconds": 2.1071955079999043,
+  "benchmark_matvec_seconds": 0.37308594600017386,
+  "hermiticity_absolute": 8.112295971805718e-17
+}
