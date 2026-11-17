@@ -1,0 +1,23 @@
+# Compiled and generated binaries
+*.so
+*.o
+*.a
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+.DS_Store
+# Large data/checkpoints should be curated, not added ad hoc
+*.npy
+*.npz
+*.h5
+*.hdf5
+*.pth
+*.pt
+*.ckpt
+*.zip
+!external_data/18spin_representative_checkpoints.zip
+# Logs and temporary benchmarking outputs
+*.tmp
+*.swp
