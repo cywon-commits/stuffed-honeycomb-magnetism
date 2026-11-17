@@ -1,0 +1,12 @@
+{
+  "geometry_manifest.csv": "09f65dbe5e05dbf2a5ec3f6907d94791174ca041daa14a3a1abd3394b8205366",
+  "gs_18_scan.csv": "9e51d2c18f613e2ac14633fc3cd8af0b5f38b4175834ebf27babf7f4096824aa",
+  "crossing_brackets_18.csv": "2c0515e9c764c91e1a8b11c2cb89ebda2c099b03d98869ddc39c0799f6e16997",
+  "size_comparison.csv": "1712fccbc66e998d989b47dd3822c92da7e04807a6a6950c0a8320932c57b766",
+  "sector_completeness_18.csv": "33ce179587f4180103352951870f82ea4f9c18afc56a03592d97f651ddba1afb",
+  "all_low_levels_18.csv": "732b95dbb318ac25caf35a49a6f97d673c6e38afdf5a3aaba73e2487c3339589",
+  "hub_structure_factors.csv": "d51b89c477899bf9520f058820e6984fe097761dce4ad933e2e350aff53c7a7b",
+  "computational_costs.csv": "08b8b6d83694dbda5d783a56a902803e404863f80446ed96ecda20bc01248b7e",
+  "reference_benchmark_comparison.csv": "ad0203746f006415093ff80b2e84567f8bdfd47eeb7e169069ea1b3ae37ed377",
+  "PHYSICS_REPORT.md": "135db4e6de266e681fa1281da9c02d249da94aff396afe367fff2314de2a33e3"
+}

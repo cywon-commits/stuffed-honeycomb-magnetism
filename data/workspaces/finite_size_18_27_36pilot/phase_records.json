@@ -1,0 +1,17 @@
+[
+  {
+    "phase": "finish18.py",
+    "returncode": 0,
+    "wall_seconds": 55.10984520799684
+  },
+  {
+    "phase": "audit27.py",
+    "returncode": 0,
+    "wall_seconds": 32.710356812996906
+  },
+  {
+    "phase": "pilot36.py",
+    "returncode": 0,
+    "wall_seconds": 1.8180341240004054
+  }
+]

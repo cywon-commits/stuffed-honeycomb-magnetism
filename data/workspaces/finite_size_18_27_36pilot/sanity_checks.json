@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "shape": "K18",
+      "r": 0.4,
+      "independent_full_Sz0_dimension": 48620,
+      "full_vs_reduced_ground_energy_error": 1.3322676295501878e-14,
+      "full_Sz0_H_calls": 268
+    },
+    {
+      "shape": "K18",
+      "r": 1.0,
+      "independent_full_Sz0_dimension": 48620,
+      "full_vs_reduced_ground_energy_error": 5.329070518200751e-15,
+      "full_Sz0_H_calls": 228
+    },
+    {
+      "shape": "K18",
+      "r": 0,
+      "energy": -7.013246018862771,
+      "H_residual": 6.08190933510924e-15,
+      "S": 3,
+      "S2_residual": 1.64496397203477e-14,
+      "note": "Rim singlet times hub S=3,M=0 test vector; free hubs have a degenerate manifold. This does not select a polarized physical ground state at r=0."
+    },
+    {
+      "shape": "C18",
+      "r": 0.4,
+      "independent_full_Sz0_dimension": 48620,
+      "full_vs_reduced_ground_energy_error": 1.2434497875801753e-14,
+      "full_Sz0_H_calls": 453
+    },
+    {
+      "shape": "C18",
+      "r": 1.0,
+      "independent_full_Sz0_dimension": 48620,
+      "full_vs_reduced_ground_energy_error": 1.9539925233402755e-14,
+      "full_Sz0_H_calls": 228
+    },
+    {
+      "shape": "C18",
+      "r": 0,
+      "energy": -6.9308614882849895,
+      "H_residual": 4.338614161259611e-15,
+      "S": 3,
+      "S2_residual": 1.2619896152955042e-14,
+      "note": "Rim singlet times hub S=3,M=0 test vector; free hubs have a degenerate manifold. This does not select a polarized physical ground state at r=0."
+    }
+  ]
+}

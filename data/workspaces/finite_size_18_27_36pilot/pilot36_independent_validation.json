@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "N": 36,
+  "number_of_down_spins": 2,
+  "full_basis_dim": 630,
+  "translation_Gamma_dim": 57,
+  "independent_Python_full_vs_Cpp_reduced_action_error": 1.2052890751028591e-14,
+  "scope": "36-site high-Sz kernel validation, not a low-spin ground-state calculation"
+}

@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "shape": "K18",
+      "r": 0.501706589,
+      "old_max_S2_residual": 1.210452139149408e-07,
+      "new_max_S2_residual": 1.343823093515504e-11,
+      "ground_energy_difference": 1.7763568394002505e-15,
+      "method": "Joint H/S2 subspace diagonalization, then H diagonalization separately for each integer S."
+    },
+    {
+      "shape": "C18",
+      "r": 0.3346873744,
+      "old_max_S2_residual": 2.3908413376657875e-07,
+      "new_max_S2_residual": 2.4145621422594323e-11,
+      "ground_energy_difference": 5.329070518200751e-15,
+      "method": "Joint H/S2 subspace diagonalization, then H diagonalization separately for each integer S."
+    },
+    {
+      "shape": "C18",
+      "r": 0.5042126561,
+      "old_max_S2_residual": 1.4528769678056387e-07,
+      "new_max_S2_residual": 3.5958663698417085e-11,
+      "ground_energy_difference": 4.440892098500626e-15,
+      "method": "Joint H/S2 subspace diagonalization, then H diagonalization separately for each integer S."
+    }
+  ]
+}
