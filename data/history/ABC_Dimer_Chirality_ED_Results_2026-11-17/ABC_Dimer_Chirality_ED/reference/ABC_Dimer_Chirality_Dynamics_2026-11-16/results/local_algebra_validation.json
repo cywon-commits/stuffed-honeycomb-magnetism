@@ -1,0 +1,38 @@
+{
+  "max_error": 6.867040539581481e-16,
+  "checks": {
+    "projector_idempotence": 2.220446049250313e-16,
+    "chirality_squared": 0.0,
+    "dimer_symmetric_norm": 3.4219371797089426e-16,
+    "dimer_chirality_commutator": 4.440892098500626e-16,
+    "nilpotent_D_square": 6.867040539581481e-16,
+    "chirality_dimer_ladder": 5.556583579345896e-16,
+    "D_flavor_matrix": 4.1925567708034397e-16,
+    "chi_flavor_matrix": 5.700189944934225e-18,
+    "scalar_D_spin_squared": 2.9110293291727306e-16,
+    "scalar_chi_spin_squared": 0.0
+  },
+  "flavor_basis_order": "AB singlet, AB triplet doublet; M=+1/2",
+  "D_flavor_matrix": [
+    [
+      {
+        "re": -0.7499999999999999,
+        "im": 1.9378488156870974e-18
+      },
+      {
+        "re": 2.441216075747891e-16,
+        "im": 0.7499999999999999
+      }
+    ],
+    [
+      {
+        "re": 2.4221382153095133e-16,
+        "im": 0.7499999999999999
+      },
+      {
+        "re": 0.75,
+        "im": -1.4328579115984732e-16
+      }
+    ]
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "reference_rows": 13,
+  "reference_max_error": 0.0,
+  "scanned_couplings": [
+    0.6,
+    0.7,
+    0.8,
+    0.9
+  ],
+  "higher_point_couplings": [
+    0.2,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9,
+    1
+  ],
+  "triangles": 54,
+  "ordered_face_pairs_per_state": 2916,
+  "max_27spin_local_identity_error": 3.0309088572266774e-14,
+  "max_RDM_trace_Hermiticity_projector_error": 4.54081217071689e-14,
+  "minimum_full_connected_covariance_eigenvalue": -1.1215524638331628e-14,
+  "maximum_Cauchy_Schwarz_violation": 0.0,
+  "maximum_disjoint_selected_chirality_imaginary": 2.42861286636753e-16,
+  "isotropic_reused_source_S2_residual": 1.7177674258648163e-08,
+  "scope": "New ground states pass H and S2 residuals below 1e-8. The reused isotropic benchmark is retained at its measured H residual 8.30e-9 and S2 residual 1.72e-8; all local identities/PSD/unfolding checks are much tighter. Finite-cluster data do not prove thermodynamic order or dynamical coherent resonance."
+}

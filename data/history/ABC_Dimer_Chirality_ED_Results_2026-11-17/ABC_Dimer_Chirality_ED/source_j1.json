@@ -1,0 +1,22 @@
+{
+  "energy": -15.125973385092488,
+  "H_residual": 2.3702201504632832e-14,
+  "spin": {
+    "S2": 0.7499999999999998,
+    "spin": 0.4999999999999999,
+    "nearest_half_integer_spin": 0.5,
+    "S2_eigen_residual": 3.005373850889868e-14
+  },
+  "wall_seconds": 23.575946652999846,
+  "H_calls": 41,
+  "original": {
+    "energy": -15.125973385092479,
+    "H_residual": 8.295612194315798e-09,
+    "spin": {
+      "S2": 0.7499999999999993,
+      "spin": 0.49999999999999967,
+      "nearest_half_integer_spin": 0.5,
+      "S2_eigen_residual": 1.7177674224292414e-08
+    }
+  }
+}

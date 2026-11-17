@@ -1,0 +1,131 @@
+{
+  "status": "PASS",
+  "fresh_full_translation_space_checks": [
+    {
+      "tag": "j1_G_a0_p-1",
+      "fingerprint": "e4c357452a69b8149e308d1728a65bce3ae49c0d3dd4af66533429978e039e45",
+      "full_translation_dimension": 742900,
+      "symmetry_dimension": 122158,
+      "H_intertwining_error": 1.0171215695926877e-14,
+      "full_basis_H_residual": 1.6561828483161728e-13,
+      "full_basis_spin": {
+        "S2": 0.7500000000000016,
+        "spin": 0.5000000000000007,
+        "nearest_half_integer_spin": 0.5,
+        "S2_eigen_residual": 2.040719611323705e-14
+      }
+    },
+    {
+      "tag": "j1_Q_a0_p1",
+      "fingerprint": "b31fd5023372df77d6682b090d65e63a45e37cc6391ff5ec81acda38cbe17613",
+      "full_translation_dimension": 742900,
+      "symmetry_dimension": 373132,
+      "H_intertwining_error": 1.0374062517490506e-14,
+      "full_basis_H_residual": 7.568666310506141e-14,
+      "full_basis_spin": {
+        "S2": 0.7499999999999993,
+        "spin": 0.49999999999999967,
+        "nearest_half_integer_spin": 0.5,
+        "S2_eigen_residual": 2.2219394438341298e-14
+      }
+    },
+    {
+      "tag": "j1_Qprime_a0_p1",
+      "fingerprint": "3fab5f01c22ce3301d05afca9de12131f2fdb69564f1ee480aa9d35ec2bbf802",
+      "full_translation_dimension": 742900,
+      "symmetry_dimension": 373132,
+      "H_intertwining_error": 6.512170073736369e-15,
+      "full_basis_H_residual": 3.8570125218573e-14,
+      "full_basis_spin": {
+        "S2": 0.7500000000000016,
+        "spin": 0.5000000000000007,
+        "nearest_half_integer_spin": 0.5,
+        "S2_eigen_residual": 5.2145839532838524e-14
+      }
+    },
+    {
+      "tag": "j09_G_a3_p1",
+      "fingerprint": "2ace375ea693ae3980abde1260d8f8690b651134ac5815f00de596b975273865",
+      "full_translation_dimension": 2228700,
+      "symmetry_dimension": 183390,
+      "H_intertwining_error": 7.451120983669581e-15,
+      "full_basis_H_residual": 1.5087306496768423e-13,
+      "full_basis_spin": {
+        "S2": 0.7499999999999944,
+        "spin": 0.4999999999999972,
+        "nearest_half_integer_spin": 0.5,
+        "S2_eigen_residual": 1.3999250499059494e-14
+      }
+    },
+    {
+      "tag": "j09_q_a0_p1",
+      "fingerprint": "862976db11ca07ebb747bfd7f768f911542daa87ec42e897bf567a5a6bd44e4c",
+      "full_translation_dimension": 2228700,
+      "symmetry_dimension": 1119396,
+      "H_intertwining_error": 4.772468734667834e-15,
+      "full_basis_H_residual": 9.167287822238952e-14,
+      "full_basis_spin": {
+        "S2": 0.7500000000000004,
+        "spin": 0.5000000000000002,
+        "nearest_half_integer_spin": 0.5,
+        "S2_eigen_residual": 1.2109818414016578e-14
+      }
+    },
+    {
+      "tag": "j07_G_a3_p1",
+      "fingerprint": "33d5867f444cabbc2054b9843398111d2347fe5ae2eec59230978225d1759b6f",
+      "full_translation_dimension": 2228700,
+      "symmetry_dimension": 183390,
+      "H_intertwining_error": 6.605404224627122e-15,
+      "full_basis_H_residual": 1.254128720698105e-13,
+      "full_basis_spin": {
+        "S2": 0.7500000000000011,
+        "spin": 0.5000000000000004,
+        "nearest_half_integer_spin": 0.5,
+        "S2_eigen_residual": 2.5040840160123555e-14
+      }
+    }
+  ],
+  "projector_completeness": [
+    {
+      "name": "j1_Q",
+      "represented_blocks": 2,
+      "expected_blocks": 2,
+      "scope": "all scalar seed channels",
+      "M0_completeness_error": 4.711249672048821e-15,
+      "complete": true
+    },
+    {
+      "name": "j1_Qprime",
+      "represented_blocks": 2,
+      "expected_blocks": 2,
+      "scope": "all scalar seed channels",
+      "M0_completeness_error": 7.470510591787559e-15,
+      "complete": true
+    },
+    {
+      "name": "j09_G",
+      "represented_blocks": 8,
+      "expected_blocks": 8,
+      "scope": "all scalar seed channels",
+      "M0_completeness_error": 4.8857164513880425e-15,
+      "complete": true
+    },
+    {
+      "name": "j09_q",
+      "represented_blocks": 2,
+      "expected_blocks": 2,
+      "scope": "all scalar seed channels",
+      "M0_completeness_error": 1.573585450507313e-14,
+      "complete": true
+    },
+    {
+      "name": "j07_G",
+      "represented_blocks": 4,
+      "expected_blocks": 4,
+      "scope": "physical-Gamma chirality face pair only",
+      "M0_completeness_error": 4.15929806133515e-16,
+      "complete": true
+    }
+  ]
+}

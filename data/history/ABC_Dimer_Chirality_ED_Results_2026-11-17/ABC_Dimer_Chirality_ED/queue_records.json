@@ -1,0 +1,132 @@
+[
+  {
+    "task": "G_chi_orthogonal",
+    "returncode": 0,
+    "wall_seconds": 142.29630180100503
+  },
+  {
+    "task": "Q_mirror_plus",
+    "returncode": 0,
+    "wall_seconds": 431.24578107900743
+  },
+  {
+    "task": "Q_mirror_minus",
+    "returncode": 0,
+    "wall_seconds": 219.8609869040083
+  },
+  {
+    "task": "Qprime_seeds",
+    "returncode": 0,
+    "wall_seconds": 59.221849779001786
+  },
+  {
+    "task": "Qprime_mirror_plus",
+    "returncode": 0,
+    "wall_seconds": 260.41603947398835
+  },
+  {
+    "task": "Qprime_mirror_minus",
+    "returncode": 0,
+    "wall_seconds": 250.1675435299985
+  },
+  {
+    "task": "G_quadrature",
+    "returncode": 0,
+    "wall_seconds": 124.03513561999716
+  },
+  {
+    "task": "Q_quadrature",
+    "returncode": 0,
+    "wall_seconds": 144.28810263400374
+  },
+  {
+    "task": "Qprime_quadrature",
+    "returncode": 0,
+    "wall_seconds": 192.55240284799947
+  },
+  {
+    "task": "j09_G_seeds",
+    "returncode": 0,
+    "wall_seconds": 157.65329022200604
+  },
+  {
+    "task": "j09_G_a0p1",
+    "returncode": 0,
+    "wall_seconds": 110.187523288987
+  },
+  {
+    "task": "j09_G_a0m1",
+    "returncode": 0,
+    "wall_seconds": 23.120444062005845
+  },
+  {
+    "task": "j09_G_a3p1",
+    "returncode": 0,
+    "wall_seconds": 89.01033632500912
+  },
+  {
+    "task": "j09_G_a3m1",
+    "returncode": 0,
+    "wall_seconds": 109.716459467003
+  },
+  {
+    "task": "j09_G_a1",
+    "returncode": 0,
+    "wall_seconds": 177.34055927299778
+  },
+  {
+    "task": "j09_G_a2",
+    "returncode": 0,
+    "wall_seconds": 166.5011317759927
+  },
+  {
+    "task": "j09_G_a4",
+    "returncode": 0,
+    "wall_seconds": 51.15070035800454
+  },
+  {
+    "task": "j09_G_a5",
+    "returncode": 0,
+    "wall_seconds": 56.21900172599999
+  },
+  {
+    "task": "j09_G_quadrature",
+    "returncode": 0,
+    "wall_seconds": 374.6507594480063
+  },
+  {
+    "task": "j09_q_seeds",
+    "returncode": 0,
+    "wall_seconds": 100.11991595099971
+  },
+  {
+    "task": "j09_q_solve",
+    "returncode": -15,
+    "wall_seconds": 1011.8532143149932
+  },
+  {
+    "task": "j09_q_quadrature",
+    "returncode": 0,
+    "wall_seconds": 280.68737073999364
+  },
+  {
+    "task": "K_seeds",
+    "returncode": 0,
+    "wall_seconds": 29.30564639699878
+  },
+  {
+    "task": "Kprime_source_seeds",
+    "returncode": 0,
+    "wall_seconds": 33.60207848499704
+  },
+  {
+    "task": "K_quadrature",
+    "returncode": 0,
+    "wall_seconds": 131.69868864800083
+  },
+  {
+    "task": "Kprime_source_quadrature",
+    "returncode": 0,
+    "wall_seconds": 153.45320653100498
+  }
+]

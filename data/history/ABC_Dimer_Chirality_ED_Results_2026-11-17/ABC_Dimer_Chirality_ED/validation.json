@@ -1,0 +1,170 @@
+{
+  "moment_matrix_min_eigenvalue": -7.148425365740297e-15,
+  "residue_min_eigenvalue": -7.979056841881949e-16,
+  "remainder_moment_min_eigenvalue": -8.236246453863328e-15,
+  "max_pole_H_residual": 1.8322420862874712e-11,
+  "max_pole_S2_residual": 4.048332674306977e-11,
+  "maximum_forbidden_spin_weight": 5.791698822828989e-22,
+  "reference_comparisons": [
+    {
+      "response": "isotropic_G_pair_average",
+      "operator": "D",
+      "matrix": "Mraw",
+      "error": 3.959021408349766e-11
+    },
+    {
+      "response": "isotropic_G_pair_average",
+      "operator": "D",
+      "matrix": "M0_elastic",
+      "error": 9.605001901570364e-18
+    },
+    {
+      "response": "isotropic_G_pair_average",
+      "operator": "D",
+      "matrix": "M0",
+      "error": 3.9590297351512385e-11
+    },
+    {
+      "response": "isotropic_G_pair_average",
+      "operator": "chi",
+      "matrix": "Mraw",
+      "error": 1.0898613702717143e-11
+    },
+    {
+      "response": "isotropic_G_pair_average",
+      "operator": "chi",
+      "matrix": "M0_elastic",
+      "error": 2.703112039813698e-12
+    },
+    {
+      "response": "isotropic_G_pair_average",
+      "operator": "chi",
+      "matrix": "M0",
+      "error": 1.1408778132379216e-11
+    },
+    {
+      "response": "isotropic_Q_pair_average",
+      "operator": "D",
+      "matrix": "Mraw",
+      "error": 1.781623536633126e-10
+    },
+    {
+      "response": "isotropic_Q_pair_average",
+      "operator": "D",
+      "matrix": "M0_elastic",
+      "error": 1.0363562630398042e-19
+    },
+    {
+      "response": "isotropic_Q_pair_average",
+      "operator": "D",
+      "matrix": "M0",
+      "error": 1.7816227277456764e-10
+    },
+    {
+      "response": "isotropic_Q_pair_average",
+      "operator": "chi",
+      "matrix": "Mraw",
+      "error": 1.943709344383243e-11
+    },
+    {
+      "response": "isotropic_Q_pair_average",
+      "operator": "chi",
+      "matrix": "M0_elastic",
+      "error": 1.2096193292422993e-33
+    },
+    {
+      "response": "isotropic_Q_pair_average",
+      "operator": "chi",
+      "matrix": "M0",
+      "error": 1.9437093443827785e-11
+    },
+    {
+      "response": "isotropic_K_pair_average",
+      "operator": "D",
+      "matrix": "Mraw",
+      "error": 5.823358954277272e-12
+    },
+    {
+      "response": "isotropic_K_pair_average",
+      "operator": "D",
+      "matrix": "M0_elastic",
+      "error": 5.3429885515937035e-11
+    },
+    {
+      "response": "isotropic_K_pair_average",
+      "operator": "D",
+      "matrix": "M0",
+      "error": 5.872956655209853e-11
+    },
+    {
+      "response": "isotropic_K_pair_average",
+      "operator": "chi",
+      "matrix": "Mraw",
+      "error": 8.346120857948095e-13
+    },
+    {
+      "response": "isotropic_K_pair_average",
+      "operator": "chi",
+      "matrix": "M0_elastic",
+      "error": 8.008400318594766e-34
+    },
+    {
+      "response": "isotropic_K_pair_average",
+      "operator": "chi",
+      "matrix": "M0",
+      "error": 8.346120857693969e-13
+    }
+  ],
+  "quadrature_moment_errors": {
+    "j1_KprimeSource": [
+      3.665057849304482e-15,
+      1.3749438724297608e-14,
+      4.315253187615644e-14
+    ],
+    "j09_G": [
+      1.029469733123685e-14,
+      3.1886360883741456e-14,
+      1.227951754231371e-13
+    ],
+    "j1_Qprime": [
+      1.4668882718544004e-14,
+      2.4526504070137802e-14,
+      9.56016249835201e-14
+    ],
+    "j1_G": [
+      2.8173430562380336e-14,
+      5.916155467699539e-14,
+      1.2639275349942515e-13
+    ],
+    "j1_K": [
+      2.6104810232154093e-15,
+      1.440519522624231e-14,
+      6.07530182043092e-14
+    ],
+    "j1_Q": [
+      8.22387686705133e-15,
+      4.3500305440108256e-14,
+      1.0295462636001008e-13
+    ],
+    "j09_q": [
+      3.0928216399122307e-14,
+      7.265105051089486e-14,
+      2.9413015437676334e-13
+    ],
+    "j07_G": [
+      1.1587564461205286e-14,
+      3.210598991269778e-14,
+      1.0792451529042483e-13
+    ]
+  },
+  "explicit_solver_restarts": [
+    {
+      "task": "j09_q_solve",
+      "status": "ABANDONED_NO_POLES; successful exact reflection replacements checked separately"
+    }
+  ],
+  "Gamma_forbidden_D_chi_cross_max": 6.4788911878466555e-15,
+  "finite_Q_allowed_complex_D_chi_cross_max": 0.062166125339371464,
+  "status": "PASS",
+  "scope": "Directly converged partial poles; unresolved remainders retained. Quadrature nodes are not exported as verified poles. Numerical floating point checks, not certified interval arithmetic."
+}
