@@ -1,0 +1,112 @@
+[
+  {
+    "label": "j1_G_a0_p-1",
+    "H_calls": 25,
+    "seconds": 15.314129884005524
+  },
+  {
+    "label": "j1_G_a0_p-1",
+    "H_calls": 50,
+    "seconds": 31.7557431919995
+  },
+  {
+    "label": "j1_G_a0_p-1",
+    "H_calls": 75,
+    "seconds": 53.31938428799913
+  },
+  {
+    "label": "j1_G_a0_p-1",
+    "H_calls": 100,
+    "seconds": 70.14471080500516
+  },
+  {
+    "label": "j1_G_a0_p-1",
+    "H_calls": 125,
+    "seconds": 84.04836214399256
+  },
+  {
+    "label": "j1_G_a0_p-1",
+    "H_calls": 150,
+    "seconds": 95.60951075400226
+  },
+  {
+    "label": "j1_G_a0_p-1",
+    "H_calls": 175,
+    "seconds": 103.84024309300003
+  },
+  {
+    "label": "j1_G_a0_p-1",
+    "H_calls": 200,
+    "seconds": 111.25049479700101
+  },
+  {
+    "label": "j1_G_a0_p-1",
+    "H_calls": 225,
+    "seconds": 117.86946880799951
+  },
+  {
+    "label": "j1_G_a0_p-1",
+    "H_calls": 250,
+    "seconds": 125.91255049100437
+  },
+  {
+    "label": "j1_G_a0_p-1",
+    "H_calls": 275,
+    "seconds": 142.66914307199477
+  },
+  {
+    "label": "j1_G_a0_p-1",
+    "H_calls": 300,
+    "seconds": 154.05221952300053
+  },
+  {
+    "label": "j1_G_a0_p-1",
+    "H_calls": 325,
+    "seconds": 168.03311195199785
+  },
+  {
+    "label": "j1_G_a0_p-1",
+    "H_calls": 350,
+    "seconds": 177.55917224400037
+  },
+  {
+    "label": "j1_G_a0_p-1",
+    "H_calls": 375,
+    "seconds": 193.99570748400583
+  },
+  {
+    "label": "j1_G_a0_p-1",
+    "H_calls": 400,
+    "seconds": 204.81354332399496
+  },
+  {
+    "label": "j1_G_a0_p-1",
+    "H_calls": 425,
+    "seconds": 214.01347609699587
+  },
+  {
+    "label": "j1_G_a0_p-1",
+    "H_calls": 450,
+    "seconds": 222.74908467500063
+  },
+  {
+    "label": "j1_G_a0_p-1",
+    "H_calls": 475,
+    "seconds": 231.60254510000232
+  },
+  {
+    "label": "j1_G_a0_p-1",
+    "H_calls": 500,
+    "seconds": 238.75393954099854
+  },
+  {
+    "label": "j1_G_a0_p-1",
+    "H_calls": 525,
+    "seconds": 248.41345858600107
+  },
+  {
+    "label": "j1_G_a0_p-1",
+    "H_calls": 550,
+    "seconds": 255.628729019998
+  }
+]
