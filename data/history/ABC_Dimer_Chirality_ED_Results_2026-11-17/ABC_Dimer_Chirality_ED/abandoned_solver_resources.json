@@ -1,0 +1,8 @@
+{
+  "status": "ABANDONED_UNRESTRICTED_STARTUP_NO_EIGENVALUE_ACCEPTED",
+  "CPU_seconds": 201.1,
+  "last_logged_H_calls_lower_bound": 25,
+  "last_logged_wall_seconds_lower_bound": 42.03353033900203,
+  "exact_wall_seconds": null,
+  "note": "Parent queue duration includes the successful reflection replacement; do not interpret it as this aborted solver duration."
+}
