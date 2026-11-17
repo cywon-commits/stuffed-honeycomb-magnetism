@@ -1,0 +1,130 @@
+[
+  {
+    "path": "Codex_Execution_Spec.md",
+    "match": true
+  },
+  {
+    "path": "README.md",
+    "match": true
+  },
+  {
+    "path": "Theory_and_Preanalysis_Report.md",
+    "match": true
+  },
+  {
+    "path": "code/static_mode_summary.py",
+    "match": true
+  },
+  {
+    "path": "code/triangle_exact_dynamics.py",
+    "match": true
+  },
+  {
+    "path": "figures/27spin_static_dynamic_targets.png",
+    "match": true
+  },
+  {
+    "path": "figures/isolated_triangle_gap.png",
+    "match": true
+  },
+  {
+    "path": "reference/ABC_triangle_ED/K_primitive.npz",
+    "match": true
+  },
+  {
+    "path": "reference/ABC_triangle_ED/triangle/cyclic_model.py",
+    "match": true
+  },
+  {
+    "path": "reference/ABC_triangle_ED/triangle/ed.py",
+    "match": true
+  },
+  {
+    "path": "reference/ABC_triangle_ED/triangle/ensemble.py",
+    "match": true
+  },
+  {
+    "path": "reference/ABC_triangle_ED/triangle/final_validation.json",
+    "match": true
+  },
+  {
+    "path": "reference/ABC_triangle_ED/triangle/isotropic_ground_manifold.npz",
+    "match": true
+  },
+  {
+    "path": "reference/ABC_triangle_ED/triangle/kernel.cpp",
+    "match": true
+  },
+  {
+    "path": "reference/ABC_triangle_ED/triangle/local_geometry.py",
+    "match": true
+  },
+  {
+    "path": "reference/ABC_triangle_ED/triangle/local_geometry_validation.json",
+    "match": true
+  },
+  {
+    "path": "reference/ABC_triangle_ED/triangle/local_rdm_j1.csv",
+    "match": true
+  },
+  {
+    "path": "reference/ABC_triangle_ED/triangle/measure.py",
+    "match": true
+  },
+  {
+    "path": "reference/ABC_triangle_ED/triangle/native.py",
+    "match": true
+  },
+  {
+    "path": "reference/ABC_triangle_ED/triangle/observables.py",
+    "match": true
+  },
+  {
+    "path": "reference/ABC_triangle_ED/triangle/raw_observables_j1.npz",
+    "match": true
+  },
+  {
+    "path": "reference/ABC_triangle_ED/triangle/sectors.py",
+    "match": true
+  },
+  {
+    "path": "reference/ABC_triangle_ED/triangle/triangle_extended_ground.csv",
+    "match": true
+  },
+  {
+    "path": "reference/ABC_triangle_ED/triangle/triangle_ops.cpp",
+    "match": true
+  },
+  {
+    "path": "reference/Codex_stage_triangle_README.md",
+    "match": true
+  },
+  {
+    "path": "reference/Codex_stage_triangle_report.md",
+    "match": true
+  },
+  {
+    "path": "reference/local_geometry_original.py",
+    "match": true
+  },
+  {
+    "path": "reference/local_geometry_validation.json",
+    "match": true
+  },
+  {
+    "path": "results/27spin_static_mode_targets.csv",
+    "match": true
+  },
+  {
+    "path": "results/isolated_triangle_cross.csv",
+    "match": true
+  },
+  {
+    "path": "results/isolated_triangle_spectra.csv",
+    "match": true
+  },
+  {
+    "path": "results/local_algebra_validation.json",
+    "match": true
+  }
+]

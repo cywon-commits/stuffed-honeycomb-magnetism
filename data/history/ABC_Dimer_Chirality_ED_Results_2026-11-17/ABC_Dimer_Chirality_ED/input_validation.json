@@ -1,0 +1,235 @@
+{
+  "manifest": [
+    {
+      "file": "Codex_Execution_Spec.md",
+      "match": true
+    },
+    {
+      "file": "README.md",
+      "match": true
+    },
+    {
+      "file": "Theory_and_Preanalysis_Report.md",
+      "match": true
+    },
+    {
+      "file": "code/static_mode_summary.py",
+      "match": true
+    },
+    {
+      "file": "code/triangle_exact_dynamics.py",
+      "match": true
+    },
+    {
+      "file": "figures/27spin_static_dynamic_targets.png",
+      "match": true
+    },
+    {
+      "file": "figures/isolated_triangle_gap.png",
+      "match": true
+    },
+    {
+      "file": "reference/ABC_triangle_ED/K_primitive.npz",
+      "match": true
+    },
+    {
+      "file": "reference/ABC_triangle_ED/triangle/cyclic_model.py",
+      "match": true
+    },
+    {
+      "file": "reference/ABC_triangle_ED/triangle/ed.py",
+      "match": true
+    },
+    {
+      "file": "reference/ABC_triangle_ED/triangle/ensemble.py",
+      "match": true
+    },
+    {
+      "file": "reference/ABC_triangle_ED/triangle/final_validation.json",
+      "match": true
+    },
+    {
+      "file": "reference/ABC_triangle_ED/triangle/isotropic_ground_manifold.npz",
+      "match": true
+    },
+    {
+      "file": "reference/ABC_triangle_ED/triangle/kernel.cpp",
+      "match": true
+    },
+    {
+      "file": "reference/ABC_triangle_ED/triangle/local_geometry.py",
+      "match": true
+    },
+    {
+      "file": "reference/ABC_triangle_ED/triangle/local_geometry_validation.json",
+      "match": true
+    },
+    {
+      "file": "reference/ABC_triangle_ED/triangle/local_rdm_j1.csv",
+      "match": true
+    },
+    {
+      "file": "reference/ABC_triangle_ED/triangle/measure.py",
+      "match": true
+    },
+    {
+      "file": "reference/ABC_triangle_ED/triangle/native.py",
+      "match": true
+    },
+    {
+      "file": "reference/ABC_triangle_ED/triangle/observables.py",
+      "match": true
+    },
+    {
+      "file": "reference/ABC_triangle_ED/triangle/raw_observables_j1.npz",
+      "match": true
+    },
+    {
+      "file": "reference/ABC_triangle_ED/triangle/sectors.py",
+      "match": true
+    },
+    {
+      "file": "reference/ABC_triangle_ED/triangle/triangle_extended_ground.csv",
+      "match": true
+    },
+    {
+      "file": "reference/ABC_triangle_ED/triangle/triangle_ops.cpp",
+      "match": true
+    },
+    {
+      "file": "reference/Codex_stage_triangle_README.md",
+      "match": true
+    },
+    {
+      "file": "reference/Codex_stage_triangle_report.md",
+      "match": true
+    },
+    {
+      "file": "reference/local_geometry_original.py",
+      "match": true
+    },
+    {
+      "file": "reference/local_geometry_validation.json",
+      "match": true
+    },
+    {
+      "file": "results/27spin_static_mode_targets.csv",
+      "match": true
+    },
+    {
+      "file": "results/isolated_triangle_cross.csv",
+      "match": true
+    },
+    {
+      "file": "results/isolated_triangle_spectra.csv",
+      "match": true
+    },
+    {
+      "file": "results/local_algebra_validation.json",
+      "match": true
+    }
+  ],
+  "reference_M0": [
+    {
+      "experiment": "j1_G",
+      "selected_static_M0_error": 1.7881986634361851e-09
+    },
+    {
+      "experiment": "j1_K",
+      "selected_static_M0_error": 3.322415684596072e-10
+    },
+    {
+      "experiment": "j1_KprimeSource",
+      "selected_static_M0_error": 3.3010791187901987e-10
+    },
+    {
+      "experiment": "j1_Q",
+      "selected_static_M0_error": 4.966845519499246e-10
+    },
+    {
+      "experiment": "j1_Qprime",
+      "selected_static_M0_error": 5.719362283469298e-10
+    },
+    {
+      "experiment": "j09_G",
+      "selected_static_M0_error": 0.0
+    },
+    {
+      "experiment": "j09_q",
+      "selected_static_M0_error": 0.0
+    },
+    {
+      "experiment": "j07_G",
+      "selected_static_M0_error": 0.0
+    }
+  ],
+  "local_sum_rules_from_all_q_archived_Gram_including_zero_frequency": [
+    {
+      "mu": 0,
+      "chi_CCW": -0.018494779786382008,
+      "D_circular_integrated_asymmetry": -0.09610169479443442,
+      "P_doublet": 0.8734808243232973,
+      "errors": [
+        9.71445146547012e-17,
+        2.90878432451791e-14,
+        4.912736883966318e-15
+      ]
+    },
+    {
+      "mu": 1,
+      "chi_CCW": 0.018494779769893485,
+      "D_circular_integrated_asymmetry": 0.09610169470875762,
+      "P_doublet": 0.8734808243232972,
+      "errors": [
+        1.3877787807814457e-17,
+        3.0309088572266774e-14,
+        5.218048215738236e-15
+      ]
+    },
+    {
+      "mu": 2,
+      "chi_CCW": -0.01849477978638123,
+      "D_circular_integrated_asymmetry": -0.09610169479443587,
+      "P_doublet": 0.8734808243232887,
+      "errors": [
+        5.384581669432009e-15,
+        2.0650148258027912e-14,
+        3.219646771412954e-15
+      ]
+    },
+    {
+      "mu": 3,
+      "chi_CCW": 0.018494779769894578,
+      "D_circular_integrated_asymmetry": 0.09610169470875884,
+      "P_doublet": 0.873480824323291,
+      "errors": [
+        4.468647674116255e-15,
+        2.375877272697835e-14,
+        3.6914915568786455e-15
+      ]
+    },
+    {
+      "mu": 4,
+      "chi_CCW": -0.01849477978638184,
+      "D_circular_integrated_asymmetry": -0.09610169479443276,
+      "P_doublet": 0.8734808243232932,
+      "errors": [
+        8.881784197001252e-16,
+        2.4646951146678475e-14,
+        4.302114220424778e-15
+      ]
+    },
+    {
+      "mu": 5,
+      "chi_CCW": 0.018494779769894287,
+      "D_circular_integrated_asymmetry": 0.09610169470875718,
+      "P_doublet": 0.8734808243232939,
+      "errors": [
+        4.621303340002214e-15,
+        2.6756374893466273e-14,
+        4.218847493575654e-15
+      ]
+    }
+  ],
+  "notes": "Supplied 27-spin reference specifies M0; no independent 27-spin M1/M2 reference numbers are present. New M1/M2 use actual H actions and are checked by Krylov moment reproduction and independent small-cluster spectral sums."
+}

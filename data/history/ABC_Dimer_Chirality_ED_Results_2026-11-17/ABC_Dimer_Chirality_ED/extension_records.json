@@ -1,0 +1,32 @@
+[
+  {
+    "task": "j07_G_seeds",
+    "returncode": 0,
+    "wall_seconds": 77.966075645003
+  },
+  {
+    "task": "j07_G_a3p1",
+    "returncode": 0,
+    "wall_seconds": 97.9863872690039
+  },
+  {
+    "task": "j07_G_a0p1",
+    "returncode": 0,
+    "wall_seconds": 85.89962715900037
+  },
+  {
+    "task": "j07_G_a0m1",
+    "returncode": 0,
+    "wall_seconds": 29.407452446001116
+  },
+  {
+    "task": "j07_G_a3m1",
+    "returncode": 0,
+    "wall_seconds": 91.66671602799033
+  },
+  {
+    "task": "j07_G_quadrature",
+    "returncode": 0,
+    "wall_seconds": 167.38714534901374
+  }
+]

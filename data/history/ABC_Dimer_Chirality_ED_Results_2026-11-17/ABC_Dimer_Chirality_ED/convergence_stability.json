@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "comparisons": [
+    {
+      "omega": 1.7385684180938608,
+      "old_requested_pairs": 8,
+      "expanded_requested_pairs": 20,
+      "energy_difference": 3.552713678800501e-15,
+      "total_weight_difference": 3.35009797680641e-14,
+      "old_direct_residual": 1.614647048965103e-14,
+      "expanded_direct_residual": 1.1850585290404965e-13
+    },
+    {
+      "omega": 1.9230101125263115,
+      "old_requested_pairs": 8,
+      "expanded_requested_pairs": 20,
+      "energy_difference": 3.552713678800501e-15,
+      "total_weight_difference": 6.7584826624056404e-15,
+      "old_direct_residual": 1.815438127513175e-14,
+      "expanded_direct_residual": 2.2504762822048782e-14
+    },
+    {
+      "omega": 2.180086196217186,
+      "old_requested_pairs": 8,
+      "expanded_requested_pairs": 20,
+      "energy_difference": 7.105427357601002e-15,
+      "total_weight_difference": 1.9600640555061943e-14,
+      "old_direct_residual": 1.711251153143007e-14,
+      "expanded_direct_residual": 3.89790641015954e-14
+    },
+    {
+      "omega": 2.238560971303853,
+      "old_requested_pairs": 8,
+      "expanded_requested_pairs": 20,
+      "energy_difference": 0.0,
+      "total_weight_difference": 1.8963997039378455e-14,
+      "old_direct_residual": 2.201122849268286e-14,
+      "expanded_direct_residual": 4.294074820510735e-14
+    },
+    {
+      "omega": 2.327064570553306,
+      "old_requested_pairs": 8,
+      "expanded_requested_pairs": 20,
+      "energy_difference": 7.105427357601002e-15,
+      "total_weight_difference": 1.8043495842411106e-16,
+      "old_direct_residual": 3.134745894749983e-14,
+      "expanded_direct_residual": 7.222500619727369e-14
+    },
+    {
+      "omega": 2.596884155282819,
+      "old_requested_pairs": 8,
+      "expanded_requested_pairs": 20,
+      "energy_difference": 1.7763568394002505e-15,
+      "total_weight_difference": 7.952839775615672e-15,
+      "old_direct_residual": 3.276604382211842e-14,
+      "expanded_direct_residual": 5.78918378125963e-14
+    }
+  ]
+}

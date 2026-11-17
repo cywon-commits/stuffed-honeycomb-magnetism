@@ -1,0 +1,14 @@
+{
+  "poles.csv": "f1ad18ba72b858f9fb82cd67702fb8137e827c80f427667b9c3e040dad87dc64",
+  "ensemble_poles.csv": "1c8a0458154cb6862a88450ffd6e1f2f5435755463ef3780937fcb8b9c584dfc",
+  "complex_residues.csv": "ade2555c7ada5c38e2d0669415dcfc08c359811d263a47f2c27c3a59f61a3b20",
+  "static_moments.csv": "b644c5b9cc9dfd1335a1e472e9b29360881d829498841632b71c0586795d24f9",
+  "ground_projection.csv": "34d952386c0eb982810b41b76d5dd1717ad1f604b89f1fa16b89f6d7e2d2da28",
+  "mode_summary.csv": "3f20e2e8b6129f89f679f9889052af1b18929f8ebbdc2201baedde3ec40ebdde",
+  "mode_poles.csv": "695412eb8903f9be6170f6300ad39e1f0dc052f70264960a733425f680f21ef8",
+  "remaining_weight_bounds.csv": "d60a56e8b48f45005bdd93a7008a9375e8b95d38cec93d5511360aae41286ea9",
+  "symmetry_partner_poles.csv": "4274f0aaa2f1c0579ad402c08652995b3b679c4fb8f53d19dc77ec8f743078df",
+  "face_mode_coverage.csv": "60238daa5b4a971c0c43428d8de3025c51f5cc91f0b68a0ff2b251f79d924dd4",
+  "cell_mode_coverage.csv": "f8470ddbbdf2d2a6177aad796cc8098caf013c544398e6938e7268b0a4890994",
+  "report.md": "e3d3cc2546b71df06e4b00283fe35d593436755fe0ec1d290e82fd4bbdd2b5e5"
+}

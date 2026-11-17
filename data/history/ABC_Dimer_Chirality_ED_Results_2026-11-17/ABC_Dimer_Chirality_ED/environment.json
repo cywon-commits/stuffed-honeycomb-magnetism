@@ -1,0 +1,15 @@
+{
+  "CPU_model": "INTEL(R) XEON(R) PLATINUM 8573C",
+  "CPU_quota": "200000 100000",
+  "RAM_limit_bytes": 8589934592,
+  "OpenMP_threads": 2,
+  "BLAS_threads": 1,
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "compiler": "g++ (Debian 14.2.0-19) 14.2.0",
+  "compile_flags": "-O3 -march=native -shared -fPIC -fopenmp",
+  "source_revision": "per-file SHA256 recorded in final SHA256SUMS; no Git mutation",
+  "H_matrix": "Never assembled for 27 spins; independent tiny-cluster dense matrices only."
+}

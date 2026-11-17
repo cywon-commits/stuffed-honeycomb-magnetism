@@ -1,0 +1,9 @@
+{
+  "reason": "Use exact compatible reflection blocks in the 2,228,700-state finite-cell target; no Ritz values accepted from abandoned unrestricted search.",
+  "unrestricted_solver_terminated_without_eigenvalue_results": true,
+  "parent_queue_paused_during_replacement": true,
+  "replacement": [],
+  "replacement_returncode": 0,
+  "replacement_wall_seconds": 882.2420539110026,
+  "cost_note": "The parent queue j09_q_solve task duration includes this replacement and must not be counted again when summing per-block measured solve times."
+}

@@ -1,0 +1,45 @@
+pole_id,response,omega,S_final,H_residual,S2_residual,weight_factor,source
+isotropic_G_pair_average_pole_0,isotropic_G_pair_average,1.0883471770513555,0.5,1.934361144365955e-14,3.292399595269194e-14,orbital ground-pair average already included,K plus exact conjugate partner
+isotropic_G_pair_average_pole_1,isotropic_G_pair_average,1.272932720675903,0.5,3.734458249512085e-14,8.552181351290246e-13,orbital ground-pair average already included,K plus exact conjugate partner
+isotropic_G_pair_average_pole_2,isotropic_G_pair_average,1.452424790601297,0.5,3.558582663751741e-14,3.2499203586095815e-13,orbital ground-pair average already included,K plus exact conjugate partner
+isotropic_G_pair_average_pole_3,isotropic_G_pair_average,1.6748259170240711,0.5,4.8496362924861927e-14,1.978959677739644e-13,orbital ground-pair average already included,K plus exact conjugate partner
+isotropic_G_pair_average_pole_4,isotropic_G_pair_average,1.7089407288967404,0.5,2.7240073270293027e-14,7.373954965572422e-14,orbital ground-pair average already included,K plus exact conjugate partner
+isotropic_G_pair_average_pole_5,isotropic_G_pair_average,1.7385684180938572,0.5,1.1850585290404965e-13,1.5769798131548892e-14,orbital ground-pair average already included,K plus exact conjugate partner
+isotropic_G_pair_average_pole_6,isotropic_G_pair_average,1.8159650492485948,0.5,2.2238355829096706e-14,5.72955163641882e-14,orbital ground-pair average already included,K plus exact conjugate partner
+isotropic_G_pair_average_pole_7,isotropic_G_pair_average,1.923010112526308,0.5,2.2504762822048782e-14,1.7603844218320002e-14,orbital ground-pair average already included,K plus exact conjugate partner
+isotropic_G_pair_average_pole_8,isotropic_G_pair_average,2.180086196217193,0.5,3.89790641015954e-14,4.1640577936324545e-14,orbital ground-pair average already included,K plus exact conjugate partner
+isotropic_G_pair_average_pole_9,isotropic_G_pair_average,2.238560971303853,0.5,4.294074820510735e-14,3.4943789669400114e-14,orbital ground-pair average already included,K plus exact conjugate partner
+isotropic_G_pair_average_pole_10,isotropic_G_pair_average,2.327064570553299,0.5,7.222500619727369e-14,7.343207891056736e-14,orbital ground-pair average already included,K plus exact conjugate partner
+isotropic_G_pair_average_pole_11,isotropic_G_pair_average,2.5968841552828206,0.5,5.78918378125963e-14,1.0807185427620615e-13,orbital ground-pair average already included,K plus exact conjugate partner
+isotropic_G_pair_average_pole_12,isotropic_G_pair_average,2.6312185591981088,0.5,5.90292175668239e-14,2.1351992779151072e-13,orbital ground-pair average already included,K plus exact conjugate partner
+isotropic_G_pair_average_pole_13,isotropic_G_pair_average,2.7513312425716983,0.5,2.7413478667550644e-14,5.0055669324768097e-14,orbital ground-pair average already included,K plus exact conjugate partner
+isotropic_G_pair_average_pole_14,isotropic_G_pair_average,2.818096143161574,0.5,5.5930754969199214e-14,1.8451219650817695e-13,orbital ground-pair average already included,K plus exact conjugate partner
+isotropic_G_pair_average_pole_15,isotropic_G_pair_average,2.840443552044187,0.5,5.493387523746001e-14,8.824080095096101e-14,orbital ground-pair average already included,K plus exact conjugate partner
+isotropic_G_pair_average_pole_16,isotropic_G_pair_average,2.9427299547045305,0.5,3.631215315015502e-14,7.91460476082081e-14,orbital ground-pair average already included,K plus exact conjugate partner
+isotropic_G_pair_average_pole_17,isotropic_G_pair_average,2.980496687444111,0.5,3.908925790939476e-14,1.40241716586486e-13,orbital ground-pair average already included,K plus exact conjugate partner
+isotropic_G_pair_average_pole_18,isotropic_G_pair_average,3.0173355139587077,0.5,4.2030375540348074e-14,1.0165848592304377e-13,orbital ground-pair average already included,K plus exact conjugate partner
+isotropic_G_pair_average_pole_19,isotropic_G_pair_average,3.0510641808832535,0.5,4.051551250603829e-14,1.0729252780165923e-13,orbital ground-pair average already included,K plus exact conjugate partner
+isotropic_Q_pair_average_pole_0,isotropic_Q_pair_average,0.5142726607766637,0.5,2.447619573708764e-14,1.8289575342062538e-14,orbital ground-pair average already included,j1_Q
+isotropic_Q_pair_average_pole_1,isotropic_Q_pair_average,0.9488029600369803,0.5,2.97320253581666e-14,5.1651821093798124e-14,orbital ground-pair average already included,j1_Qprime
+isotropic_Q_pair_average_pole_2,isotropic_Q_pair_average,0.9823739493554768,0.5,1.7962889097770796e-14,2.0777101850497106e-14,orbital ground-pair average already included,j1_Q
+isotropic_Q_pair_average_pole_3,isotropic_Q_pair_average,1.0211129904669711,0.5,4.009812958382757e-14,1.0311825554582351e-13,orbital ground-pair average already included,j1_Qprime
+isotropic_Q_pair_average_pole_4,isotropic_Q_pair_average,1.1451963648106496,0.5,1.7758091809572446e-14,1.2343508359983015e-13,orbital ground-pair average already included,j1_Q
+isotropic_Q_pair_average_pole_5,isotropic_Q_pair_average,1.1591976453644932,0.5,2.7037938077561883e-14,1.7872602159062517e-14,orbital ground-pair average already included,j1_Q
+isotropic_Q_pair_average_pole_6,isotropic_Q_pair_average,1.2216954932855604,0.5,2.526577635293394e-14,5.6638189038755036e-14,orbital ground-pair average already included,j1_Qprime
+isotropic_Q_pair_average_pole_7,isotropic_Q_pair_average,1.225532881192441,0.5,1.83315592440793e-14,1.1445386859228027e-14,orbital ground-pair average already included,j1_Qprime
+isotropic_Q_pair_average_pole_8,isotropic_Q_pair_average,1.4137294333034731,0.5,1.1070939871432797e-13,1.8411034772384653e-14,orbital ground-pair average already included,j1_Q
+isotropic_Q_pair_average_pole_9,isotropic_Q_pair_average,1.4311733271344558,0.5,2.45455901015398e-14,1.164268392329489e-13,orbital ground-pair average already included,j1_Qprime
+isotropic_Q_pair_average_pole_10,isotropic_Q_pair_average,1.4535464159761897,0.5,3.5071256353165016e-14,8.880726173700976e-14,orbital ground-pair average already included,j1_Q
+isotropic_Q_pair_average_pole_11,isotropic_Q_pair_average,1.4912553871196206,0.5,2.9814784257072936e-14,9.383851748062757e-14,orbital ground-pair average already included,j1_Qprime
+isotropic_Q_pair_average_pole_12,isotropic_Q_pair_average,1.5153989311026823,0.5,2.788471695030103e-14,1.434698395550382e-14,orbital ground-pair average already included,j1_Qprime
+isotropic_Q_pair_average_pole_13,isotropic_Q_pair_average,1.5751502974198175,0.5,2.378354379435197e-14,2.08959263138005e-14,orbital ground-pair average already included,j1_Q
+isotropic_Q_pair_average_pole_14,isotropic_Q_pair_average,1.6768600016345125,0.5,1.813649622196648e-14,1.6080439521055934e-14,orbital ground-pair average already included,j1_Qprime
+isotropic_Q_pair_average_pole_15,isotropic_Q_pair_average,1.7692076004589214,0.5,2.7010139339473833e-14,5.604246308956248e-14,orbital ground-pair average already included,j1_Q
+isotropic_Q_pair_average_pole_16,isotropic_Q_pair_average,1.7922759801165196,0.5,4.951274956630507e-14,3.686918038574773e-14,orbital ground-pair average already included,j1_Qprime
+isotropic_Q_pair_average_pole_17,isotropic_Q_pair_average,1.807258699619661,0.5,2.792933839510132e-14,6.357786031689061e-14,orbital ground-pair average already included,j1_Q
+isotropic_Q_pair_average_pole_18,isotropic_Q_pair_average,1.8500194495737503,0.5,4.806019930343723e-14,6.526746826381229e-14,orbital ground-pair average already included,j1_Qprime
+isotropic_Q_pair_average_pole_19,isotropic_Q_pair_average,1.8748297105558809,0.5,3.1243408440015796e-14,6.06615684553921e-14,orbital ground-pair average already included,j1_Q
+isotropic_K_pair_average_pole_0,isotropic_K_pair_average,1.0883471770513484,0.5,3.124625434071418e-14,7.960907468615595e-14,orbital ground-pair average already included,j1_K
+isotropic_K_pair_average_pole_1,isotropic_K_pair_average,1.2729327206759056,0.5,3.868460414611522e-14,8.554608532278821e-13,orbital ground-pair average already included,j1_K
+isotropic_K_pair_average_pole_2,isotropic_K_pair_average,1.452424790601297,0.5,3.6765281736118885e-14,3.2510766099977935e-13,orbital ground-pair average already included,j1_K
+isotropic_K_pair_average_pole_3,isotropic_K_pair_average,1.6748259170240711,0.5,4.9403054588933375e-14,1.9845087014641158e-13,orbital ground-pair average already included,j1_K
