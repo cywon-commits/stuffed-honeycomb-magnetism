@@ -5,3 +5,4 @@ specs/
 specs_*.txt
 *.lz
 *.vec
+results/N36/*.log
