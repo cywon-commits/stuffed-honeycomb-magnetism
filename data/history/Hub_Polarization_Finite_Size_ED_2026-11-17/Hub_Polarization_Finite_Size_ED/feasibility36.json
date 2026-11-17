@@ -1,0 +1,148 @@
+{
+  "status": "PHASE_C_LOW_SPIN_ED_BLOCKED_BY_MEMORY; REAL_36SPIN_HIGH_SZ_PILOTS_COMPLETED",
+  "available_RAM_bytes": 8589934592,
+  "exact_Sz0_full_dimension": 9075135300,
+  "exact_translation_sector_dimensions": [
+    {
+      "k": [
+        0.0,
+        0.0
+      ],
+      "dimension": 756273594
+    },
+    {
+      "k": [
+        0.0,
+        0.5
+      ],
+      "dimension": 756257374
+    },
+    {
+      "k": [
+        0.16666666666666666,
+        0.3333333333333333
+      ],
+      "dimension": 756257148
+    },
+    {
+      "k": [
+        0.16666666666666666,
+        0.8333333333333334
+      ],
+      "dimension": 756257148
+    },
+    {
+      "k": [
+        0.3333333333333333,
+        0.16666666666666666
+      ],
+      "dimension": 756257148
+    },
+    {
+      "k": [
+        0.3333333333333333,
+        0.6666666666666666
+      ],
+      "dimension": 756273348
+    },
+    {
+      "k": [
+        0.5,
+        0.0
+      ],
+      "dimension": 756257374
+    },
+    {
+      "k": [
+        0.5,
+        0.5
+      ],
+      "dimension": 756257374
+    },
+    {
+      "k": [
+        0.6666666666666666,
+        0.3333333333333333
+      ],
+      "dimension": 756273348
+    },
+    {
+      "k": [
+        0.6666666666666666,
+        0.8333333333333334
+      ],
+      "dimension": 756257148
+    },
+    {
+      "k": [
+        0.8333333333333334,
+        0.16666666666666666
+      ],
+      "dimension": 756257148
+    },
+    {
+      "k": [
+        0.8333333333333334,
+        0.6666666666666666
+      ],
+      "dimension": 756257148
+    }
+  ],
+  "smallest_complex_vector_GiB": 11.269109666347504,
+  "largest_complex_vector_GiB": 11.269354730844498,
+  "Gamma_real_vector_GiB": 5.634677365422249,
+  "dense_combinatorial_lookup_GiB": 42.259391862899065,
+  "measured_pilots": [
+    {
+      "N": 36,
+      "r": 0.3,
+      "number_of_down_spins": 4,
+      "Sz_abs": 14,
+      "full_sector_dim": 58905,
+      "translation_Gamma_dim": 4947,
+      "basis_generation_seconds": 0.0009802590066101402,
+      "median_H_action_seconds": 0.0008149900022544898,
+      "H_action_samples_seconds": [
+        0.00107136600126978,
+        0.0019513310035108589,
+        0.0007905609963927418,
+        0.0008149900022544898,
+        0.0007105070035322569
+      ],
+      "Hermiticity_error": 1.0007415106216802e-16,
+      "metadata_bytes_measured_arrays": 378624,
+      "complex_vector_bytes": 79152,
+      "peak_RSS_MiB": 48.203125,
+      "status": "MEASURED_HIGH_SZ_PILOT; NOT_A_GROUND_STATE_CALCULATION"
+    },
+    {
+      "N": 36,
+      "r": 0.3,
+      "number_of_down_spins": 6,
+      "Sz_abs": 12,
+      "full_sector_dim": 1947792,
+      "translation_Gamma_dim": 162534,
+      "basis_generation_seconds": 0.05905545400310075,
+      "median_H_action_seconds": 0.048986677000357304,
+      "H_action_samples_seconds": [
+        0.04832959300256334,
+        0.049606336004217155,
+        0.05064001400023699,
+        0.04750860399508383,
+        0.048986677000357304
+      ],
+      "Hermiticity_error": 5.612607933133757e-17,
+      "metadata_bytes_measured_arrays": 12502038,
+      "complex_vector_bytes": 2600544,
+      "peak_RSS_MiB": 72.3125,
+      "status": "MEASURED_HIGH_SZ_PILOT; NOT_A_GROUND_STATE_CALCULATION"
+    }
+  ],
+  "translation_only_Sz0_H_seconds_estimate_from_high_Sz_pilot": 227.93587971241314,
+  "estimate_limitations": "Dimension-linear extrapolation from high magnetization; not a measured low-spin matvec. Half filling has more opposite-spin bonds and rank operations, so this can be optimistic. No converged low-spin 36-spin eigenvalue exists.",
+  "hypothetical_300_to_1000_H_actions_hours_at_two_CPU_estimate": [
+    18.994656642701095,
+    63.31552214233699
+  ],
+  "HPC_recommendation": "At least 128 GiB for selected Gamma one-dimensional point-group sectors with compatible indexing and restarted eigensolver; approximately 256 GiB and 64-128 CPU cores for meaningful Gamma/corner coverage. These are design estimates, not completed benchmarks."
+}
