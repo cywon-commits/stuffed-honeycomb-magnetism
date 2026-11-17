@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "checkpoints_freshly_reconstructed_and_verified": 122,
+  "all_momentum_dimensions_sum_to_full_Sz0_48620": true,
+  "max_fresh_H_residual": 4.691651745880047e-14,
+  "max_fresh_S2_residual": 4.907653602423959e-10
+}
