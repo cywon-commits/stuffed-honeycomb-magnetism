@@ -323,33 +323,93 @@ template <class T> static void save_vec(FILE* f, const std::vector<T>& v) { fwri
 template <class T> static bool load_vec(FILE* f, std::vector<T>& v) { return fread(v.data(), sizeof(T), v.size(), f) == v.size(); }
 
 struct Opts {
-  std::string mode = "lanczos", spec, ckpt, out;
+  std::string mode = "lanczos", spec, ckpt, out, in, pairs;
   double r = 0.2, tol = 1e-10;
   int maxit = 400, nbench = 3, ckevery = 20, nev = 3; uint64_t seed = 12345; bool vec = true;
 };
 
+// ------------------------------------------------------------------ pair-orbit correlations
+struct Pairs { std::vector<u64> mask; std::vector<int> orb; int norb = 0; };
+static Pairs read_pairs(const std::string& path) {
+  Pairs P; std::ifstream f(path); std::string tok; int np;
+  if (!(f >> tok >> np >> tok >> P.norb)) { fprintf(stderr, "bad pairs file %s\n", path.c_str()); exit(1); }
+  for (int k = 0; k < np; k++) { int a, b, o, si, sj; f >> a >> b >> o >> si >> sj; P.mask.push_back((1ULL << a) | (1ULL << b)); P.orb.push_back(o); }
+  return P;
+}
+// <psi| sum_{pairs in orbit} S_i.S_j |psi> for every orbit (psi normalized)
 template <class T>
-static void lanczos(const Opts& o, const Ham& H, size_t D, FILE* log) {
+static std::vector<double> measure_pairs(const Ham& H, const Pairs& P, const std::vector<T>& psi) {
+  const size_t D = psi.size(); const int np = (int)P.mask.size(), no = P.norb;
+  std::vector<double> tot(no, 0.0);
+#pragma omp parallel
+  {
+    std::vector<double> acc(no, 0.0);
+#pragma omp for schedule(dynamic, 4096)
+    for (size_t i = 0; i < D; i++) {
+      const u64 s = H.B->reps[i]; const double p2 = std::norm(cplx(psi[i]));
+      const T ci = conj_(psi[i]) / H.sqn[i];
+      for (int k = 0; k < np; k++) {
+        const u64 m = s & P.mask[k];
+        if (m == 0 || m == P.mask[k]) { acc[P.orb[k]] += 0.25 * p2; continue; }
+        acc[P.orb[k]] -= 0.25 * p2;
+        int g = 0; const u64 rp = H.S->rep(s ^ P.mask[k], g);
+        const int64_t j = H.B->find(rp); if (j < 0) continue;
+        acc[P.orb[k]] += 0.5 * re_(ci * from_c<T>(H.S->chi[g]) * (H.sqn[j] * psi[j]));
+      }
+    }
+#pragma omp critical
+    for (int o = 0; o < no; o++) tot[o] += acc[o];
+  }
+  return tot;
+}
+
+template <class T>
+static void report_pairs(const Opts& o, const Ham& H, const std::vector<T>& psi, int N) {
+  if (o.pairs.empty()) return;
+  double t = now();
+  Pairs P = read_pairs(o.pairs);
+  std::vector<double> v = measure_pairs(H, P, psi);
+  double all = 0; for (double x : v) all += x;
+  printf("PAIRS measured %d orbits over %zu pairs in %.1fs\n", P.norb, P.mask.size(), now() - t);
+  for (int k = 0; k < P.norb; k++) printf("ORBIT %d %.15f\n", k, v[k]);
+  double S2 = 0.75 * N + 2 * all;
+  printf("S2 %.12f  S_eff %.10f\n", S2, 0.5 * (std::sqrt(1 + 4 * S2) - 1));
+  fflush(stdout);
+}
+
+// ------------------------------------------------------------------ Lanczos (two pass, restartable)
+// checkpoint files:  PREFIX.lz  (pass 1: alpha, beta, v_{j-1}, v_j; flag=1 once pass 1 has finished)
+//                    PREFIX.p2  (pass 2: step j, v_{j-1}, v_j, partial psi)
+template <class T>
+static bool lanczos(const Opts& o, const Ham& H, size_t D, std::vector<T>& psi, double& Eout) {
+  FILE* log = stdout;
   std::vector<T> v0(D), v1(D), w(D);
-  std::vector<double> al, be;  // be[j] couples v_j, v_{j+1}
-  int start = 0; double t0 = now();
-  std::string ck = o.ckpt;
+  std::vector<double> al, be;
+  int start = 0; double t0 = now(); uint64_t finished = 0;
+  const std::string ck = o.ckpt;
+  auto save1 = [&](uint64_t fin) {
+    if (ck.empty()) return;
+    std::string tmp = ck + ".lz.tmp"; FILE* f = fopen(tmp.c_str(), "wb");
+    uint64_t d = D, it = al.size(); fwrite(&d, 8, 1, f); fwrite(&it, 8, 1, f); fwrite(&fin, 8, 1, f);
+    fwrite(al.data(), 8, it, f); fwrite(be.data(), 8, it, f);
+    if (!fin) { save_vec(f, v0); save_vec(f, v1); }
+    fclose(f); rename(tmp.c_str(), (ck + ".lz").c_str());
+  };
   bool resumed = false;
   if (!ck.empty()) {
-    FILE* f = fopen((ck + ".lz").c_str(), "rb");
-    if (f) {
-      uint64_t d, it; fread(&d, 8, 1, f); fread(&it, 8, 1, f);
+    if (FILE* f = fopen((ck + ".lz").c_str(), "rb")) {
+      uint64_t d = 0, it = 0; fread(&d, 8, 1, f); fread(&it, 8, 1, f); fread(&finished, 8, 1, f);
       if (d == D) {
         al.resize(it); be.resize(it); fread(al.data(), 8, it, f); fread(be.data(), 8, it, f);
-        if (load_vec(f, v0) && load_vec(f, v1)) { start = (int)it; resumed = true; }
+        if (finished || (load_vec(f, v0) && load_vec(f, v1))) { start = (int)it; resumed = true; }
       }
       fclose(f);
-      if (resumed) fprintf(log, "resumed pass-1 checkpoint at iteration %d\n", start);
+      if (resumed) fprintf(log, "resumed pass-1 checkpoint at iteration %d (finished=%d)\n", start, (int)finished);
     }
   }
-  if (!resumed) { random_vec(v1, o.seed); std::fill(v0.begin(), v0.end(), T(0)); }
-  std::vector<double> ev, Z; double Eold = 1e300; int conv_it = -1; double resid_est = 1;
-  for (int j = start; j < o.maxit; j++) {
+  if (!resumed) { random_vec(v1, o.seed); std::fill(v0.begin(), v0.end(), T(0)); finished = 0; }
+  std::vector<double> ev, Z; double Eold = 1e300; int conv_it = finished ? start : -1; double resid_est = 1;
+  for (int j = start; !finished && j < o.maxit; j++) {
     double tm = now();
     H.apply(v1.data(), w.data());
     double a = dotr(v1, w); double bprev = j > 0 ? be[j - 1] : 0.0;
@@ -357,7 +417,6 @@ static void lanczos(const Opts& o, const Ham& H, size_t D, FILE* log) {
     for (size_t i = 0; i < D; i++) w[i] -= a * v1[i] + bprev * v0[i];
     double b = std::sqrt(dotr(w, w));
     al.push_back(a); be.push_back(b);
-    // eigenvalues every iteration (O(n^2)); Ritz vectors only when E0 has settled or periodically (O(n^3))
     std::vector<double> sub(be.begin(), be.end() - 1);
     tqli(al, sub, ev, Z, false);
     int n = (int)al.size();
@@ -370,26 +429,32 @@ static void lanczos(const Opts& o, const Ham& H, size_t D, FILE* log) {
     if (b < 1e-14) { conv_it = j + 1; break; }
 #pragma omp parallel for
     for (size_t i = 0; i < D; i++) { v0[i] = v1[i]; v1[i] = w[i] / b; }
-    if (!ck.empty() && (j + 1) % o.ckevery == 0) {
-      std::string tmp = ck + ".lz.tmp"; FILE* f = fopen(tmp.c_str(), "wb");
-      uint64_t d = D, it = al.size(); fwrite(&d, 8, 1, f); fwrite(&it, 8, 1, f);
-      fwrite(al.data(), 8, it, f); fwrite(be.data(), 8, it, f); save_vec(f, v0); save_vec(f, v1); fclose(f);
-      rename(tmp.c_str(), (ck + ".lz").c_str());
-    }
     if (resid_est < o.tol) { conv_it = j + 1; break; }
+    if ((j + 1) % o.ckevery == 0) save1(0);
     Eold = ev[0];
   }
   int n = (int)al.size();
-  { std::vector<double> ev2; tqli(al, std::vector<double>(be.begin(), be.end() - 1), ev2, Z, true); }
+  tqli(al, std::vector<double>(be.begin(), be.end() - 1), ev, Z, true);
+  resid_est = std::fabs(be[n - 1] * Z[(size_t)0 * n + (n - 1)]);
   fprintf(log, "PASS1 iterations %d converged %s E0 %.15f ritz_resid %.3e\n", n, conv_it > 0 ? "yes" : "no", ev[0], resid_est);
   fprintf(log, "RITZ");
   for (int k = 0; k < std::min(o.nev * 2, n); k++) fprintf(log, " %.14f", ev[k]);
-  fprintf(log, "\n");
-  if (!o.vec) return;
+  fprintf(log, "\n"); fflush(log);
+  if (conv_it > 0) save1(1); else { save1(0); fprintf(log, "NOT CONVERGED: rerun with larger --maxit to continue from the checkpoint\n"); return false; }
+  if (!o.vec) return false;
   // pass 2: rebuild Krylov vectors and accumulate ground-state vector
-  std::vector<T> psi(D, T(0));
-  random_vec(v1, o.seed); std::fill(v0.begin(), v0.end(), T(0));
-  for (int j = 0; j < n; j++) {
+  psi.assign(D, T(0));
+  int j0 = 0;
+  if (!ck.empty()) {
+    if (FILE* f = fopen((ck + ".p2").c_str(), "rb")) {
+      uint64_t d = 0, jj = 0; fread(&d, 8, 1, f); fread(&jj, 8, 1, f);
+      if (d == D && load_vec(f, v0) && load_vec(f, v1) && load_vec(f, psi)) { j0 = (int)jj; fprintf(log, "resumed pass-2 checkpoint at step %d\n", j0); }
+      else { psi.assign(D, T(0)); j0 = 0; }
+      fclose(f);
+    }
+  }
+  if (j0 == 0) { random_vec(v1, o.seed); std::fill(v0.begin(), v0.end(), T(0)); }
+  for (int j = j0; j < n; j++) {
     double c = Z[(size_t)0 * n + j];
 #pragma omp parallel for
     for (size_t i = 0; i < D; i++) psi[i] += c * v1[i];
@@ -398,7 +463,14 @@ static void lanczos(const Opts& o, const Ham& H, size_t D, FILE* log) {
     double bprev = j > 0 ? be[j - 1] : 0.0;
 #pragma omp parallel for
     for (size_t i = 0; i < D; i++) { T t = (w[i] - al[j] * v1[i] - bprev * v0[i]) / be[j]; v0[i] = v1[i]; v1[i] = t; }
+    if ((j + 1) % 10 == 0) { fprintf(log, "pass2 step %d/%d t %.1fs\n", j + 1, n, now() - t0); fflush(log); }
+    if (!ck.empty() && (j + 1) % o.ckevery == 0) {
+      std::string tmp = ck + ".p2.tmp"; FILE* f = fopen(tmp.c_str(), "wb");
+      uint64_t d = D, jj = j + 1; fwrite(&d, 8, 1, f); fwrite(&jj, 8, 1, f); save_vec(f, v0); save_vec(f, v1); save_vec(f, psi); fclose(f);
+      rename(tmp.c_str(), (ck + ".p2").c_str());
+    }
   }
+  std::vector<T>().swap(v0);
   double nrm = std::sqrt(dotr(psi, psi));
 #pragma omp parallel for
   for (size_t i = 0; i < D; i++) psi[i] /= nrm;
@@ -408,11 +480,14 @@ static void lanczos(const Opts& o, const Ham& H, size_t D, FILE* log) {
   for (size_t i = 0; i < D; i++) w[i] -= E * psi[i];
   double res = std::sqrt(dotr(w, w));
   fprintf(log, "GROUND E0 %.15f residual %.3e norm_before %.12f (pass-2 total %.1fs)\n", E, res, nrm, now() - t0);
+  fflush(log);
+  Eout = E;
   if (!o.out.empty()) {
     FILE* f = fopen(o.out.c_str(), "wb"); uint64_t d = D; fwrite(&d, 8, 1, f); fwrite(&E, 8, 1, f); save_vec(f, psi); fclose(f);
     fprintf(log, "wrote ground-state vector to %s\n", o.out.c_str());
   }
-  if (!ck.empty()) remove((ck + ".lz").c_str());
+  if (!ck.empty()) { remove((ck + ".p2").c_str()); }
+  return true;
 }
 
 template <class T>
@@ -434,8 +509,15 @@ static void run(const Opts& o, const Spec& sp, const Sym& S, const Basis& B) {
       std::fill(e.begin(), e.end(), T(0)); e[j] = 1; H.apply(e.data(), col.data());
       for (size_t i = 0; i < D; i++) { cplx c = cplx(col[i]); printf("%zu %zu %.17g %.17g\n", i, j, c.real(), c.imag()); }
     }
+  } else if (o.mode == "measure") {
+    std::vector<T> psi(D); FILE* f = fopen(o.in.c_str(), "rb"); uint64_t d = 0; double E = 0;
+    if (!f || fread(&d, 8, 1, f) != 1 || d != D || fread(&E, 8, 1, f) != 1 || !load_vec(f, psi)) { fprintf(stderr, "cannot read vector %s\n", o.in.c_str()); exit(1); }
+    fclose(f);
+    printf("LOADED E0 %.15f\n", E);
+    report_pairs(o, H, psi, sp.N);
   } else {
-    lanczos<T>(o, H, D, stdout);
+    std::vector<T> psi; double E = 0;
+    if (lanczos<T>(o, H, D, psi, E)) report_pairs(o, H, psi, sp.N);
   }
 }
 
@@ -454,6 +536,8 @@ int main(int argc, char** argv) {
     else if (a == "--out") o.out = nx();
     else if (a == "--seed") o.seed = std::stoull(nx());
     else if (a == "--novec") o.vec = false;
+    else if (a == "--pairs") o.pairs = nx();
+    else if (a == "--in") o.in = nx();
     else o.spec = a;
   }
   if (o.spec.empty()) { fprintf(stderr, "usage: ed_sym SPEC [--mode dim|bench|lanczos|dense] [--r R] [--maxit N] [--tol T] [--ckpt PREFIX] [--out FILE]\n"); return 1; }

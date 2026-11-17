@@ -200,14 +200,25 @@ class Cluster:
                 chars.append(phi)
         return chars
 
-    def sectors(self, nup, use_flip=None):
-        """Complete list of sectors for the given number of up spins."""
+    def sectors(self, nup, use_flip=None, full_little=False, only_k=None):
+        """Complete list of sectors for the given number of up spins.
+
+        full_little=True uses the 1D characters of the full little group
+        instead (e.g. A1, A2, B1, B2 of C6v at Gamma).  Those sectors are
+        smaller but NOT complete when the point part is non-abelian (2D irreps
+        are omitted); use them for targeted runs only.
+        """
         if use_flip is None:
             use_flip = (2 * nup == self.N)
         out = []
         for ik, k in enumerate(self.momenta):
+            if only_k is not None and ik != only_k:
+                continue
             L = self.little_group(k)
-            S, how = self.abelian_part(L)
+            if full_little:
+                S, how = sorted(L), "full little group, 1D irreps only (incomplete if point part non-abelian)"
+            else:
+                S, how = self.abelian_part(L)
             for ic, phi in enumerate(self.characters(S, k)):
                 for z in ([1, -1] if use_flip else [None]):
                     out.append(dict(k=k, ik=ik, ichar=ic, z=z, chi=phi, little_order=len(L) // self.Ncell,
@@ -236,6 +247,46 @@ class Cluster:
         dim = tot / sec["group_order"]
         assert abs(dim.imag) < 1e-6 and abs(dim.real - round(dim.real)) < 1e-6, dim
         return int(round(dim.real))
+
+    # ---------------- labels and pair orbits -----------------
+    def point_label(self, sec):
+        """Characters of the symmetry elements that fix hub site 2 (the cell-0 hub), i.e. the point part.
+
+        Returned as {cycle-type string: character}, enough to tell A1 from A2 etc."""
+        hub0 = 2
+        lab = {}
+        for p, c in sec["chi"].items():
+            if p[hub0] != hub0:
+                continue
+            order = math.lcm(*cycles(p))
+            nfix = sum(1 for i in range(self.N) if p[i] == i)
+            key = f"ord{order}_fix{nfix}"
+            lab.setdefault(key, set()).add(complex(round(c.real, 6), round(c.imag, 6)))
+        return {k: sorted([str(v) for v in vs]) for k, vs in sorted(lab.items())}
+
+    def pair_orbits(self):
+        """Orbits of unordered site pairs (i<j) under the automorphism group."""
+        orbit = {}
+        reps = []
+        for i in range(self.N):
+            for j in range(i + 1, self.N):
+                if (i, j) in orbit:
+                    continue
+                oid = len(reps)
+                reps.append((i, j))
+                for p in self.group:
+                    a, b = sorted((p[i], p[j]))
+                    orbit[(a, b)] = oid
+        return orbit, reps
+
+    def write_pairs(self, path):
+        orbit, reps = self.pair_orbits()
+        b = self.bit_of_site
+        lines = [f"PAIRS {len(orbit)} ORBITS {len(reps)}"]
+        for (i, j), o in sorted(orbit.items()):
+            lines.append(f"{b[i]} {b[j]} {o} {i} {j}")
+        pathlib.Path(path).write_text("\n".join(lines) + "\n")
+        return orbit, reps
 
     # ---------------- export -----------------
     def write_spec(self, sec, nup, path):
@@ -281,11 +332,15 @@ def main():
     ap.add_argument("--nup", type=int, help="number of up spins (default: Sz=0 or 1/2)")
     ap.add_argument("--outdir", default="specs")
     ap.add_argument("--no-write", action="store_true")
+    ap.add_argument("--full-little", action="store_true", help="1D irreps of the full little group (incomplete set)")
+    ap.add_argument("--k", type=int, help="only this momentum index")
     a = ap.parse_args()
     c = Cluster(a.cluster)
     nup = a.nup if a.nup is not None else (c.N + 1) // 2
-    secs = c.sectors(nup)
-    out = pathlib.Path(a.outdir) / f"{c.name}_nup{nup}"
+    secs = c.sectors(nup, full_little=a.full_little, only_k=a.k)
+    out = pathlib.Path(a.outdir) / (f"{c.name}_nup{nup}" + ("_fulllittle" if a.full_little else "") + (f"_k{a.k}" if a.k is not None else ""))
+    out.mkdir(parents=True, exist_ok=True)
+    c.write_pairs(out / "pairs.txt")
     out.mkdir(parents=True, exist_ok=True)
     rows = []
     tot = 0
@@ -297,14 +352,16 @@ def main():
             c.write_spec(s, nup, out / f"{tag}.spec")
         rows.append(dict(tag=tag, k=list(s["k"]), ichar=s["ichar"], z=s["z"], dim=d,
                          group_order=s["group_order"], little_point_order=s["little_order"], point_part=s["point_part"],
+                         point_characters=c.point_label(s),
                          real=all(abs(v.imag) < 1e-12 for v in s["chi"].values())))
     full = math.comb(c.N, nup)
     summary = dict(cluster=c.name, T=c.T, N=c.N, NH=c.NH, nup=nup, automorphisms=len(c.group),
-                   full_dim=full, sum_sector_dims=tot, complete=(tot == full), sectors=rows)
+                   full_dim=full, sum_sector_dims=tot, complete=(tot == full), full_little=a.full_little,
+                   only_k=a.k, sectors=rows)
     (out / "sectors.json").write_text(json.dumps(summary, indent=1))
     print(f"{c.name}: |Aut|={len(c.group)} nup={nup} full={full} sum={tot} complete={tot == full} sectors={len(rows)}")
     for r in rows:
-        print(f"  {r['tag']} k={np.round(r['k'], 4).tolist()} chi#{r['ichar']} z={r['z']} dim={r['dim']} real={r['real']} |S|={r['group_order']}")
+        print(f"  {r['tag']} k={np.round(r['k'], 4).tolist()} chi#{r['ichar']} z={r['z']} dim={r['dim']} real={r['real']} |S|={r['group_order']} point={r['point_characters']}")
 
 
 if __name__ == "__main__":
