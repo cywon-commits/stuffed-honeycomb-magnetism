@@ -5,3 +5,4 @@ SPEC N=36 NH=12 NUP=18 bonds=108 elements=288 real=1 threads=4 r=0.3
 TABLES built 0.07s  mean candidates per hub pattern 3.30
 BASIS dim 31541930  build 1.74s  basis+lookup 0.654 GiB  rim_key_bits 19  peak_RSS 878.0 MiB
 it    1  E0 -0.41203183492256  E1  0.00000000000000  ritz_resid 1.000e+00  dt 42.76s  t 42.9s
+it    2  E0 -3.32231487278777  E1  2.29166393855378  ritz_resid 1.000e+00  dt 43.43s  t 86.4s

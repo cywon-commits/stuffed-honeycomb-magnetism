@@ -29,6 +29,9 @@ work (`src/workspaces/finite_size_18_27_36pilot/geometry.py`, 36-site torus
 - `ed_sym.cpp` — solver. Build: `g++ -O3 -march=native -fopenmp -std=c++17 -o ed_sym ed_sym.cpp`.
 - `validate_small.py` — N = 12: union of all 36 dense sector spectra vs. the full unsymmetrized Sz = 0 spectrum.
 - `validate_reference.py` — Lanczos vs. archived K18/C18 per-momentum energies and the verified 27-spin ground states.
+- `analyze.py` — ground-state observables from the solver's pair-orbit output (same definitions as `observables.py::values`).
+- `validate_observables.py` — S, ⟨S_H²⟩, ⟨S_R²⟩, ⟨S_H·S_R⟩, p_H, m_R², m_N², hub S(q) vs. `gs_18_scan.csv`.
+- `run_n36.sh SPEC R TAG WORKDIR` — detached, restartable N = 36 run (rerun the same command to resume).
 - `results/` — validation JSON and benchmark logs.
 
 Usage:
@@ -36,8 +39,24 @@ Usage:
 ```bash
 ./ed_sym specs/N36_nup18/s000.spec --mode dim            # basis only
 ./ed_sym specs/N36_nup18/s000.spec --mode bench --r 0.3  # timed H-actions + Hermiticity
-./ed_sym specs/N36_nup18/s000.spec --r 0.3 --tol 1e-9 --ckpt ck/s000_r0.3 --out gs.vec
+./ed_sym specs/N36_nup18/s000.spec --r 0.3 --tol 1e-9 --ckpt ck/s000_r0.3 --out gs.vec \
+         --pairs specs/N36_nup18/pairs.txt                # + all pair-orbit correlations
+python3 symmetry.py N36 --full-little --k 0 --outdir specs   # Gamma A1/A2/B1/B2 x flip (31.5 M each)
+python3 analyze.py N36 specs/N36_nup18_fulllittle_k0/pairs.txt results/N36/<tag>.log
 ```
+
+### Observables
+
+Because a sector eigenstate transforms in a 1D representation, ⟨S_i·S_j⟩ is
+constant on every orbit of site pairs under the symmetry group (12 orbits for
+N = 36). `--pairs` evaluates all orbit sums in one sweep (cost ≈ 630/108 H
+actions) and `analyze.py` rebuilds the full G matrix, from which S (via S²),
+⟨S_H²⟩, ⟨S_R²⟩, ⟨S_H·S_R⟩, p_H, m_R,uniform², m_N², legacy Néel F(Γ) and the
+hub structure factor at every cluster momentum follow. The energy recomputed
+from G and the spin sum rule are reported as checks.
+
+Spin-flip parity of an Sz = 0 state with total spin S is z = (−1)^(N/2+S)
+(confirmed: N = 18 singlets have z = −1); N = 36 singlets are in z = +1.
 
 ## Validation
 
@@ -45,6 +64,8 @@ See `results/validation_N12.json` and `results/validation_reference_18_27.json`.
 
 - **N = 12, r = 0.3 / 0.77 / 1.0:** the union of the 36 sector spectra equals the full 924-state Sz = 0 spectrum, max |ΔE| = 3e-14; Hermiticity error ≤ 3e-15; every sector dimension equals its Burnside count.
 - **N = 18 (K18, C18), r = 0.1 / 0.3 / 0.5 / 1.0:** lowest energy in every one of the 6 momenta agrees with the archived NEW_18_SPIN_ED data to ≤ 1.8e-14; global ground energies agree to ≤ 1.1e-14; eigenvector residuals ‖Hψ − Eψ‖ < 1e-9.
+- **Observables, N = 18 (K18, C18), r = 0.3 / 0.5 / 1.0:** S, H2, R2, HR, p_H, m_R_uniform2, m_N2, hub_S_Gamma, hub_peak agree with `gs_18_scan.csv` to ≤ 4e-11; energy from G and solver S² agree to ≤ 2e-13 (`results/validation_observables_18.json`).
+- **Checkpoint restart:** a 27-spin run killed in pass 1 and again in pass 2 and resumed reproduces E0 to 1e-14.
 - **N = 27 (Sz = 1/2, no spin flip), r = 0.2 / 0.2375:** global ground energies −10.185949128477 and −10.224890752095 agree with the verified 27-spin checkpoints to 1.4e-14 and 5e-15; the ground-state momentum is the reference K point (found at −k, i.e. the opposite Fourier sign convention).
 
 ## Measured N = 36 benchmark (this environment)
@@ -71,8 +92,12 @@ smaller; dimensions are listed by `symmetry.py N36`.
 - Larger total spin is cheaper: the Sz = S sectors are several times smaller than Sz = 0.
 - The cloud container is reclaimed after inactivity; long runs must use `--ckpt` and be restartable.
 
+## N = 36 runs
+
+Logs in `results/N36/`. Γ A1 (C6v), z = +1, 31,541,930 states: 42.8 s per
+H action on 4 threads, 0.65 GiB basis.
+
 ## Not yet implemented
 
-- S² / spin-multiplet identification and the observables required by `docs/guides/HPC_36SPIN_EXECUTION_REQUEST_EN.md` (⟨S_H²⟩, ⟨S_R²⟩, structure factors, …).
-- Splitting Γ A1/A2 (and B1/B2) with the full C6v 1D characters, which would halve the most important sector to ~31.5 M states.
-- Thick-restart / block Lanczos for several low-lying states per sector.
+- Thick-restart / block Lanczos for several low-lying states per sector (convergence is slow when levels are close: ~250 steps for N = 27).
+- Rim (Néel) finite-q structure factors beyond what the reconstructed G already gives (G is complete, so any static pair quantity can be added in `analyze.py`).
