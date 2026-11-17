@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "all_archived_files_byte_identical_after_cached_reproduction": true,
+  "manifest_entries": 217,
+  "scope": "Re-export, static identities, tables, conditional exclusions, deterministic figures, result validation. New eigensolver small tests are recorded separately."
+}

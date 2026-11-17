@@ -1,0 +1,197 @@
+{
+  "target_width": 0.004999,
+  "new_point_count_this_process": 2,
+  "refinement_coupling_count": 11,
+  "strict_exclusions_requested": false,
+  "new_point_limit_reached": false,
+  "crossings": [
+    {
+      "a": 0.25625,
+      "b": 0.2609375,
+      "width": 0.004687500000000011,
+      "left_quantum_numbers": [
+        [
+          1,
+          2
+        ],
+        0,
+        0.5,
+        1
+      ],
+      "right_quantum_numbers": [
+        [
+          0,
+          0
+        ],
+        0,
+        3.5,
+        1
+      ],
+      "target_width_met": true,
+      "competing_branch_records": [
+        {
+          "Jp": 0.25625,
+          "cell_n": [
+            1,
+            2
+          ],
+          "character": 0,
+          "spin": 0.5,
+          "reflection_parity": 1,
+          "name": "p0.256250000_n12_r0_e0",
+          "energy": -10.24738135243231,
+          "residual": 3.087097108408151e-14,
+          "slope_dE_dJp": -1.2549535032576804
+        },
+        {
+          "Jp": 0.2609375,
+          "cell_n": [
+            1,
+            2
+          ],
+          "character": 0,
+          "spin": 0.5,
+          "reflection_parity": 1,
+          "name": "p0.260937500_n12_r0_e0",
+          "energy": -10.253329843606297,
+          "residual": 2.919239196263006e-14,
+          "slope_dE_dJp": -1.2831090889460794
+        },
+        {
+          "Jp": 0.25625,
+          "cell_n": [
+            0,
+            0
+          ],
+          "character": 0,
+          "spin": 3.5,
+          "reflection_parity": 1,
+          "name": "p0.256250000_n00_r0_e0",
+          "energy": -10.24578909196519,
+          "residual": 1.8563801743471146e-13,
+          "slope_dE_dJp": -2.346862173323971
+        },
+        {
+          "Jp": 0.2609375,
+          "cell_n": [
+            0,
+            0
+          ],
+          "character": 0,
+          "spin": 3.5,
+          "reflection_parity": 1,
+          "name": "p0.260937500_n00_r0_e0",
+          "energy": -10.256806331333848,
+          "residual": 3.337143456868474e-14,
+          "slope_dE_dJp": -2.3538167862853094
+        }
+      ],
+      "gap_right_minus_left_at_a": 0.0015922604671203544,
+      "gap_right_minus_left_at_b": -0.0034764877275517136
+    },
+    {
+      "a": 0.3875,
+      "b": 0.3921875,
+      "width": 0.004687500000000011,
+      "left_quantum_numbers": [
+        [
+          0,
+          0
+        ],
+        0,
+        3.5,
+        1
+      ],
+      "right_quantum_numbers": [
+        [
+          0,
+          0
+        ],
+        3,
+        2.5,
+        -1
+      ],
+      "target_width_met": true,
+      "competing_branch_records": [
+        {
+          "Jp": 0.3875,
+          "cell_n": [
+            0,
+            0
+          ],
+          "character": 0,
+          "spin": 3.5,
+          "reflection_parity": 1,
+          "name": "p0.387500000_n00_r0_e0",
+          "energy": -10.565757910893009,
+          "residual": 6.97933466057705e-11,
+          "slope_dE_dJp": -2.5230083422195095
+        },
+        {
+          "Jp": 0.3921875,
+          "cell_n": [
+            0,
+            0
+          ],
+          "character": 0,
+          "spin": 3.5,
+          "reflection_parity": 1,
+          "name": "p0.392187500_n00_r0_e0",
+          "energy": -10.577597912934728,
+          "residual": 7.4033384239604e-11,
+          "slope_dE_dJp": -2.5287206901348203
+        },
+        {
+          "Jp": 0.3875,
+          "cell_n": [
+            0,
+            0
+          ],
+          "character": 3,
+          "spin": 2.5,
+          "reflection_parity": -1,
+          "name": "p0.387500000_n00_r3_e0",
+          "energy": -10.56000179396218,
+          "residual": 5.380606293947705e-12,
+          "slope_dE_dJp": -4.56341356502522
+        },
+        {
+          "Jp": 0.3921875,
+          "cell_n": [
+            0,
+            0
+          ],
+          "character": 3,
+          "spin": 2.5,
+          "reflection_parity": -1,
+          "name": "p0.392187500_n00_r3_e0",
+          "energy": -10.581418391118241,
+          "residual": 2.8286693568008384e-11,
+          "slope_dE_dJp": -4.574180259984016
+        }
+      ],
+      "gap_right_minus_left_at_a": 0.005756116930829336,
+      "gap_right_minus_left_at_b": -0.003820478183513387
+    }
+  ],
+  "verified_couplings": [
+    0.2,
+    0.21875,
+    0.2375,
+    0.25625,
+    0.2609375,
+    0.265625,
+    0.275,
+    0.3125,
+    0.35,
+    0.3875,
+    0.3921875,
+    0.396875,
+    0.40625,
+    0.425,
+    0.4625,
+    0.5
+  ],
+  "all_bracket_widths_met": true,
+  "limit_note": "Spatial-family concavity exclusions are recorded continuously between samples. Same-spatial-family spin changes or islands narrower than the sampled resolution are not rigorously excluded."
+}

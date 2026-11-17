@@ -1,0 +1,892 @@
+[
+  {
+    "a": 0.2,
+    "b": 0.21875,
+    "excluded_other_families": false,
+    "unresolved_families": [
+      [
+        [
+          0,
+          1
+        ],
+        0
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        1
+      ]
+    ],
+    "family_margins": [
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 0,
+        "minimum_margin": 0.0008877635215913671
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 1,
+        "minimum_margin": 0.014430715268565208
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 2,
+        "minimum_margin": 0.01576885871188871
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 3,
+        "minimum_margin": 0.0006327670327994639
+      },
+      {
+        "cell_n": [
+          0,
+          1
+        ],
+        "character": 0,
+        "minimum_margin": -0.00036354552502082527
+      },
+      {
+        "cell_n": [
+          0,
+          1
+        ],
+        "character": 1,
+        "minimum_margin": -0.00034941304773106197
+      },
+      {
+        "cell_n": [
+          1,
+          2
+        ],
+        "character": 1,
+        "minimum_margin": 0.014443826595289977
+      }
+    ],
+    "sampling_points_for_piecewise_linear_bounds": 38
+  },
+  {
+    "a": 0.21875,
+    "b": 0.2375,
+    "excluded_other_families": false,
+    "unresolved_families": [
+      [
+        [
+          0,
+          1
+        ],
+        0
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        1
+      ]
+    ],
+    "family_margins": [
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 0,
+        "minimum_margin": 0.0013070966950863294
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 1,
+        "minimum_margin": 0.015137367650236655
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 2,
+        "minimum_margin": 0.016716601124565855
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 3,
+        "minimum_margin": 0.0009376205606024257
+      },
+      {
+        "cell_n": [
+          0,
+          1
+        ],
+        "character": 0,
+        "minimum_margin": -0.0003259417527701203
+      },
+      {
+        "cell_n": [
+          0,
+          1
+        ],
+        "character": 1,
+        "minimum_margin": -0.00030153384129860683
+      },
+      {
+        "cell_n": [
+          1,
+          2
+        ],
+        "character": 1,
+        "minimum_margin": 0.015154771855430127
+      }
+    ],
+    "sampling_points_for_piecewise_linear_bounds": 83
+  },
+  {
+    "a": 0.2375,
+    "b": 0.25625,
+    "excluded_other_families": false,
+    "unresolved_families": [
+      [
+        [
+          0,
+          1
+        ],
+        0
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        1
+      ]
+    ],
+    "family_margins": [
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 0,
+        "minimum_margin": 0.0013004965112202171
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 1,
+        "minimum_margin": 0.01755362859688603
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 2,
+        "minimum_margin": 0.01961756709006046
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 3,
+        "minimum_margin": 0.0012973560498661385
+      },
+      {
+        "cell_n": [
+          0,
+          1
+        ],
+        "character": 0,
+        "minimum_margin": -0.00027409521516652546
+      },
+      {
+        "cell_n": [
+          0,
+          1
+        ],
+        "character": 1,
+        "minimum_margin": -0.00023204481966487833
+      },
+      {
+        "cell_n": [
+          1,
+          2
+        ],
+        "character": 1,
+        "minimum_margin": 0.017579663518700883
+      }
+    ],
+    "sampling_points_for_piecewise_linear_bounds": 185
+  },
+  {
+    "a": 0.2609375,
+    "b": 0.265625,
+    "excluded_other_families": true,
+    "unresolved_families": [],
+    "family_margins": [
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 1,
+        "minimum_margin": 0.02691957280278423
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 2,
+        "minimum_margin": 0.02958939256951254
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 3,
+        "minimum_margin": 0.005603367969905904
+      },
+      {
+        "cell_n": [
+          0,
+          1
+        ],
+        "character": 0,
+        "minimum_margin": 0.003580632834243147
+      },
+      {
+        "cell_n": [
+          0,
+          1
+        ],
+        "character": 1,
+        "minimum_margin": 0.0036433019945647516
+      },
+      {
+        "cell_n": [
+          1,
+          2
+        ],
+        "character": 0,
+        "minimum_margin": 0.003476485727551548
+      },
+      {
+        "cell_n": [
+          1,
+          2
+        ],
+        "character": 1,
+        "minimum_margin": 0.02695639612037759
+      }
+    ],
+    "sampling_points_for_piecewise_linear_bounds": 79
+  },
+  {
+    "a": 0.265625,
+    "b": 0.275,
+    "excluded_other_families": true,
+    "unresolved_families": [],
+    "family_margins": [
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 1,
+        "minimum_margin": 0.03345934748860557
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 2,
+        "minimum_margin": 0.0362503435100443
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 3,
+        "minimum_margin": 0.01068708775961369
+      },
+      {
+        "cell_n": [
+          0,
+          1
+        ],
+        "character": 0,
+        "minimum_margin": 0.008505070316608965
+      },
+      {
+        "cell_n": [
+          0,
+          1
+        ],
+        "character": 1,
+        "minimum_margin": 0.008577288500994484
+      },
+      {
+        "cell_n": [
+          1,
+          2
+        ],
+        "character": 0,
+        "minimum_margin": 0.00831109228506044
+      },
+      {
+        "cell_n": [
+          1,
+          2
+        ],
+        "character": 1,
+        "minimum_margin": 0.03349832848535428
+      }
+    ],
+    "sampling_points_for_piecewise_linear_bounds": 86
+  },
+  {
+    "a": 0.275,
+    "b": 0.3125,
+    "excluded_other_families": true,
+    "unresolved_families": [],
+    "family_margins": [
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 1,
+        "minimum_margin": 0.046635204430302224
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 2,
+        "minimum_margin": 0.04030836272472982
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 3,
+        "minimum_margin": 0.020561144047920976
+      },
+      {
+        "cell_n": [
+          0,
+          1
+        ],
+        "character": 0,
+        "minimum_margin": 0.018450252851391014
+      },
+      {
+        "cell_n": [
+          0,
+          1
+        ],
+        "character": 1,
+        "minimum_margin": 0.018541569083909692
+      },
+      {
+        "cell_n": [
+          1,
+          2
+        ],
+        "character": 0,
+        "minimum_margin": 0.018076612970130412
+      },
+      {
+        "cell_n": [
+          1,
+          2
+        ],
+        "character": 1,
+        "minimum_margin": 0.04667850078536162
+      }
+    ],
+    "sampling_points_for_piecewise_linear_bounds": 133
+  },
+  {
+    "a": 0.3125,
+    "b": 0.35,
+    "excluded_other_families": true,
+    "unresolved_families": [],
+    "family_margins": [
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 1,
+        "minimum_margin": 0.05388304429833646
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 2,
+        "minimum_margin": 0.032854662837740634
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 3,
+        "minimum_margin": 0.05594548087895923
+      },
+      {
+        "cell_n": [
+          0,
+          1
+        ],
+        "character": 0,
+        "minimum_margin": 0.034205753455371024
+      },
+      {
+        "cell_n": [
+          0,
+          1
+        ],
+        "character": 1,
+        "minimum_margin": 0.0486096278711301
+      },
+      {
+        "cell_n": [
+          1,
+          2
+        ],
+        "character": 0,
+        "minimum_margin": 0.04761889914803774
+      },
+      {
+        "cell_n": [
+          1,
+          2
+        ],
+        "character": 1,
+        "minimum_margin": 0.0741674775956902
+      }
+    ],
+    "sampling_points_for_piecewise_linear_bounds": 381
+  },
+  {
+    "a": 0.35,
+    "b": 0.3875,
+    "excluded_other_families": true,
+    "unresolved_families": [],
+    "family_margins": [
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 1,
+        "minimum_margin": 0.06303737451581526
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 2,
+        "minimum_margin": 0.027205095806596802
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 3,
+        "minimum_margin": 0.00575611493082917
+      },
+      {
+        "cell_n": [
+          0,
+          1
+        ],
+        "character": 0,
+        "minimum_margin": 0.043930494421880795
+      },
+      {
+        "cell_n": [
+          0,
+          1
+        ],
+        "character": 1,
+        "minimum_margin": 0.07971902604088577
+      },
+      {
+        "cell_n": [
+          1,
+          2
+        ],
+        "character": 0,
+        "minimum_margin": 0.07906767567539141
+      },
+      {
+        "cell_n": [
+          1,
+          2
+        ],
+        "character": 1,
+        "minimum_margin": 0.09068579900549878
+      }
+    ],
+    "sampling_points_for_piecewise_linear_bounds": 122
+  },
+  {
+    "a": 0.3921875,
+    "b": 0.396875,
+    "excluded_other_families": true,
+    "unresolved_families": [],
+    "family_margins": [
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 0,
+        "minimum_margin": 0.0038204761835132217
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 1,
+        "minimum_margin": 0.07930858724134104
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 2,
+        "minimum_margin": 0.030441841695738603
+      },
+      {
+        "cell_n": [
+          0,
+          1
+        ],
+        "character": 0,
+        "minimum_margin": 0.04688127994154989
+      },
+      {
+        "cell_n": [
+          0,
+          1
+        ],
+        "character": 1,
+        "minimum_margin": 0.08356223056317447
+      },
+      {
+        "cell_n": [
+          1,
+          2
+        ],
+        "character": 0,
+        "minimum_margin": 0.08526885133831819
+      },
+      {
+        "cell_n": [
+          1,
+          2
+        ],
+        "character": 1,
+        "minimum_margin": 0.0930190975547891
+      }
+    ],
+    "sampling_points_for_piecewise_linear_bounds": 18
+  },
+  {
+    "a": 0.396875,
+    "b": 0.40625,
+    "excluded_other_families": true,
+    "unresolved_families": [],
+    "family_margins": [
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 0,
+        "minimum_margin": 0.013418803601005891
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 1,
+        "minimum_margin": 0.0904258907260278
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 2,
+        "minimum_margin": 0.03948314141736731
+      },
+      {
+        "cell_n": [
+          0,
+          1
+        ],
+        "character": 0,
+        "minimum_margin": 0.05563661929370767
+      },
+      {
+        "cell_n": [
+          0,
+          1
+        ],
+        "character": 1,
+        "minimum_margin": 0.0932025163622896
+      },
+      {
+        "cell_n": [
+          1,
+          2
+        ],
+        "character": 0,
+        "minimum_margin": 0.0952672618160495
+      },
+      {
+        "cell_n": [
+          1,
+          2
+        ],
+        "character": 1,
+        "minimum_margin": 0.10115694993656454
+      }
+    ],
+    "sampling_points_for_piecewise_linear_bounds": 23
+  },
+  {
+    "a": 0.40625,
+    "b": 0.425,
+    "excluded_other_families": true,
+    "unresolved_families": [],
+    "family_margins": [
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 0,
+        "minimum_margin": 0.032667547336656
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 1,
+        "minimum_margin": 0.11279213953443801
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 2,
+        "minimum_margin": 0.057697382699661404
+      },
+      {
+        "cell_n": [
+          0,
+          1
+        ],
+        "character": 0,
+        "minimum_margin": 0.07327893983705636
+      },
+      {
+        "cell_n": [
+          0,
+          1
+        ],
+        "character": 1,
+        "minimum_margin": 0.11261472979955656
+      },
+      {
+        "cell_n": [
+          1,
+          2
+        ],
+        "character": 0,
+        "minimum_margin": 0.11539572461054881
+      },
+      {
+        "cell_n": [
+          1,
+          2
+        ],
+        "character": 1,
+        "minimum_margin": 0.11756429653915212
+      }
+    ],
+    "sampling_points_for_piecewise_linear_bounds": 28
+  },
+  {
+    "a": 0.425,
+    "b": 0.4625,
+    "excluded_other_families": true,
+    "unresolved_families": [],
+    "family_margins": [
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 0,
+        "minimum_margin": 0.07130928342445486
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 1,
+        "minimum_margin": 0.15798340674058942
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 2,
+        "minimum_margin": 0.09458463485357704
+      },
+      {
+        "cell_n": [
+          0,
+          1
+        ],
+        "character": 0,
+        "minimum_margin": 0.10902235051308651
+      },
+      {
+        "cell_n": [
+          0,
+          1
+        ],
+        "character": 1,
+        "minimum_margin": 0.1518979262634197
+      },
+      {
+        "cell_n": [
+          1,
+          2
+        ],
+        "character": 0,
+        "minimum_margin": 0.15611141978887844
+      },
+      {
+        "cell_n": [
+          1,
+          2
+        ],
+        "character": 1,
+        "minimum_margin": 0.15083775933365828
+      }
+    ],
+    "sampling_points_for_piecewise_linear_bounds": 37
+  },
+  {
+    "a": 0.4625,
+    "b": 0.5,
+    "excluded_other_families": true,
+    "unresolved_families": [],
+    "family_margins": [
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 0,
+        "minimum_margin": 0.07899792214607793
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 1,
+        "minimum_margin": 0.24988181810262233
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 2,
+        "minimum_margin": 0.16987501611114375
+      },
+      {
+        "cell_n": [
+          0,
+          1
+        ],
+        "character": 0,
+        "minimum_margin": 0.14279600493902933
+      },
+      {
+        "cell_n": [
+          0,
+          1
+        ],
+        "character": 1,
+        "minimum_margin": 0.2319801961408796
+      },
+      {
+        "cell_n": [
+          1,
+          2
+        ],
+        "character": 0,
+        "minimum_margin": 0.18092621851874036
+      },
+      {
+        "cell_n": [
+          1,
+          2
+        ],
+        "character": 1,
+        "minimum_margin": 0.20250009900530763
+      }
+    ],
+    "sampling_points_for_piecewise_linear_bounds": 11
+  }
+]

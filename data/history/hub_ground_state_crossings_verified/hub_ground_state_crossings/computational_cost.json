@@ -1,0 +1,16 @@
+{
+  "new_verified_eigenpairs": 54,
+  "new_incomplete_eigenpairs": 0,
+  "measured_solve_wall_seconds_sum": 7203.451008897015,
+  "measured_setup_seconds_sum": 70.10545979199924,
+  "measured_H_calls_sum": 9924,
+  "process_peak_rss_MiB": 2302.78125,
+  "cost_scope": "Sum of instrumented new eigenpair solves, including verification/checkpoint work; excludes reused endpoint solves, endpoint profiling, plotting and static-observable runs. Peak RSS is process high water with cached bases.",
+  "CPU_quota": 2,
+  "OpenMP_threads": 2,
+  "BLAS_threads": 1,
+  "RAM_cap_GiB": 8,
+  "static_analysis_seconds_sum": 566.5956866419965,
+  "static_pair_kernel_seconds_sum": 146.34664927599988,
+  "unrecorded_work_note": "Endpoint profiling and a discarded optional audit startup at j=0.209375 are excluded from these sums; no eigenvalue from that discarded startup is reported."
+}

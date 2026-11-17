@@ -1,0 +1,11 @@
+{
+  "included_checkpoints": [
+    "p0.237500000_n12_r0_e0.npz",
+    "p0.275000000_n00_r0_e0.npz",
+    "p0.350000000_n00_r0_e0.npz",
+    "p0.425000000_n00_r3_e0.npz"
+  ],
+  "omitted_intermediate_checkpoints": "Regenerate with run_analysis.py --compute. Verified scalar records and direct residuals for every completed level are included.",
+  "previous_endpoint_ground_checkpoints": "Available in the prior static bundle linked in README.md.",
+  "no_dynamics": true
+}

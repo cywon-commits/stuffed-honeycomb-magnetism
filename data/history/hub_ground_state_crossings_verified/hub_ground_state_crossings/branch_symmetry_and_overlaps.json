@@ -1,0 +1,592 @@
+[
+  {
+    "name": "p0.392187500_n00_r3_e0",
+    "Jp": 0.3921875,
+    "cell_n": [
+      0,
+      0
+    ],
+    "character": 3,
+    "spin": 2.5,
+    "reflection_overlap_real": -1.0000000000000009,
+    "reflection_eigen_residual": 9.962096016801943e-12,
+    "reflection_parity": -1,
+    "previous_matching_branch": "p0.387500000_n00_r3_e0",
+    "overlap_with_previous": 0.9999785833078255,
+    "overlap_tracking_note": "Largest overlap among same-quantum-number states at nearest earlier measured coupling; incomplete excited-state coverage."
+  },
+  {
+    "name": "p0.256250000_n12_r0_e0",
+    "Jp": 0.25625,
+    "cell_n": [
+      1,
+      2
+    ],
+    "character": 0,
+    "spin": 0.5,
+    "reflection_overlap_real": 0.9999999999999996,
+    "reflection_eigen_residual": 2.1422510769005385e-11,
+    "reflection_parity": 1,
+    "previous_matching_branch": "p0.237500000_n12_r0_e0",
+    "overlap_with_previous": 0.9996504997966783,
+    "overlap_tracking_note": "Largest overlap among same-quantum-number states at nearest earlier measured coupling; incomplete excited-state coverage."
+  },
+  {
+    "name": "p0.387500000_n00_r3_e0",
+    "Jp": 0.3875,
+    "cell_n": [
+      0,
+      0
+    ],
+    "character": 3,
+    "spin": 2.5,
+    "reflection_overlap_real": -1.0000000000000024,
+    "reflection_eigen_residual": 3.129038315771006e-12,
+    "reflection_parity": -1,
+    "previous_matching_branch": "p0.350000000_n00_r3_e0",
+    "overlap_with_previous": 0.9954910112154386,
+    "overlap_tracking_note": "Largest overlap among same-quantum-number states at nearest earlier measured coupling; incomplete excited-state coverage."
+  },
+  {
+    "name": "p0.275000000_n00_r0_e0",
+    "Jp": 0.275,
+    "cell_n": [
+      0,
+      0
+    ],
+    "character": 0,
+    "spin": 3.5,
+    "reflection_overlap_real": 1.0000000000000018,
+    "reflection_eigen_residual": 2.3698444617211735e-14,
+    "reflection_parity": 1,
+    "previous_matching_branch": "p0.265625000_n00_r0_e0",
+    "overlap_with_previous": 0.9999823524433094,
+    "overlap_tracking_note": "Largest overlap among same-quantum-number states at nearest earlier measured coupling; incomplete excited-state coverage."
+  },
+  {
+    "name": "p0.312500000_n00_r3_e0",
+    "Jp": 0.3125,
+    "cell_n": [
+      0,
+      0
+    ],
+    "character": 3,
+    "spin": 1.5,
+    "reflection_overlap_real": -0.9999999999999996,
+    "reflection_eigen_residual": 1.1084433233184646e-13,
+    "reflection_parity": -1,
+    "previous_matching_branch": "p0.275000000_n00_r3_e0",
+    "overlap_with_previous": 0.9984254996051511,
+    "overlap_tracking_note": "Largest overlap among same-quantum-number states at nearest earlier measured coupling; incomplete excited-state coverage."
+  },
+  {
+    "name": "p0.260937500_n00_r3_e0",
+    "Jp": 0.2609375,
+    "cell_n": [
+      0,
+      0
+    ],
+    "character": 3,
+    "spin": 1.5,
+    "reflection_overlap_real": -1.0,
+    "reflection_eigen_residual": 6.959206896204329e-14,
+    "reflection_parity": -1,
+    "previous_matching_branch": "p0.256250000_n00_r3_e0",
+    "overlap_with_previous": 0.9999780181668353,
+    "overlap_tracking_note": "Largest overlap among same-quantum-number states at nearest earlier measured coupling; incomplete excited-state coverage."
+  },
+  {
+    "name": "p0.425000000_n00_r3_e1",
+    "Jp": 0.425,
+    "cell_n": [
+      0,
+      0
+    ],
+    "character": 3,
+    "spin": 1.5,
+    "reflection_overlap_real": -1.000000000000001,
+    "reflection_eigen_residual": 8.769822235262474e-14,
+    "reflection_parity": -1,
+    "previous_matching_branch": "p0.350000000_n00_r3_e1",
+    "overlap_with_previous": 0.9904092846887452,
+    "overlap_tracking_note": "Largest overlap among same-quantum-number states at nearest earlier measured coupling; incomplete excited-state coverage."
+  },
+  {
+    "name": "p0.425000000_n12_r0_e0",
+    "Jp": 0.425,
+    "cell_n": [
+      1,
+      2
+    ],
+    "character": 0,
+    "spin": 2.5,
+    "reflection_overlap_real": 0.9999999999999999,
+    "reflection_eigen_residual": 4.676114309829574e-12,
+    "reflection_parity": 1
+  },
+  {
+    "name": "p0.218750000_n12_r0_e0",
+    "Jp": 0.21875,
+    "cell_n": [
+      1,
+      2
+    ],
+    "character": 0,
+    "spin": 0.5,
+    "reflection_overlap_real": 0.9999999999999998,
+    "reflection_eigen_residual": 4.746042038255827e-11,
+    "reflection_parity": 1
+  },
+  {
+    "name": "p0.425000000_n00_r3_e0",
+    "Jp": 0.425,
+    "cell_n": [
+      0,
+      0
+    ],
+    "character": 3,
+    "spin": 2.5,
+    "reflection_overlap_real": -0.9999999999999987,
+    "reflection_eigen_residual": 1.349179492997206e-13,
+    "reflection_parity": -1,
+    "previous_matching_branch": "p0.406250000_n00_r3_e0",
+    "overlap_with_previous": 0.9998511036942932,
+    "overlap_tracking_note": "Largest overlap among same-quantum-number states at nearest earlier measured coupling; incomplete excited-state coverage."
+  },
+  {
+    "name": "p0.237500000_n00_r0_e0",
+    "Jp": 0.2375,
+    "cell_n": [
+      0,
+      0
+    ],
+    "character": 0,
+    "spin": 1.5,
+    "reflection_overlap_real": 0.9999999999999982,
+    "reflection_eigen_residual": 1.1034581211503656e-13,
+    "reflection_parity": 1,
+    "previous_matching_branch": "p0.218750000_n00_r0_e0",
+    "overlap_with_previous": 0.9996866966639227,
+    "overlap_tracking_note": "Largest overlap among same-quantum-number states at nearest earlier measured coupling; incomplete excited-state coverage."
+  },
+  {
+    "name": "p0.275000000_n00_r3_e1",
+    "Jp": 0.275,
+    "cell_n": [
+      0,
+      0
+    ],
+    "character": 3,
+    "spin": 1.5,
+    "reflection_overlap_real": -0.9999999999999998,
+    "reflection_eigen_residual": 1.0654596484495116e-11,
+    "reflection_parity": -1,
+    "previous_matching_branch": "p0.265625000_n00_r3_e0",
+    "overlap_with_previous": 0.0003726160351970988,
+    "overlap_tracking_note": "Largest overlap among same-quantum-number states at nearest earlier measured coupling; incomplete excited-state coverage."
+  },
+  {
+    "name": "p0.425000000_n00_r0_e0",
+    "Jp": 0.425,
+    "cell_n": [
+      0,
+      0
+    ],
+    "character": 0,
+    "spin": 3.5,
+    "reflection_overlap_real": 0.9999999999999989,
+    "reflection_eigen_residual": 5.168572296739859e-14,
+    "reflection_parity": 1,
+    "previous_matching_branch": "p0.406250000_n00_r0_e0",
+    "overlap_with_previous": 0.9999444488422998,
+    "overlap_tracking_note": "Largest overlap among same-quantum-number states at nearest earlier measured coupling; incomplete excited-state coverage."
+  },
+  {
+    "name": "p0.350000000_n00_r3_e1",
+    "Jp": 0.35,
+    "cell_n": [
+      0,
+      0
+    ],
+    "character": 3,
+    "spin": 1.5,
+    "reflection_overlap_real": -1.0000000000000022,
+    "reflection_eigen_residual": 1.0921275479345145e-10,
+    "reflection_parity": -1,
+    "previous_matching_branch": "p0.312500000_n00_r3_e0",
+    "overlap_with_previous": 0.9981853796580089,
+    "overlap_tracking_note": "Largest overlap among same-quantum-number states at nearest earlier measured coupling; incomplete excited-state coverage."
+  },
+  {
+    "name": "p0.396875000_n00_r0_e0",
+    "Jp": 0.396875,
+    "cell_n": [
+      0,
+      0
+    ],
+    "character": 0,
+    "spin": 3.5,
+    "reflection_overlap_real": 1.0000000000000004,
+    "reflection_eigen_residual": 4.335014022223637e-11,
+    "reflection_parity": 1,
+    "previous_matching_branch": "p0.392187500_n00_r0_e0",
+    "overlap_with_previous": 0.9999964535253497,
+    "overlap_tracking_note": "Largest overlap among same-quantum-number states at nearest earlier measured coupling; incomplete excited-state coverage."
+  },
+  {
+    "name": "p0.396875000_n00_r3_e0",
+    "Jp": 0.396875,
+    "cell_n": [
+      0,
+      0
+    ],
+    "character": 3,
+    "spin": 2.5,
+    "reflection_overlap_real": -0.9999999999999969,
+    "reflection_eigen_residual": 4.4856684472264304e-12,
+    "reflection_parity": -1,
+    "previous_matching_branch": "p0.392187500_n00_r3_e0",
+    "overlap_with_previous": 0.9999821852659563,
+    "overlap_tracking_note": "Largest overlap among same-quantum-number states at nearest earlier measured coupling; incomplete excited-state coverage."
+  },
+  {
+    "name": "p0.218750000_n00_r0_e0",
+    "Jp": 0.21875,
+    "cell_n": [
+      0,
+      0
+    ],
+    "character": 0,
+    "spin": 1.5,
+    "reflection_overlap_real": 0.9999999999999989,
+    "reflection_eigen_residual": 2.6978020211652487e-13,
+    "reflection_parity": 1
+  },
+  {
+    "name": "p0.237500000_n12_r0_e0",
+    "Jp": 0.2375,
+    "cell_n": [
+      1,
+      2
+    ],
+    "character": 0,
+    "spin": 0.5,
+    "reflection_overlap_real": 1.0000000000000004,
+    "reflection_eigen_residual": 4.2971706114073064e-11,
+    "reflection_parity": 1,
+    "previous_matching_branch": "p0.218750000_n12_r0_e0",
+    "overlap_with_previous": 0.999668174670729,
+    "overlap_tracking_note": "Largest overlap among same-quantum-number states at nearest earlier measured coupling; incomplete excited-state coverage."
+  },
+  {
+    "name": "p0.406250000_n00_r3_e0",
+    "Jp": 0.40625,
+    "cell_n": [
+      0,
+      0
+    ],
+    "character": 3,
+    "spin": 2.5,
+    "reflection_overlap_real": -0.9999999999999998,
+    "reflection_eigen_residual": 7.545694765140973e-13,
+    "reflection_parity": -1,
+    "previous_matching_branch": "p0.396875000_n00_r3_e0",
+    "overlap_with_previous": 0.9999442852721807,
+    "overlap_tracking_note": "Largest overlap among same-quantum-number states at nearest earlier measured coupling; incomplete excited-state coverage."
+  },
+  {
+    "name": "p0.350000000_n00_r0_e0",
+    "Jp": 0.35,
+    "cell_n": [
+      0,
+      0
+    ],
+    "character": 0,
+    "spin": 3.5,
+    "reflection_overlap_real": 1.0000000000000013,
+    "reflection_eigen_residual": 2.4514808408762552e-11,
+    "reflection_parity": 1,
+    "previous_matching_branch": "p0.312500000_n00_r0_e0",
+    "overlap_with_previous": 0.999750625824473,
+    "overlap_tracking_note": "Largest overlap among same-quantum-number states at nearest earlier measured coupling; incomplete excited-state coverage."
+  },
+  {
+    "name": "p0.275000000_n00_r3_e0",
+    "Jp": 0.275,
+    "cell_n": [
+      0,
+      0
+    ],
+    "character": 3,
+    "spin": 1.5,
+    "reflection_overlap_real": -0.9999999999999991,
+    "reflection_eigen_residual": 4.9025196359013054e-14,
+    "reflection_parity": -1,
+    "previous_matching_branch": "p0.265625000_n00_r3_e0",
+    "overlap_with_previous": 0.9999088730210716,
+    "overlap_tracking_note": "Largest overlap among same-quantum-number states at nearest earlier measured coupling; incomplete excited-state coverage."
+  },
+  {
+    "name": "p0.387500000_n00_r0_e0",
+    "Jp": 0.3875,
+    "cell_n": [
+      0,
+      0
+    ],
+    "character": 0,
+    "spin": 3.5,
+    "reflection_overlap_real": 1.0000000000000004,
+    "reflection_eigen_residual": 3.4540516671974134e-11,
+    "reflection_parity": 1,
+    "previous_matching_branch": "p0.350000000_n00_r0_e0",
+    "overlap_with_previous": 0.9997652768002614,
+    "overlap_tracking_note": "Largest overlap among same-quantum-number states at nearest earlier measured coupling; incomplete excited-state coverage."
+  },
+  {
+    "name": "p0.350000000_n00_r3_e0",
+    "Jp": 0.35,
+    "cell_n": [
+      0,
+      0
+    ],
+    "character": 3,
+    "spin": 2.5,
+    "reflection_overlap_real": -1.0000000000000036,
+    "reflection_eigen_residual": 1.6921907778316878e-12,
+    "reflection_parity": -1
+  },
+  {
+    "name": "p0.406250000_n00_r0_e0",
+    "Jp": 0.40625,
+    "cell_n": [
+      0,
+      0
+    ],
+    "character": 0,
+    "spin": 3.5,
+    "reflection_overlap_real": 0.9999999999999993,
+    "reflection_eigen_residual": 4.355965433547466e-11,
+    "reflection_parity": 1,
+    "previous_matching_branch": "p0.396875000_n00_r0_e0",
+    "overlap_with_previous": 0.9999859231121309,
+    "overlap_tracking_note": "Largest overlap among same-quantum-number states at nearest earlier measured coupling; incomplete excited-state coverage."
+  },
+  {
+    "name": "p0.256250000_n00_r0_e0",
+    "Jp": 0.25625,
+    "cell_n": [
+      0,
+      0
+    ],
+    "character": 0,
+    "spin": 3.5,
+    "reflection_overlap_real": 0.9999999999999982,
+    "reflection_eigen_residual": 2.5833415308843527e-13,
+    "reflection_parity": 1
+  },
+  {
+    "name": "p0.312500000_n00_r0_e0",
+    "Jp": 0.3125,
+    "cell_n": [
+      0,
+      0
+    ],
+    "character": 0,
+    "spin": 3.5,
+    "reflection_overlap_real": 1.0000000000000018,
+    "reflection_eigen_residual": 1.6115080870449427e-11,
+    "reflection_parity": 1,
+    "previous_matching_branch": "p0.275000000_n00_r0_e0",
+    "overlap_with_previous": 0.9997317057469304,
+    "overlap_tracking_note": "Largest overlap among same-quantum-number states at nearest earlier measured coupling; incomplete excited-state coverage."
+  },
+  {
+    "name": "p0.265625000_n00_r0_e0",
+    "Jp": 0.265625,
+    "cell_n": [
+      0,
+      0
+    ],
+    "character": 0,
+    "spin": 3.5,
+    "reflection_overlap_real": 1.0000000000000007,
+    "reflection_eigen_residual": 8.938715324742428e-14,
+    "reflection_parity": 1,
+    "previous_matching_branch": "p0.260937500_n00_r0_e0",
+    "overlap_with_previous": 0.9999955160431546,
+    "overlap_tracking_note": "Largest overlap among same-quantum-number states at nearest earlier measured coupling; incomplete excited-state coverage."
+  },
+  {
+    "name": "p0.237500000_n00_r3_e0",
+    "Jp": 0.2375,
+    "cell_n": [
+      0,
+      0
+    ],
+    "character": 3,
+    "spin": 1.5,
+    "reflection_overlap_real": -1.0000000000000007,
+    "reflection_eigen_residual": 7.184593790979673e-14,
+    "reflection_parity": -1,
+    "previous_matching_branch": "p0.218750000_n00_r3_e0",
+    "overlap_with_previous": 0.9996773846187538,
+    "overlap_tracking_note": "Largest overlap among same-quantum-number states at nearest earlier measured coupling; incomplete excited-state coverage."
+  },
+  {
+    "name": "p0.462500000_n00_r3_e0",
+    "Jp": 0.4625,
+    "cell_n": [
+      0,
+      0
+    ],
+    "character": 3,
+    "spin": 2.5,
+    "reflection_overlap_real": -1.0000000000000007,
+    "reflection_eigen_residual": 1.544354144693441e-14,
+    "reflection_parity": -1,
+    "previous_matching_branch": "p0.425000000_n00_r3_e0",
+    "overlap_with_previous": 0.9996517856290659,
+    "overlap_tracking_note": "Largest overlap among same-quantum-number states at nearest earlier measured coupling; incomplete excited-state coverage."
+  },
+  {
+    "name": "p0.462500000_n00_r0_e0",
+    "Jp": 0.4625,
+    "cell_n": [
+      0,
+      0
+    ],
+    "character": 0,
+    "spin": 1.5,
+    "reflection_overlap_real": 1.0000000000000007,
+    "reflection_eigen_residual": 3.2965622158678604e-14,
+    "reflection_parity": 1,
+    "previous_matching_branch": "p0.237500000_n00_r0_e0",
+    "overlap_with_previous": 0.18837036210240962,
+    "overlap_tracking_note": "Largest overlap among same-quantum-number states at nearest earlier measured coupling; incomplete excited-state coverage."
+  },
+  {
+    "name": "p0.350000000_n12_r0_e0",
+    "Jp": 0.35,
+    "cell_n": [
+      1,
+      2
+    ],
+    "character": 0,
+    "spin": 0.5,
+    "reflection_overlap_real": 1.0000000000000004,
+    "reflection_eigen_residual": 3.4750967098270094e-13,
+    "reflection_parity": 1,
+    "previous_matching_branch": "p0.275000000_n12_r0_e0",
+    "overlap_with_previous": 0.9930846509138601,
+    "overlap_tracking_note": "Largest overlap among same-quantum-number states at nearest earlier measured coupling; incomplete excited-state coverage."
+  },
+  {
+    "name": "p0.275000000_n12_r0_e0",
+    "Jp": 0.275,
+    "cell_n": [
+      1,
+      2
+    ],
+    "character": 0,
+    "spin": 0.5,
+    "reflection_overlap_real": 1.0000000000000007,
+    "reflection_eigen_residual": 1.744610509803245e-11,
+    "reflection_parity": 1,
+    "previous_matching_branch": "p0.260937500_n12_r0_e0",
+    "overlap_with_previous": 0.999790800995387,
+    "overlap_tracking_note": "Largest overlap among same-quantum-number states at nearest earlier measured coupling; incomplete excited-state coverage."
+  },
+  {
+    "name": "p0.392187500_n00_r0_e0",
+    "Jp": 0.3921875,
+    "cell_n": [
+      0,
+      0
+    ],
+    "character": 0,
+    "spin": 3.5,
+    "reflection_overlap_real": 0.9999999999999997,
+    "reflection_eigen_residual": 3.7508350560387735e-11,
+    "reflection_parity": 1,
+    "previous_matching_branch": "p0.387500000_n00_r0_e0",
+    "overlap_with_previous": 0.9999964340248169,
+    "overlap_tracking_note": "Largest overlap among same-quantum-number states at nearest earlier measured coupling; incomplete excited-state coverage."
+  },
+  {
+    "name": "p0.256250000_n00_r3_e0",
+    "Jp": 0.25625,
+    "cell_n": [
+      0,
+      0
+    ],
+    "character": 3,
+    "spin": 1.5,
+    "reflection_overlap_real": -1.0000000000000004,
+    "reflection_eigen_residual": 2.541922952540164e-13,
+    "reflection_parity": -1,
+    "previous_matching_branch": "p0.237500000_n00_r3_e0",
+    "overlap_with_previous": 0.9996601397518843,
+    "overlap_tracking_note": "Largest overlap among same-quantum-number states at nearest earlier measured coupling; incomplete excited-state coverage."
+  },
+  {
+    "name": "p0.260937500_n12_r0_e0",
+    "Jp": 0.2609375,
+    "cell_n": [
+      1,
+      2
+    ],
+    "character": 0,
+    "spin": 0.5,
+    "reflection_overlap_real": 1.0,
+    "reflection_eigen_residual": 2.5488533902052362e-11,
+    "reflection_parity": 1,
+    "previous_matching_branch": "p0.256250000_n12_r0_e0",
+    "overlap_with_previous": 0.999977400791867,
+    "overlap_tracking_note": "Largest overlap among same-quantum-number states at nearest earlier measured coupling; incomplete excited-state coverage."
+  },
+  {
+    "name": "p0.260937500_n00_r0_e0",
+    "Jp": 0.2609375,
+    "cell_n": [
+      0,
+      0
+    ],
+    "character": 0,
+    "spin": 3.5,
+    "reflection_overlap_real": 0.9999999999999976,
+    "reflection_eigen_residual": 2.756524842716641e-13,
+    "reflection_parity": 1,
+    "previous_matching_branch": "p0.256250000_n00_r0_e0",
+    "overlap_with_previous": 0.9999954663977526,
+    "overlap_tracking_note": "Largest overlap among same-quantum-number states at nearest earlier measured coupling; incomplete excited-state coverage."
+  },
+  {
+    "name": "p0.265625000_n00_r3_e0",
+    "Jp": 0.265625,
+    "cell_n": [
+      0,
+      0
+    ],
+    "character": 3,
+    "spin": 1.5,
+    "reflection_overlap_real": -0.9999999999999993,
+    "reflection_eigen_residual": 5.4300434381186005e-14,
+    "reflection_parity": -1,
+    "previous_matching_branch": "p0.260937500_n00_r3_e0",
+    "overlap_with_previous": 0.9999777058528241,
+    "overlap_tracking_note": "Largest overlap among same-quantum-number states at nearest earlier measured coupling; incomplete excited-state coverage."
+  },
+  {
+    "name": "p0.218750000_n00_r3_e0",
+    "Jp": 0.21875,
+    "cell_n": [
+      0,
+      0
+    ],
+    "character": 3,
+    "spin": 1.5,
+    "reflection_overlap_real": -0.9999999999999998,
+    "reflection_eigen_residual": 3.0822069320081386e-14,
+    "reflection_parity": -1
+  }
+]

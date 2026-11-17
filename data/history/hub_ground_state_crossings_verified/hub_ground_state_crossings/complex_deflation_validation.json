@@ -1,0 +1,20 @@
+[
+  {
+    "physical_root_index": 0,
+    "eigenvalue_error": 1.7763568394002505e-15,
+    "original_H_residual": 2.0802651128653945e-12,
+    "orthogonality": 0.0
+  },
+  {
+    "physical_root_index": 1,
+    "eigenvalue_error": 8.881784197001252e-15,
+    "original_H_residual": 2.4165696497003557e-14,
+    "orthogonality": 6.131407058289218e-16
+  },
+  {
+    "physical_root_index": 2,
+    "eigenvalue_error": 8.881784197001252e-16,
+    "original_H_residual": 2.0405508327817682e-13,
+    "orthogonality": 4.441672655467205e-15
+  }
+]

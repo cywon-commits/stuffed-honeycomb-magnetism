@@ -1,0 +1,52 @@
+[
+  {
+    "r": 0.2,
+    "file": "j0.2_n12_r0.npz",
+    "cell_n": [
+      1,
+      2
+    ],
+    "angular": 0,
+    "sha256": "8431b538cf6e432ca490dcaf4f4621454a357cf4aa6efc74034869f28c987e51"
+  },
+  {
+    "r": 0.35,
+    "file": "p0.350000000_n00_r0_e0.npz",
+    "cell_n": [
+      0,
+      0
+    ],
+    "angular": 0,
+    "sha256": "8357f49e3171a933805902b3fbaf6537c66a240916a48e7898d46e6f29ee0493"
+  },
+  {
+    "r": 0.5,
+    "file": "j0.5_n00_r3.npz",
+    "cell_n": [
+      0,
+      0
+    ],
+    "angular": 3,
+    "sha256": "4161855948d997f39112aab67de0d1349517f673c0f4af6ffa7ea4d7ff6dec27"
+  },
+  {
+    "r": 0.6,
+    "file": "p0.600000000_n00_r0_e0.npz",
+    "cell_n": [
+      0,
+      0
+    ],
+    "angular": 0,
+    "sha256": "0cc88450f6b7c88a421da96cdbfff890f86b4e1f04f73c92b8769f38673392bf"
+  },
+  {
+    "r": 0.7,
+    "file": "p0.700000000_n00_r3_e0.npz",
+    "cell_n": [
+      0,
+      0
+    ],
+    "angular": 3,
+    "sha256": "44857ffeee5bfa4bb3447831e5bee6b3ee409aa4be20f63336a0d275e41e2470"
+  }
+]

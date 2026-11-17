@@ -1,0 +1,243 @@
+{
+  "Jp": 0.35,
+  "lowest_checked": {
+    "name": "p0.350000000_n00_r0_e0",
+    "Jp": 0.35,
+    "cell_n": [
+      0,
+      0
+    ],
+    "cell_k": [
+      0.0,
+      0.0
+    ],
+    "character": 0,
+    "cyclic_order": 6,
+    "physical_root_index": 0,
+    "dimension": 371808,
+    "ncv": 64,
+    "seed": 2026,
+    "start_type": "independent_random",
+    "model_cache_hit": true,
+    "setup_seconds": 0.005998599999657017,
+    "arpack_tol": 1e-11,
+    "verified": true,
+    "deflation_shift": 0,
+    "history": [
+      {
+        "name": "p0.350000000_n00_r0_e0",
+        "H_calls": 50,
+        "elapsed_seconds": 13.319020216998979
+      },
+      {
+        "name": "p0.350000000_n00_r0_e0",
+        "H_calls": 100,
+        "elapsed_seconds": 28.864109177999126
+      }
+    ],
+    "energy": -10.472017603235424,
+    "residual": 5.0007232543251477e-11,
+    "orthogonality_to_lower_roots": 0.0,
+    "spin_check": {
+      "S2": 15.75,
+      "spin": 3.5,
+      "nearest_half_integer_spin": 3.5,
+      "S2_eigen_residual": 2.582016572957432e-10
+    },
+    "spin": 3.5,
+    "slope_dE_dJp": -2.476100313954883,
+    "verification_seconds": 1.2925590760005434,
+    "status": "VERIFIED",
+    "H_calls": 129,
+    "H_kernel_seconds": 30.209158936988388,
+    "wall_seconds": 38.341833233000216,
+    "peak_rss_MiB": 2154.13671875
+  },
+  "sector_minima": {
+    "(0, 0)": {
+      "name": "p0.350000000_n00_r0_e0",
+      "Jp": 0.35,
+      "cell_n": [
+        0,
+        0
+      ],
+      "cell_k": [
+        0.0,
+        0.0
+      ],
+      "character": 0,
+      "cyclic_order": 6,
+      "physical_root_index": 0,
+      "dimension": 371808,
+      "ncv": 64,
+      "seed": 2026,
+      "start_type": "independent_random",
+      "model_cache_hit": true,
+      "setup_seconds": 0.005998599999657017,
+      "arpack_tol": 1e-11,
+      "verified": true,
+      "deflation_shift": 0,
+      "history": [
+        {
+          "name": "p0.350000000_n00_r0_e0",
+          "H_calls": 50,
+          "elapsed_seconds": 13.319020216998979
+        },
+        {
+          "name": "p0.350000000_n00_r0_e0",
+          "H_calls": 100,
+          "elapsed_seconds": 28.864109177999126
+        }
+      ],
+      "energy": -10.472017603235424,
+      "residual": 5.0007232543251477e-11,
+      "orthogonality_to_lower_roots": 0.0,
+      "spin_check": {
+        "S2": 15.75,
+        "spin": 3.5,
+        "nearest_half_integer_spin": 3.5,
+        "S2_eigen_residual": 2.582016572957432e-10
+      },
+      "spin": 3.5,
+      "slope_dE_dJp": -2.476100313954883,
+      "verification_seconds": 1.2925590760005434,
+      "status": "VERIFIED",
+      "H_calls": 129,
+      "H_kernel_seconds": 30.209158936988388,
+      "wall_seconds": 38.341833233000216,
+      "peak_rss_MiB": 2154.13671875
+    },
+    "(0, 1)": {
+      "name": "p0.350000000_n01_r0_e0",
+      "Jp": 0.35,
+      "cell_n": [
+        0,
+        1
+      ],
+      "cell_k": [
+        0.0,
+        0.3333333333333333
+      ],
+      "character": 0,
+      "cyclic_order": 2,
+      "physical_root_index": 0,
+      "dimension": 1119396,
+      "ncv": 64,
+      "seed": 2026,
+      "start_type": "independent_random",
+      "model_cache_hit": true,
+      "setup_seconds": 0.028915790000610286,
+      "arpack_tol": 1e-11,
+      "verified": true,
+      "deflation_shift": 0,
+      "history": [
+        {
+          "name": "p0.350000000_n01_r0_e0",
+          "H_calls": 50,
+          "elapsed_seconds": 37.57950391200029
+        },
+        {
+          "name": "p0.350000000_n01_r0_e0",
+          "H_calls": 100,
+          "elapsed_seconds": 89.39138453499982
+        },
+        {
+          "name": "p0.350000000_n01_r0_e0",
+          "H_calls": 150,
+          "elapsed_seconds": 148.7401203540012
+        },
+        {
+          "name": "p0.350000000_n01_r0_e0",
+          "H_calls": 200,
+          "elapsed_seconds": 229.18843745600134
+        },
+        {
+          "name": "p0.350000000_n01_r0_e0",
+          "H_calls": 250,
+          "elapsed_seconds": 361.54193481400034
+        }
+      ],
+      "energy": -10.420149856826626,
+      "residual": 5.119812771446591e-12,
+      "orthogonality_to_lower_roots": 0.0,
+      "spin_check": {
+        "S2": 8.749999999999973,
+        "spin": 2.4999999999999956,
+        "nearest_half_integer_spin": 2.5,
+        "S2_eigen_residual": 8.382593345170907e-11
+      },
+      "spin": 2.5,
+      "slope_dE_dJp": -2.5840300283941855,
+      "verification_seconds": 4.940919083999688,
+      "status": "VERIFIED",
+      "H_calls": 257,
+      "H_kernel_seconds": 232.65553825800453,
+      "wall_seconds": 378.60048890000144,
+      "peak_rss_MiB": 2302.78125
+    },
+    "(1, 2)": {
+      "name": "p0.350000000_n12_r0_e0",
+      "Jp": 0.35,
+      "cell_n": [
+        1,
+        2
+      ],
+      "cell_k": [
+        0.3333333333333333,
+        0.6666666666666666
+      ],
+      "character": 0,
+      "cyclic_order": 3,
+      "physical_root_index": 0,
+      "dimension": 742900,
+      "ncv": 64,
+      "seed": 2026,
+      "start_type": "independent_random",
+      "model_cache_hit": true,
+      "setup_seconds": 0.008432922999418224,
+      "arpack_tol": 1e-11,
+      "verified": true,
+      "deflation_shift": 0,
+      "history": [
+        {
+          "name": "p0.350000000_n12_r0_e0",
+          "H_calls": 50,
+          "elapsed_seconds": 33.26179722100096
+        },
+        {
+          "name": "p0.350000000_n12_r0_e0",
+          "H_calls": 100,
+          "elapsed_seconds": 70.14915121100057
+        },
+        {
+          "name": "p0.350000000_n12_r0_e0",
+          "H_calls": 150,
+          "elapsed_seconds": 103.80086100500012
+        },
+        {
+          "name": "p0.350000000_n12_r0_e0",
+          "H_calls": 200,
+          "elapsed_seconds": 138.27861155200117
+        }
+      ],
+      "energy": -10.392949925560032,
+      "residual": 4.212154930274472e-14,
+      "orthogonality_to_lower_roots": 0.0,
+      "spin_check": {
+        "S2": 0.7499999999999989,
+        "spin": 0.49999999999999944,
+        "nearest_half_integer_spin": 0.5,
+        "S2_eigen_residual": 2.82799019880412e-12
+      },
+      "spin": 0.5,
+      "slope_dE_dJp": -1.8699836286951315,
+      "verification_seconds": 2.61242141799994,
+      "status": "VERIFIED",
+      "H_calls": 225,
+      "H_kernel_seconds": 82.88632848100497,
+      "wall_seconds": 157.49982017900038,
+      "peak_rss_MiB": 2154.13671875
+    }
+  },
+  "uncomputed_characters_checked_by_concavity_bounds": true
+}

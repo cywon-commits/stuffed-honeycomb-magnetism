@@ -1,0 +1,3 @@
+a,b,width,left_quantum_numbers,right_quantum_numbers,target_width_met,gap_right_minus_left_at_a,gap_right_minus_left_at_b,index,linear_interpolation_estimate,estimate_note
+0.25625,0.2609375,0.004687500000000011,"[[1, 2], 0, 0.5, 1]","[[0, 0], 0, 3.5, 1]",True,0.0015922604671203544,-0.0034764877275517136,1,0.2577224978738285,Interpolation estimate only; the measured bracket is authoritative.
+0.3875,0.3921875,0.004687500000000011,"[[0, 0], 0, 3.5, 1]","[[0, 0], 3, 2.5, -1]",True,0.005756116930829336,-0.003820478183513387,2,0.3903174729944312,Interpolation estimate only; the measured bracket is authoritative.

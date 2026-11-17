@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "new_verified_eigenpairs": 54,
+  "max_direct_H_residual_J": 8.948589262254914e-11,
+  "max_S2_eigen_residual": 3.4844316724503045e-09,
+  "static_states_validated": 10,
+  "maximum_static_energy_reconstruction_error_J": 2.064126647383091e-12,
+  "small_tests": [
+    "crossing_validation.json",
+    "complex_deflation_validation.json",
+    "solver_validation.json"
+  ],
+  "no_unconverged_records_used": true,
+  "legacy_metadata_note": "Early initial-scan records omit explicit L/up fields; L=3 and up=14 follow their production source defaults and the checked symmetry-block dimensions.",
+  "coupling_bracket_count": 2
+}

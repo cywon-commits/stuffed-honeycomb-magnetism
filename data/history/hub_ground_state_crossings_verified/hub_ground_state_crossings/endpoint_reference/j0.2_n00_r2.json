@@ -1,0 +1,50 @@
+{
+  "Jp": 0.2,
+  "cyclic": true,
+  "angular": 2,
+  "cyclic_order": 6,
+  "real_solver": false,
+  "L": 3,
+  "up": 14,
+  "cell_n": [
+    0,
+    0
+  ],
+  "cell_k": [
+    0.0,
+    0.0
+  ],
+  "q_argument": [
+    0.0,
+    0.0
+  ],
+  "dimension": 371700,
+  "setup_seconds": 3.24520080900038,
+  "ncv": 32,
+  "arpack_tol": 1e-11,
+  "residual_tolerance": 1e-08,
+  "converged": true,
+  "seed": 2026,
+  "iteration_count": null,
+  "iteration_count_note": "SciPy does not expose restart iterations; matvec calls are measured.",
+  "energy": -10.170163176988808,
+  "residual": 8.192387353614035e-14,
+  "status": "CONVERGED",
+  "matvec_calls": 113,
+  "direct_residual_matvecs": 1,
+  "matvec_seconds": 30.492665265998767,
+  "solve_seconds": 38.39973319500041,
+  "history": [
+    {
+      "matvec_calls": 50,
+      "elapsed_seconds": 11.057790372999989,
+      "peak_rss_MiB": 384.33203125
+    },
+    {
+      "matvec_calls": 100,
+      "elapsed_seconds": 30.542917621000015,
+      "peak_rss_MiB": 384.33203125
+    }
+  ],
+  "peak_rss_MiB": 391.6875
+}

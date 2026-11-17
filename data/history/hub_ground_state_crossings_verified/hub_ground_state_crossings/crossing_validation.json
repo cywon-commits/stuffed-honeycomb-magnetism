@@ -1,0 +1,48 @@
+{
+  "deflation_tests": [
+    {
+      "character": 0,
+      "root": 0,
+      "energy_error": 0.0,
+      "residual": 7.82806073062653e-15,
+      "S2_residual": 1.2844586697634555e-14
+    },
+    {
+      "character": 0,
+      "root": 1,
+      "energy_error": 4.440892098500626e-15,
+      "residual": 3.8475125004298246e-13,
+      "S2_residual": 4.741125996044938e-13
+    },
+    {
+      "character": 0,
+      "root": 2,
+      "energy_error": 2.6645352591003757e-15,
+      "residual": 2.112420272544241e-11,
+      "S2_residual": 3.0158113401499936e-11
+    },
+    {
+      "character": 3,
+      "root": 0,
+      "energy_error": 6.217248937900877e-15,
+      "residual": 4.2320315264882655e-11,
+      "S2_residual": 1.2728438998173186e-10
+    },
+    {
+      "character": 3,
+      "root": 1,
+      "energy_error": 8.881784197001252e-15,
+      "residual": 2.7816197966973593e-15,
+      "S2_residual": 7.020076962371717e-15
+    },
+    {
+      "character": 3,
+      "root": 2,
+      "energy_error": 0.0,
+      "residual": 1.8417299337973224e-15,
+      "S2_residual": 6.2207417805078535e-15
+    }
+  ],
+  "concavity_and_variational_line_tests": true,
+  "corner_reflection_equivalence_test": true
+}

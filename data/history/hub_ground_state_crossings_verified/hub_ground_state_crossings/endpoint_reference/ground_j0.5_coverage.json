@@ -1,0 +1,25 @@
+{
+  "Jp": 0.5,
+  "all_representative_blocks_converged": true,
+  "verified_blocks": 9,
+  "cell_sector_dimension_checks": [
+    2228700,
+    2228700,
+    2228700
+  ],
+  "full_dimension_covered": 20058300,
+  "ground_name": "j0.5_n00_r3",
+  "ground_energy": -11.083587020439092,
+  "ground_cell_n": [
+    0,
+    0
+  ],
+  "ground_cyclic_order": 6,
+  "ground_angular": 3,
+  "ground_residual": 2.988789654114859e-14,
+  "lowest_energy_separation_between_checked_blocks": 0.07899792414609941,
+  "separation_note": "This is not the full first excitation gap; same-block excited roots were not calculated.",
+  "measured_solve_seconds_sum": 1086.577606613002,
+  "maximum_measured_peak_rss_MiB": 1414.98046875,
+  "complex_conjugate_Gamma_partners": "ell=4 matches ell=2; ell=5 matches ell=1 for the real Hamiltonian at Gamma."
+}

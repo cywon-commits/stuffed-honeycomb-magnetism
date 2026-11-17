@@ -1,0 +1,114 @@
+[
+  {
+    "a": 0.25625,
+    "b": 0.2609375,
+    "other_family_margins": [
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 1,
+        "minimum_margin": 0.022004520907920266
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 2,
+        "minimum_margin": 0.024553164419938156
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 3,
+        "minimum_margin": 0.002015876876242828
+      },
+      {
+        "cell_n": [
+          0,
+          1
+        ],
+        "character": 0,
+        "minimum_margin": 0.0002054259561070637
+      },
+      {
+        "cell_n": [
+          0,
+          1
+        ],
+        "character": 1,
+        "minimum_margin": 0.0002615167014496933
+      },
+      {
+        "cell_n": [
+          1,
+          2
+        ],
+        "character": 1,
+        "minimum_margin": 0.02203918654635828
+      }
+    ],
+    "all_third_spatial_families_excluded": true,
+    "scope": "Conditional on verified numerical lowest-root identification; no exclusion of unsampled spin changes within the two competing spatial families."
+  },
+  {
+    "a": 0.3875,
+    "b": 0.3921875,
+    "other_family_margins": [
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 1,
+        "minimum_margin": 0.07399583758914119
+      },
+      {
+        "cell_n": [
+          0,
+          0
+        ],
+        "character": 2,
+        "minimum_margin": 0.0268486280296667
+      },
+      {
+        "cell_n": [
+          0,
+          1
+        ],
+        "character": 0,
+        "minimum_margin": 0.043402010257581836
+      },
+      {
+        "cell_n": [
+          0,
+          1
+        ],
+        "character": 1,
+        "minimum_margin": 0.07972649859654624
+      },
+      {
+        "cell_n": [
+          1,
+          2
+        ],
+        "character": 0,
+        "minimum_margin": 0.08107499469307378
+      },
+      {
+        "cell_n": [
+          1,
+          2
+        ],
+        "character": 1,
+        "minimum_margin": 0.08978587218959255
+      }
+    ],
+    "all_third_spatial_families_excluded": true,
+    "scope": "Conditional on verified numerical lowest-root identification; no exclusion of unsampled spin changes within the two competing spatial families."
+  }
+]
