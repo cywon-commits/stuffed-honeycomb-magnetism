@@ -1,0 +1,30 @@
+{
+ "U1": {
+  "details": {
+   "(1, 0.6, 0.6)": true,
+   "equals geometry(3, 0.6)": true,
+   "(1.3, 0.7, 0.2)": true,
+   "(1, 1, 0)": true
+  },
+  "pass_": true,
+  "wall_s": 0.0677330493927002
+ },
+ "U6": {
+  "details": {
+   "N27_hermiticity_relative": 4.684385382059801e-14,
+   "N12_nup6_spectrum_maxdiff": 2.930988785010413e-14,
+   "N12_nup6_dims": [
+    924,
+    924
+   ],
+   "N12_nup7_spectrum_maxdiff": 3.730349362740526e-14,
+   "N12_nup7_dims": [
+    792,
+    792
+   ],
+   "N12_max_hermiticity_error": 1.2947314098277873e-15
+  },
+  "pass_": true,
+  "wall_s": 2.7739968299865723
+ }
+}

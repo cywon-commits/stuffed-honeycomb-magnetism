@@ -233,9 +233,19 @@ struct Ham {
   const Sym* S; const Basis* B;
   std::vector<u64> bmask; std::vector<double> bJ;
   std::vector<double> sqn;     // sqrt(norm)
-  void init(const Spec& sp, const Sym& s, const Basis& b, double r) {
+  // J[t] is the coupling of bond type t (0 = AB rim, 1 = hub-B, 2 = hub-A)
+  void init(const Spec& sp, const Sym& s, const Basis& b, const double J[3]) {
     S = &s; B = &b;
-    for (size_t k = 0; k < sp.bi.size(); k++) { bmask.push_back((1ULL << sp.bi[k]) | (1ULL << sp.bj[k])); bJ.push_back(sp.bt[k] == 0 ? 1.0 : r); }
+    for (size_t k = 0; k < sp.bi.size(); k++) {
+      if (sp.bt[k] < 0 || sp.bt[k] > 2) { fprintf(stderr, "bad bond type\n"); exit(1); }
+      bmask.push_back((1ULL << sp.bi[k]) | (1ULL << sp.bj[k])); bJ.push_back(J[sp.bt[k]]);
+    }
+    sqn.resize(b.norm.size());
+    for (size_t i = 0; i < sqn.size(); i++) sqn[i] = std::sqrt(b.norm[i]);
+  }
+  // generic pair operator sum_k c_k S_i.S_j over the given masks (same basis, same tables)
+  void init_pairs(const std::vector<u64>& masks, double c, const Sym& s, const Basis& b) {
+    S = &s; B = &b; bmask = masks; bJ.assign(masks.size(), c);
     sqn.resize(b.norm.size());
     for (size_t i = 0; i < sqn.size(); i++) sqn[i] = std::sqrt(b.norm[i]);
   }
@@ -327,7 +337,7 @@ template <class T> static bool load_vec(FILE* f, std::vector<T>& v) { return fre
 
 struct Opts {
   std::string mode = "lanczos", spec, ckpt, out, in, pairs;
-  double r = 0.2, tol = 1e-10;
+  double r = 0.2, tol = 1e-10; double J[3] = {1.0, 0.2, 0.2}; bool Jset = false;
   int maxit = 400, nbench = 3, ckevery = 20, nev = 3; uint64_t seed = 12345; bool vec = true;
 };
 
@@ -377,6 +387,16 @@ static void report_pairs(const Opts& o, const Ham& H, const std::vector<T>& psi,
   for (int k = 0; k < P.norb; k++) printf("ORBIT %d %.15f\n", k, v[k]);
   double S2 = 0.75 * N + 2 * all;
   printf("S2 %.12f  S_eff %.10f\n", S2, 0.5 * (std::sqrt(1 + 4 * S2) - 1));
+  // explicit S^2 action: S^2 psi = (3N/4) psi + 2 sum_{i<j} S_i.S_j psi ; residual vs nearest allowed S(S+1)
+  {
+    Ham Q; Q.init_pairs(P.mask, 2.0, *H.S, *H.B);
+    std::vector<T> y(psi.size()); Q.apply(psi.data(), y.data());
+    double Seff = 0.5 * (std::sqrt(1 + 4 * S2) - 1);
+    double Sq = (N % 2) ? std::round(Seff - 0.5) + 0.5 : std::round(Seff);   // nearest allowed S (half-integer for odd N)
+    double ss = Sq * (Sq + 1), r2 = 0, ex = 0;
+    for (size_t i = 0; i < psi.size(); i++) { T z = y[i] + (0.75 * N - ss) * psi[i]; r2 += std::norm(cplx(z)); ex += re_(conj_(psi[i]) * (y[i] + 0.75 * N * psi[i])); }
+    printf("S2ACTION S %.1f  <S2> %.12f  S2_residual %.3e\n", Sq, ex, std::sqrt(r2));
+  }
   fflush(stdout);
 }
 
@@ -495,7 +515,9 @@ static bool lanczos(const Opts& o, const Ham& H, size_t D, std::vector<T>& psi, 
 
 template <class T>
 static void run(const Opts& o, const Spec& sp, const Sym& S, const Basis& B) {
-  Ham H; H.init(sp, S, B, o.r);
+  double J[3] = {o.J[0], o.J[1], o.J[2]};
+  if (!o.Jset) { J[0] = 1.0; J[1] = o.r; J[2] = o.r; }
+  Ham H; H.init(sp, S, B, J);
   const size_t D = B.reps.size();
   if (o.mode == "bench") {
     std::vector<T> x(D), y(D), x2(D), y2(D);
@@ -540,13 +562,15 @@ int main(int argc, char** argv) {
     else if (a == "--seed") o.seed = std::stoull(nx());
     else if (a == "--novec") o.vec = false;
     else if (a == "--pairs") o.pairs = nx();
+    else if (a == "--J") { std::string v = nx(); if (sscanf(v.c_str(), "%lf,%lf,%lf", &o.J[0], &o.J[1], &o.J[2]) != 3) { fprintf(stderr, "--J needs jab,jbc,jca\n"); return 1; } o.Jset = true; }
     else if (a == "--in") o.in = nx();
     else o.spec = a;
   }
   if (o.spec.empty()) { fprintf(stderr, "usage: ed_sym SPEC [--mode dim|bench|lanczos|dense] [--r R] [--maxit N] [--tol T] [--ckpt PREFIX] [--out FILE]\n"); return 1; }
   double t0 = now();
   Spec sp = read_spec(o.spec.c_str());
-  printf("%sSPEC N=%d NH=%d NUP=%d bonds=%zu elements=%zu real=%d threads=%d r=%.10g\n", sp.header.c_str(), sp.N, sp.NH, sp.NUP, sp.bi.size(), sp.perm.size(), (int)sp.real, omp_get_max_threads(), o.r);
+  printf("%sSPEC N=%d NH=%d NUP=%d bonds=%zu elements=%zu real=%d threads=%d r=%.10g J=%.12g,%.12g,%.12g\n", sp.header.c_str(), sp.N, sp.NH, sp.NUP, sp.bi.size(), sp.perm.size(), (int)sp.real, omp_get_max_threads(), o.r,
+         o.Jset ? o.J[0] : 1.0, o.Jset ? o.J[1] : o.r, o.Jset ? o.J[2] : o.r);
   Sym S; S.build(sp);
   double avgc = (double)S.cand.size() / (1ULL << S.NH);
   printf("TABLES built %.2fs  mean candidates per hub pattern %.2f\n", now() - t0, avgc);

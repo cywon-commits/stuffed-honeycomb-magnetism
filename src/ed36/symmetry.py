@@ -49,8 +49,11 @@ def inverse(p):
 
 
 class Cluster:
-    def __init__(self, name):
+    def __init__(self, name, couplings=None):
+        """couplings=(J_AB, J_BC, J_CA) selects the bond labels used for the symmetry
+        search.  None keeps the two-coupling model (J on rim bonds, J' on all hub bonds)."""
         self.name = name
+        self.couplings = None if couplings is None else tuple(float(x) for x in couplings)
         self.T = CLUSTERS[name]
         g = G.make(self.T)
         assert g["valid"], name
@@ -58,7 +61,14 @@ class Cluster:
         self.Ncell = g["Ncell"]
         self.cells = [tuple(map(int, c)) for c in g["cells"]]
         self.momenta = [tuple(map(float, q)) for q in g["momenta"]]
-        self.bonds = [(int(a), int(b), int(t)) for a, b, t in g["bonds"]]  # t=0 rim-rim (J), t=1 hub-rim (J')
+        # bond type: 0 = A-B rim (J_AB), 1 = hub-B (J_BC), 2 = hub-A (J_CA); geometry.make lists hub bonds as (hub, rim)
+        self.bonds = []
+        for a, b, t in g["bonds"]:
+            a, b, t = int(a), int(b), int(t)
+            if t == 1:
+                assert a % 3 == 2 and b % 3 in (0, 1)
+                t = 2 if b % 3 == 0 else 1
+            self.bonds.append((a, b, t))
         self.is_hub = [i % 3 == 2 for i in range(self.N)]
         self.trans = {tuple(map(int, g["cells"][k])): tuple(map(int, g["perms"][k])) for k in range(self.Ncell)}
         self.trans_of_perm = {p: R for R, p in self.trans.items()}
@@ -70,12 +80,17 @@ class Cluster:
         self.NR, self.NH = len(rims), len(hubs)
 
     # ---------------- automorphism group -----------------
+    def bond_label(self, t):
+        if self.couplings is None:
+            return "J" if t == 0 else "Jp"
+        return round(self.couplings[t], 12)
+
     def _automorphisms(self):
         N = self.N
         adj = [dict() for _ in range(N)]
         for a, b, t in self.bonds:
-            adj[a][b] = t
-            adj[b][a] = t
+            adj[a][b] = self.bond_label(t)
+            adj[b][a] = self.bond_label(t)
         order = [0]
         seen = {0}
         for v in order:
@@ -291,7 +306,7 @@ class Cluster:
     # ---------------- export -----------------
     def write_spec(self, sec, nup, path):
         b = self.bit_of_site
-        lines = [f"# stuffed-honeycomb ED sector spec: cluster {self.name} T={self.T}",
+        lines = [f"# stuffed-honeycomb ED sector spec: cluster {self.name} T={self.T} symmetry_couplings={self.couplings}",
                  f"# k={list(sec['k'])} ichar={sec['ichar']} z={sec['z']} point_part={sec['point_part']}",
                  f"N {self.N} NH {self.NH} NUP {nup}",
                  f"BONDS {len(self.bonds)}"]
