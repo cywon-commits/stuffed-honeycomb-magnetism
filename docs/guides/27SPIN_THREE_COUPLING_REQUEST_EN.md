@@ -89,8 +89,12 @@ residual ||H psi - E psi|| < 1e-8 and S(S+1) from the S^2 action.
   global minimum within 1e-8.
 - Report d_c(j) = first d at which S > 1/2, and S after the jump.
 - Decision: N = 18 gives d_c = 0.21 j (K18), 0.19 j (C18). Finite-size scaling d_c * N_H = const
-  predicts d_c ≈ 0.14 j at N = 27. A bulk wedge predicts d_c → 0.13 j^2 (0.0029, 0.0052, 0.0117
-  for j = 0.15, 0.2, 0.3). Classical non-collinear wedge: d = j^2.
+  predicts d_c ≈ 0.14 j at N = 27 (0.021, 0.028, 0.042 for j = 0.15, 0.2, 0.3). A bulk wedge from the
+  Seifert–Vojta effective hub model predicts d_c → 0.34–0.37 j^2 (0.0076, 0.0135, 0.030; see
+  `src/field_dice/wedge_theory.py`). Classical non-collinear wedge: d = j^2. j = 0.15 and 0.2 separate
+  the two predictions best; j = 0.3 is a consistency point.
+- Correction (2026-11-18, later the same day): an earlier version of this request quoted 0.13 j^2. That
+  number counted each hub pair once against a table that counts it twice and dropped the transverse term.
 
 ### Task D — resonance efficiency (prediction Q5)
 - E_hex: J = (1, 0, 0), lowest level in S^z = 9/2 (honeycomb singlet + 9 free hub spins up).
@@ -113,6 +117,6 @@ Peak memory per Lanczos is dominated by the S^z = 1/2 sector (2.23 M complex amp
 about 36 MB per vector; the existing look-up tables need a few hundred MB). Previous runs with
 2 cores / 8 GiB took ~2 s per H action at this size. Task C needs roughly
 3 j × 6 d × (3 + 4 smaller sectors) Lanczos runs; Tasks A, B, D are lighter. Run A, B, D first,
-then C. If time is short, C at j = 0.2 alone is still decisive (0.028 vs 0.0052).
+then C. If time is short, run C at j = 0.15 and 0.2 (0.021 vs 0.0076, 0.028 vs 0.0135).
 
 36-spin results are not assumed. If they appear later they are used only as a reference.

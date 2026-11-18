@@ -23,6 +23,8 @@ Geometry (sites, bonds, K18/C18 tori) is imported unchanged from
 | `f_lswt.py` | Resonance efficiency f from LSWT vs ED in the Lieb-Mattis region |
 | `wedge.py` | 18-spin partial-disorder wedge: jump asymmetry delta_c(j) -> data/field_dice/pd_wedge_18.csv |
 | `ref27.py` | Independent unreduced N=27 reference energies for S^z >= 13/2 (unit tests of the 27-spin solver) |
+| `hub_eff.py`, `hub_eff_check.py` | Effective hub couplings from second-order perturbation around the LSWT Neel honeycomb; reproduces 2 j^{xy,0} of Seifert-Vojta Table I, exact sum rule sum_R K^xx = 9 chi_perp |
+| `wedge_theory.py` | Bulk PD wedge Delta J_c = 0.34-0.37 J'^2/J from the Seifert-Vojta S=1/2 couplings |
 | `scan_simplex.py` | 18-spin ED over 55 points of the fundamental domain -> data/field_dice/simplex_scan_18.csv |
 
 Reproduce (about 2 min on 2 cores):
