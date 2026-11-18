@@ -701,5 +701,14 @@
   "diff": 1.5631940186722204e-13,
   "pass_": true,
   "wall_s": 0.26312875747680664
+ },
+ "U9": {
+  "states_checked": 17,
+  "max_diff_AB": 6.314393452555578e-15,
+  "max_diff_CA_plus_CB": 9.842127113302013e-14,
+  "max_mirror_CA_minus_CB": 0.0,
+  "note": "Individual H_CA, H_CB reduced-basis actions are not used: not group invariant on the mirror line.",
+  "pass_": true,
+  "wall_s": 0.009907245635986328
  }
 }

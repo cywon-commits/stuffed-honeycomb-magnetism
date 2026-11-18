@@ -218,14 +218,23 @@ def U8():
 
 
 def U9():
-    """Sum rule zz_t + t_t = <H_t>/27 for every Task E state; <H_t> from a separate H_t action."""
+    """Sum rule zz_AB + t_AB = <H_AB>/27 for every Task E state, with <H_AB> from a separate H_AB action
+    in the reduced basis.  The same check is made for H_CA + H_CB.  H_CA and H_CB separately are NOT
+    invariant under the mirror-line symmetry group (the A<->B swap exchanges them), so their reduced-basis
+    actions are not expectation values there; on the mirror the test instead checks zz_CA = zz_CB and
+    t_CA = t_CB, which the symmetry requires."""
     tc = Cache(WORK / "cache_tasks.jsonl")
     rows = [r for k, r in tc.d.items() if k.startswith("obs|")]
-    worst = 0.0
+    wAB = wHub = wSym = 0.0
     for r in rows:
-        for name in ("AB", "CA", "CB"):
-            worst = max(worst, abs(r[f"zz_{name}"] + r[f"t_{name}"] - r[f"Htype_{name}"]))
-    return dict(states_checked=len(rows), max_diff=worst, pass_=bool(rows) and worst <= 1e-10)
+        wAB = max(wAB, abs(r["zz_AB"] + r["t_AB"] - r["Htype_AB"]))
+        hub = r["zz_CA"] + r["t_CA"] + r["zz_CB"] + r["t_CB"]
+        wHub = max(wHub, abs(hub - (r["Htype_CA"] + r["Htype_CB"])))
+        if abs(r["J"][1] - r["J"][2]) < 1e-12:   # mirror line: CA <-> CB by symmetry
+            wSym = max(wSym, abs(r["zz_CA"] - r["zz_CB"]), abs(r["t_CA"] - r["t_CB"]))
+    return dict(states_checked=len(rows), max_diff_AB=wAB, max_diff_CA_plus_CB=wHub, max_mirror_CA_minus_CB=wSym,
+                note="Individual H_CA, H_CB reduced-basis actions are not used: not group invariant on the mirror line.",
+                pass_=bool(rows) and max(wAB, wHub, wSym) <= 1e-10)
 
 
 TESTS.update(U7=U7, U8=U8, U9=U9)
