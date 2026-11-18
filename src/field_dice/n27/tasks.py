@@ -22,7 +22,8 @@ COLS = ["task", "J_AB", "J_BC", "J_CA", "eps", "phi_deg", "n_up", "Sz", "k1", "k
 def eps_phi(J):
     jb = sum(J) / 3
     z = sum((J[k] / jb - 1) * cmath.exp(2j * math.pi * k / 3) for k in range(3)) / 3
-    return abs(z), (math.degrees(cmath.phase(z)) % 360 if abs(z) > 1e-12 else 0.0)
+    phi = math.degrees(cmath.phase(z)) % 360 if abs(z) > 1e-12 else 0.0
+    return abs(z), (0.0 if abs(phi - 360) < 1e-6 else phi)
 
 
 def couplings(eps, phi_deg):
