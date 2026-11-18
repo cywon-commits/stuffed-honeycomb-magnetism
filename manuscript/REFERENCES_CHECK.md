@@ -17,3 +17,10 @@ Each entry of `refs.bib` was checked against a publisher, repository or arXiv pa
 Competitor search (2026-11-18): no study of the full three-coupling space (J_AB, J_BC, J_CA) of the
 sqrt3 x sqrt3 triangular lattice, nor of the r < 1 side in a magnetic field, was found. Sahoo & Flint's
 2021 APS March Meeting abstract (field, DM interactions, GdInO3) has no journal version found yet.
+
+Added 2026-11-19:
+
+| Key | Verified bibliographic data | Source opened | Cited for |
+| --- | --- | --- | --- |
+| ChubukovGolosov1991 | J. Phys.: Condens. Matter 3, 69–82 (1991), DOI 10.1088/0953-8984/3/1/005 | Scilit record of the IOP article; cited as "Chubukov and Golosov (1991)" in Ye & Chubukov, PRB 96, 140406 | 1/S order-by-disorder 1/3 plateau of the triangular lattice |
+| Yuan2023 | PRB 108, 224403 (2023), DOI 10.1103/PhysRevB.108.224403; Yuan, Elghandour, Hergett, Ohlendorf, Gries, Klingeler | Heidelberg University library record; KIP publication record; arXiv:2308.04935 | GdInO3: centered-honeycomb Gd layers, 1/3 (uud) plateau for B parallel to c, weak easy-axis anisotropy |

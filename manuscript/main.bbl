@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{9}%
+\begin{thebibliography}{11}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -50,6 +50,41 @@
 \providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
 \let\auto@bib@innerbib\@empty
 %</preamble>
+\bibitem [{\citenamefont {Lieb}\ and\ \citenamefont
+  {Mattis}(1962)}]{LiebMattis1962}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Lieb}}\ and\ \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Mattis}},\
+  }\bibfield  {title} {\bibinfo {title} {Ordering energy levels of interacting
+  spin systems},\ }\href {https://doi.org/10.1063/1.1724276} {\bibfield
+  {journal} {\bibinfo  {journal} {J. Math. Phys.}\ }\textbf {\bibinfo {volume}
+  {3}},\ \bibinfo {pages} {749} (\bibinfo {year} {1962})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Chubukov}\ and\ \citenamefont
+  {Golosov}(1991)}]{ChubukovGolosov1991}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~V.}\ \bibnamefont
+  {Chubukov}}\ and\ \bibinfo {author} {\bibfnamefont {D.~I.}\ \bibnamefont
+  {Golosov}},\ }\bibfield  {title} {\bibinfo {title} {Quantum theory of an
+  antiferromagnet on a triangular lattice in a magnetic field},\ }\href
+  {https://doi.org/10.1088/0953-8984/3/1/005} {\bibfield  {journal} {\bibinfo
+  {journal} {J. Phys.: Condens. Matter}\ }\textbf {\bibinfo {volume} {3}},\
+  \bibinfo {pages} {69} (\bibinfo {year} {1991})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Yuan}\ \emph {et~al.}(2023)\citenamefont {Yuan},
+  \citenamefont {Elghandour}, \citenamefont {Hergett}, \citenamefont
+  {Ohlendorf}, \citenamefont {Gries},\ and\ \citenamefont
+  {Klingeler}}]{Yuan2023}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Yuan}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Elghandour}},
+  \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {Hergett}}, \bibinfo
+  {author} {\bibfnamefont {R.}~\bibnamefont {Ohlendorf}}, \bibinfo {author}
+  {\bibfnamefont {L.}~\bibnamefont {Gries}},\ and\ \bibinfo {author}
+  {\bibfnamefont {R.}~\bibnamefont {Klingeler}},\ }\bibfield  {title} {\bibinfo
+  {title} {1/3 plateau and 3/5 discontinuity in the magnetization and the
+  magnetic phase diagram of hexagonal {GdInO$_3$}},\ }\href
+  {https://doi.org/10.1103/PhysRevB.108.224403} {\bibfield  {journal} {\bibinfo
+   {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {108}},\ \bibinfo
+  {pages} {224403} (\bibinfo {year} {2023})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Gonzalez}\ \emph {et~al.}(2019)\citenamefont
   {Gonzalez}, \citenamefont {Lisandrini}, \citenamefont {Blesio}, \citenamefont
   {Trumper}, \citenamefont {Gazza},\ and\ \citenamefont
@@ -77,6 +112,17 @@
   {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo
   {volume} {99}},\ \bibinfo {pages} {155156} (\bibinfo {year}
   {2019})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Blesio}\ \emph {et~al.}(2023)\citenamefont {Blesio},
+  \citenamefont {Lisandrini},\ and\ \citenamefont {Gonzalez}}]{Blesio2023}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.~G.}\ \bibnamefont
+  {Blesio}}, \bibinfo {author} {\bibfnamefont {F.~T.}\ \bibnamefont
+  {Lisandrini}},\ and\ \bibinfo {author} {\bibfnamefont {M.~G.}\ \bibnamefont
+  {Gonzalez}},\ }\bibfield  {title} {\bibinfo {title} {Partially disordered
+  {H}eisenberg antiferromagnet with short-range stripe correlations},\ }\href
+  {https://doi.org/10.1103/PhysRevB.107.134418} {\bibfield  {journal} {\bibinfo
+   {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {107}},\ \bibinfo
+  {pages} {134418} (\bibinfo {year} {2023})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Nakano}\ and\ \citenamefont
   {Sakai}(2017)}]{NakanoSakai2017}%
   \BibitemOpen
@@ -140,24 +186,4 @@
   {journal} {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume}
   {98}},\ \bibinfo {pages} {134419} (\bibinfo {year} {2018})}\BibitemShut
   {NoStop}%
-\bibitem [{\citenamefont {Blesio}\ \emph {et~al.}(2023)\citenamefont {Blesio},
-  \citenamefont {Lisandrini},\ and\ \citenamefont {Gonzalez}}]{Blesio2023}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.~G.}\ \bibnamefont
-  {Blesio}}, \bibinfo {author} {\bibfnamefont {F.~T.}\ \bibnamefont
-  {Lisandrini}},\ and\ \bibinfo {author} {\bibfnamefont {M.~G.}\ \bibnamefont
-  {Gonzalez}},\ }\bibfield  {title} {\bibinfo {title} {Partially disordered
-  {H}eisenberg antiferromagnet with short-range stripe correlations},\ }\href
-  {https://doi.org/10.1103/PhysRevB.107.134418} {\bibfield  {journal} {\bibinfo
-   {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {107}},\ \bibinfo
-  {pages} {134418} (\bibinfo {year} {2023})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Lieb}\ and\ \citenamefont
-  {Mattis}(1962)}]{LiebMattis1962}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
-  {Lieb}}\ and\ \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Mattis}},\
-  }\bibfield  {title} {\bibinfo {title} {Ordering energy levels of interacting
-  spin systems},\ }\href {https://doi.org/10.1063/1.1724276} {\bibfield
-  {journal} {\bibinfo  {journal} {J. Math. Phys.}\ }\textbf {\bibinfo {volume}
-  {3}},\ \bibinfo {pages} {749} (\bibinfo {year} {1962})}\BibitemShut {NoStop}%
 \end{thebibliography}%
