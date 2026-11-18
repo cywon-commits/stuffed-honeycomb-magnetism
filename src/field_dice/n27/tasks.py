@@ -292,6 +292,167 @@ def task_F2():
 
 TASKS.update(E=task_E, G=task_G, F=task_F, F2=task_F2)
 
+
+# ======================================================================= third request (H)
+TOLDEG = 1e-8
+
+
+def levels_up(J, ks_half=GK, cap=5.5, need_full_half=False):
+    """Lowest level per S^z: S^z = 1/2 over ks_half (all momenta if need_full_half), then S^z = 3/2, 5/2, ...
+    over all momenta until the level rises above the running minimum (or S^z = cap).
+    Returns (S, E0, {Sz: E}, {Sz: (k_min, lv)})."""
+    E, where = {}, {}
+    lv = lowest_per_k(cache, J, 14, ks=(ALLK if need_full_half else ks_half), vectors=False, log=log)
+    E[0.5] = emin(lv); where[0.5] = (min(lv.items(), key=lambda kv: kv[1]["E"])[0], lv)
+    m = 1.5
+    while m <= cap + 1e-9:
+        lv = lowest_per_k(cache, J, nup_of(m), ks=ALLK, vectors=False, log=log)
+        E[m] = emin(lv); where[m] = (min(lv.items(), key=lambda kv: kv[1]["E"])[0], lv)
+        if E[m] > min(E.values()) + TOLDEG:
+            break
+        m += 1.0
+    S, E0 = gs_spin_from_levels(E, TOLDEG)
+    return S, E0, E, where
+
+
+def confirm_S2(J, S, where):
+    """Rebuild the lowest state of the S^z = S sector (its lowest momentum) and return S from S^2."""
+    k = where[S][0]
+    lv = lowest_per_k(cache, J, nup_of(S), ks=[k], vectors=True, log=log)
+    r = lv[k]
+    write_rows("H", J, nup_of(S), {k: r})
+    return r["S"], r["S2_residual"], r["H_residual"]
+
+
+def H1_point(j, res=0.0004, hi0=0.02):
+    Jd = lambda d: (1.0, j + d / 2, j - d / 2)
+    jump = lambda d: ground_spin_jump_all(Jd(d))
+    base = dict(task="H1", point=f"j={j}")
+    if jump(0.0)[0]:
+        summary(dict(base, quantity="d_c", value="", note="S>1/2 already at d=0: not decidable (skipped)"))
+        log(f"H1 j={j}: S>1/2 at d=0, skipped")
+        return None
+    hi = hi0
+    while not jump(hi)[0]:
+        hi *= 2
+        if hi > 0.0801:
+            summary(dict(base, quantity="d_c", value="", note="no jump up to d=0.08"))
+            return None
+    lo = 0.0
+    while hi - lo > res + 1e-12:
+        mid = round((lo + hi) / 2, 10)
+        jm, e1, e3 = jump(mid)
+        log(f"H1 j={j} d={mid:.6f}: E1/2={e1:.10f} E3/2={e3:.10f} jump={jm}")
+        if jm:
+            hi = mid
+        else:
+            lo = mid
+    out = {}
+    for d in (lo, hi):           # final bracket: S^z = 1/2, 3/2, 5/2, all momenta, vectors (S from S^2)
+        J = Jd(d)
+        E = {}
+        for nup in (14, 15, 16):
+            lv = lowest_per_k(cache, J, nup, ks=ALLK, vectors=True, log=log)
+            write_rows("H", J, nup, lv)
+            E[sz_of(nup)] = emin(lv)
+        Sg, E0 = gs_spin_from_levels(E, TOLDEG)
+        k0 = min(lowest_per_k(cache, J, nup_of(Sg), ks=ALLK, vectors=True, log=log).items(), key=lambda kv: kv[1]["E"])
+        out[d] = (Sg, k0[1]["S"], E0)
+    lin = (0.056 * j, 0.058 * j); quad = (0.28 * j * j, 0.39 * j * j)
+    ov = lambda a, b: not (b[1] < a[0] or b[0] > a[1])
+    br = (lo, hi)
+    summary(dict(base, J_AB=1, quantity="d_c", value=hi,
+                 note=f"bracket ({lo:.6f},{hi:.6f}]; S(lo)={out[lo][0]} (S^2: {out[lo][1]}), S(hi)={out[hi][0]} (S^2: {out[hi][1]}); "
+                      f"d_c/j={lo / j:.4f}-{hi / j:.4f}; d_c/j^2={lo / j / j:.3f}-{hi / j / j:.3f}; "
+                      f"linear 0.056-0.058j=[{lin[0]:.5f},{lin[1]:.5f}] overlap={ov(br, lin)}; "
+                      f"quadratic 0.28-0.39j^2=[{quad[0]:.5f},{quad[1]:.5f}] overlap={ov(br, quad)}"))
+    log(f"H1 j={j}: d_c in ({lo:.6f},{hi:.6f}]  S {out[lo][0]}->{out[hi][0]}  linear overlap={ov(br, lin)} quadratic overlap={ov(br, quad)}")
+    return lo, hi
+
+
+def ground_spin_jump_all(J):
+    """Task H1 rule: S^z = 1/2 and 3/2 both over all 9 momenta; S > 1/2 iff E(3/2) <= E(1/2) + 1e-8."""
+    e1 = emin(lowest_per_k(cache, J, 14, ks=ALLK, vectors=False, log=log))
+    e3 = emin(lowest_per_k(cache, J, 15, ks=ALLK, vectors=False, log=log))
+    return e3 <= e1 + TOLDEG, e1, e3
+
+
+def H2_point(j, d_first, step=0.0025, res=0.0005):
+    """Track the ground spin from the first jump upward; bisect every change of S to res."""
+    Jd = lambda d: (1.0, j + d / 2, j - d / 2)
+    memo = {}
+
+    def S_at(d):
+        d = round(d, 10)
+        if d not in memo:
+            S, E0, E, where = levels_up(Jd(d))
+            memo[d] = (S, E0, E, where)
+            log(f"H2 j={j} d={d:.6f}: S={S} E0={E0:.10f} levels={ {k: round(v, 8) for k, v in E.items()} }")
+        return memo[d][0]
+
+    dmax = 2 * j * j
+    grid = [round(d_first + i * step, 10) for i in range(0, 200) if d_first + i * step <= dmax + 1e-12]
+    thresholds = {}
+    prev_d, prev_S = None, None
+    for d in grid:
+        S = S_at(d)
+        if prev_S is not None and S > prev_S:
+            for target in [prev_S + 1 + i for i in range(int(round(S - prev_S)))]:
+                lo, hi = prev_d, d
+                while hi - lo > res + 1e-12:
+                    mid = round((lo + hi) / 2, 10)
+                    if S_at(mid) >= target:
+                        hi = mid
+                    else:
+                        lo = mid
+                thresholds[target] = (lo, hi)
+        elif prev_S is not None and S < prev_S:
+            log(f"H2 j={j}: S decreased {prev_S}->{S} at d={d} (non-monotonic)")
+            thresholds.setdefault("non_monotonic", []).append((prev_d, d, prev_S, S))
+        prev_d, prev_S = d, S
+        if S >= 4.5:
+            break
+    # S^2 confirmation at both ends of every bracket, rows for the energy levels at every evaluated d
+    for d, (S, E0, E, where) in sorted(memo.items()):
+        for m, (k, lv) in where.items():
+            write_rows("H", Jd(d), nup_of(m), lv)
+    base = dict(task="H2", point=f"j={j}", J_AB=1)
+    for target, br in sorted((t, b) for t, b in thresholds.items() if t != "non_monotonic"):
+        s_lo = confirm_S2(Jd(br[0]), memo[round(br[0], 10)][0], memo[round(br[0], 10)][3])
+        s_hi = confirm_S2(Jd(br[1]), memo[round(br[1], 10)][0], memo[round(br[1], 10)][3])
+        summary(dict(base, quantity=f"d(->S={target})", value=br[1],
+                     note=f"bracket ({br[0]:.6f},{br[1]:.6f}]; S^2 check lo={s_lo[0]}, hi={s_hi[0]}; d/j^2={br[1] / j / j:.3f}"))
+        log(f"H2 j={j}: d(->S={target}) in ({br[0]:.6f},{br[1]:.6f}]  S^2 check {s_lo[0]}/{s_hi[0]}")
+    reached = [t for t in thresholds if t != "non_monotonic" and t >= 4.5]
+    if reached:
+        br = thresholds[4.5]
+        summary(dict(base, quantity="d_full", value=br[1],
+                     note=f"S=9/2 (N/6) reached in ({br[0]:.6f},{br[1]:.6f}]; d_full/j^2={br[0] / j / j:.3f}-{br[1] / j / j:.3f}; "
+                          f"theory 0.34-0.37j^2=[{0.34 * j * j:.5f},{0.37 * j * j:.5f}]; classical j^2={j * j:.5f}"))
+    else:
+        last = max(memo)
+        summary(dict(base, quantity="d_full", value="", note=f"S=9/2 not reached up to d={last:.6f} (2j^2={dmax:.5f}); S there={memo[last][0]}"))
+    if "non_monotonic" in thresholds:
+        summary(dict(base, quantity="non_monotonic", value=json.dumps(thresholds["non_monotonic"])))
+    return thresholds
+
+
+def task_H():
+    dc = {}
+    for j in (0.10, 0.125):
+        r = H1_point(j)
+        if r:
+            dc[j] = r[1]
+    # first-jump upper bracket ends from task C for j = 0.15, 0.2
+    dc.setdefault(0.15, 0.00875); dc.setdefault(0.2, 0.0125)
+    for j in (0.10, 0.15, 0.20):
+        if j in dc:
+            H2_point(j, dc[j])
+    H1_point(0.175)
+
+
+TASKS.update(H=task_H, H1=lambda: [H1_point(j) for j in (0.10, 0.125)], H175=lambda: H1_point(0.175))
+
 if __name__ == "__main__":
     for t in sys.argv[1:] or ["A", "B", "D", "C"]:
         t0 = time.time()
