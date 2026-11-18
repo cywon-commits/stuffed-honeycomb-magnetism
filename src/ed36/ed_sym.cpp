@@ -342,49 +342,75 @@ struct Opts {
 };
 
 // ------------------------------------------------------------------ pair-orbit correlations
-struct Pairs { std::vector<u64> mask; std::vector<int> orb; int norb = 0; };
+struct Pairs {
+  std::vector<u64> mask; std::vector<int> orb; int norb = 0;
+  std::vector<u64> smask; std::vector<int> ssize;   // optional site orbits (bit masks)
+};
 static Pairs read_pairs(const std::string& path) {
   Pairs P; std::ifstream f(path); std::string tok; int np;
   if (!(f >> tok >> np >> tok >> P.norb)) { fprintf(stderr, "bad pairs file %s\n", path.c_str()); exit(1); }
   for (int k = 0; k < np; k++) { int a, b, o, si, sj; f >> a >> b >> o >> si >> sj; P.mask.push_back((1ULL << a) | (1ULL << b)); P.orb.push_back(o); }
+  int ns, nso;
+  if (f >> tok && tok == "SITES" && (f >> ns >> tok >> nso)) {
+    P.smask.assign(nso, 0); P.ssize.assign(nso, 0);
+    for (int k = 0; k < ns; k++) { int b, o, site; f >> b >> o >> site; P.smask[o] |= 1ULL << b; P.ssize[o]++; }
+  }
   return P;
 }
-// <psi| sum_{pairs in orbit} S_i.S_j |psi> for every orbit (psi normalized)
+struct PairResult { std::vector<double> full, zz, sz; };
+// For every pair orbit: <psi| sum_{pairs in orbit} S_i.S_j |psi> (full) and its S^z S^z part (zz);
+// for every site orbit: <psi| sum_{i in orbit} S^z_i |psi>.  All these operators are group invariant,
+// so their expectation in a symmetry-adapted state is evaluated exactly in the reduced basis.
 template <class T>
-static std::vector<double> measure_pairs(const Ham& H, const Pairs& P, const std::vector<T>& psi) {
-  const size_t D = psi.size(); const int np = (int)P.mask.size(), no = P.norb;
-  std::vector<double> tot(no, 0.0);
+static PairResult measure_pairs(const Ham& H, const Pairs& P, const std::vector<T>& psi) {
+  const size_t D = psi.size(); const int np = (int)P.mask.size(), no = P.norb, nso = (int)P.smask.size();
+  PairResult R; R.full.assign(no, 0.0); R.zz.assign(no, 0.0); R.sz.assign(nso, 0.0);
 #pragma omp parallel
   {
-    std::vector<double> acc(no, 0.0);
+    std::vector<double> acc(no, 0.0), zz(no, 0.0), sz(nso, 0.0);
 #pragma omp for schedule(dynamic, 4096)
     for (size_t i = 0; i < D; i++) {
       const u64 s = H.B->reps[i]; const double p2 = std::norm(cplx(psi[i]));
       const T ci = conj_(psi[i]) / H.sqn[i];
+      for (int o = 0; o < nso; o++) sz[o] += p2 * (__builtin_popcountll(s & P.smask[o]) - 0.5 * P.ssize[o]);
       for (int k = 0; k < np; k++) {
         const u64 m = s & P.mask[k];
-        if (m == 0 || m == P.mask[k]) { acc[P.orb[k]] += 0.25 * p2; continue; }
-        acc[P.orb[k]] -= 0.25 * p2;
+        if (m == 0 || m == P.mask[k]) { acc[P.orb[k]] += 0.25 * p2; zz[P.orb[k]] += 0.25 * p2; continue; }
+        acc[P.orb[k]] -= 0.25 * p2; zz[P.orb[k]] -= 0.25 * p2;
         int g = 0; const u64 rp = H.S->rep(s ^ P.mask[k], g);
         const int64_t j = H.B->find(rp); if (j < 0) continue;
         acc[P.orb[k]] += 0.5 * re_(ci * from_c<T>(H.S->chi[g]) * (H.sqn[j] * psi[j]));
       }
     }
 #pragma omp critical
-    for (int o = 0; o < no; o++) tot[o] += acc[o];
+    {
+      for (int o = 0; o < no; o++) { R.full[o] += acc[o]; R.zz[o] += zz[o]; }
+      for (int o = 0; o < nso; o++) R.sz[o] += sz[o];
+    }
   }
-  return tot;
+  return R;
 }
 
 template <class T>
-static void report_pairs(const Opts& o, const Ham& H, const std::vector<T>& psi, int N) {
+static void report_pairs(const Opts& o, const Ham& H, const std::vector<T>& psi, int N, const Spec* sp = nullptr) {
   if (o.pairs.empty()) return;
   double t = now();
   Pairs P = read_pairs(o.pairs);
-  std::vector<double> v = measure_pairs(H, P, psi);
+  PairResult PR = measure_pairs(H, P, psi);
+  const std::vector<double>& v = PR.full;
   double all = 0; for (double x : v) all += x;
   printf("PAIRS measured %d orbits over %zu pairs in %.1fs\n", P.norb, P.mask.size(), now() - t);
   for (int k = 0; k < P.norb; k++) printf("ORBIT %d %.15f\n", k, v[k]);
+  for (int k = 0; k < P.norb; k++) printf("ORBITZZ %d %.15f\n", k, PR.zz[k]);
+  for (size_t k = 0; k < PR.sz.size(); k++) printf("SITEORB %zu %.15f\n", k, PR.sz[k]);
+  // bond-type energies <H_t> (J_t = 1, others 0) by separate H actions: independent check of the pair sums
+  if (sp) for (int bt = 0; bt < 3; bt++) {
+    double Jt[3] = {0, 0, 0}; Jt[bt] = 1.0;
+    Ham Ht; Ht.init(*sp, *H.S, *H.B, Jt);
+    std::vector<T> y(psi.size()); Ht.apply(psi.data(), y.data());
+    double e = 0; for (size_t i = 0; i < psi.size(); i++) e += re_(conj_(psi[i]) * y[i]);
+    printf("HTYPE %d %.15f\n", bt, e);
+  }
   double S2 = 0.75 * N + 2 * all;
   printf("S2 %.12f  S_eff %.10f\n", S2, 0.5 * (std::sqrt(1 + 4 * S2) - 1));
   // explicit S^2 action: S^2 psi = (3N/4) psi + 2 sum_{i<j} S_i.S_j psi ; residual vs nearest allowed S(S+1)
@@ -539,10 +565,10 @@ static void run(const Opts& o, const Spec& sp, const Sym& S, const Basis& B) {
     if (!f || fread(&d, 8, 1, f) != 1 || d != D || fread(&E, 8, 1, f) != 1 || !load_vec(f, psi)) { fprintf(stderr, "cannot read vector %s\n", o.in.c_str()); exit(1); }
     fclose(f);
     printf("LOADED E0 %.15f\n", E);
-    report_pairs(o, H, psi, sp.N);
+    report_pairs(o, H, psi, sp.N, &sp);
   } else {
     std::vector<T> psi; double E = 0;
-    if (lanczos<T>(o, H, D, psi, E)) report_pairs(o, H, psi, sp.N);
+    if (lanczos<T>(o, H, D, psi, E)) report_pairs(o, H, psi, sp.N, &sp);
   }
 }
 

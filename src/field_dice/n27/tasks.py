@@ -191,12 +191,106 @@ def task_C(js=(0.2, 0.15, 0.3)):
             res[d] = gs_spin_from_levels(E)
         summary(dict(base, J_AB=1, quantity="d_c", value=hi,
                      note=f"bracket [{lo:.6f},{hi:.6f}]; S(d=0)={res[0.0][0]}, S(lo)={res[lo][0]}, S(hi)={res[hi][0]}; "
-                          f"d_c/j={hi / j:.4f}; predictions: finite-size 0.14j={0.14 * j:.4f}, bulk 0.13j^2={0.13 * j * j:.4f}"))
+                          f"d_c/j={hi / j:.4f}; predictions: finite-size 0.14j={0.14 * j:.4f}, bulk (Seifert-Vojta, corrected) 0.34-0.37j^2={0.34 * j * j:.4f}-{0.37 * j * j:.4f}"))
         summary(dict(base, quantity="S_after_jump", value=res[hi][0]))
         log(f"C j={j}: d_c in ({lo:.6f},{hi:.6f}], S after jump {res[hi][0]}, d_c/j={hi / j:.4f}")
 
 
 TASKS = dict(A=task_A, B=task_B, D=task_D, C=task_C)
+
+
+# ======================================================================= second request (E-G)
+from core import lowest_multiplet_observables, OBS_KEYS   # noqa: E402
+
+ECOLS = COLS + ["zz_AB", "t_AB", "zz_CA", "t_CA", "zz_CB", "t_CB", "m_A", "m_B", "m_C", "multiplet_dim", "multiplet_k"]
+
+
+def ref18_anisotropy():
+    out = {}
+    p = ROOT / "data" / "field_dice" / "rim_anisotropy_18.csv"
+    if p.exists():
+        for r in csv.DictReader(open(p)):
+            out.setdefault(r.get("r") or r.get("Jp") or "", []).append(r)
+    return out
+
+
+def task_E():
+    for r in (0.6, 0.8, 0.4, 0.2, 1.0):          # decisive points first
+        J = (1.0, r, r)
+        ks = [(0, 0)] if r in (0.4, 0.6, 0.8) else GK
+        for nup in (17, 18, 19):
+            o = lowest_multiplet_observables(cache, J, nup, ks=ks, log=log)
+            assert o["converged"], "unconverged level"
+            eps, phi = eps_phi(J)
+            row = dict(zip(COLS, ["E", repr(J[0]), repr(J[1]), repr(J[2]), f"{eps:.12f}", f"{phi:.6f}", str(nup), str(sz_of(nup)),
+                                  f"{o['k'][0]:.6f}", f"{o['k'][1]:.6f}", f"{o['E']:.12f}", str(o["S"]), str(o["H_residual"]),
+                                  str(o["S2_residual"]), str(o["converged"]), str(o["iters"]), str(o["dim"]), "computed (multiplet average)"]))
+            row.update({x: f"{o[x]:.12f}" for x in ("zz_AB", "t_AB", "zz_CA", "t_CA", "zz_CB", "t_CB", "m_A", "m_B", "m_C")})
+            row["multiplet_dim"] = str(o["multiplet_dim"])
+            row["multiplet_k"] = ";".join(f"({a:.4f},{b:.4f})" for a, b in o["multiplet_k"])
+            _rewrite(OUT / "task_E.csv", ECOLS, lambda x: (x["J_BC"], x["n_up"]), [row])
+            R = o["zz_AB"] / o["t_AB"]
+            base = dict(task="E", point=f"r={r},Sz={sz_of(nup)}", J_AB=J[0], J_BC=J[1], J_CA=J[2], eps=eps, phi_deg=phi)
+            summary(dict(base, quantity="R=zz_AB/t_AB", value=R, note=f"multiplet_dim={o['multiplet_dim']}, k={o['multiplet_k']}"))
+            summary(dict(base, quantity="Delta=R-0.5", value=R - 0.5))
+            log(f"E r={r} Sz={sz_of(nup)}: E={o['E']:.12f} S={o['S']} R={R:.6f} Delta={R - 0.5:+.6f} m=({o['m_A']:.4f},{o['m_B']:.4f},{o['m_C']:.4f}) dim={o['multiplet_dim']}")
+
+
+def task_G():
+    pts = [("eps0.1_phi30", couplings(0.1, 30)), ("eps0.2_phi30", couplings(0.2, 30)), ("mirror_1.1_1.1_0.8", (1.1, 1.1, 0.8))]
+    for name, J in pts:
+        E = {}
+        for nup in (14, 15, 16):
+            lv = lowest_per_k(cache, J, nup, ks=GK, vectors=True, log=log)
+            write_rows("G", J, nup, lv)
+            E[sz_of(nup)] = emin(lv)
+        for nup in (17, 18, 19):                  # Task B levels (all 9 momenta, cached)
+            E[sz_of(nup)] = emin(lowest_per_k(cache, J, nup, ks=ALLK, vectors=True, log=log))
+        lo = {m: (E[4.5] - E[m]) / (4.5 - m) for m in E if m < 4.5}
+        m_lo = max(lo, key=lo.get)
+        hlo_B = lo[3.5]
+        o = sorted(J); Jmin = o[0]
+        hm = 3 * S_SPIN * (Jmin - math.sqrt(max((o[1] - Jmin) * (o[2] - Jmin), 0.0)))
+        eps, phi = eps_phi(J)
+        base = dict(task="G", point=name, J_AB=J[0], J_BC=J[1], J_CA=J[2], eps=eps, phi_deg=phi)
+        summary(dict(base, quantity="h_lo_full_Maxwell", value=lo[m_lo], note=f"set by S^z={m_lo}; candidates {json.dumps({str(k): round(v, 6) for k, v in lo.items()})}"))
+        summary(dict(base, quantity="h_lo_sector", value=m_lo))
+        summary(dict(base, quantity="h_lo-h_minus_corrected", value=lo[m_lo] - hm, note=f"Task B (S^z=7/2 only): {hlo_B - hm:.6f}; change {lo[m_lo] - hlo_B:+.3e}"))
+        log(f"G {name}: full-Maxwell h_lo={lo[m_lo]:.6f} (S^z={m_lo}); Task B h_lo={hlo_B:.6f}; h_lo-h-={lo[m_lo] - hm:+.6f}")
+
+
+def plateau_scan(task, r, full_k_low):
+    J = (1.0, r, r)
+    E, where = {}, {}
+    for nup in range(14, 21):
+        ks = ALLK if (nup >= 16 or full_k_low) else GK
+        lv = lowest_per_k(cache, J, nup, ks=ks, vectors=True, log=log)
+        write_rows(task, J, nup, lv)
+        E[sz_of(nup)] = emin(lv)
+        where[sz_of(nup)] = min(lv.items(), key=lambda kv: kv[1]["E"])[0]
+    lo = {m: (E[4.5] - E[m]) / (4.5 - m) for m in E if m < 4.5}
+    hi = {m: (E[m] - E[4.5]) / (m - 4.5) for m in E if m > 4.5}
+    mlo, mhi = max(lo, key=lo.get), min(hi, key=hi.get)
+    Sgs, E0 = gs_spin_from_levels(E)
+    eps, phi = eps_phi(J)
+    base = dict(task=task, point=f"r={r}", J_AB=J[0], J_BC=J[1], J_CA=J[2], eps=eps, phi_deg=phi)
+    summary(dict(base, quantity="h_lo", value=lo[mlo], note=f"set by S^z={mlo}"))
+    summary(dict(base, quantity="h_hi", value=hi[mhi], note=f"set by S^z={mhi}"))
+    summary(dict(base, quantity="W_27", value=hi[mhi] - lo[mlo]))
+    summary(dict(base, quantity="ground_spin_S", value=Sgs, note=f"E0={E0:.12f}; lowest-level momenta {json.dumps({str(k): list(v) for k, v in where.items()})}"))
+    log(f"{task} r={r}: h_lo={lo[mlo]:.6f} (S^z={mlo}) h_hi={hi[mhi]:.6f} (S^z={mhi}) W={hi[mhi] - lo[mlo]:.6f} S_gs={Sgs}")
+
+
+def task_F(rs=(0.2, 0.3, 0.5)):
+    for r in rs:
+        plateau_scan("F", r, full_k_low=(r == 0.2))
+
+
+def task_F2():
+    task_F(rs=(0.7, 0.9))
+
+
+TASKS.update(E=task_E, G=task_G, F=task_F, F2=task_F2)
 
 if __name__ == "__main__":
     for t in sys.argv[1:] or ["A", "B", "D", "C"]:

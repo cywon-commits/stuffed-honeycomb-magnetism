@@ -294,12 +294,28 @@ class Cluster:
                     orbit[(a, b)] = oid
         return orbit, reps
 
+    def site_orbits(self):
+        orb = {}
+        n = 0
+        for i in range(self.N):
+            if i in orb:
+                continue
+            for p in self.group:
+                orb[p[i]] = n
+            n += 1
+        return orb, n
+
     def write_pairs(self, path):
+        """Pair orbits (for <S_i.S_j>, S^z S^z parts) and site orbits (for <S^z_i>)."""
         orbit, reps = self.pair_orbits()
+        sorb, nso = self.site_orbits()
         b = self.bit_of_site
         lines = [f"PAIRS {len(orbit)} ORBITS {len(reps)}"]
         for (i, j), o in sorted(orbit.items()):
             lines.append(f"{b[i]} {b[j]} {o} {i} {j}")
+        lines.append(f"SITES {self.N} ORBITS {nso}")
+        for i in range(self.N):
+            lines.append(f"{b[i]} {sorb[i]} {i}")
         pathlib.Path(path).write_text("\n".join(lines) + "\n")
         return orbit, reps
 
