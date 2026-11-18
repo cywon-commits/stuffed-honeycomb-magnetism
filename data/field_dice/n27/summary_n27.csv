@@ -70,7 +70,8 @@ E,"r=1.0,Sz=4.5",1.0,1.0,1.0,0.0,0.0,R=zz_AB/t_AB,0.6092893320768842,"multiplet_
 E,"r=1.0,Sz=4.5",1.0,1.0,1.0,0.0,0.0,Delta=R-0.5,0.10928933207688418,
 E,"r=1.0,Sz=5.5",1.0,1.0,1.0,0.0,0.0,R=zz_AB/t_AB,0.21628756057842277,"multiplet_dim=1, k=[(0.0, 0.0)]"
 E,"r=1.0,Sz=5.5",1.0,1.0,1.0,0.0,0.0,Delta=R-0.5,-0.2837124394215772,
-C,j=0.2,1,,,,,d_c,0.0125,"bracket [0.011250,0.012500]; S(d=0)=0.5, S(lo)=0.5, S(hi)=1.5; d_c/j=0.0625; predictions: finite-size 0.14j=0.0280, bulk 0.13j^2=0.0052"
+C,j=0.2,1,,,,,d_c,0.0125,"bracket [0.011250,0.012500]; S(d=0)=0.5, S(lo)=0.5, S(hi)=1.5; d_c/j=0.0625; predictions: finite-size 0.14j=0.0280, bulk (Seifert-Vojta, corrected) 0.34-0.37j^2=0.0136-0.0148"
 C,j=0.2,,,,,,S_after_jump,1.5,
-C,j=0.15,1,,,,,d_c,0.00875,"bracket [0.007500,0.008750]; S(d=0)=0.5, S(lo)=0.5, S(hi)=1.5; d_c/j=0.0583; predictions: finite-size 0.14j=0.0210, bulk 0.13j^2=0.0029"
+C,j=0.15,1,,,,,d_c,0.00875,"bracket [0.007500,0.008750]; S(d=0)=0.5, S(lo)=0.5, S(hi)=1.5; d_c/j=0.0583; predictions: finite-size 0.14j=0.0210, bulk (Seifert-Vojta, corrected) 0.34-0.37j^2=0.0077-0.0083"
 C,j=0.15,,,,,,S_after_jump,1.5,
+C,j=0.3,,,,,,d_c,,"no single jump bracketed in [0,0.08]: S>1/2 at d=0: True, at d=0.08: True"
