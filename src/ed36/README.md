@@ -94,7 +94,7 @@ smaller; dimensions are listed by `symmetry.py N36`.
 
 ## N = 36 runs
 
-Logs in `results/N36/`. Γ A1 (C6v), z = +1, 31,541,930 states: 42.8 s per
+Logs in `results/N36/`. **Paused run and resume instructions: `results/N36/RESUME.md`** (r = 0.3 Γ A1 z=+1: pass 1 converged, E0 = −13.629646604664; pass 2 and observables pending). Γ A1 (C6v), z = +1, 31,541,930 states: 42.8 s per
 H action on 4 threads, 0.65 GiB basis.
 
 ## Not yet implemented

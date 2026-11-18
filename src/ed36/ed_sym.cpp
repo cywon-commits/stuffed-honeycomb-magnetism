@@ -272,10 +272,13 @@ template <class T> static cplx dotc(const std::vector<T>& a, const std::vector<T
   return cplx(sr, si);
 }
 template <class T> static void random_vec(std::vector<T>& v, uint64_t seed) {
+  // Fixed number of RNG streams (4) so the start vector -- and therefore a
+  // Lanczos pass-2 restart from saved alpha/beta -- does not depend on the
+  // OpenMP thread count.  Identical to the original 4-thread layout.
   const size_t n = v.size();
-#pragma omp parallel
-  {
-    int t = omp_get_thread_num(), nt = omp_get_num_threads();
+  const int nt = 4;
+#pragma omp parallel for schedule(static, 1)
+  for (int t = 0; t < nt; t++) {
     std::mt19937_64 rng(seed * 1000003ULL + t);
     std::normal_distribution<double> nd;
     size_t a = n * t / nt, b = n * (t + 1) / nt;
