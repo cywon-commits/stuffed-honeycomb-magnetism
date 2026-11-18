@@ -1,0 +1,163 @@
+%apsrev4-2.bst 2019-01-14 (MD) hand-edited version of apsrev4-1.bst
+%Control: key (0)
+%Control: author (8) initials jnrlst
+%Control: editor formatted (1) identically to author
+%Control: production of article title (0) allowed
+%Control: page (0) single
+%Control: year (1) truncated
+%Control: production of eprint (0) enabled
+\begin{thebibliography}{9}%
+\makeatletter
+\providecommand \@ifxundefined [1]{%
+ \@ifx{#1\undefined}
+}%
+\providecommand \@ifnum [1]{%
+ \ifnum #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \@ifx [1]{%
+ \ifx #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \natexlab [1]{#1}%
+\providecommand \enquote  [1]{``#1''}%
+\providecommand \bibnamefont  [1]{#1}%
+\providecommand \bibfnamefont [1]{#1}%
+\providecommand \citenamefont [1]{#1}%
+\providecommand \href@noop [0]{\@secondoftwo}%
+\providecommand \href [0]{\begingroup \@sanitize@url \@href}%
+\providecommand \@href[1]{\@@startlink{#1}\@@href}%
+\providecommand \@@href[1]{\endgroup#1\@@endlink}%
+\providecommand \@sanitize@url [0]{\catcode `\\12\catcode `\$12\catcode
+  `\&12\catcode `\#12\catcode `\^12\catcode `\_12\catcode `\%12\relax}%
+\providecommand \@@startlink[1]{}%
+\providecommand \@@endlink[0]{}%
+\providecommand \url  [0]{\begingroup\@sanitize@url \@url }%
+\providecommand \@url [1]{\endgroup\@href {#1}{\urlprefix }}%
+\providecommand \urlprefix  [0]{URL }%
+\providecommand \Eprint [0]{\href }%
+\providecommand \doibase [0]{https://doi.org/}%
+\providecommand \selectlanguage [0]{\@gobble}%
+\providecommand \bibinfo  [0]{\@secondoftwo}%
+\providecommand \bibfield  [0]{\@secondoftwo}%
+\providecommand \translation [1]{[#1]}%
+\providecommand \BibitemOpen [0]{}%
+\providecommand \bibitemStop [0]{}%
+\providecommand \bibitemNoStop [0]{.\EOS\space}%
+\providecommand \EOS [0]{\spacefactor3000\relax}%
+\providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
+\let\auto@bib@innerbib\@empty
+%</preamble>
+\bibitem [{\citenamefont {Gonzalez}\ \emph {et~al.}(2019)\citenamefont
+  {Gonzalez}, \citenamefont {Lisandrini}, \citenamefont {Blesio}, \citenamefont
+  {Trumper}, \citenamefont {Gazza},\ and\ \citenamefont
+  {Manuel}}]{Gonzalez2019}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~G.}\ \bibnamefont
+  {Gonzalez}}, \bibinfo {author} {\bibfnamefont {F.~T.}\ \bibnamefont
+  {Lisandrini}}, \bibinfo {author} {\bibfnamefont {G.~G.}\ \bibnamefont
+  {Blesio}}, \bibinfo {author} {\bibfnamefont {A.~E.}\ \bibnamefont {Trumper}},
+  \bibinfo {author} {\bibfnamefont {C.~J.}\ \bibnamefont {Gazza}},\ and\
+  \bibinfo {author} {\bibfnamefont {L.~O.}\ \bibnamefont {Manuel}},\ }\bibfield
+   {title} {\bibinfo {title} {Correlated partial disorder in a weakly
+  frustrated quantum antiferromagnet},\ }\href
+  {https://doi.org/10.1103/PhysRevLett.122.017201} {\bibfield  {journal}
+  {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {122}},\
+  \bibinfo {pages} {017201} (\bibinfo {year} {2019})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Seifert}\ and\ \citenamefont
+  {Vojta}(2019)}]{SeifertVojta2019}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {U.~F.~P.}\
+  \bibnamefont {Seifert}}\ and\ \bibinfo {author} {\bibfnamefont
+  {M.}~\bibnamefont {Vojta}},\ }\bibfield  {title} {\bibinfo {title} {Theory of
+  partial quantum disorder in the stuffed honeycomb {H}eisenberg
+  antiferromagnet},\ }\href {https://doi.org/10.1103/PhysRevB.99.155156}
+  {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo
+  {volume} {99}},\ \bibinfo {pages} {155156} (\bibinfo {year}
+  {2019})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Nakano}\ and\ \citenamefont
+  {Sakai}(2017)}]{NakanoSakai2017}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Nakano}}\ and\ \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Sakai}},\
+  }\bibfield  {title} {\bibinfo {title} {Ferrimagnetism in the spin-1/2
+  {H}eisenberg antiferromagnet on a distorted triangular lattice},\ }\href
+  {https://doi.org/10.7566/JPSJ.86.063702} {\bibfield  {journal} {\bibinfo
+  {journal} {J. Phys. Soc. Jpn.}\ }\textbf {\bibinfo {volume} {86}},\ \bibinfo
+  {pages} {063702} (\bibinfo {year} {2017})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Nakano}\ and\ \citenamefont
+  {Sakai}(2018)}]{NakanoSakai2018}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Nakano}}\ and\ \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Sakai}},\
+  }\bibfield  {title} {\bibinfo {title} {Spin-1/2 triangular-lattice
+  {H}eisenberg antiferromagnet with $\sqrt{3}\times\sqrt{3}$-type
+  distortion---behavior around the boundaries of the intermediate phase},\
+  }\href {https://doi.org/10.7566/JPSJ.87.034706} {\bibfield  {journal}
+  {\bibinfo  {journal} {J. Phys. Soc. Jpn.}\ }\textbf {\bibinfo {volume}
+  {87}},\ \bibinfo {pages} {034706} (\bibinfo {year} {2018})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Shimada}\ \emph
+  {et~al.}(2018{\natexlab{a}})\citenamefont {Shimada}, \citenamefont {Sakai},
+  \citenamefont {Nakano},\ and\ \citenamefont {Yoshimura}}]{Shimada2018}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Shimada}}, \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Sakai}},
+  \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Nakano}},\ and\ \bibinfo
+  {author} {\bibfnamefont {K.}~\bibnamefont {Yoshimura}},\ }\bibfield  {title}
+  {\bibinfo {title} {Spontaneous magnetization of the spin-1/2 {H}eisenberg
+  antiferromagnet on the triangular lattice with a distortion},\ }\href
+  {https://doi.org/10.1088/1742-6596/969/1/012126} {\bibfield  {journal}
+  {\bibinfo  {journal} {J. Phys.: Conf. Ser.}\ }\textbf {\bibinfo {volume}
+  {969}},\ \bibinfo {pages} {012126} (\bibinfo {year}
+  {2018}{\natexlab{a}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Shimada}\ \emph
+  {et~al.}(2018{\natexlab{b}})\citenamefont {Shimada}, \citenamefont {Nakano},
+  \citenamefont {Sakai},\ and\ \citenamefont {Yoshimura}}]{Shimada2018b}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Shimada}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Nakano}},
+  \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Sakai}},\ and\ \bibinfo
+  {author} {\bibfnamefont {K.}~\bibnamefont {Yoshimura}},\ }\bibfield  {title}
+  {\bibinfo {title} {The {S}=1/2 {H}eisenberg antiferromagnet on a triangular
+  lattice with $\sqrt{3}\times\sqrt{3}$-type distortion---magnetization process
+  and magnetic susceptibility},\ }\href@noop {} {\bibfield  {journal} {\bibinfo
+   {journal} {J. Jpn. Soc. Powder Powder Metall.}\ }\textbf {\bibinfo {volume}
+  {65}},\ \bibinfo {pages} {3} (\bibinfo {year} {2018}{\natexlab{b}})},\
+  \bibinfo {note} {dOI not yet confirmed}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Sahoo}\ \emph {et~al.}(2018)\citenamefont {Sahoo},
+  \citenamefont {Kochkov}, \citenamefont {Clark},\ and\ \citenamefont
+  {Flint}}]{Sahoo2018}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Sahoo}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Kochkov}},
+  \bibinfo {author} {\bibfnamefont {B.~K.}\ \bibnamefont {Clark}},\ and\
+  \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Flint}},\ }\bibfield
+  {title} {\bibinfo {title} {Classical phase diagram of the stuffed honeycomb
+  lattice},\ }\href {https://doi.org/10.1103/PhysRevB.98.134419} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume}
+  {98}},\ \bibinfo {pages} {134419} (\bibinfo {year} {2018})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Blesio}\ \emph {et~al.}(2023)\citenamefont {Blesio},
+  \citenamefont {Lisandrini},\ and\ \citenamefont {Gonzalez}}]{Blesio2023}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.~G.}\ \bibnamefont
+  {Blesio}}, \bibinfo {author} {\bibfnamefont {F.~T.}\ \bibnamefont
+  {Lisandrini}},\ and\ \bibinfo {author} {\bibfnamefont {M.~G.}\ \bibnamefont
+  {Gonzalez}},\ }\bibfield  {title} {\bibinfo {title} {Partially disordered
+  {H}eisenberg antiferromagnet with short-range stripe correlations},\ }\href
+  {https://doi.org/10.1103/PhysRevB.107.134418} {\bibfield  {journal} {\bibinfo
+   {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {107}},\ \bibinfo
+  {pages} {134418} (\bibinfo {year} {2023})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Lieb}\ and\ \citenamefont
+  {Mattis}(1962)}]{LiebMattis1962}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Lieb}}\ and\ \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Mattis}},\
+  }\bibfield  {title} {\bibinfo {title} {Ordering energy levels of interacting
+  spin systems},\ }\href {https://doi.org/10.1063/1.1724276} {\bibfield
+  {journal} {\bibinfo  {journal} {J. Math. Phys.}\ }\textbf {\bibinfo {volume}
+  {3}},\ \bibinfo {pages} {749} (\bibinfo {year} {1962})}\BibitemShut {NoStop}%
+\end{thebibliography}%
