@@ -104,6 +104,7 @@ class Point:
             for i, s in enumerate(secs):
                 s["spec"] = self.dir / f"n{nup}_s{i:03d}.spec"
                 s["i"] = i
+                s["dim"] = self.c.burnside_dim(s, nup)
                 if not s["spec"].exists():
                     self.c.write_spec(s, nup, s["spec"])
             self._sec[nup] = secs
@@ -131,7 +132,7 @@ def lowest_per_k(cache, J, nup, ks=None, vectors=True, log=print):
     for k in solve:
         best = None
         for s in secs:
-            if kkey(s["k"]) != k:
+            if kkey(s["k"]) != k or s["dim"] == 0:   # empty sectors carry no levels
                 continue
             key = f"p1|{ckey(J)}|{nup}|{s['i']}"
             r = cache.get(key)
@@ -143,6 +144,8 @@ def lowest_per_k(cache, J, nup, ks=None, vectors=True, log=print):
                 log(f"  pass1 J={J} nup={nup} k={k} s{s['i']} dim={r.get('dim')} E={r.get('E_pass1')} it={r.get('iters')} conv={r.get('converged')} {r['wall_s']:.0f}s")
             if best is None or r["E_pass1"] < best["E_pass1"]:
                 best = r
+        if best is None:   # every sector of this momentum is empty (possible only at extreme S^z)
+            continue
         row = dict(best)
         if vectors:
             key = f"p2|{ckey(J)}|{nup}|{best['sector']}"

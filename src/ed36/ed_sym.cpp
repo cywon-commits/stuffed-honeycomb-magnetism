@@ -580,6 +580,7 @@ int main(int argc, char** argv) {
   printf("BASIS dim %zu  build %.2fs  basis+lookup %.3f GiB  rim_key_bits %d  peak_RSS %.1f MiB\n", B.reps.size(), now() - t1, mem / 1073741824.0, B.rb, peak_rss_mib());
   fflush(stdout);
   if (o.mode == "dim") return 0;
+  if (B.reps.empty()) { printf("EMPTY sector (dimension 0): no eigenvalues\n"); return 3; }
   if (sp.real) run<double>(o, sp, S, B); else run<cplx>(o, sp, S, B);
   printf("DONE total %.1fs peak_RSS %.1f MiB\n", now() - t0, peak_rss_mib());
   return 0;
