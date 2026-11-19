@@ -297,13 +297,14 @@ TASKS.update(E=task_E, G=task_G, F=task_F, F2=task_F2)
 TOLDEG = 1e-8
 
 
-def levels_up(J, ks_half=GK, cap=5.5, need_full_half=False):
+def levels_up(J, ks_half=GK, cap=5.5, need_full_half=False, skip_half=False):
     """Lowest level per S^z: S^z = 1/2 over ks_half (all momenta if need_full_half), then S^z = 3/2, 5/2, ...
     over all momenta until the level rises above the running minimum (or S^z = cap).
     Returns (S, E0, {Sz: E}, {Sz: (k_min, lv)})."""
     E, where = {}, {}
-    lv = lowest_per_k(cache, J, 14, ks=(ALLK if need_full_half else ks_half), vectors=False, log=log)
-    E[0.5] = emin(lv); where[0.5] = (min(lv.items(), key=lambda kv: kv[1]["E"])[0], lv)
+    if not skip_half:   # skip_half: only valid when S >= 3/2 is already known (after the first jump)
+        lv = lowest_per_k(cache, J, 14, ks=(ALLK if need_full_half else ks_half), vectors=False, log=log)
+        E[0.5] = emin(lv); where[0.5] = (min(lv.items(), key=lambda kv: kv[1]["E"])[0], lv)
     m = 1.5
     while m <= cap + 1e-9:
         lv = lowest_per_k(cache, J, nup_of(m), ks=ALLK, vectors=False, log=log)
@@ -385,7 +386,9 @@ def H2_point(j, d_first, step=0.0025, res=0.0005):
     def S_at(d):
         d = round(d, 10)
         if d not in memo:
-            S, E0, E, where = levels_up(Jd(d))
+            # after the first jump S >= 3/2 (S assumed not to fall back to 1/2); request allows computing
+            # only the sectors that fix S, so S^z = 1/2 is checked only at bracket ends (confirm_S2 + below)
+            S, E0, E, where = levels_up(Jd(d), skip_half=True)
             memo[d] = (S, E0, E, where)
             log(f"H2 j={j} d={d:.6f}: S={S} E0={E0:.10f} levels={ {k: round(v, 8) for k, v in E.items()} }")
         return memo[d][0]
@@ -418,6 +421,11 @@ def H2_point(j, d_first, step=0.0025, res=0.0005):
             write_rows("H", Jd(d), nup_of(m), lv)
     base = dict(task="H2", point=f"j={j}", J_AB=1)
     for target, br in sorted((t, b) for t, b in thresholds.items() if t != "non_monotonic"):
+        for dd in br:   # S^z = 1/2 sanity check at bracket ends (Gamma, K, K'): must not be below E0
+            e_half = emin(lowest_per_k(cache, Jd(dd), 14, ks=GK, vectors=False, log=log))
+            if e_half < memo[round(dd, 10)][1] - TOLDEG:
+                log(f"H2 j={j} d={dd}: WARNING S^z=1/2 level {e_half} below E0 -> S fell back to 1/2")
+                summary(dict(base, quantity=f"warning_d={dd}", value=e_half, note="S^z=1/2 below tracked E0"))
         s_lo = confirm_S2(Jd(br[0]), memo[round(br[0], 10)][0], memo[round(br[0], 10)][3])
         s_hi = confirm_S2(Jd(br[1]), memo[round(br[1], 10)][0], memo[round(br[1], 10)][3])
         summary(dict(base, quantity=f"d(->S={target})", value=br[1],
