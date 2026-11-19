@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{11}%
+\begin{thebibliography}{12}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -171,8 +171,8 @@
   lattice with $\sqrt{3}\times\sqrt{3}$-type distortion---magnetization process
   and magnetic susceptibility},\ }\href@noop {} {\bibfield  {journal} {\bibinfo
    {journal} {J. Jpn. Soc. Powder Powder Metall.}\ }\textbf {\bibinfo {volume}
-  {65}},\ \bibinfo {pages} {3} (\bibinfo {year} {2018}{\natexlab{b}})},\
-  \bibinfo {note} {dOI not yet confirmed}\BibitemShut {NoStop}%
+  {65}},\ \bibinfo {pages} {3} (\bibinfo {year}
+  {2018}{\natexlab{b}})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Sahoo}\ \emph {et~al.}(2018)\citenamefont {Sahoo},
   \citenamefont {Kochkov}, \citenamefont {Clark},\ and\ \citenamefont
   {Flint}}]{Sahoo2018}%
@@ -185,5 +185,19 @@
   lattice},\ }\href {https://doi.org/10.1103/PhysRevB.98.134419} {\bibfield
   {journal} {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume}
   {98}},\ \bibinfo {pages} {134419} (\bibinfo {year} {2018})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Bernu}\ \emph {et~al.}(1994)\citenamefont {Bernu},
+  \citenamefont {Lecheminant}, \citenamefont {Lhuillier},\ and\ \citenamefont
+  {Pierre}}]{Bernu1994}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
+  {Bernu}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Lecheminant}},
+  \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Lhuillier}},\ and\
+  \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Pierre}},\ }\bibfield
+  {title} {\bibinfo {title} {Exact spectra, spin susceptibilities, and order
+  parameter of the quantum {H}eisenberg antiferromagnet on the triangular
+  lattice},\ }\href {https://doi.org/10.1103/PhysRevB.50.10048} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume}
+  {50}},\ \bibinfo {pages} {10048} (\bibinfo {year} {1994})}\BibitemShut
   {NoStop}%
 \end{thebibliography}%

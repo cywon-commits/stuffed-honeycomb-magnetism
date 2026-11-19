@@ -52,7 +52,7 @@ def fig2():
     a.plot(em * np.cos(ph), em * np.sin(ph), color=MUTED, lw=0.8)
     a.plot([0, em[0]], [0, 0], color=MUTED, lw=0.8); a.plot([0, em[-1] * np.cos(np.pi / 3)], [0, em[-1] * np.sin(np.pi / 3)], color=MUTED, lw=0.8)
     ec = np.array([eps_collinear(p) for p in ph])
-    a.plot(ec * np.cos(ph), ec * np.sin(ph), color=INK, lw=1.4, label=r"classical: $1/J$ triangle equality")
+    a.plot(ec * np.cos(ph), ec * np.sin(ph), color=INK, lw=1.4, label=r"classical boundary, Eq. (5)")
     R = [x for x in rows(D / "simplex_scan_18.csv") if x["shape"] == "K18"]
     cmap = plt.get_cmap("Blues")
     for x in R:
@@ -121,10 +121,10 @@ def fig3():
     a.plot(x, 1.515 * x, "--", color=MUTED, lw=0.9); a.plot(x, 1.44 * x, "--", color=MUTED, lw=0.9)
     a.text(1.21, 1.515 * 1.21 + 0.08, r"$1.51\,h_+$", fontsize=7, color=MUTED)
     a.text(1.30, 1.44 * 1.30 - 0.16, r"$1.44\,h_+$", fontsize=7, color=MUTED)
-    a.set_xlabel(r"classical upper edge $h_+/J$"); a.set_ylabel(r"ED upper edge $h_{\rm hi}/J$")
+    a.set_xlabel(r"classical upper edge $h_+$"); a.set_ylabel(r"ED upper edge $h_{\rm hi}$")
     x = np.linspace(0, 1.5, 10)
     b.plot(x, x, ":", color=INK, lw=1, label=r"classical $h=h_-$"); b.plot(x, x - 0.11, "--", color=MUTED, lw=0.9, label=r"$h_- - 0.11$")
-    b.set_xlabel(r"classical lower edge $h_-/J$"); b.set_ylabel(r"ED lower edge $h_{\rm lo}/J$")
+    b.set_xlabel(r"classical lower edge $h_-$"); b.set_ylabel(r"ED lower edge $h_{\rm lo}$")
     for ax, l in ((a, "(a)"), (b, "(b)")):
         ax.grid(color=GRID, lw=0.4); ax.legend(loc="lower right"); label(ax, l)
     fig.tight_layout(); save(fig, "fig4_plateau_edges")
@@ -169,13 +169,13 @@ def fig4():
     b.plot(r27, d27, "D-", color=C3, ms=5, mec="white", mew=0.5, lw=1, label="$N=27$")
     b.set_xlabel(r"$r$"); b.set_ylabel(r"rim anisotropy $\Delta=\langle zz\rangle/\langle xx{+}yy\rangle-\frac{1}{2}$")
     b.set_xlim(0.15, 0.85); b.set_ylim(0, 0.36); b.legend(loc="upper left", bbox_to_anchor=(0.04, 0.9))
-    ratio = [(q, summ[q] / v) for q, v in zip(rr, d18["K18"])] + [(q, summ[q] / v) for q, v in zip(rr, d18["C18"])]
-    rq, rv = np.array(ratio).T
-    c.plot(rq[:3], rv[:3], "s", color=C2, ms=4, mec="white", mew=0.4, label=r"$\Delta_{27}/\Delta_{18}$ (K18)")
-    c.plot(rq[3:], rv[3:], "^", color=C2, ms=4, mec="white", mew=0.4, label=r"$\Delta_{27}/\Delta_{18}$ (C18)")
-    c.axhline((27 / 18) ** 2, color=INK, lw=1.2); c.text(0.37, 2.32, r"rotor $(27/18)^2$", fontsize=7, color=INK)
-    c.axhline(1, color=MUTED, ls="--", lw=0.9); c.text(0.37, 1.07, "local anisotropy", fontsize=7, color=MUTED)
-    c.set_xlim(0.3, 0.9); c.set_ylim(0, 3.4); c.set_xlabel(r"$r$"); c.set_ylabel("size ratio")
+    F = [x for x in rows(D / "rotor_fit_ladder.csv") if x["cluster"] == "27" and x["K_eff"] not in ("", "nan") and float(x["r"]) >= 0.55]
+    rf = [float(x["r"]) for x in F]
+    c.plot(rf, [float(x["K_eff"]) / float(x["K_LSWT"]) for x in F], "D-", color=C3, ms=5, mec="white", mew=0.5, lw=1,
+           label=r"$K_{\rm eff}/K_{\rm LSWT}$")
+    c.plot(rf, [float(x["I_over_N9"]) for x in F], "o--", color=C1, ms=4, mec="white", mew=0.4, lw=1, label=r"$I/(N/9)$")
+    c.axhline(1, color=INK, lw=0.9, ls=":")
+    c.set_xlim(0.5, 0.95); c.set_ylim(0, 1.4); c.set_xlabel(r"$r$"); c.set_ylabel(r"rotor fit, $N=27$")
     c.legend(loc="lower right")
     for ax, l in ((a, "(a)"), (b, "(b)"), (c, "(c)")):
         ax.grid(color=GRID, lw=0.4); label(ax, l)

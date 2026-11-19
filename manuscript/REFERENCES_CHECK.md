@@ -24,3 +24,12 @@ Added 2026-11-19:
 | --- | --- | --- | --- |
 | ChubukovGolosov1991 | J. Phys.: Condens. Matter 3, 69–82 (1991), DOI 10.1088/0953-8984/3/1/005 | Scilit record of the IOP article; cited as "Chubukov and Golosov (1991)" in Ye & Chubukov, PRB 96, 140406 | 1/S order-by-disorder 1/3 plateau of the triangular lattice |
 | Yuan2023 | PRB 108, 224403 (2023), DOI 10.1103/PhysRevB.108.224403; Yuan, Elghandour, Hergett, Ohlendorf, Gries, Klingeler | Heidelberg University library record; KIP publication record; arXiv:2308.04935 | GdInO3: centered-honeycomb Gd layers, 1/3 (uud) plateau for B parallel to c, weak easy-axis anisotropy |
+
+Added / revised 2026-11-19 (after independent review):
+
+| Key | Verified bibliographic data | Source opened | Cited for |
+| --- | --- | --- | --- |
+| Bernu1994 | PRB 50, 10048–10062 (1994), DOI 10.1103/PhysRevB.50.10048; Bernu, Lecheminant, Lhuillier, Pierre | Scilit record; arXiv:cond-mat/9407028 | tower of states / quantum rotor of the Néel order parameter on finite clusters |
+| Shimada2018b | (unchanged) | J-STAGE abstract: "between the nondistorted triangular-lattice and dice-lattice systems, a nontrivial intermediate phase appears" | now also supports "intermediate phase"; DOI note removed from refs.bib |
+| NakanoSakai2018 | (unchanged) | title "Behavior around the Boundaries of the Intermediate Phase" | intermediate phase |
+| Sahoo2018 | (unchanged) | arXiv:1805.09831 abstract; Sahoo & Flint arXiv:2003.04269 describe the model with A and B equivalent (hexagonal symmetry) | classical phase diagram with A, B equivalent (mirror lines only) |

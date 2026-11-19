@@ -62,8 +62,8 @@ bx.scatter(0, 0, s=30, marker="^", color="k", zorder=4)
 bx.annotate("honeycomb", (1, 0), (0.78, -0.22), fontsize=7, ha="center")
 bx.annotate("dice", fd[2], (0.33, 0.52), fontsize=7, ha="center")
 bx.annotate("triangle", (0, 0), (-0.2, -0.13), fontsize=7, ha="center")
-bx.text(0.55, 0.06, r"$\varphi=0$" "\n" r"($r<1$)", fontsize=6.5, ha="center")
-bx.text(0.02, 0.27, r"$\varphi=\pi/3$" "\n" r"($r>1$)", fontsize=6.5, ha="right")
+bx.text(0.66, 0.05, r"$\varphi=0$" "\n" r"($r<1$)", fontsize=6.5, ha="center")
+bx.text(0.15, 0.13, r"$\varphi=\pi/3$" "\n" r"($r>1$)", fontsize=6.5, ha="left")
 bx.text(0.72, 0.30, r"$J_{CA}=0$" "\n Lieb–Mattis", fontsize=6.5, ha="left", rotation=-30)
 from matplotlib.patches import Patch
 bx.legend(handles=[Patch(fc="#f6dcc4", label="non-collinear (1/J triangle inequality)"),
