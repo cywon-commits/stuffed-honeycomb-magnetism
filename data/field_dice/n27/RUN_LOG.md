@@ -16,6 +16,7 @@
 | request 1 runs started (tests U3–U5, tasks A–D) | `eb17f8a` |
 | task C resumed after container restart | `878d949` |
 | second request code (E–G, U7–U9) | `4f6dacf` (E), `abcf466` (G, F) |
+| third request (Task H, U10) | `e06d9fa` (start), `325d5e8` (H2 S^z = 1/2 skip) |
 
 Every solver result is cached (JSON lines, outside git), so reruns of the same scripts reproduce the CSVs without recomputation.
 
@@ -36,9 +37,11 @@ Every solver result is cached (JSON lines, outside git), so reruns of the same s
 | Task G | 2611 s | |
 | Task F (r = 0.2, 0.3, 0.5) | 3387 s | |
 | Task F (r = 0.7, 0.9) | 4383 s | |
+| U10 | 94 s | third request |
+| Task H (H1 j = 0.10, 0.125, 0.175; H2 j = 0.10, 0.15, 0.20) | ≈ 24.5 h | 2026-11-18 23:35 – 11-20 00:06 UTC, two container restarts resumed from cache; H2 grid points after 12:20 UTC skip S^z = 1/2 |
 
 Peak resident memory per solver process: ≤ 106 MiB (largest sectors: 1.12 M states). Solver runs: 1524 pass-1 (eigenvalue), 450 pass-2 (vector, residual, S^2), 17 observable runs.
 
 ## Convergence policy
 
-Pass-1 Lanczos to Ritz residual 1e-9 (max 2000 steps); every reported eigenpair rebuilt and checked: ||H psi − E psi|| ≤ 1.0e-9 for all rows of task_A … task_G; S from the explicit S^2 action (S2_residual ≤ 1.04e-8). No unconverged level occurs in any derived quantity (all rows `converged = True`).
+Pass-1 Lanczos to Ritz residual 1e-9 (max 2000 steps); every reported eigenpair rebuilt and checked: ||H psi − E psi|| ≤ 1.0e-9 for all rows of task_A … task_H; S from the explicit S^2 action (S2_residual ≤ 1.04e-8). No unconverged level occurs in any derived quantity (all rows `converged = True`).

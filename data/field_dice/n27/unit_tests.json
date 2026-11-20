@@ -710,5 +710,41 @@
   "note": "Individual H_CA, H_CB reduced-basis actions are not used: not group invariant on the mirror line.",
   "pass_": true,
   "wall_s": 0.009907245635986328
+ },
+ "U10": {
+  "rows": [
+   {
+    "d": 0.01125,
+    "S_from_levels": 0.5,
+    "S_from_S2": 0.5,
+    "S_ref": 0.5,
+    "E0": -10.186327697145206,
+    "E_fresh": -10.186327697145138,
+    "E_taskC": -10.186327697145,
+    "dE_fresh": 1.3855583347321954e-13,
+    "dE_cache": 2.0605739337042905e-13,
+    "k": [
+     0.333333,
+     0.666667
+    ]
+   },
+   {
+    "d": 0.0125,
+    "S_from_levels": 1.5,
+    "S_from_S2": 1.5,
+    "S_ref": 1.5,
+    "E0": -10.186628949715118,
+    "E_fresh": -10.186628949714953,
+    "E_taskC": -10.186628949715,
+    "dE_fresh": 4.796163466380676e-14,
+    "dE_cache": 1.1723955140041653e-13,
+    "k": [
+     0.0,
+     0.0
+    ]
+   }
+  ],
+  "pass_": true,
+  "wall_s": 93.61791157722473
  }
 }

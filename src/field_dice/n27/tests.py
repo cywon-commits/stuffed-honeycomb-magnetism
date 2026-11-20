@@ -239,6 +239,39 @@ def U9():
 
 TESTS.update(U7=U7, U8=U8, U9=U9)
 
+
+def U10():
+    """Task C reproduction at j = 0.2: ground spin 1/2 at d = 0.01125 and 3/2 at d = 0.0125.
+    The ground-state sectors are re-solved from scratch (no checkpoint) and compared with the Task C
+    record; S comes from the S^2 action stored with Task C's eigenpairs."""
+    from core import Point, kkey as kk
+    tc = Cache(WORK / "cache_tasks.jsonl")
+    rows = []
+    for d, Sref, Eref in ((0.01125, 0.5, -10.186327697145), (0.0125, 1.5, -10.186628949715)):
+        J = (1.0, 0.2 + d / 2, 0.2 - d / 2)
+        # lowest levels per S^z (Task C final-bracket records) -> ground spin
+        em = {}
+        best = {}
+        for nup in range(14, 19):
+            lv = lowest_per_k(tc, J, nup, ks=None, vectors=True)
+            k, r = min(lv.items(), key=lambda kv: kv[1]["E"])
+            em[sz_of(nup)] = r["E"]; best[nup] = (k, r)
+        S, E0 = gs_spin_from_levels(em)
+        nup0 = nup_of(S)
+        k0, r0 = best[nup0]
+        P = Point(J)
+        spec = P.sectors(nup0)[r0["sector"]]["spec"]
+        out = subprocess.run([str(EXE), str(spec), "--J", P.jarg(), "--tol", "1e-9", "--maxit", "2000", "--novec"],
+                             capture_output=True, text=True, check=True).stdout
+        Efresh = float(next(l for l in out.splitlines() if l.startswith("PASS1")).split()[6])
+        rows.append(dict(d=d, S_from_levels=S, S_from_S2=r0["S"], S_ref=Sref, E0=E0, E_fresh=Efresh, E_taskC=Eref,
+                         dE_fresh=abs(Efresh - Eref), dE_cache=abs(E0 - Eref), k=list(k0)))
+    ok = all(x["S_from_levels"] == x["S_ref"] == x["S_from_S2"] and x["dE_fresh"] <= 1e-10 and x["dE_cache"] <= 1e-10 for x in rows)
+    return dict(rows=rows, pass_=ok)
+
+
+TESTS.update(U10=U10)
+
 if __name__ == "__main__":
     want = sys.argv[1:] or list(TESTS)
     path = OUT / "unit_tests.json"
