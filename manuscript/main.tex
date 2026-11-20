@@ -132,7 +132,33 @@ It is minimal, $f_{\rm cl}=1/2$, at the triangular point, where the three honeyc
 
 On 18 sites $f=0.497$ (K18) and $0.510$ (C18) at the triangular point, close to the classical value, and each honeycomb is half satisfied, $s_k\approx0.50$. In the Lieb--Mattis region the quantum $f$ falls below the classical value: at the dice point $f=0.833$ (K18) and $0.839$ (C18) against 1. Linear spin-wave theory explains this: $f_{\rm LSWT}/f_{\rm cl}=(1+g_{\rm LM})/(1+g_{\rm hex})$, where $g$ is the zero-point gain relative to the classical energy, $g_{\rm hex}=0.42$ for the N\'eel honeycomb and, at the dice point, $g_{\rm LM}=0.27$ for the ferrimagnet, whose ferromagnetic branch carries no zero-point motion. This gives $f_{\rm LSWT}=0.89$ at the dice point; elsewhere in the collinear region $g_{\rm LM}$ varies, and the ratio follows the trend of exact diagonalization (Fig.~\ref{fig:resonance}).
 
-The dice decomposition~\eqref{eq:dice} gives a sharper bound where all $d_\alpha\ge0$: $E(w)\ge\sum_\alpha d_\alpha E_{\rm dice}\ge\sum_kJ_kE_{\rm hex}$, the second inequality because $E_{\rm dice}\ge2E_{\rm hex}$. At the symmetric points the efficiency therefore factorizes, $f_{\rm hex}(\text{triangle})=f_{\rm hex}(\text{dice})\,f_{\rm dice}(\text{triangle})$, with $f_{\rm dice}(\text{triangle})=E_{\rm tri}/(\tfrac32JE_{\rm dice})$. Classically $1/2=1\times1/2$. On 18 sites $0.497=0.833\times0.597$ (K18) and $0.510=0.839\times0.607$ (C18): quantum fluctuations lose resonance in the first step, honeycomb to dice, and gain it in the second, dice to triangle. On 27 sites $f=0.857$ at the dice point and $0.853$ near the Lieb--Mattis edge at $\varphi=30^\circ$, moving from the 18-site values toward linear spin-wave theory.
+The dice decomposition~\eqref{eq:dice} gives a sharper bound where all $d_\alpha\ge0$: $E(w)\ge\sum_\alpha d_\alpha E_{\rm dice}\ge\sum_kJ_kE_{\rm hex}$, the second inequality because $E_{\rm dice}\ge2E_{\rm hex}$. At the symmetric points the efficiency therefore factorizes, $f_{\rm hex}(\text{triangle})=f_{\rm hex}(\text{dice})\,f_{\rm dice}(\text{triangle})$, with $f_{\rm dice}(\text{triangle})=E_{\rm tri}/(\tfrac32JE_{\rm dice})$. Classically $1/2=1\times1/2$. On 18 sites $0.497=0.833\times0.597$ (K18) and $0.510=0.839\times0.607$ (C18): quantum fluctuations lose resonance in the first step, honeycomb to dice, and gain it in the second, dice to triangle.
+
+Honeycomb and dice lattices are two of a larger family of unfrustrated pieces. Every bond carries a sublattice pair ($AB$, $BC$ or $CA$) and one of three directions, and keeping $k$ pairs and $d$ directions defines a piece $P_{kd}$ (Table~\ref{tab:pieces}). The sublattice choice is the $S_3$ of the coupling triangle and the direction choice that of lattice rotations; all pieces except the triangle itself ($k=d=3$) are bipartite. The new two-dimensional member is the Lieb lattice: removing one direction from a dice lattice leaves each hub with four and each rim site with two neighbors, again a Lieb--Mattis ferrimagnet with $M=M_s/3$. Each bond lies in $m=\binom{2}{k-1}\binom{2}{d-1}$ of the nine pieces of a class, so $H_{\rm tri}=m^{-1}\sum_PH_P$ and $E_{\rm tri}\ge m^{-1}\sum_PE_P$. Because every bipartite piece is fully satisfied by a collinear classical state, the classical efficiency is $1/2$ for every class, and quantum mechanically
+\begin{equation}
+f_P=\frac{1+g_{\rm tri}}{2(1+g_P)},
+\label{eq:fP}
+\end{equation}
+where $g$ is the zero-point gain relative to the classical energy. The best bound comes from the piece with the smallest gain. Table~\ref{tab:pieces} shows that this is the dice lattice, both on 18 sites and in the bulk. The gain decreases with dimension and coordination: the zero-dimensional dimers and trimers and the chains gain most, the honeycomb and square lattices less. Being ferrimagnetic is not sufficient: the Lieb lattice, whose rim sites have only two neighbors, gains about as much as the honeycomb lattice, while the dice lattice combines a ferromagnetic branch without zero-point motion with sixfold-coordinated hubs.
+
+\begin{table}[tbp]
+\caption{Unfrustrated pieces of the $\sqrt3\times\sqrt3$ triangular lattice obtained by keeping $k$ sublattice pairs and $d$ bond directions, and their resonance efficiency at the triangular point for $S=1/2$. ED: same 18-site clusters for the triangle and the pieces (K18/C18); chains and square pieces wind an odd number of times around these tori and are not bipartite there. Bulk: Eq.~\eqref{eq:fP} with $g_{\rm tri}=0.437$ (linear spin waves) and $g_P$ exact for dimers and trimers, from the Bethe--Hulthén energy for chains~\cite{Bethe1931,Hulthen1938}, and from linear spin waves for the two-dimensional pieces.}
+\label{tab:pieces}
+\begin{ruledtabular}
+\begin{tabular}{lcccc}
+piece & $(k,d)$ & bonds & $f_P$, ED & $f_P$, bulk\\
+\hline
+dimers & (1,1) & 1/9 & 0.258/0.262 & 0.240\\
+trimers & (2,1) & 2/9 & 0.387/0.392 & 0.359\\
+zigzag chains & (1,2) & 2/9 & 0.426/0.416 & 0.405\\
+chains & (3,1) & 1/3 & -- & 0.405\\
+honeycomb & (1,3) & 1/3 & 0.497/0.510 & 0.506\\
+Lieb & (2,2) & 4/9 & 0.532/0.533 & 0.510\\
+square & (3,2) & 2/3 & -- & 0.546\\
+dice & (2,3) & 2/3 & 0.597/0.607 & 0.567\\
+\end{tabular}
+\end{ruledtabular}
+\end{table} On 27 sites $f=0.857$ at the dice point and $0.853$ near the Lieb--Mattis edge at $\varphi=30^\circ$, moving from the 18-site values toward linear spin-wave theory.
 
 \begin{figure}[tbp]
 \includegraphics[width=\columnwidth]{figures/fig3_resonance.pdf}
@@ -208,7 +234,7 @@ The selection is also visible in the rim correlations. In the plateau sector the
 
 %=====================================================================
 \section{Discussion}
-Three coupling combinations organize the results. The inverse couplings decide the zero-field state: a collinear ferrimagnet appears when $1/J_{AB},1/J_{BC},1/J_{CA}$ fail the triangle inequality~\eqref{eq:triangle}, that is, when the weakest bond is too weak to close the triangle of weighted spins. The dice weights $d_\alpha$ decide the plateau: classically the up-up-down state is the ground state of the most strongly weighted dice, which fixes the down sublattice, and the window~\eqref{eq:window} reaches zero field exactly where the ground state becomes the ferrimagnet. The size $\varepsilon$ alone decides the saturation field~\eqref{eq:hsat}, because the polarized state sees the couplings only through the eigenvalues of a weighted Laplacian. The cubic invariant that separates the honeycomb and dice sides is the weight~\eqref{eq:loop} of the odd $A$--$B$--$C$ loop, and the resonance efficiency measures the energy lost to that loop.
+Three coupling combinations organize the results. The inverse couplings decide the zero-field state: a collinear ferrimagnet appears when $1/J_{AB},1/J_{BC},1/J_{CA}$ fail the triangle inequality~\eqref{eq:triangle}, that is, when the weakest bond is too weak to close the triangle of weighted spins. The dice weights $d_\alpha$ decide the plateau: classically the up-up-down state is the ground state of the most strongly weighted dice, which fixes the down sublattice, and the window~\eqref{eq:window} reaches zero field exactly where the ground state becomes the ferrimagnet. The size $\varepsilon$ alone decides the saturation field~\eqref{eq:hsat}, because the polarized state sees the couplings only through the eigenvalues of a weighted Laplacian. The cubic invariant that separates the honeycomb and dice sides is the weight~\eqref{eq:loop} of the odd $A$--$B$--$C$ loop, and the resonance efficiency measures the energy lost to that loop. Classically every decomposition of the triangle into unfrustrated pieces is equally good; quantum mechanically the ferrimagnetic dice decomposition is the best, because it has the smallest zero-point gain.
 
 The honeycomb mirror shows a mechanism that the endpoints do not have. The hubs polarize first and their exchange field cancels the external field on the rim, which leaves the direction of the rim N\'eel vector free. The spin-wave zero-point energy acts as an easy axis $K\propto S$, and the rim behaves as a quantum rotor with an anisotropy. In the thermodynamic limit this gives a plateau width $2\sqrt{2K/\chi}\propto\sqrt S$, so relative to the saturation field the plateau shrinks only as $S^{-1/2}$, compared with $S^{-1}$ at the triangular point. On a finite cluster the same rotor interpolates between the tower of states and the spin flop, which is why a two-size extrapolation of the width fails on this line. On 27 sites at $r\ge0.8$ the measured moment of inertia and anisotropy agree with the spin-wave values; at smaller $r$ the anisotropy is weaker and hub excitations mix into the ladder.
 

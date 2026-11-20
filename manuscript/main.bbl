@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{12}%
+\begin{thebibliography}{14}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -186,6 +186,21 @@
   {journal} {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume}
   {98}},\ \bibinfo {pages} {134419} (\bibinfo {year} {2018})}\BibitemShut
   {NoStop}%
+\bibitem [{\citenamefont {Bethe}(1931)}]{Bethe1931}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Bethe}},\ }\bibfield  {title} {\bibinfo {title} {Zur {T}heorie der
+  {M}etalle. {I}. {E}igenwerte und {E}igenfunktionen der linearen
+  {A}tomkette},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Z.
+  Phys.}\ }\textbf {\bibinfo {volume} {71}},\ \bibinfo {pages} {205} (\bibinfo
+  {year} {1931})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Hulth\'en}(1938)}]{Hulthen1938}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
+  {Hulth\'en}},\ }\bibfield  {title} {\bibinfo {title} {{\"U}ber das
+  {A}ustauschproblem eines {K}ristalles},\ }\href@noop {} {\bibfield  {journal}
+  {\bibinfo  {journal} {Ark. Mat. Astron. Fys.}\ }\textbf {\bibinfo {volume}
+  {26A}} (\bibinfo {year} {1938})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Bernu}\ \emph {et~al.}(1994)\citenamefont {Bernu},
   \citenamefont {Lecheminant}, \citenamefont {Lhuillier},\ and\ \citenamefont
   {Pierre}}]{Bernu1994}%
