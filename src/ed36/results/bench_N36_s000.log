@@ -1,0 +1,10 @@
+# stuffed-honeycomb ED sector spec: cluster N36 T=[[2, 2], [-2, 4]]
+# k=[0.0, 0.0] ichar=0 z=1 point_part=cyclic point part of order 6
+SPEC N=36 NH=12 NUP=18 bonds=108 elements=144 real=1 threads=4 r=0.3
+TABLES built 0.03s  mean candidates per hub pattern 1.86
+BASIS dim 63049929  build 2.68s  basis+lookup 1.354 GiB  rim_key_bits 20  peak_RSS 1511.6 MiB
+BENCH H_action 68.309 s
+BENCH H_action 65.969 s
+HERMITICITY |<x2,Hx>-<Hx2,x>| = 8.113e-17 (|<x2,Hx>| = 1.427e-05)
+DONE total 206.9s peak_RSS 3916.9 MiB
+EXIT 0

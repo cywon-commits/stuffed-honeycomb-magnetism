@@ -1,0 +1,306 @@
+\documentclass[prb,twocolumn,superscriptaddress,amsmath,amssymb,floatfix]{revtex4-2}
+\usepackage{graphicx}
+\usepackage{bm}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newcommand{\todo}[1]{\textcolor{red}{[#1]}}
+\newcommand{\Jb}{\bar J}
+
+\begin{document}
+
+\title{Honeycomb, dice and triangle: $S_3$ structure of the three-coupling\\ triangular-lattice Heisenberg antiferromagnet}
+
+\author{Changyeon Won}
+\affiliation{Department of Physics, Kyung Hee University, Seoul, Republic of Korea}
+
+\date{Draft, \today}
+
+\begin{abstract}
+The Heisenberg antiferromagnet on the $\sqrt3\times\sqrt3$-distorted triangular lattice has three nearest-neighbor couplings $J_{AB},J_{BC},J_{CA}$. Their space is a triangle acted on by $S_3$, whose vertices, edge midpoints and center are the honeycomb, dice and triangular lattices. We show that the classical ground state is non-collinear exactly when $1/J_{AB},1/J_{BC},1/J_{CA}$ obey the triangle inequality and is a Lieb--Mattis ferrimagnet with $M=M_s/3$ otherwise. The Hamiltonian is a sum of three dice Hamiltonians with weights $d_\alpha$; classically the $1/3$ plateau is the ground state of the most strongly weighted dice, and its window is centered at $3SJ_{\min}$. The saturation field $9S\bar J(1+\varepsilon)$ depends only on the size $\varepsilon$ of the anisotropy. Exact diagonalization of 18 and 27 spins $S=1/2$ shows that these structures survive quantum fluctuations with shifted edges, and that partial disorder is confined near the honeycomb-direction mirrors. On these mirrors the classical plateau width vanishes; the linear spin-wave zero-point energy selects the collinear state of the honeycomb rim and produces a plateau of width $\propto\sqrt S$ bounded by first-order spin flops. On 27 sites the energy ladder around the plateau is that of a quantum rotor whose moment of inertia and anisotropy agree with these predictions for $J_{BC}/J_{AB}\ge0.8$. A resonance efficiency, which factorizes through the dice lattice, measures how far the three honeycomb N\'eel orders can be satisfied at once.
+\end{abstract}
+
+\maketitle
+
+%=====================================================================
+\section{Introduction}
+Lattices built from two inequivalent sites interpolate between the classic frustrated and unfrustrated antiferromagnets. The $\sqrt3\times\sqrt3$-distorted triangular lattice is the simplest case: its three sublattices $A,B,C$ are connected by three couplings $J_{AB},J_{BC},J_{CA}$. Switching on one coupling gives the honeycomb lattice with its N\'eel order; two give the dice lattice, a Lieb--Mattis ferrimagnet~\cite{LiebMattis1962}, which is extremal among planar bipartite lattices: if every site of the majority sublattice has at least $z$ neighbors, Euler's relation ($E\le2N$ bonds) gives $M/M_s\le(4-z)/z$, with equality for the dice lattice at $z=3$; all three equal give the triangular lattice, with $120^\circ$ order and a $1/3$ magnetization plateau stabilized by quantum fluctuations~\cite{ChubukovGolosov1991}. Rare-earth indium oxides realize the intermediate case as centered-honeycomb layers; GdInO$_3$, whose Gd$^{3+}$ moments are close to isotropic, shows an up-up-down $1/3$ plateau~\cite{Yuan2023}.
+
+Earlier work followed single lines through this space. On the honeycomb side, weak coupling to the central (hub) spins leaves them disordered while the honeycomb orders, the partially disordered state~\cite{Gonzalez2019,SeifertVojta2019}; a related state occurs on the stuffed square lattice~\cite{Blesio2023}. Between the triangular and dice points numerical work found ferrimagnetism and an intermediate phase~\cite{NakanoSakai2017,NakanoSakai2018,Shimada2018,Shimada2018b}, and the classical phase diagram of the stuffed honeycomb lattice, in which $A$ and $B$ remain equivalent, is known~\cite{Sahoo2018}. These lines are pieces of one parameter space, and it has been open how the honeycomb, dice and triangular limits connect across it, in zero field and in a magnetic field.
+
+Here we treat the full coupling space. Its structure follows from $S_3$ symmetry and a few closed formulas, each tested by exact diagonalization on 18 and 27 sites. The classical ground state is non-collinear exactly when the inverse couplings obey the triangle inequality (Sec.~\ref{sec:zero}). Partial disorder is confined to a narrow region around the honeycomb-direction mirrors. Three honeycomb N\'eel orders compete for the same spins, and a resonance efficiency measures how far they can be satisfied together (Sec.~\ref{sec:resonance}). In a field the saturation field depends only on the size of the anisotropy, and the classical $1/3$ plateau is the ground state of the most strongly weighted of three dice Hamiltonians (Sec.~\ref{sec:field}). On the honeycomb mirror the classical plateau width vanishes; there the plateau arises from order by disorder and ends in spin flops, with a width of order $\sqrt S$ instead of the $S^0$ of the triangular lattice.
+
+%=====================================================================
+\section{Model and $S_3$ structure}
+\label{sec:model}
+
+We divide the triangular lattice into three $\sqrt3\times\sqrt3$ sublattices $A$, $B$, $C$ and assign one exchange constant to each pair of sublattices,
+\begin{equation}
+H=\sum_{\langle ij\rangle}J_{s_is_j}\,\mathbf S_i\cdot\mathbf S_j-h\sum_i S_i^z ,\qquad J_{AB},J_{BC},J_{CA}\ge0 .
+\label{eq:H}
+\end{equation}
+Every site has three bonds of each type that touches its sublattice [Fig.~\ref{fig:model}(a)]. Switching on a single coupling gives a honeycomb lattice plus decoupled spins on the third sublattice; two couplings give the dice lattice, whose shared sublattice is the six-coordinated hub; three equal couplings give the triangular lattice. The Hamiltonian is linear in the couplings,
+\begin{equation}
+H=J_{AB}H_{AB}+J_{BC}H_{BC}+J_{CA}H_{CA},
+\label{eq:linear}
+\end{equation}
+where $H_{ss'}$ is the Heisenberg Hamiltonian of the honeycomb lattice formed by sublattices $s$ and $s'$. Grouping instead the bonds that touch sublattice $\alpha$ into the dice Hamiltonian $H^{(\alpha)}_{\rm dice}$ (e.g.\ $H^{(A)}_{\rm dice}=H_{AB}+H_{CA}$, with hub $A$),
+\begin{equation}
+H=\sum_\alpha d_\alpha H^{(\alpha)}_{\rm dice},\quad d_A=\tfrac12(J_{AB}+J_{CA}-J_{BC}),
+\label{eq:dice}
+\end{equation}
+and cyclically for $d_B$, $d_C$. All weights $d_\alpha$ are non-negative exactly when the couplings themselves obey the triangle inequality. We set $g\mu_B=1$; fields and energies are in units of the couplings as given (we use $\Jb=1$ in scans of the coupling triangle and $J_{AB}\equiv J=1$ on the honeycomb mirror). $N$ is the number of sites, $N_c=N/3$ the number of three-site cells, $M_s=NS$ the saturation magnetization, and $r=J'/J$ with $J'=J_{BC}=J_{CA}$ on the mirror lines.
+
+\paragraph{Symmetry.}
+The primitive translation $t$ of the triangular lattice permutes the sublattices cyclically ($A\to B\to C$), and a site-centred inversion exchanges two of them. These lattice operations generate $S_3\cong D_3$ acting on $w=(J_{AB},J_{BC},J_{CA})$. The coupling vector decomposes as $A_1\oplus E$: the mean $\Jb$ and a two-component anisotropy $(\varepsilon,\varphi)$,
+\begin{equation}
+J_k=\Jb\left[1+2\varepsilon\cos\!\left(\varphi-\tfrac{2\pi k}{3}\right)\right],
+\label{eq:Erep}
+\end{equation}
+with $k=0,1,2$ for $AB$, $BC$, $CA$.
+At fixed $\Jb$ the physical region $J_k\ge0$ is a triangle in the $(\varepsilon\cos\varphi,\varepsilon\sin\varphi)$ plane [Fig.~\ref{fig:model}(b)]. Its vertices ($\varepsilon=1$, $\varphi=0,2\pi/3,4\pi/3$) are the three honeycomb lattices, the midpoints of its edges ($\varepsilon=1/2$, $\varphi=\pi/3,\pi,5\pi/3$) are the three dice lattices, and its centre is the triangular lattice. The six mirror lines divide it into equivalent fundamental domains; we use $0\le\varphi\le\pi/3$, in which $J_{CA}$ is the weakest coupling. The three sides of this domain are
+(i) the honeycomb-direction mirror $\varphi=0$, $J_{AB}>J_{BC}=J_{CA}$, the line $r=J'/J=(1-\varepsilon)/(1+2\varepsilon)<1$ studied in Refs.~\cite{Gonzalez2019,SeifertVojta2019};
+(ii) the dice-direction mirror $\varphi=\pi/3$, $J_{AB}=J_{BC}>J_{CA}$, equivalent to $r=(1+\varepsilon)/(1-2\varepsilon)>1$~\cite{NakanoSakai2017};
+(iii) the edge $J_{CA}=0$ joining a honeycomb lattice to a dice lattice.
+
+The invariants of the $E$ representation are $\varepsilon^2$ and $\varepsilon^3\cos3\varphi$. No linear invariant exists, so every symmetric quantity that is analytic in the couplings is stationary at the triangular point; quantities that depend on $|\varepsilon|$, such as the saturation field below, are not. The cubic invariant distinguishes the honeycomb direction ($\cos3\varphi=+1$) from the dice direction ($\cos3\varphi=-1$), which is why physics on the two sides of the triangular point along a mirror line is asymmetric. Its microscopic origin is the shortest loop that belongs to no honeycomb and no dice sublattice, the $A$--$B$--$C$ triangle, whose weight is
+\begin{equation}
+J_{AB}J_{BC}J_{CA}=\Jb^3\big(1-3\varepsilon^2+2\varepsilon^3\cos3\varphi\big).
+\label{eq:loop}
+\end{equation}
+It vanishes on the whole Lieb--Mattis edge, including the honeycomb and dice points, and is largest at the triangular point. It is the lowest-order loop term that distinguishes the lattice from a bipartite one. (For quantum spins single-bond terms $\sum_kJ_k^3$ also contain $\cos3\varphi$ at the same order, so the cubic invariant is not exclusively a loop effect.)
+
+\begin{figure*}[tbp]
+\includegraphics[width=0.9\textwidth]{figures/fig1_model.pdf}
+\caption{Honeycomb, dice and triangular lattices are the vertices, edge midpoints and centre of one coupling triangle. (a) Three-coupling triangular lattice: sublattices $A,B,C$ and the three bond types. (b) Coupling triangle in the plane of the $E$ anisotropy $(\varepsilon\cos\varphi,\varepsilon\sin\varphi)$ at fixed $\Jb$, with mirror lines (dash-dotted) and the fundamental domain (red). Shading: classical ground state, non-collinear where $1/J_{AB},1/J_{BC},1/J_{CA}$ satisfy the triangle inequality [Eq.~\eqref{eq:triangle}], collinear Lieb--Mattis ferrimagnet otherwise.}
+\label{fig:model}
+\end{figure*}
+
+%=====================================================================
+\section{Zero field}
+\label{sec:zero}
+
+\subsection{Classical ground state: a triangle inequality for $1/J$}
+Every elementary triangle contains one bond of each type, so the classical energy is bounded below by the minimum over a single triangle, and the three-sublattice state that reaches this bound on every triangle is a global classical ground state. For three-sublattice states of unit vectors $\mathbf a,\mathbf b,\mathbf c$ the energy per cell is $3S^2(J_{AB}\,\mathbf a\!\cdot\!\mathbf b+J_{BC}\,\mathbf b\!\cdot\!\mathbf c+J_{CA}\,\mathbf c\!\cdot\!\mathbf a)$. With
+$\alpha=\sqrt{J_{AB}J_{CA}/J_{BC}}$, $\beta=\sqrt{J_{AB}J_{BC}/J_{CA}}$, $\gamma=\sqrt{J_{BC}J_{CA}/J_{AB}}$ it can be written as a square (Appendix~\ref{app:three}),
+\begin{equation}
+\frac{E_{\rm cl}}{3S^2N_c}=\tfrac12\left|\alpha\mathbf a+\beta\mathbf b+\gamma\mathbf c\right|^2-\tfrac12\left(\alpha^2+\beta^2+\gamma^2\right).
+\label{eq:square}
+\end{equation}
+The minimum $-\tfrac12(\alpha^2+\beta^2+\gamma^2)$ is reached when the weighted vectors close a triangle, which is possible if and only if
+\begin{equation}
+\frac1{J_{AB}}\le\frac1{J_{BC}}+\frac1{J_{CA}}\quad\text{and cyclic},
+\label{eq:triangle}
+\end{equation}
+since $(\alpha,\beta,\gamma)\propto(1/J_{BC},1/J_{CA},1/J_{AB})$. The angles follow from the closed triangle, $\mathbf a\cdot\mathbf b=(\gamma^2-\alpha^2-\beta^2)/2\alpha\beta$ and cyclic, and the classical magnetization is $M/M_s=|\mathbf a+\mathbf b+\mathbf c|/3$. Outside the region~\eqref{eq:triangle} the minimum is collinear: the two ends of the weakest bond are parallel and the third sublattice is antiparallel, giving $M=M_s/3$. On the dice mirror this boundary is $r=2$; near a honeycomb vertex it is the wedge $|J_{BC}-J_{CA}|\le J_{BC}J_{CA}/J_{AB}$ around the honeycomb mirror. Along the honeycomb mirror the state is non-collinear all the way to the vertex, with $M/M_s=(1-r)/3$.
+
+\subsection{The Lieb--Mattis edge}
+On the edge $J_{CA}=0$ the lattice is bipartite, $\{B\}$ versus $\{A,C\}$, and the Lieb--Mattis theorem~\cite{LiebMattis1962} fixes the ground-state spin to $S_{\rm tot}=S|N_A+N_C-N_B|=SN/3$ ($=N/6$ for $S=1/2$) for all $J_{AB},J_{BC}>0$. On 18-spin clusters we find $S_{\rm tot}=3$ for every $J_{BC}/J_{AB}$ tested.
+
+\subsection{Quantum ground state on finite clusters}
+\begin{figure*}[tbp]
+\includegraphics[width=\textwidth]{figures/fig2_zero_field.pdf}
+\caption{Zero field. (a) Ground-state spin of the 18-site cluster (K18) over the fundamental domain, in the plane $(\varepsilon\cos\varphi,\varepsilon\sin\varphi)$. The black line is the classical boundary~\eqref{eq:triangle}; outside it the ground state is the Lieb--Mattis ferrimagnet, $S_{\rm tot}=N/6$. (b) Thresholds around the honeycomb mirror, $J_{AB}=1$, $J_{BC,CA}=J'\pm\delta/2$: first jump of $S_{\rm tot}$ on two 18-site clusters (K18 jumps directly to $N/6$), and on 27 sites the first jump ($1/2\to3/2$, open) and the jump to the ferrimagnet ($3/2\to9/2$, filled), with bisection brackets. Dashed lines are the linear fits $0.209J'$ (K18) and $0.164J'$ (27 sites); the band is the hub-model estimate~\eqref{eq:wedge} and the dotted line the classical wedge.}
+\label{fig:zero}
+\end{figure*}
+Exact diagonalization of two 18-site clusters on 55 points of the fundamental domain shows that the ground state reaches $S_{\rm tot}=N/6$ at the classical boundary within the grid resolution $\Delta\varepsilon=0.1$ in every direction $10^\circ\le\varphi\le60^\circ$. Near the triangular point and along the honeycomb mirror the spin is smaller, and on the honeycomb mirror at small $r$ it is zero, the partially disordered state~\cite{Gonzalez2019}. The clusters are defined in Appendix~\ref{app:clusters}. On the 27-site cluster the mirror ground state has $S_{\rm tot}=1/2,7/2,5/2,5/2,3/2,1/2$ at $r=0.2,\dots,0.7$; the large spins for $0.26\lesssim r\lesssim0.39$ are the finite-size rotor--hub crossings of the hubs, which on 18 sites occur at smaller spin.
+
+\subsection{Partial disorder is confined to a wedge}
+Away from the honeycomb mirror the N\'eel order of the rim exerts a uniform static field $3m_N(J_{BC}-J_{CA})$ on every hub spin, because each hub has three $A$ and three $B$ neighbours. On the mirror this field vanishes by symmetry. The hubs therefore stay disordered only while the field is smaller than the saturation field of their effective model, generated at second order in $J'$ by the rim magnons~\cite{SeifertVojta2019}. We recomputed the leading transverse couplings from the linear-spin-wave N\'eel state (Appendix~\ref{app:hub}); they reproduce Table~I of Ref.~\cite{SeifertVojta2019} and satisfy an exact sum rule. With the $S=1/2$ couplings of Ref.~\cite{SeifertVojta2019}, in which the $1/S$ correction cancels 97\% of the classical transverse coupling, the hub saturation field is $0.27\,J'^2/J$ and the wedge is
+\begin{equation}
+|J_{BC}-J_{CA}|\lesssim(0.34\text{--}0.37)\,\frac{J'^2}{J},
+\label{eq:wedge}
+\end{equation}
+with $J'=\tfrac12(J_{BC}+J_{CA})$ and $J=J_{AB}$.
+This is narrower than the classical non-collinear wedge $J'^2/J$. Here $m_N=0.24$--$0.27$ is the rim N\'eel moment (linear spin waves and quantum Monte Carlo), and because the transverse hub couplings nearly cancel at $S=1/2$ the hub saturation field is dominated by the longitudinal couplings of Ref.~\cite{SeifertVojta2019}.
+
+Exact diagonalization does not reach the regime of Eq.~\eqref{eq:wedge} [Fig.~\ref{fig:zero}(b)]. On 18 sites the ground state jumps from $S_{\rm tot}=0$ directly to the ferrimagnet $S_{\rm tot}=N/6$ at $|J_{BC}-J_{CA}|=0.209J'$ (K18), and to $S_{\rm tot}=1$ at $0.17$--$0.19J'$ (C18). On 27 sites the mirror ground state has $S_{\rm tot}=1/2$; it first jumps to $3/2$ at a threshold $\propto J'^{1.38}$ ($1.26\le p\le1.42$ is consistent with all five values $J'=0.1$--$0.2$), and then directly to the ferrimagnet $9/2$ at $|J_{BC}-J_{CA}|=0.164J'$. The threshold for the ferrimagnet is thus linear in $J'$ on both clusters, with a coefficient that decreases from $0.21$ to $0.16$ between 18 and 27 sites, and lies 2.2--4.8 times above Eq.~\eqref{eq:wedge}. What the clusters establish is that partial disorder is confined to $|J_{BC}-J_{CA}|\lesssim0.16J'$ on 27 sites and that this region shrinks with size; whether its bulk width scales as $J'^2/J$, as Eq.~\eqref{eq:wedge} predicts, cannot be decided from these sizes. At $J'=0.3$ the 27-site mirror ground state already has $S_{\rm tot}=7/2$ and no threshold can be defined.
+
+%=====================================================================
+\section{Resonance of honeycombs}
+\label{sec:resonance}
+Because $H$ is linear in $w$ [Eq.~\eqref{eq:linear}], its ground-state energy $E(w)$ is concave and homogeneous of degree one, so $E(w)\ge\sum_kJ_kE_{\rm hex}$, with equality only if the three honeycomb Hamiltonians share a ground state. Here $E_{\rm hex}$ and $E_{\rm dice}$ are the ground-state energies of a single honeycomb and dice Hamiltonian on the same cluster. We define the resonance efficiency
+\begin{equation}
+f(w)=\frac{E(w)}{\sum_kJ_kE_{\rm hex}}\in[0,1],
+\label{eq:f}
+\end{equation}
+and the satisfaction of honeycomb $k$, $s_k=\langle H_k\rangle/E_{\rm hex}=\partial E/\partial J_k\,/E_{\rm hex}$ (Hellmann--Feynman). Classically, from Eq.~\eqref{eq:square},
+\begin{equation}
+f_{\rm cl}=
+\begin{cases}
+\dfrac{\alpha^2+\beta^2+\gamma^2}{2\sum_kJ_k} & \text{non-collinear},\\[2ex]
+\dfrac{J_1+J_2-J_{\min}}{\sum_kJ_k} & \text{collinear}.
+\end{cases}
+\end{equation}
+It is minimal, $f_{\rm cl}=1/2$, at the triangular point, where the three honeycomb N\'eel orders cannot be satisfied together because $A$--$B$--$C$ is an odd loop. On the dice lattice two honeycomb orders share the hub and are compatible, $f_{\rm cl}=1$.
+
+On 18 sites $f=0.497$ (K18) and $0.510$ (C18) at the triangular point, close to the classical value, and each honeycomb is half satisfied, $s_k\approx0.50$. In the Lieb--Mattis region the quantum $f$ falls below the classical value: at the dice point $f=0.833$ (K18) and $0.839$ (C18) against 1. Linear spin-wave theory explains this: $f_{\rm LSWT}/f_{\rm cl}=(1+g_{\rm LM})/(1+g_{\rm hex})$, where $g$ is the zero-point gain relative to the classical energy, $g_{\rm hex}=0.42$ for the N\'eel honeycomb and, at the dice point, $g_{\rm LM}=0.27$ for the ferrimagnet, whose ferromagnetic branch carries no zero-point motion. This gives $f_{\rm LSWT}=0.89$ at the dice point; elsewhere in the collinear region $g_{\rm LM}$ varies, and the ratio follows the trend of exact diagonalization (Fig.~\ref{fig:resonance}).
+
+The dice decomposition~\eqref{eq:dice} gives a sharper bound where all $d_\alpha\ge0$: $E(w)\ge\sum_\alpha d_\alpha E_{\rm dice}\ge\sum_kJ_kE_{\rm hex}$, the second inequality because $E_{\rm dice}\ge2E_{\rm hex}$. At the symmetric points the efficiency therefore factorizes, $f_{\rm hex}(\text{triangle})=f_{\rm hex}(\text{dice})\,f_{\rm dice}(\text{triangle})$, with $f_{\rm dice}(\text{triangle})=E_{\rm tri}/(\tfrac32JE_{\rm dice})$. Classically $1/2=1\times1/2$. On 18 sites $0.497=0.833\times0.597$ (K18) and $0.510=0.839\times0.607$ (C18): quantum fluctuations lose resonance in the first step, honeycomb to dice, and gain it in the second, dice to triangle.
+
+Honeycomb and dice lattices are two of a larger family of unfrustrated pieces. Every bond carries a sublattice pair ($AB$, $BC$ or $CA$) and one of three directions, and keeping $k$ pairs and $d$ directions defines a piece $P_{kd}$ (Table~\ref{tab:pieces}). The sublattice choice is the $S_3$ of the coupling triangle and the direction choice that of lattice rotations; all pieces except the triangle itself ($k=d=3$) are bipartite. The new two-dimensional member is the Lieb lattice: removing one direction from a dice lattice leaves each hub with four and each rim site with two neighbors, again a Lieb--Mattis ferrimagnet with $M=M_s/3$. Each bond lies in $m=\binom{2}{k-1}\binom{2}{d-1}$ of the $\binom3k\binom3d$ pieces of a class, so $H_{\rm tri}=m^{-1}\sum_PH_P$ and $E_{\rm tri}\ge m^{-1}\sum_PE_P$. Because every bipartite piece is fully satisfied by a collinear classical state, the classical efficiency is $1/2$ for every class, and quantum mechanically
+\begin{equation}
+f_P=\frac{1+g_{\rm tri}}{2(1+g_P)},
+\label{eq:fP}
+\end{equation}
+where $g$ is the zero-point gain relative to the classical energy. The best bound comes from the piece with the smallest gain. Table~\ref{tab:pieces} shows that this is the dice lattice, both on 18 sites and in the bulk. The gain decreases with dimension and coordination: the zero-dimensional dimers and trimers and the chains gain most, the honeycomb and square lattices less. Being ferrimagnetic is not sufficient: the Lieb lattice, whose rim sites have only two neighbors, gains about as much as the honeycomb lattice, while the dice lattice combines a ferromagnetic branch without zero-point motion with sixfold-coordinated hubs.
+
+\begin{table}[tbp]
+\caption{Unfrustrated pieces of the $\sqrt3\times\sqrt3$ triangular lattice obtained by keeping $k$ sublattice pairs and $d$ bond directions, and their resonance efficiency at the triangular point for $S=1/2$. ED: same 18-site clusters for the triangle and the pieces (K18/C18); chains and square pieces wind an odd number of times around these tori and are not bipartite there. Bulk: Eq.~\eqref{eq:fP} with $g_{\rm tri}=0.437$ (linear spin waves) and $g_P$ exact for dimers and trimers, from the Bethe--Hulthén energy for chains~\cite{Bethe1931,Hulthen1938}, and from linear spin waves for the two-dimensional pieces. The bulk column thus mixes levels of approximation (numerator from spin-wave theory, some denominators exact) and should be read for the ordering of the pieces, not for the third digit.}
+\label{tab:pieces}
+\begin{ruledtabular}
+\begin{tabular}{lcccc}
+piece & $(k,d)$ & bonds & $f_P$, ED & $f_P$, bulk\\
+\hline
+dimers & (1,1) & 1/9 & 0.258/0.262 & 0.240\\
+trimers & (2,1) & 2/9 & 0.387/0.392 & 0.359\\
+zigzag chains & (1,2) & 2/9 & 0.426/0.416 & 0.405\\
+chains & (3,1) & 1/3 & -- & 0.405\\
+honeycomb & (1,3) & 1/3 & 0.497/0.510 & 0.506\\
+Lieb & (2,2) & 4/9 & 0.532/0.533 & 0.510\\
+square & (3,2) & 2/3 & -- & 0.546\\
+dice & (2,3) & 2/3 & 0.597/0.607 & 0.567\\
+\end{tabular}
+\end{ruledtabular}
+\end{table} On 27 sites $f=0.857$ at the dice point and $0.853$ near the Lieb--Mattis edge at $\varphi=30^\circ$, moving from the 18-site values toward linear spin-wave theory.
+
+\begin{figure}[tbp]
+\includegraphics[width=\columnwidth]{figures/fig3_resonance.pdf}
+\caption{Resonance efficiency in the collinear (Lieb--Mattis) region relative to its classical value, along $\varphi=30^\circ$ and the dice mirror $\varphi=60^\circ$: linear spin-wave theory, 18 sites (K18) and 27 sites.}
+\label{fig:resonance}
+\end{figure}
+
+%=====================================================================
+\section{Magnetic field}
+\label{sec:field}
+
+\subsection{Saturation field}
+The one-magnon instability of the polarized state occurs at the cell $\Gamma$ point, where the magnon matrix is $-3S$ times the weighted Laplacian $L$ of the $A$--$B$--$C$ triangle (Appendix~\ref{app:hsat}). Hence
+\begin{align}
+h_{\rm sat}&=3S\,\lambda_{\max}(L)=3S\Big[\textstyle\sum_kJ_k+\sqrt{\sum_kJ_k^2-\sum_{i<j}J_iJ_j}\Big]\nonumber\\
+&=9S\Jb(1+\varepsilon).
+\label{eq:hsat}
+\end{align}
+Although $S_3$ allows a $\cos3\varphi$ dependence, $h_{\rm sat}$ depends only on the size of the anisotropy. Equation~\eqref{eq:hsat} agrees with exact diagonalization at 110 points on 18 sites and at five points on 27 sites to $10^{-14}$. The instability lies at $\Gamma$ for all couplings, by the same triangle argument as in Sec.~\ref{sec:zero} (Appendix~\ref{app:hsat}).
+
+\subsection{Which sublattice points down on the $1/3$ plateau}
+The classical up-up-down states are labelled by the sublattice $\alpha$ that points down. The state with $\alpha$ down is the classical ground state of $H^{(\alpha)}_{\rm dice}$, all of whose bonds are antiparallel, and has zero energy on the other two dice Hamiltonians, each of which contains as many parallel as antiparallel bonds. By Eq.~\eqref{eq:dice} its exchange energy per cell is
+\begin{equation}
+E(\alpha\!\downarrow)=-6S^2d_\alpha=3S^2\big(2J_{\rm opp}(\alpha)-J_{AB}-J_{BC}-J_{CA}\big),
+\label{eq:potts}
+\end{equation}
+where $J_{\rm opp}(\alpha)$ is the bond not touching $\alpha$. The three weights $d_\alpha$ form a three-state Potts field, linear in $(\varepsilon\cos\varphi,\varepsilon\sin\varphi)$, and the down sublattice is the hub of the most strongly weighted dice, equivalently the sublattice opposite the weakest bond. The plateau state is unique for generic $\varphi$, twofold degenerate on the honeycomb mirror and threefold at the triangular point. Exact diagonalization confirms this pattern through the $C_2$ parity and the eigenvalues $1,\omega,\omega^2$ of $t$ in the $S^z=N/6$ sector.
+
+\subsection{Plateau window}
+Linear spin-wave stability of the selected state is lost at $\Gamma$ (Appendix~\ref{app:window}), which gives
+\begin{equation}
+h_\pm=3S\Big[J_{\min}\pm\sqrt{(J_1-J_{\min})(J_2-J_{\min})}\Big],
+\label{eq:window}
+\end{equation}
+with $J_1,J_2$ the two stronger couplings. The classical plateau is centred at $3SJ_{\min}$ and its classical width,
+\begin{equation}
+W_{\rm cl}=12\sqrt3\,S\Jb\,\varepsilon\sqrt{\sin\varphi\,\sin(\varphi+\pi/3)},
+\end{equation}
+is homogeneous of degree one in $\varepsilon$ and vanishes as $\sqrt\varphi$ on the honeycomb mirror. The condition $h_-=0$ coincides with the boundary~\eqref{eq:triangle}: the plateau reaches zero field exactly where the ground state becomes the Lieb--Mattis ferrimagnet. On the dice mirror, with $J_{AB}=J_{BC}=J'$ the strong and $J_{CA}=J$ the weak coupling, Eq.~\eqref{eq:window} reduces to $3JS(2-r)\le h\le3J'S$. For $S=1/2$ exact diagonalization keeps both structures of Eq.~\eqref{eq:window} but shifts the edges (Fig.~\ref{fig:edges}). The lower edge lies below $h_-$ by a nearly constant amount, $0.08$--$0.13$ on 18 sites and $0.106$--$0.117$ on 27 sites, at all points with $h_->0.03$; where $h_-$ is smaller, the plateau already starts at zero field. The upper edge is close to a single multiple of $h_+$, nearly independent of the direction $\varphi$: $1.49$--$1.52$ (K18) and $1.46$--$1.52$ (C18) on 18 sites, $1.42$--$1.45$ on 27 sites. The multiple decreases with size and depends on the cluster shape; its thermodynamic value is not determined by these clusters. The quantum plateau is therefore not centered at $3SJ_{\min}$; at $(\varepsilon,\varphi)=(0.1,30^\circ)$ its center is $1.61$ on 18 sites against $3SJ_{\min}=1.24$.
+
+\begin{figure*}[tbp]
+\includegraphics[width=\textwidth]{figures/fig4_plateau_edges.pdf}
+\caption{Edges of the $1/3$ plateau off the honeycomb mirror ($\varphi\ge10^\circ$) against the classical window~\eqref{eq:window}. (a) Upper edge; dashed lines are $1.51\,h_+$ and $1.44\,h_+$. (b) Lower edge for $h_->0$; the dashed line is $h_--0.11$. Fields in units of the couplings ($\Jb=1$ except for the 27-site dice point, $\Jb=2/3$), $g\mu_B=1$.}
+\label{fig:edges}
+\end{figure*}
+
+\subsection{The honeycomb mirror}
+On the honeycomb mirror, $J_{AB}=J$ and $J_{BC}=J_{CA}=rJ$ with $r<1$, the classical width vanishes and any plateau is a quantum effect. Expanding the classical energy in $\mathbf s=\mathbf a+\mathbf b$ at $h=3SrJ$ gives the quadratic form $\tfrac32S^2J\,[s_z^2+(1-r)|\mathbf s_\perp|^2]$ (Appendix~\ref{app:rotor}). For $r<1$ the classical ground states at this field are therefore the hubs fully polarized and the rim in a N\'eel state with an arbitrary direction $\mathbf n$: the exchange field of the hubs cancels the external field on the rim. Away from $h=3SrJ$ the rim flops perpendicular to the field with susceptibility $\chi=1/(9J)$ per site, for every $r$ and $S$.
+
+The zero-point energy of linear spin waves lifts this degeneracy. We compute it for the whole lattice; that the selection originates in the hub--rim bonds is suggested by $k\propto r^2$ at small $r$ but is not separated mode by mode. It is lowest for $\mathbf n\parallel\mathbf h$, the up-up-down state, by
+\begin{equation}
+K=E_{\rm zp}(\mathbf n\perp\mathbf h)-E_{\rm zp}(\mathbf n\parallel\mathbf h)=S\,k(r)\,J,
+\label{eq:K}
+\end{equation}
+per site, with $k\approx0.09\,r^2$ for $r\lesssim0.2$ and $k=0.011,0.021,0.034$ at $r=0.4,0.6,0.8$. The angular dependence is $\sin^2\theta$ with a small negative $\sin^4\theta$ term, so the rim stays collinear until a first-order spin flop at $|h-3SrJ|=\sqrt{2K/\chi}$. The plateau width is
+\begin{equation}
+W=2\sqrt{2K/\chi}=6\sqrt{2S\,k(r)}\,J,
+\label{eq:Wflop}
+\end{equation}
+of order $\sqrt S$. This is a different mechanism from the triangular point, where the order-by-disorder plateau has a width of order $S^0$~\cite{ChubukovGolosov1991}; Eq.~\eqref{eq:Wflop} requires the selection energy to be small against the stiffness $\tfrac32S^2J(1-r)$ of the transverse mode $\mathbf s_\perp$, i.e.\ $(1-r)S\gg k$, and crosses over to the triangular case as $r\to1$.
+
+On a cluster the rim N\'eel vector is a quantum rotor~\cite{Bernu1994}, $H_{\rm rot}=L^2/2I-D\,n_z^2$, with $I=\chi N$ and $D=NK$ in this theory, and the plateau sector is $L_z=0$. Its width $W_N=2(E_{L_z=1}-E_{L_z=0})$ depends only on $x=DI$: $W_NI=G(x)$ with $G(0)=2$, the tower of states, and $G\to2\sqrt{2x}$, Eq.~\eqref{eq:Wflop}, for $x\to\infty$ (Appendix~\ref{app:rotor}). For small $x$, $W_N\simeq2/(\chi N)+0.27KN$ is not monotonic in $N$, so extrapolating two cluster sizes in $1/N$ is not meaningful here.
+
+The rotor can be tested without assuming $I$ and $D$. The symmetric gaps $\Delta_m=\tfrac12(E_{N/6+m}+E_{N/6-m})-E_{N/6}$ of the $S^z$ ladder cancel the shift of the plateau center, and the ratio $\Delta_2/\Delta_1$ depends on $x$ alone, equal to 3 for $x=0$; $\Delta_1$ then fixes $I$. On 27 sites at $r=0.8$ and $0.9$ this gives $I=(1.07$--$1.08)\,N/(9J)$ and $D/N=(1.04$--$1.09)\,K$, in agreement with the spin-wave values [Fig.~\ref{fig:mirror}(c)]; at $r=0.6$ and $0.7$ the fitted anisotropy is $0.3$ and $0.7$ of $K$. For $r\le0.5$ on 27 sites, and for $0.5\le r\le0.85$ on 18 sites, $\Delta_2/\Delta_1\ge3$, so the ladder is not that of a single rotor; hub excitations enter at these energies. With $I$ and $D$ fixed in advance, the rotor reproduces the 27-site widths to within 10\% [Fig.~\ref{fig:mirror}(a)], but most of this width is the tower term $2/(\chi N)$; on 18 sites it overestimates the widths by up to 29\% and has the wrong trend in $r$. The clusters used here have $x\le1.7$, whereas the bulk regime, in which $W_N$ is within 20\% of Eq.~\eqref{eq:Wflop}, requires $x\approx10$, i.e.\ $N\approx70$ ($r=0.8$) to $130$ ($r=0.4$).
+
+The selection is also visible in the rim correlations. In the plateau sector the ratio of longitudinal to transverse nearest-neighbour correlations on the $A$--$B$ bonds exceeds its isotropic value $1/2$ by $\Delta>0$, while the neighbouring sectors have $\Delta<0.02$ [Fig.~\ref{fig:mirror}(b)]. Between 18 and 27 sites $\Delta$ grows by a factor 2.0--2.9, compared with 2.3--2.6 expected from the rotor at the actual values of $x$ and with 1 for a local, size-independent anisotropy. The two 18-site clusters differ by 30--50\%, so this test supports the rotor picture without fixing the power of $N$.
+
+\begin{figure*}[tbp]
+\includegraphics[width=\textwidth]{figures/fig5_mirror_plateau.pdf}
+\caption{The $1/3$ plateau on the honeycomb mirror. (a) Width from exact diagonalization on 18 and 27 sites, the rotor theory for the same sizes with $I=N/9J$ and $D=NK$ (lines, no fitted parameter) and the bulk spin-flop width~\eqref{eq:Wflop} with $S=1/2$; the 18-site widths are overestimated. (b) Rim anisotropy $\Delta$ in the plateau sector. (c) Rotor parameters fitted to the 27-site $S^z$ ladder, relative to $N/9J$ and to the spin-wave anisotropy $K$.}
+\label{fig:mirror}
+\end{figure*}
+
+%=====================================================================
+\section{Discussion}
+Three coupling combinations organize the results. The inverse couplings decide the zero-field state: a collinear ferrimagnet appears when $1/J_{AB},1/J_{BC},1/J_{CA}$ fail the triangle inequality~\eqref{eq:triangle}, that is, when the weakest bond is too weak to close the triangle of weighted spins. The dice weights $d_\alpha$ decide the plateau: classically the up-up-down state is the ground state of the most strongly weighted dice, which fixes the down sublattice, and the window~\eqref{eq:window} reaches zero field exactly where the ground state becomes the ferrimagnet. The size $\varepsilon$ alone decides the saturation field~\eqref{eq:hsat}, because the polarized state sees the couplings only through the eigenvalues of a weighted Laplacian. The cubic invariant that separates the honeycomb and dice sides is the weight~\eqref{eq:loop} of the odd $A$--$B$--$C$ loop, and the resonance efficiency measures the energy lost to that loop. Classically every decomposition of the triangle into unfrustrated pieces is equally good; quantum mechanically the ferrimagnetic dice decomposition is the best, because it has the smallest zero-point gain.
+
+The honeycomb mirror shows a mechanism that the endpoints do not have. The hubs polarize first and their exchange field cancels the external field on the rim, which leaves the direction of the rim N\'eel vector free. The spin-wave zero-point energy acts as an easy axis $K\propto S$, and the rim behaves as a quantum rotor with an anisotropy. In the thermodynamic limit this gives a plateau width $2\sqrt{2K/\chi}\propto\sqrt S$, so relative to the saturation field the plateau shrinks only as $S^{-1/2}$, compared with $S^{-1}$ at the triangular point. On a finite cluster the same rotor interpolates between the tower of states and the spin flop, which is why a two-size extrapolation of the width fails on this line. On 27 sites at $r\ge0.8$ the measured moment of inertia and anisotropy agree with the spin-wave values; at smaller $r$ the anisotropy is weaker and hub excitations mix into the ladder.
+
+The classical formulas apply most directly to large spins. GdInO$_3$ has nearly isotropic $S=7/2$ moments, so the Heisenberg form of the model applies, and it shows a $1/3$ plateau for fields along $c$~\cite{Yuan2023}; its weak easy-axis anisotropy adds to the order-by-disorder selection without changing the structure. To leading order in $1/S$ the three fields $h_{\rm sat}$, $h_-$ and $h_+$ determine $\Jb$, $\varepsilon$ and $\varphi$, so a magnetization curve locates a material in the coupling triangle. A ferrimagnetic moment $M_s/3$ at zero field and a plateau that starts at zero field must appear together, by Eq.~\eqref{eq:window}. On the honeycomb side the spin-flop edges of the plateau are first order, with magnetization jumps. For $S=1/2$ the same structures survive with shifted edges, as the exact diagonalization shows.
+
+The classical results of Secs.~\ref{sec:zero} and~\ref{sec:field} rest on one structural fact: every elementary triangle carries one bond of each type, so the single-magnon Laplacian and the spin-wave form of a collinear state are sums of identical triangle forms (Appendices~\ref{app:hsat} and~\ref{app:window}). If each bond belongs to $m$ triangles and each site to $n$, a single triangle gives
+\begin{align}
+h_{\rm sat}&=\frac nm\,S\,\lambda_{\max}(L),\nonumber\\
+h_\pm&=\frac nm\,S\Big[J_{\min}\pm\sqrt{(J_1-J_{\min})(J_2-J_{\min})}\Big],
+\end{align}
+and the classical non-collinear condition is the triangle inequality~\eqref{eq:triangle}. The triangular lattice has $(n,m)=(6,2)$. The kagome lattice with one coupling per chain direction has $(n,m)=(2,1)$ and the same $S_3$ coupling triangle: one coupling gives decoupled chains with free spins, two give the Lieb lattice ($M=M_s/3$), and three the kagome lattice. The formulas carry over with the factor 3 replaced by 2, e.g.\ $h_{\rm sat}=6S\Jb(1+\varepsilon)$; on the mirror the ferrimagnetic boundary $r=2$ agrees with the known classical boundary of the anisotropic kagome model~\cite{Yavorskii2007}.
+
+What the triangle argument does not fix is how many states reach the bound, and here the two lattices differ. On the mirror $\varphi=0$ the optimal magnon vector vanishes on the weakly coupled sublattice, so the remaining two sublattices decide the degeneracy. In the triangular lattice they form a connected honeycomb lattice: the saturation magnon is unique, and at the plateau field the only classical freedom is one global N\'eel direction, the rotor of Sec.~\ref{sec:field}. In the kagome lattice they form decoupled chains. The number of coplanar classical ground states then grows at most as $2^{\alpha\sqrt N}$, and linear spin waves do not select among them~\cite{Yavorskii2007}; in the limit of weakly coupled chains the couplings that order the chains relative to each other arise only at third order in the interchain coupling, and that analysis finds no plateau at $M_s/3$ for $S=1/2$~\cite{Stoudenmire2008}. The mirror plateau found here is therefore not a generic consequence of frustration on a mirror line; it requires the rim to be a connected two-dimensional N\'eel lattice.
+
+The complementary anisotropy, which distinguishes bond directions instead of sublattices, interpolates between chains, the square lattice and the triangle, and its $1/3$ plateau has been studied for Cs$_2$CuBr$_4$~\cite{Alicea2009}; breaking both the sublattice and the direction $S_3$ would span the whole grid of Table~\ref{tab:pieces}.
+
+We restricted the couplings to the $\sqrt3\times\sqrt3$ pattern. A state with one sublattice down is a classical ground state only if every triangle has the same total spin, which requires every triangle to contain each sublattice once; this holds for three sublattices only. The four-sublattice up-up-up-down state at $m=1/2$, for example, costs $0.375JS^2$ per site relative to states with equal triangle sums. Moreover, a $2\times2$ order parameter $\psi_M$ lives at the $M$ points while the three-coupling anisotropy transforms at $K$, so they cannot couple linearly; the lowest coupling is $\varepsilon^2|\psi_M|^2$.
+
+The partial-disorder region and the mirror plateau involve energy scales, of order $J'^2/J$ and $\sqrt{KJ}$, that on the clusters used here are comparable to finite-size gaps; on 27 sites the ferrimagnetic threshold is still linear in $J'$, so the bulk width of the partial-disorder region remains open. The rotor theory predicts that the bulk regime of the mirror plateau needs about 70 to 130 sites; density-matrix renormalization group calculations on cylinders of that size would test Eq.~\eqref{eq:Wflop} directly.
+
+\begin{acknowledgments}
+This research was supported by the National Research Foundation (NRF) of Korea funded by the Korean Government (NRF-2023R1A2C1006050).
+\end{acknowledgments}
+
+\paragraph*{Data availability.} Code and data: \url{https://github.com/cywon-commits/stuffed-honeycomb-magnetism}.
+
+%=====================================================================
+\appendix
+
+\section{Saturation field}
+\label{app:hsat}
+Above the polarized state a single flipped spin hops with amplitude $SJ_{ij}$ and costs $h-S\sum_jJ_{ij}$. In the three-sublattice basis the hopping matrix at the cell $\Gamma$ point is $3W$, with $W_{ss'}=J_{ss'}$ the weighted adjacency of the $A$--$B$--$C$ triangle, and the on-site term is $3\,{\rm diag}(W\mathbf 1)$. The magnon energies are $h-3S\lambda$ with $\lambda$ an eigenvalue of the weighted Laplacian $L={\rm diag}(W\mathbf 1)-W$. For a triangle with weights $a,b,c$ the eigenvalues of $L$ are $0$ and $(a+b+c)\pm\sqrt{a^2+b^2+c^2-ab-bc-ca}$. Inserting Eq.~\eqref{eq:Erep} gives $a^2+b^2+c^2-ab-bc-ca=9\Jb^2\varepsilon^2$ and hence Eq.~\eqref{eq:hsat}.
+
+That no other momentum has a larger eigenvalue follows from a decomposition into triangles. The magnon matrix of the whole lattice is $-S\mathcal L$ with the lattice Laplacian $\mathcal L=\sum_{\langle ij\rangle}J_{ij}(\mathbf e_i-\mathbf e_j)(\mathbf e_i-\mathbf e_j)^{T}$. Every bond belongs to two elementary triangles and every triangle carries the same three couplings, so $\mathcal L=\tfrac12\sum_\triangle L_\triangle$; every site belongs to six triangles, so for any normalized $\psi$
+\begin{align}
+\psi^\dagger\mathcal L\,\psi&=\tfrac12\sum_\triangle\psi_\triangle^\dagger L\,\psi_\triangle\nonumber\\
+&\le\tfrac12\lambda_{\max}(L)\sum_\triangle|\psi_\triangle|^2=3\lambda_{\max}(L),
+\end{align}
+where $\psi_\triangle$ is the restriction of $\psi$ to a triangle. Equality requires $\psi_\triangle$ to be proportional to the top eigenvector of $L$ on every triangle, which the three-sublattice ($\Gamma$) vector satisfies. The maximum is unique when that eigenvector has no vanishing component, because neighbouring triangles then fix all relative signs, and also on the honeycomb mirror, where the eigenvector $(1,-1,0)$ vanishes on the hubs but the $A$--$B$ honeycomb is connected. At $\varepsilon=0$ the top eigenvalue of $L$ is doubly degenerate; in the unfolded zone these are the modes at $K$ and $K'$.
+
+\section{Three-vector minimization}
+\label{app:three}
+Expanding $\tfrac12|\alpha\mathbf a+\beta\mathbf b+\gamma\mathbf c|^2=\tfrac12(\alpha^2+\beta^2+\gamma^2)+\alpha\beta\,\mathbf a\cdot\mathbf b+\beta\gamma\,\mathbf b\cdot\mathbf c+\gamma\alpha\,\mathbf c\cdot\mathbf a$ and choosing $\alpha\beta=J_{AB}$, $\beta\gamma=J_{BC}$, $\gamma\alpha=J_{CA}$ gives Eq.~\eqref{eq:square}. Three vectors of lengths $\alpha,\beta,\gamma$ can sum to zero if and only if each length is at most the sum of the other two, which is Eq.~\eqref{eq:triangle}. If, say, $\gamma>\alpha+\beta$, the norm is minimized by $\mathbf c$ antiparallel to $\mathbf a=\mathbf b$, the collinear state with the weakest bond ($J_{AB}$) parallel.
+
+\section{Plateau window in linear spin-wave theory}
+\label{app:window}
+For the collinear state with $B$ down, the quadratic boson Hamiltonian at $\Gamma$ has the $6\times6$ matrix $M=\left(\begin{smallmatrix}\mathcal A&\mathcal B\\ \mathcal B&\mathcal A\end{smallmatrix}\right)$, with hopping between parallel sublattices and pairing between antiparallel ones. Its determinant factorizes as
+$\det M=h^2\big[h^2-6SJ_{CA}h+9S^2(J_{AB}J_{CA}+J_{BC}J_{CA}-J_{AB}J_{BC})\big]^2$,
+whose roots are Eq.~\eqref{eq:window}. $M(\mathbf k)$ first loses positivity at $\Gamma$, again by a triangle decomposition. The quadratic form consists of bond terms and a Zeeman term; assigning each bond term in halves to its two triangles and each site's Zeeman term in sixths to its six triangles gives $H_2=\tfrac12\sum_\triangle q_\triangle(h/3)$, where $q_\triangle(h/3)$ is the form of a single triangle in the field $h/3$. In the up-up-down state all triangles carry the same form and $M(\Gamma)=3q_\triangle$. Hence $M(\Gamma)\ge0$ implies $q_\triangle\ge0$ and therefore $M(\mathbf k)\ge0$ for all $\mathbf k$; we confirmed this at random couplings and fields.
+
+\section{Order by disorder on the honeycomb mirror and the rotor model}
+\label{app:rotor}
+With $\mathbf c$ the hub direction and $\mathbf s=\mathbf a+\mathbf b$, the energy per cell on the mirror is $3S^2J[\tfrac12(|\mathbf s|^2-2)+r\,\mathbf c\cdot\mathbf s]-hS(s_z+c_z)$. Minimizing over $\mathbf c$ to second order in $\mathbf s$ at $h=3SrJ$ gives $\tfrac32S^2J[s_z^2+(1-r)|\mathbf s_\perp|^2]$ up to a constant, which vanishes only for $\mathbf s=0$ when $r<1$. For $h\ne3SrJ$, $s_z=(h-3SrJ)/3SJ$ and $m=S(1+s_z)/3$, so $dm/dh=1/9$. The linear spin-wave spectrum is computed in local frames for $\mathbf a=-\mathbf b=\mathbf n$ at angle $\theta$ to the field; the zero-point energy converges to $10^{-6}$ on $48\times48$ $k$ grids and is exactly proportional to $S$ at fixed $h/S$.
+
+The rotor $H_{\rm rot}=L^2/2I-Dn_z^2$ is diagonalized in the basis $|l,m\rangle$, $l\le80$, using $\langle l\pm1,m|\cos\theta|l,m\rangle$. At large $x=DI$ the low states are those of a two-dimensional oscillator around the poles with frequency $\sqrt{2D/I}$, so $E_{L_z=1}-E_{L_z=0}\to\sqrt{2D/I}$ and $W_N\to2\sqrt{2K/\chi}$.
+
+\section{Effective hub couplings and a sum rule}
+\label{app:hub}
+At second order in the hub--rim couplings the hub spins interact through $K^{ab}_{RR'}=\sum_n\langle0|O^a_R|n\rangle\langle n|O^b_{R'}|0\rangle/E_n$, where $O_R$ is the sum of the six rim spins around hub $R$; the per-pair coupling is $-2J'^2\,{\rm Re}\,K_{RR'}$. With the rim in the linear-spin-wave N\'eel state, the transverse couplings are $-0.308$, $+0.054$, $-0.033$ (in units of $J'^2/J$) for the first three shells, twice the $j^{xy,0}$ of Ref.~\cite{SeifertVojta2019}, whose sums run over ordered pairs. Within linear spin-wave theory they obey the sum rule $\sum_{R'}K^{xx}_{RR'}=9\chi_\perp$ with $\chi_\perp=1/(2zJ)=1/6$, which we verified to $10^{-4}$ on $L\times L$ tori with $L=9,12,15$. The longitudinal couplings arise from two-magnon processes and are infrared sensitive on finite tori; we therefore use the extrapolated values of Ref.~\cite{SeifertVojta2019} in Eq.~\eqref{eq:wedge}.
+
+\section{Clusters}
+\label{app:clusters}
+All clusters are tori of the $\sqrt3\times\sqrt3$ cell, spanned by the cell vectors $\mathbf A_1=\mathbf a_1+\mathbf a_2$ and $\mathbf A_2=2\mathbf a_1-\mathbf a_2$ of the triangular lattice ($\mathbf a_{1,2}$ primitive). A cluster is defined by an integer matrix $T$ whose rows give its periods in units of $\mathbf A_{1,2}$; it has $|\det T|$ cells. We use K18, $T=\left(\begin{smallmatrix}3&0\\2&2\end{smallmatrix}\right)$; C18, $T=\left(\begin{smallmatrix}1&2\\0&6\end{smallmatrix}\right)$; and N27, $T=\left(\begin{smallmatrix}3&0\\0&3\end{smallmatrix}\right)$. In all three every site has six distinct neighbours with the correct bond types (three rim and three hub bonds on a rim site, six rim bonds on a hub). K18 and N27 contain the cell momentum $(1/3,2/3)$; C18 does not and serves as a shape control. Exact diagonalization uses $S^z$ conservation and cell translations; the 18-site spectra are obtained with sparse Lanczos diagonalization, and the 27-site eigenvalues are converged to residuals below $10^{-9}$ with the spin fixed by $\langle\mathbf S^2\rangle$.
+
+\bibliography{refs}
+
+\end{document}
