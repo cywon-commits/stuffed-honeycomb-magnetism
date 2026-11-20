@@ -73,22 +73,29 @@ def fig2():
     label(a, "(a)")
 
     W = rows(D / "pd_wedge_18.csv")
-    for shp, col, mk in (("K18", C1, "o"), ("C18", C2, "s")):
+    for shp, col, mk, lab in (("K18", C2, "s", r"$N=18$ K18 ($0\to3=N/6$)"), ("C18", C4, "^", r"$N=18$ C18 ($0\to1$)")):
         pts = [(float(x["j"]), float(x["delta_c"])) for x in W if x["shape"] == shp and x["delta_c"]]
         j, d = np.array(pts).T
-        b.plot(j, d, mk, color=col, ms=5, mec="white", mew=0.5, label=f"$N=18$ ({shp})")
-    C = [x for x in rows(D / "n27" / "summary_n27.csv") if x["task"] == "C" and x["quantity"] == "d_c" and x["value"]]
-    for x in C:
-        jj = float(x["point"].split("=")[1]); lo, hi = map(float, re.search(r"\[([\d.]+),\s*([\d.]+)\]", x["note"]).groups())
-        b.errorbar(jj, (lo + hi) / 2, yerr=(hi - lo) / 2, fmt="D", color=C3, ms=5, mec="white", mew=0.5, capsize=2, lw=1,
-                   label="$N=27$" if jj == 0.15 else None)
+        b.plot(j, d, mk, color=col, ms=5, mec="white", mew=0.5, label=lab)
+    first, full = [], []
+    for x in rows(D / "n27" / "summary_n27.csv"):
+        if x["task"] in ("C", "H1") and x["quantity"] == "d_c" and x["value"]:
+            first.append(x)
+        if x["task"] == "H2" and x["quantity"] == "d_full":
+            full.append(x)
+    for lst, mfc, lab in ((first, "white", r"$N=27$ first jump ($1/2\to3/2$)"), (full, C3, r"$N=27$ ferrimagnet ($3/2\to9/2$)")):
+        for n, x in enumerate(lst):
+            jj = float(x["point"].split("=")[1]); lo, hi = map(float, re.search(r"[\[(]([\d.]+),\s*([\d.]+)\]", x["note"]).groups())
+            b.errorbar(jj, (lo + hi) / 2, yerr=(hi - lo) / 2, fmt="D", color=C3, mfc=mfc, ms=5, mew=1, capsize=2, lw=1,
+                       label=lab if n == 0 else None)
     jg = np.linspace(0, 0.32, 100)
-    b.plot(jg, 0.14 * jg, ls="--", color=MUTED, lw=1, label=r"finite size $0.14\,J'$ ($N=27$)")
-    b.fill_between(jg, 0.34 * jg**2, 0.37 * jg**2, color=INK, alpha=0.25, lw=0, label=r"bulk hub model $0.34$–$0.37\,J'^2/J$")
+    b.plot(jg, 0.164 * jg, ls="--", color=C3, lw=0.9)
+    b.plot(jg, 0.209 * jg, ls="--", color=C2, lw=0.9)
+    b.fill_between(jg, 0.34 * jg**2, 0.37 * jg**2, color=INK, alpha=0.25, lw=0, label=r"hub model $0.34$–$0.37\,J'^2/J$")
     b.plot(jg, jg**2, ls=":", color=INK, lw=1, label=r"classical $J'^2/J$")
-    b.set_xlim(0, 0.32); b.set_ylim(0, 0.07)
-    b.set_xlabel(r"$J'=(J_{BC}+J_{CA})/2$  ($J_{AB}=J=1$)"); b.set_ylabel(r"wedge half-width $|J_{BC}-J_{CA}|_c$")
-    b.grid(color=GRID, lw=0.4); b.legend(loc="upper left", bbox_to_anchor=(0.06, 1.0))
+    b.set_xlim(0, 0.32); b.set_ylim(0, 0.072)
+    b.set_xlabel(r"$J'=(J_{BC}+J_{CA})/2$  ($J_{AB}=J=1$)"); b.set_ylabel(r"threshold $|J_{BC}-J_{CA}|_c$")
+    b.grid(color=GRID, lw=0.4); b.legend(loc="upper left", bbox_to_anchor=(0.06, 1.0), fontsize=6.3)
     label(b, "(b)")
     fig.tight_layout(); save(fig, "fig2_zero_field")
 
