@@ -52,7 +52,7 @@ def fig2():
     a.plot(em * np.cos(ph), em * np.sin(ph), color=MUTED, lw=0.8)
     a.plot([0, em[0]], [0, 0], color=MUTED, lw=0.8); a.plot([0, em[-1] * np.cos(np.pi / 3)], [0, em[-1] * np.sin(np.pi / 3)], color=MUTED, lw=0.8)
     ec = np.array([eps_collinear(p) for p in ph])
-    a.plot(ec * np.cos(ph), ec * np.sin(ph), color=INK, lw=1.4, label=r"classical boundary, Eq. (5)")
+    a.plot(ec * np.cos(ph), ec * np.sin(ph), color=INK, lw=1.4, label=r"classical boundary, Eq. (7)")
     R = [x for x in rows(D / "simplex_scan_18.csv") if x["shape"] == "K18"]
     cmap = plt.get_cmap("Blues")
     for x in R:

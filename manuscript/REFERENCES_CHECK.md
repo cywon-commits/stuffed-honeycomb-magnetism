@@ -35,3 +35,4 @@ Added / revised 2026-11-19 (after independent review):
 | Sahoo2018 | (unchanged) | arXiv:1805.09831 abstract; Sahoo & Flint arXiv:2003.04269 describe the model with A and B equivalent (hexagonal symmetry) | classical phase diagram with A, B equivalent (mirror lines only) |
 | Bethe1931 | Z. Phys. 71, 205–226 (1931), "Zur Theorie der Metalle. I." | reference lists of arXiv:2512.01869 and cond-mat/9910426 | Bethe ansatz for the Heisenberg chain |
 | Hulthen1938 | Ark. Mat. Astron. Fys. 26A, No. 11 (1938), "Über das Austauschproblem eines Kristalles" | reference lists of arXiv:2512.01869, cond-mat/9910426, Springer chapter 10.1007/978-3-662-06390-3_35 | ground-state energy ln2 − 1/4 per bond (Bethe–Hulthén); page range 1–106 not verified |
+| Alicea2009 | PRL 102, 137201 (2009); Alicea, Chubukov, Starykh | Univ. of Minnesota Experts record; Scilit; arXiv:0809.3800 | 1/3 plateau of the spatially (direction-) anisotropic triangular lattice, Cs2CuBr4 |
