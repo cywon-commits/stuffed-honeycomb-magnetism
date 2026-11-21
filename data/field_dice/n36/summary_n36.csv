@@ -26,3 +26,4 @@ I2,0.6,E_min(Sz=6),-13.754080448309,"k=(0.0, 0.0) irrep=C3:(1+0j);C6:(1+0j);o2:(
 I2,0.6,R=zz_AB/t_AB(Sz=6),0.6837295074840399,Delta=R-1/2=+0.183730
 I2,0.6,E_min(Sz=7),-12.372386934351,"k=(0.0, 0.0) irrep=C3:(1-0j);C6:(-1+0j);o2:(-1+0j) multiplet_dim=1 S=7.0 residual=8.58e-10 in-sector gap=6.02e-01"
 I2,0.6,R=zz_AB/t_AB(Sz=7),0.41514827613069577,Delta=R-1/2=-0.084852
+I2,0.6,E_min(Sz=8),-10.753056528867,"k=(0.0, 0.0) irrep=C3:(1+0j);C6:(1+0j);o2:(1+0j) multiplet_dim=1 S=8.0 residual=8.26e-10 in-sector gap=8.87e-01"
