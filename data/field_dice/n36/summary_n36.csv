@@ -40,3 +40,5 @@ I2,0.6,I_over_N9,0.9391644292687502,
 I2,0.6,D_over_N,0.008389143744770169,
 I3,0.9,E_min(Sz=6),-14.393843077221,"k=(0.0, 0.0) irrep=C3:(1+0j);C6:(1+0j);o2:(1+0j) multiplet_dim=1 S=6.0 residual=9.53e-10 in-sector gap=4.82e-01"
 I3,0.9,R=zz_AB/t_AB(Sz=6),1.0265800112567398,Delta=R-1/2=+0.526580
+I3,0.9,E_min(Sz=7),-12.377569823300,"k=(0.0, 0.0) irrep=C3:(1-0j);C6:(-1+0j);o2:(-1+0j) multiplet_dim=1 S=7.0 residual=8.47e-10 in-sector gap=3.56e-01"
+I3,0.9,R=zz_AB/t_AB(Sz=7),0.6541244199247458,Delta=R-1/2=+0.154124
