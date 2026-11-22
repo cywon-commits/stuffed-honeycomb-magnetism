@@ -6,13 +6,6 @@ I4,0.15,dims(Sz=3),463991814,"21 sectors, total 5567902560, |G|=72"
 I4,0.15,dims(Sz=4),316355448,"21 sectors, total 3796297200, |G|=72"
 I4,0.15,dims(Sz=5),192565800,"21 sectors, total 2310789600, |G|=72"
 I4,0.15,dims(Sz=6),104304888,"21 sectors, total 1251677700, |G|=72"
-I1,0.8,E_min(Sz=6),-14.135758463352,"k=(0.0, 0.0) irrep=C3:(1+0j);C6:(1+0j);o2:(1+0j) multiplet_dim=1 S=6.0 residual=9.48e-10 in-sector gap=4.25e-01"
-I1,0.8,R=zz_AB/t_AB(Sz=6),0.9165443454611696,Delta=R-1/2=+0.416544
-I1,0.8,E_min(Sz=7),-12.312263045722,"k=(0.0, 0.0) irrep=C3:(1-0j);C6:(-1+0j);o2:(-1+0j) multiplet_dim=1 S=7.0 residual=7.29e-10 in-sector gap=3.51e-01"
-I1,0.8,R=zz_AB/t_AB(Sz=7),0.5303616399119394,Delta=R-1/2=+0.030362
-I1,0.8,E_min(Sz=8),-10.296176375400,"k=(0.0, 0.0) irrep=C3:(1+0j);C6:(1+0j);o2:(1+0j) multiplet_dim=1 S=8.0 residual=9.03e-10 in-sector gap=4.31e-01"
-I1,0.8,E_min(Sz=5),-15.172038314070,"k=(0.0, 0.0) irrep=C3:(1-0j);C6:(-1+0j);o2:(-1+0j) multiplet_dim=1 S=5.0 residual=6.59e-10 in-sector gap=3.09e-01"
-I1,0.8,R=zz_AB/t_AB(Sz=5),0.6135787652832242,Delta=R-1/2=+0.113579
 I1,0.8,W,0.787215566910934,
 I1,0.8,Delta1,0.393607783455467,
 I1,0.8,Delta2,0.9798068196037022,"E_m - E_6 = e_m(x)/I - h0 m with m = -1, 1, 2"
@@ -43,3 +36,21 @@ I3,0.9,R=zz_AB/t_AB(Sz=6),1.0265800112567398,Delta=R-1/2=+0.526580
 I3,0.9,E_min(Sz=7),-12.377569823300,"k=(0.0, 0.0) irrep=C3:(1-0j);C6:(-1+0j);o2:(-1+0j) multiplet_dim=1 S=7.0 residual=8.47e-10 in-sector gap=3.56e-01"
 I3,0.9,R=zz_AB/t_AB(Sz=7),0.6541244199247458,Delta=R-1/2=+0.154124
 I3,0.9,E_min(Sz=8),-10.130925052012,"k=(0.0, 0.0) irrep=C3:(1+0j);C6:(1+0j);o2:(1+0j) multiplet_dim=1 S=8.0 residual=8.68e-10 in-sector gap=2.83e-01"
+I3,0.9,E_min(Sz=5),-15.581547657284,"k=(0.0, 0.0) irrep=C3:(1-0j);C6:(-1+0j);o2:(-1+0j) multiplet_dim=1 S=5.0 residual=9.48e-10 in-sector gap=2.80e-01"
+I3,0.9,R=zz_AB/t_AB(Sz=5),0.8073979531553883,Delta=R-1/2=+0.307398
+I3,0.9,W,0.8285686738583351,
+I3,0.9,Delta1,0.41428433692916755,
+I3,0.9,Delta2,1.058940191225581,"E_m - E_6 = e_m(x)/I - h0 m with m = -1, 1, 2"
+I3,0.9,Delta2/Delta1,2.556071028595594,
+I3,0.9,h0,-1.6019889169918358,
+I3,0.9,x,2.101306533643965,"E_m - E_6 = e_m(x)/I - h0 m with m = -1, 1, 2"
+I3,0.9,I,3.3299570291678995,
+I3,0.9,I_over_N9,0.8324892572919749,
+I3,0.9,D_over_N,0.017528642388859948,
+I1,0.8,E_min(Sz=6),-14.135758463352,"k=(0.0, 0.0) irrep=C3:(1+0j);C6:(1+0j);o2:(1+0j) multiplet_dim=1 S=6.0 residual=9.48e-10 in-sector gap=4.25e-01"
+I1,0.8,R=zz_AB/t_AB(Sz=6),0.9165443454611696,Delta=R-1/2=+0.416544
+I1,0.8,E_min(Sz=7),-12.312263045722,"k=(0.0, 0.0) irrep=C3:(1-0j);C6:(-1+0j);o2:(-1+0j) multiplet_dim=1 S=7.0 residual=7.29e-10 in-sector gap=3.51e-01"
+I1,0.8,R=zz_AB/t_AB(Sz=7),0.5303616399119394,Delta=R-1/2=+0.030362
+I1,0.8,E_min(Sz=8),-10.296176375400,"k=(0.0, 0.0) irrep=C3:(1+0j);C6:(1+0j);o2:(1+0j) multiplet_dim=1 S=8.0 residual=9.03e-10 in-sector gap=4.31e-01"
+I1,0.8,E_min(Sz=5),-15.172038314070,"k=(0.0, 0.0) irrep=C3:(1-0j);C6:(-1+0j);o2:(-1+0j) multiplet_dim=1 S=5.0 residual=6.59e-10 in-sector gap=3.09e-01"
+I1,0.8,R=zz_AB/t_AB(Sz=5),0.6135787652832242,Delta=R-1/2=+0.113579

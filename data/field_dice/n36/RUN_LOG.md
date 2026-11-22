@@ -40,3 +40,8 @@ Unit tests: U11 26 s, U12 61 min, U13 < 1 s, U14 < 1 s.
 
 Total I2: 13.4 h of solver time (2026-11-21 01:21 – 17:51 UTC including the restart).
 U14 rerun after I2: passes (8 states, max |zz_AB + t_AB − ⟨H_AB⟩/36| = 1.3e-14).
+
+## I3 (r = 0.9)
+
+Total 22.6 h (2026-11-21 17:51 – 11-22 16:28 UTC). S^z = 5 K sectors needed 151 and 235 Lanczos steps (2.7 h and 4.4 h).
+U14 after I3: passes (12 states, max deviation 5.6e-14).

@@ -154,9 +154,9 @@
   "pass_": true
  },
  "U14": {
-  "states": 8,
-  "max_diff_AB": 1.2712053631958042e-14,
-  "max_diff_CA_plus_CB": 1.9734214262712158e-14,
+  "states": 12,
+  "max_diff_AB": 5.573319583618286e-14,
+  "max_diff_CA_plus_CB": 5.129230373768223e-14,
   "pass_": true
  }
 }
