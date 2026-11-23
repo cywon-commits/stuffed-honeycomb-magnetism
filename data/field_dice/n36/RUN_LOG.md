@@ -45,3 +45,13 @@ U14 rerun after I2: passes (8 states, max |zz_AB + t_AB − ⟨H_AB⟩/36| = 1.3
 
 Total 22.6 h (2026-11-21 17:51 – 11-22 16:28 UTC). S^z = 5 K sectors needed 151 and 235 Lanczos steps (2.7 h and 4.4 h).
 U14 after I3: passes (12 states, max deviation 5.6e-14).
+
+## S^z = 4 at r = 0.8 (optional)
+
+Six representative sectors (Gamma 52.7 M real/complex, K 105.5 M complex); K sectors took 4.5 h each at 8.5 GiB peak RSS.
+Pass 2 + observables on the lowest (Gamma A, 52.7 M) took 1.7 h. Total 17.0 h (2026-11-22 16:28 – 11-23 09:27 UTC).
+U14 final: passes (13 states, max deviation 6.3e-14).
+
+## Total
+
+Task I wall time: ≈ 3.3 days on 4 cores (2026-11-20 04:29 – 11-23 09:27 UTC, including three container restarts that resumed from cache).
