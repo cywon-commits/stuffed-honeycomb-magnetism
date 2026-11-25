@@ -138,52 +138,65 @@ def fig3():
 
 
 # ---------------------------------------------------------------- Fig. 4
+def n36():
+    """36-site ladder on the mirror: {r: {Sz: (E, zz_AB, t_AB)}} (lowest level per sector)."""
+    out = {}
+    for x in rows(D / "n36" / "task_I.csv"):
+        k = round(float(x["r"]), 2); m = int(float(x["Sz"])); e = float(x["E"])
+        if m not in out.setdefault(k, {}) or e < out[k][m][0]:
+            out[k][m] = (e, float(x["zz_AB"]) if x["zz_AB"] else np.nan, float(x["t_AB"]) if x["t_AB"] else np.nan)
+    return out
+
+
 def fig4():
+    from rotor_fit import fit
     fig, (a, b, c) = plt.subplots(1, 3, figsize=(7.0, 2.5), gridspec_kw={"width_ratios": [1.35, 1, 1]})
     L = rows(D / "obd_flop_lswt.csv"); rl = np.array([float(x["r"]) for x in L]); Kl = np.array([float(x["K_S0.5"]) for x in L])
-    rg = np.linspace(0.1, 0.9, 81); Kg = np.interp(rg, rl, Kl)
+    Kof = lambda q: float(np.interp(q, rl, Kl))
     chi = 1 / 9
     V = rows(D / "rotor_aniso_vs_ed.csv")
-    r = np.array([float(x["r"]) for x in V])
-    for N, col, mk, key in ((18, C2, "s", None), (27, C3, "D", "W27_ED")):
-        I = chi * N
-        a.plot(rg, [G(k * N * I)[0] / I for k in Kg], color=col, lw=1.2)
-        if N == 18:
-            a.plot(r, [float(x["W18_K18"]) for x in V], "s", color=col, ms=4, mec="white", mew=0.4)
-            a.plot(r, [float(x["W18_C18"]) for x in V], "^", color=col, ms=4, mec="white", mew=0.4)
-        else:
-            a.plot(r, [float(x[key]) for x in V], mk, color=col, ms=5, mec="white", mew=0.5)
-    a.plot(rg, 2 * np.sqrt(2 * Kg / chi), color=INK, lw=1.4)
-    a.text(0.62, 1.22, r"bulk $2\sqrt{2K/\chi}$", fontsize=7, color=INK)
-    a.text(0.12, 1.09, "$N=18$", fontsize=7, color=INK); a.text(0.12, 0.62, "$N=27$", fontsize=7, color=INK)
-    a.set_xlim(0.1, 0.92); a.set_ylim(0, 1.4)
-    a.set_xlabel(r"$r=J'/J$ (honeycomb mirror)"); a.set_ylabel(r"$1/3$-plateau width $W/J$")
-    a.legend(handles=[Line2D([], [], color=MUTED, lw=1.2, label="rotor theory (no fit)"),
-                      Line2D([], [], ls="", marker="s", color=C2, label="ED $N=18$ (K18; C18 $\\triangle$)"),
-                      Line2D([], [], ls="", marker="D", color=C3, label="ED $N=27$")], loc="lower right")
-    E27 = {}
-    for x in rows(D / "n27" / "task_E.csv"):
-        E27.setdefault((float(x["J_BC"]), x["Sz"]), []).append(x)
+    N36 = n36()
+    # (a) scaling collapse: W * chi * N against x = chi K N^2 with K from LSWT (no fit)
+    xg = np.linspace(0, 3.4, 120)
+    a.plot(xg, [G(x)[0] for x in xg], color=INK, lw=1.4)
+    a.plot(xg[20:], 2 * np.sqrt(2 * xg[20:]), color=MUTED, lw=0.9, ls="--")
+    a.axhline(2, color=MUTED, lw=0.9, ls=":")
+    a.text(0.95, 1.88, "tower", fontsize=7, color=MUTED); a.text(1.72, 3.47, r"spin flop $2\sqrt{2x}$", fontsize=7, color=MUTED)
+    for key, N, col, mk, lab in (("W18_K18", 18, C2, "s", "$N=18$ (K18)"), ("W18_C18", 18, C2, "^", "$N=18$ (C18)"), ("W27_ED", 27, C3, "D", "$N=27$")):
+        a.plot([chi * float(x["K_LSWT"]) * N * N for x in V], [float(x[key]) * chi * N for x in V], mk, color=col, ms=4.5, mec="white", mew=0.4, label=lab)
+    r36 = sorted(N36)
+    W36 = [N36[q][7][0] + N36[q][5][0] - 2 * N36[q][6][0] for q in r36]
+    a.plot([chi * Kof(q) * 36 * 36 for q in r36], [w * chi * 36 for w in W36], "o", color=C1, ms=5.5, mec="white", mew=0.5, label="$N=36$")
+    a.set_xlim(0, 3.4); a.set_ylim(1.2, 3.6)
+    a.set_xlabel(r"$x=\chi K N^2$ ($K$ from spin waves)"); a.set_ylabel(r"$W_N\,\chi N$")
+    a.legend(loc="lower right", fontsize=6.3, handles=[Line2D([], [], color=INK, lw=1.4, label="rotor $G(x)$, no fit")] + a.get_legend_handles_labels()[0])
+    # (b) rim anisotropy in the plateau sector
     rows18 = rows(D / "rim_anisotropy_18.csv")
     rr = [0.4, 0.6, 0.8]
     d18 = {s: [np.mean([float(x["zz_AB"]) / float(x["xxyy_AB"]) - 0.5 for x in rows18 if x["shape"] == s and float(x["r"]) == q and x["Sz"] == "3"]) for q in rr] for s in ("K18", "C18")}
     summ = {float(x["J_BC"]): float(x["value"]) for x in rows(D / "n27" / "summary_n27.csv") if x["task"] == "E" and x["quantity"].startswith("Delta") and x["point"].endswith("Sz=4.5")}
-    if not summ:
-        summ = {x: v for x, v in zip((0.2, 0.4, 0.6, 0.8, 1.0), (0.0078, 0.038, 0.1208, 0.3289, 0.1093))}
     r27 = sorted(k for k in summ if k < 1); d27 = [summ[k] for k in r27]
     b.plot(rr, d18["K18"], "s-", color=C2, ms=4, mec="white", mew=0.4, lw=1, label="$N=18$ (K18)")
     b.plot(rr, d18["C18"], "^-", color=C2, ms=4, mec="white", mew=0.4, lw=1, alpha=0.8, label="$N=18$ (C18)")
     b.plot(r27, d27, "D-", color=C3, ms=5, mec="white", mew=0.5, lw=1, label="$N=27$")
+    b.plot(r36, [N36[q][6][1] / N36[q][6][2] - 0.5 for q in r36], "o-", color=C1, ms=5, mec="white", mew=0.5, lw=1, label="$N=36$")
     b.set_xlabel(r"$r$"); b.set_ylabel(r"rim anisotropy $\Delta=\langle zz\rangle/\langle xx{+}yy\rangle-\frac{1}{2}$")
-    b.set_xlim(0.15, 0.85); b.set_ylim(0, 0.36); b.legend(loc="upper left", bbox_to_anchor=(0.04, 0.9))
+    b.set_xlim(0.15, 0.95); b.set_ylim(0, 0.56); b.legend(loc="upper left", bbox_to_anchor=(0.04, 0.9))
+    # (c) rotor parameters from the symmetric S^z ladder
     F = [x for x in rows(D / "rotor_fit_ladder.csv") if x["cluster"] == "27" and x["K_eff"] not in ("", "nan") and float(x["r"]) >= 0.55]
     rf = [float(x["r"]) for x in F]
-    c.plot(rf, [float(x["K_eff"]) / float(x["K_LSWT"]) for x in F], "D-", color=C3, ms=5, mec="white", mew=0.5, lw=1,
-           label=r"$K_{\rm eff}/K_{\rm LSWT}$")
-    c.plot(rf, [float(x["I_over_N9"]) for x in F], "o--", color=C1, ms=4, mec="white", mew=0.4, lw=1, label=r"$I/(N/9)$")
+    c.plot(rf, [float(x["K_eff"]) / float(x["K_LSWT"]) for x in F], "D-", color=C3, ms=5, mec="white", mew=0.5, lw=1)
+    c.plot(rf, [float(x["I_over_N9"]) for x in F], "D--", color=C3, ms=5, mfc="white", mew=1, lw=1)
+    e = {m: v[0] for m, v in N36[0.8].items()}
+    x36, I36, D36 = fit((e[7] + e[5]) / 2 - e[6], (e[8] + e[4]) / 2 - e[6])
+    c.plot([0.8], [D36 / 36 / Kof(0.8)], "o", color=C1, ms=6, mec="white", mew=0.5)
+    c.plot([0.8], [I36 / 4], "o", color=C1, ms=6, mfc="white", mew=1)
     c.axhline(1, color=INK, lw=0.9, ls=":")
-    c.set_xlim(0.5, 0.95); c.set_ylim(0, 1.4); c.set_xlabel(r"$r$"); c.set_ylabel(r"rotor fit, $N=27$")
-    c.legend(loc="lower right")
+    c.set_xlim(0.5, 0.95); c.set_ylim(0, 1.4); c.set_xlabel(r"$r$"); c.set_ylabel("fitted / predicted")
+    c.legend(handles=[Line2D([], [], ls="", marker="D", color=MUTED, label=r"$(D/N)/K$"),
+                      Line2D([], [], ls="", marker="D", color=MUTED, mfc="white", label=r"$I/(N/9J)$"),
+                      Line2D([], [], ls="", marker="D", color=C3, label="$N=27$"),
+                      Line2D([], [], ls="", marker="o", color=C1, label="$N=36$")], loc="lower right")
     for ax, l in ((a, "(a)"), (b, "(b)"), (c, "(c)")):
         ax.grid(color=GRID, lw=0.4); label(ax, l)
     fig.tight_layout(); save(fig, "fig5_mirror_plateau")
