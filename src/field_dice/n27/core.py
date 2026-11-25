@@ -81,6 +81,8 @@ def _run(args):
             d["peak_rss_mib"] = float(p[-2])
         elif l.startswith("NOT CONVERGED"):
             d["converged"] = False
+        elif l.startswith("RITZ"):
+            d["ritz"] = [float(x) for x in p[1:]]
     return d
 
 
