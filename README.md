@@ -34,6 +34,10 @@ The historical source packages contain some duplicated versions; they are retain
 
 A complete archival package (including large eigenvector checkpoints) is maintained separately from git because storing hundreds of MB of binary checkpoints in the repository would be difficult to version and review. See `external_data/README.md`.
 
+## Current stage (2026-11-18)
+
+The project now studies the three-coupling model (J_AB, J_BC, J_CA) that connects honeycomb, dice and triangular lattices; the old r = J'/J line is a mirror of its S3 fundamental domain. Stage-3 code and 18-spin data: `src/field_dice/`, `data/field_dice/`. 27-spin request: `docs/guides/27SPIN_THREE_COUPLING_REQUEST_EN.md` (Korean summary: `docs/guides/27SPIN_세결합_의뢰서_KO.md`).
+
 ## Start here
 
 Read `docs/README_START_HERE.md` and `docs/HPC_36SPIN_EXECUTION_REQUEST_EN.md` to reproduce the existing work or continue a 36-spin HPC calculation.

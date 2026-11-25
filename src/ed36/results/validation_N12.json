@@ -1,0 +1,41 @@
+[
+ {
+  "cluster": "N12",
+  "r": 0.3,
+  "nup": 6,
+  "full_dim": 924,
+  "sum_sector_dims": 924,
+  "sectors": 36,
+  "max_hermiticity_error": 2.0807427796300308e-15,
+  "max_abs_spectrum_difference": 3.241851231905457e-14,
+  "E0_full": -4.891185342101222,
+  "E0_sectors": -4.891185342101201,
+  "pass": true
+ },
+ {
+  "cluster": "N12",
+  "r": 0.77,
+  "nup": 6,
+  "full_dim": 924,
+  "sum_sector_dims": 924,
+  "sectors": 36,
+  "max_hermiticity_error": 2.5341311739065124e-15,
+  "max_abs_spectrum_difference": 3.019806626980426e-14,
+  "E0_full": -6.201257135146698,
+  "E0_sectors": -6.201257135146692,
+  "pass": true
+ },
+ {
+  "cluster": "N12",
+  "r": 1.0,
+  "nup": 6,
+  "full_dim": 924,
+  "sum_sector_dims": 924,
+  "sectors": 36,
+  "max_hermiticity_error": 3.3766115072321296e-15,
+  "max_abs_spectrum_difference": 3.019806626980426e-14,
+  "E0_full": -7.323961625254613,
+  "E0_sectors": -7.323961625254618,
+  "pass": true
+ }
+]
